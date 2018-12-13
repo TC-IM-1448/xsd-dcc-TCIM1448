@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dcc:digitalCalibrationCertificate 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v1.8.4.xsd" 
+	xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
+	xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI">
+	
+	<dcc:administrativeData><!--00100-->
+
+		<dcc:usedSoftware><!--00110-->
+
+			<dcc:software id="Notepad_plusplus"><!--1100M-->
+				<dcc:name>Notepad++ (32-bit)</dcc:name><!--11010-->
+				<dcc:purposes><!--11020-->
+					<dcc:purpose>XML</dcc:purpose><!--11021-->
+					<dcc:purpose>hash</dcc:purpose><!--11021-->
+					<dcc:purpose>Base64</dcc:purpose><!--11021-->
+				</dcc:purposes>
+				<dcc:release>v7.5.8</dcc:release><!--11030-->
+				<dcc:addOns><!--11040-->
+					<dcc:addOn>Compare</dcc:addOn><!--11041-->
+					<dcc:addOn>DSpellCheck</dcc:addOn><!--11041-->
+					<dcc:addOn>NppHash</dcc:addOn><!--11041-->
+					<dcc:addOn>XML Tools</dcc:addOn><!--11041-->
+					<dcc:addOn>MIME Tools</dcc:addOn><!--11041-->
+					<dcc:addOn>Converter</dcc:addOn><!--11041-->
+					<dcc:addOn>NppExport</dcc:addOn><!--11041-->
+				</dcc:addOns>
+				<dcc:langCodeISO639_1>de</dcc:langCodeISO639_1><!--12050-->
+				<dcc:source>https://notepad-plus-plus.org/</dcc:source><!--11060-->
+				<dcc:parameters><!--11070-->
+					<dcc:parameter>XML Tools plugin version 2.3.2 unicode beta4 r908</dcc:parameter><!--11071-->
+					<dcc:parameter>Npp Hash Maker version 1.0 unicode 2011-07-03</dcc:parameter><!--11071-->
+					<dcc:parameter>MIME Tools Version 1.7 unicode</dcc:parameter><!--11071-->
+				</dcc:parameters>
+			</dcc:software>
+		
+			<dcc:software id="Altova_XML"><!--1100M-->
+				<dcc:name>Altova XMLSpy</dcc:name><!--11010-->
+				<dcc:purposes><!--11020-->
+					<dcc:purpose>XML</dcc:purpose><!--11021-->
+				</dcc:purposes>
+				<dcc:release>2018 SP 1 (x64) Enterprise Edition</dcc:release><!--11030-->
+				<dcc:langCodeISO639_1>de</dcc:langCodeISO639_1><!--12050-->
+				<dcc:source>Altova GmbH, Rudolfsplatz 13a/9, A-1010 Wien, Österreich
+				https://www.altova.com/de/</dcc:source><!--11060-->
+			</dcc:software>
+		</dcc:usedSoftware>
+		
+		<dcc:coreData><!--00120-->
+			<dcc:countryCodeISO3166_1>DE</dcc:countryCodeISO3166_1><!--12010-->
+			<dcc:langCodeISO639_1>de</dcc:langCodeISO639_1><!--12020-->
+			<dcc:langCodeISO639_1>en</dcc:langCodeISO639_1><!--12020-->
+			<dcc:mandatoryLangISO639_1>de</dcc:mandatoryLangISO639_1><!--12030-->
+			<dcc:uniqueIdentifier>PTB - 11044 17</dcc:uniqueIdentifier><!--12040-->
+			<dcc:receiptDate>1900-01-01</dcc:receiptDate><!--12050-->
+			<dcc:beginPerformanceDate>1900-01-01</dcc:beginPerformanceDate><!--12070-->
+			<dcc:endPerformanceDate>2017-09-20</dcc:endPerformanceDate><!--12080-->
+		</dcc:coreData>
+	
+	
+		<dcc:items><!--00130-->
+		
+			<dcc:item><!--1300M-->
+				<dcc:name>1 Gewichtstück zu 10 g</dcc:name><!--13010-->
+				<dcc:description lang="de" id="Beschreibung"><!--13020-->
+					<dcc:content>1 Gewichtstück zu 10 g</dcc:content><!--92110-->
+					<dcc:content>Aufbewahrung</dcc:content><!--92110-->
+					<dcc:content>Die Gewichtstücke befinden sich in einem Kasten aus lackiertem Holz; das Kalibrierzeichen ist auf dem Kasten aufgebracht.</dcc:content><!--92110-->
+				</dcc:description>
+				<dcc:description lang="en" id="Description"><!--13020-->
+					<dcc:content>Case</dcc:content><!--92110-->
+					<dcc:content>The weights are accommodated in a box of varnished wood; the calibration mark is applied to the box.</dcc:content><!--92110-->
+				</dcc:description>
+				
+				<dcc:manufacturer><!--13050-->
+					<dcc:name>Hersteller</dcc:name><!--91310-->
+					<dcc:eMail>info@hersteller.de</dcc:eMail><!--91320-->
+					<dcc:location><!--91330-->
+						<dcc:street>Herstellerstraße</dcc:street><!--91120-->
+						<dcc:streetNo>42</dcc:streetNo><!--91130-->
+						<dcc:postCode>12345</dcc:postCode><!--91150-->
+						<dcc:city>Herstellerort</dcc:city><!--91160-->
+						<dcc:countryCode>DE</dcc:countryCode><!--91180-->
+					</dcc:location>
+				</dcc:manufacturer>
+				<dcc:identNumber lang="de"><!--13060-->
+					<dcc:manufacturer>Kennnummer: 1040917</dcc:manufacturer><!--12061-->
+					<dcc:calibrationLaboratory>Geschäftszeichen: 1.81-17.019</dcc:calibrationLaboratory><!--12070-->
+					<dcc:calibrationLaboratory>Kennzeichnung: 18L</dcc:calibrationLaboratory><!--12070-->
+				</dcc:identNumber>
+				<dcc:identNumber lang="en"><!--13060-->
+					<dcc:manufacturer>Serial No.: 1040917</dcc:manufacturer><!--12061-->
+					<dcc:calibrationLaboratory>Reference No.: 1.81-17.019</dcc:calibrationLaboratory><!--12070-->
+					<dcc:calibrationLaboratory>Marking: 18L</dcc:calibrationLaboratory><!--12070-->
+				</dcc:identNumber>
+			</dcc:item>
+		</dcc:items>
+	
+		<dcc:calibrationLaboratory><!--00140-->
+			<dcc:contact><!--91300-->
+				<dcc:name>Physikalisch-Technische Bundesanstalt (PTB)</dcc:name><!--91310-->
+				<dcc:eMail>info@ptb.de</dcc:eMail><!--91320-->
+				<dcc:location lang="de"><!--91330-->
+					<dcc:further>Abteilung 1 Mechanik und Akustik</dcc:further><!--91110-->
+					<dcc:further>Fachbereich 1.8 Masse – Darstellung der Einheit</dcc:further><!--91110-->
+					<dcc:further>Arbeitsgruppe 1.81 Darstellung Masse</dcc:further><!--91110-->
+					<dcc:further>Vorname1 Name1 o. V. i. A.</dcc:further><!--91110-->
+					<dcc:street>Bundesallee</dcc:street><!--91120-->
+					<dcc:streetNo>100</dcc:streetNo><!--91130-->
+					<dcc:postCode>38116</dcc:postCode><!--91150-->
+					<dcc:city>Braunschweig</dcc:city><!--91160-->
+					<dcc:countryCode>DE</dcc:countryCode><!--91180-->
+				</dcc:location>
+				<dcc:location lang="en"><!--91330-->
+					<dcc:further>Division 1 Mechanics and Acoustics</dcc:further><!--91110-->
+					<dcc:further>Department 1.8 Mass - Realization of the Unit</dcc:further><!--91110-->
+					<dcc:further>Working Group 1.81 Realization of Mass</dcc:further><!--91110-->
+					<dcc:further>Vorname1 Name1 or representative in office</dcc:further><!--91110-->
+					<dcc:street>Bundesallee</dcc:street><!--91120-->
+					<dcc:streetNo>100</dcc:streetNo><!--91130-->
+					<dcc:postCode>38116</dcc:postCode><!--91150-->
+					<dcc:city>Brunswick</dcc:city><!--91160-->
+					<dcc:countryCode>DE</dcc:countryCode><!--91180-->
+				</dcc:location>
+			</dcc:contact>
+		</dcc:calibrationLaboratory>
+		
+		<dcc:calibrationLocations><!--00150-->
+			<dcc:calibrationLocation><!--1500M-->
+				<dcc:calibrationLocationSites>Physikalisch-Technische Bundesanstalt (PTB)</dcc:calibrationLocationSites><!--15010-->
+				<dcc:location lang="de"><!--91330-->
+					<dcc:further>Abteilung 1 Mechanik und Akustik</dcc:further><!--91110-->
+					<dcc:further>Fachbereich 1.8 Masse – Darstellung der Einheit</dcc:further><!--91110-->
+					<dcc:further>Arbeitsgruppe 1.81 Darstellung Masse</dcc:further><!--91110-->
+					<dcc:further>Raum 1.23 im Besselbau</dcc:further><!--91110-->
+					<dcc:street>Bundesallee</dcc:street><!--91120-->
+					<dcc:streetNo>100</dcc:streetNo><!--91130-->
+					<dcc:postCode>38116</dcc:postCode><!--91150-->
+					<dcc:city>Braunschweig</dcc:city><!--91160-->
+					<dcc:countryCode>DE</dcc:countryCode><!--91180-->
+				</dcc:location>
+				<dcc:location lang="en"><!--91330-->
+					<dcc:further>Division 1 Mechanics and Acoustics</dcc:further><!--91110-->
+					<dcc:further>Department 1.8 Mass - Realization of the Unit</dcc:further><!--91110-->
+					<dcc:further>Working Group 1.81 Realization of Mass</dcc:further><!--91110-->
+					<dcc:further>Room 1.23 in the Besselbau</dcc:further><!--91110-->
+					<dcc:street>Bundesallee</dcc:street><!--91120-->
+					<dcc:streetNo>100</dcc:streetNo><!--91130-->
+					<dcc:postCode>38116</dcc:postCode><!--91150-->
+					<dcc:city>Brunswick</dcc:city><!--91160-->
+					<dcc:countryCode>DE</dcc:countryCode><!--91180-->
+				</dcc:location>
+			</dcc:calibrationLocation>
+		</dcc:calibrationLocations>
+			
+		<dcc:respPersons><!--00160-->
+			<dcc:respPerson id="Responsible"><!--1600M-->
+				<dcc:responsiblePerson>Vorname2 Name2</dcc:responsiblePerson><!--16010-->
+				<dcc:mainSigner>true</dcc:mainSigner><!--16020-->
+				<dcc:eMailResponsiblePerson>vorname2.name2@ptb.de</dcc:eMailResponsiblePerson><!--16050-->
+			</dcc:respPerson>
+
+			<dcc:respPerson id="Technician"><!--1600M-->
+				<dcc:responsiblePerson>Vorname3 Name3</dcc:responsiblePerson><!--16010-->
+				<dcc:eMailResponsiblePerson>vorname3.name3@ptb.de</dcc:eMailResponsiblePerson><!--16050-->
+			</dcc:respPerson>
+
+			<dcc:respPerson id="Signature"><!--1600M-->
+				<dcc:responsiblePerson>Vorname4 Name4</dcc:responsiblePerson><!--16010-->
+				<dcc:kryptElectronicSignature>true</dcc:kryptElectronicSignature><!--16040-->
+				<dcc:eMailResponsiblePerson>vorname4.name4@ptb.de</dcc:eMailResponsiblePerson><!--16050-->
+			</dcc:respPerson>
+		</dcc:respPersons>
+	
+		<dcc:usedMethods><!--00170-->
+		
+			<dcc:usedMethod><!--1700M-->
+				<dcc:name lang="de" id="Methode">Hydrostatische Wägemethode</dcc:name><!--17010-->
+				<dcc:description><!--17020-->
+					<dcc:content>Verfahren</dcc:content><!--92110-->
+					
+<!--	Demo for formatting HTML or LaTeX	-->
+					<dcc:content><![CDATA[<p>Die Volumenbestimmung für <latex>$m \ge 1 g$</latex> erfolgte nach der hydrostatischen Wägemethode.</p>]]></dcc:content><!--92110-->
+					<dcc:content>Die Kalibrierung erfolgte durch Vergleich mit den Hauptnormalen der PTB nach der Substitutionsmethode mit Auftriebskorrektion.</dcc:content><!--92110-->
+				</dcc:description>
+			</dcc:usedMethod>
+			
+			<dcc:usedMethod><!--1700M-->
+				<dcc:name lang="en" id="Method">Hydrostatic weighing method</dcc:name><!--17010-->
+				<dcc:description><!--17020-->
+					<dcc:content>Procedure</dcc:content><!--92110-->
+					
+<!--	Demo for formatting HTML or LaTeX	-->
+					<dcc:content><![CDATA[<p>The volume determination for <latex>$m \ge 1 g$</latex> was carried out with the hydrostatic weighing method.</p>]]></dcc:content><!--92110-->
+					<dcc:content>The calibration was ensued through comparison with the reference standards of PTB using the substitution method with air buoyancy correction.</dcc:content><!--92110-->
+				</dcc:description>
+			</dcc:usedMethod>
+		</dcc:usedMethods>
+
+		<dcc:customer><!--00180-->
+			<dcc:name>Physikalisch-Technische Bundesanstalt (PTB)</dcc:name><!--91310-->
+			<dcc:eMail>info@ptb.de</dcc:eMail><!--91320-->
+				<dcc:location lang="de"><!--91330-->
+					<dcc:further>Abteilung 1 Mechanik und Akustik</dcc:further><!--91110-->
+					<dcc:further>Fachbereich 1.1 Masse – Weitergabe der Einheit</dcc:further><!--91110-->
+					<dcc:further>Arbeitsgruppe 1.15 Metrologie in der Wägetechnik</dcc:further><!--91110-->
+					<dcc:further>Vorname5 Name5 o. V. i. A.</dcc:further><!--91110-->
+					<dcc:street>Bundesallee</dcc:street><!--91120-->
+					<dcc:streetNo>100</dcc:streetNo><!--91130-->
+					<dcc:postCode>38116</dcc:postCode><!--91150-->
+					<dcc:city>Braunschweig</dcc:city><!--91160-->
+					<dcc:countryCode>DE</dcc:countryCode><!--91180-->
+				</dcc:location>
+				<dcc:location lang="en"><!--91330-->
+					<dcc:further>Division 1 Mechanics and Acoustics</dcc:further><!--91110-->
+					<dcc:further>Department 1.1 Mass - Dissemination of the Unit</dcc:further><!--91110-->
+					<dcc:further>Working Group 1.15 Metrology in Weighing Technology</dcc:further><!--91110-->
+					<dcc:further>Vorname5 Name5 or representative in office</dcc:further><!--91110-->
+					<dcc:street>Bundesallee</dcc:street><!--91120-->
+					<dcc:streetNo>100</dcc:streetNo><!--91130-->
+					<dcc:postCode>38116</dcc:postCode><!--91150-->
+					<dcc:city>Brunswick</dcc:city><!--91160-->
+					<dcc:countryCode>DE</dcc:countryCode><!--91180-->
+				</dcc:location>
+		</dcc:customer>
+		
+		<dcc:statements><!--00230-->
+			<dcc:statement lang="de" id="ISO_17025_7.8.2.1_l_de"><!--2300M-->
+	            <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm><!--23030-->
+	            <dcc:reference>7.8.2.1 l)</dcc:reference><!--23040-->
+	            <dcc:value>Die Ergebnisse beziehen sich nur auf den in diesem DCC beschriebenen Gegenstand.</dcc:value><!--23040-->
+	        </dcc:statement>
+
+			<dcc:statement lang="en"><!--2300M-->
+	            <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm><!--23030-->
+	            <dcc:reference>7.8.2.1 l)</dcc:reference><!--23040-->
+	            <dcc:value>The results refer only to the object calibrated in this DCC.</dcc:value><!--23040-->
+	        </dcc:statement>
+	
+			<dcc:statement><!--2300M-->
+				<dcc:convention>CIPM-MRA</dcc:convention>	<!--23020-->
+	            <dcc:valueBool>true</dcc:valueBool><!--23060-->
+	        </dcc:statement>
+	
+			<dcc:statement lang="de"><!--2300M-->
+	            <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm><!--23030-->
+	            <dcc:reference>7.8.4.3</dcc:reference><!--23040-->
+	            <dcc:value>Die Ergebnisse gelten zum Zeitpunkt der Kalibrierung. Es obliegt dem Antragsteller, zu gegebener Zeit eine Rekalibrierung zu veranlassen.</dcc:value><!--23040-->
+	        </dcc:statement>
+
+			<dcc:statement lang="en"><!--2300M-->
+	            <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm><!--23030-->
+	            <dcc:reference>7.8.4.3</dcc:reference><!--23040-->
+	            <dcc:value>The results refer only to the object calibrated in this DCC.The measurement results are valid at the time of calibration. The applicant is responsible for arranging a recalibration in due time.</dcc:value><!--23040-->
+	        </dcc:statement>
+		</dcc:statements>
+
+	</dcc:administrativeData>
+	
+	<!--   #####################################################################################
+
+			End of administrativeData part of the DCC
+-->
+	<dcc:measurementResults><!--00300-->
+
+		<dcc:influenceConditions><!--00301-->
+		
+  			<dcc:influenceCondition lang="de" id="Umgebungsbedingungen"><!--3010M-->
+				<dcc:name>Umgebungsbedingungen</dcc:name><!--31010-->
+  				<dcc:outcome><!--32000-->
+				
+					<dcc:data><!--32060-->
+
+						<dcc:dccList><!--35000-->
+							<dcc:name>Die Kalibrierung wurde bei folgenden Umgebungsbedingungen ausgeführt:</dcc:name><!--35010-->
+							
+							<dcc:dccList><!--35000-->
+								<dcc:name>Temperatur</dcc:name><!--35010-->
+								<dcc:quantity><!--35040-->
+									<si:real>
+										<si:value>21.4,21.5</si:value>
+										<si:unit>\degreeCelsius</si:unit>
+										<si:label>von,bis</si:label>
+										<si:uncertainty>0.2</si:uncertainty>
+										<si:coverageFactor>2</si:coverageFactor>
+										<si:coverageProbability>0.95</si:coverageProbability>
+									</si:real> 
+								</dcc:quantity>
+							</dcc:dccList>
+							
+							<dcc:dccList><!--35000-->
+								<dcc:name>rel. Luftfeuchte</dcc:name><!--35010-->
+								<dcc:quantity><!--35040-->
+									<si:real>
+										<si:value>46,47</si:value>
+										<si:unit>\percent</si:unit>
+										<si:label>von,bis</si:label>
+										<si:uncertainty>5</si:uncertainty>
+										<si:coverageFactor>2</si:coverageFactor>
+										<si:coverageProbability>0.95</si:coverageProbability>
+									</si:real> 
+								</dcc:quantity>
+							</dcc:dccList>
+							
+							<dcc:dccList><!--35000-->
+								<dcc:name>Luftdruck</dcc:name><!--35010-->
+								<dcc:quantity><!--35040-->
+									<si:real>
+										<si:value>1007.0,1009.9</si:value>
+										<si:unit>\milli\bar</si:unit>
+										<si:label>von,bis</si:label>
+										<si:uncertainty>0.2</si:uncertainty>
+										<si:coverageFactor>2</si:coverageFactor>
+										<si:coverageProbability>0.95</si:coverageProbability>
+									</si:real> 
+								</dcc:quantity>
+							</dcc:dccList>
+														
+						</dcc:dccList>
+					</dcc:data>
+  				</dcc:outcome>
+  			</dcc:influenceCondition>
+
+		
+  			<dcc:influenceCondition lang="en" id="Ambient_conditions"><!--3010M-->
+				<dcc:name>Ambient conditions</dcc:name><!--31010-->
+  				<dcc:outcome><!--32000-->
+				
+					<dcc:data><!--32060-->
+
+						<dcc:dccList><!--35000-->
+							<dcc:name>The calibration was carried out under the following ambient conditions:</dcc:name><!--35010-->
+							
+							<dcc:dccList><!--35000-->
+								<dcc:name>temperature</dcc:name><!--35010-->
+								<dcc:quantity><!--35040-->
+									<si:real>
+										<si:value>21.4,21.5</si:value>
+										<si:unit>\degreeCelsius</si:unit>
+										<si:label>von,bis</si:label>
+										<si:uncertainty>0.2</si:uncertainty>
+										<si:coverageFactor>2</si:coverageFactor>
+										<si:coverageProbability>0.95</si:coverageProbability>
+									</si:real> 
+								</dcc:quantity>
+							</dcc:dccList>
+							
+							<dcc:dccList><!--35000-->
+								<dcc:name>relative humidity</dcc:name><!--35010-->
+								<dcc:quantity><!--35040-->
+									<si:real>
+										<si:value>46,47</si:value>
+										<si:unit>\percent</si:unit>
+										<si:label>von,bis</si:label>
+										<si:uncertainty>5</si:uncertainty>
+										<si:coverageFactor>2</si:coverageFactor>
+										<si:coverageProbability>0.95</si:coverageProbability>
+									</si:real> 
+								</dcc:quantity>
+							</dcc:dccList>
+							
+							<dcc:dccList><!--35000-->
+								<dcc:name>air pressure</dcc:name><!--35010-->
+								<dcc:quantity><!--35040-->
+									<si:real>
+										<si:value>1007.0,1009.9</si:value>
+										<si:unit>\milli\bar</si:unit>
+										<si:label>von,bis</si:label>
+										<si:uncertainty>0.2</si:uncertainty>
+										<si:coverageFactor>2</si:coverageFactor>
+										<si:coverageProbability>0.95</si:coverageProbability>
+									</si:real> 
+								</dcc:quantity>
+							</dcc:dccList>
+														
+						</dcc:dccList>
+					</dcc:data>
+  				</dcc:outcome>
+  			</dcc:influenceCondition>
+  		</dcc:influenceConditions>
+		
+    	<dcc:results><!--00306-->
+    		<dcc:result><!--3060M-->
+				<dcc:name lang="de">Konventioneller Wägewert und Fehlergrenze entsprechend OIML R 111</dcc:name><!--31010-->
+				<dcc:name lang="en">Conventional mass and maximum permissible error corresponding to OIML R 111</dcc:name><!--31010-->
+				<dcc:outcome><!--32000-->
+					<dcc:data id="OIML_R_111" comment="Conventional mass and maximum permissible error corresponding to OIML R 111"><!--32060-->
+						<dcc:quantity><!--33010-->
+							<si:real><!--34020-->
+								<si:value>10.000006E-3</si:value>
+								<si:unit>\kilogram</si:unit>
+								<si:uncertainty>0.000004E-3</si:uncertainty>
+								<si:coverageFactor>2</si:coverageFactor>
+								<si:coverageProbability>0.95</si:coverageProbability>
+							</si:real>
+						</dcc:quantity>
+					</dcc:data>
+				</dcc:outcome>
+    		</dcc:result>
+    		
+    		<dcc:result><!--3060M-->
+				<dcc:name lang="de">Masse</dcc:name><!--31010-->
+				<dcc:name lang="en">mass</dcc:name><!--31010-->
+				<dcc:outcome><!--32000-->
+					<dcc:data id="Mass" comment="Mass"><!--32060-->
+						<dcc:quantity><!--33010-->
+							<si:real><!--34020-->
+								<si:value>10.000003E-3</si:value>
+								<si:unit>\kilogram</si:unit>
+								<si:uncertainty>0.000004E-3</si:uncertainty>
+								<si:coverageFactor>2</si:coverageFactor>
+								<si:coverageProbability>0.95</si:coverageProbability>
+							</si:real>
+						</dcc:quantity>
+					</dcc:data>				
+				</dcc:outcome>
+    		</dcc:result>	
+
+    		<dcc:result><!--3060M-->
+				<dcc:name lang="de">Dichte</dcc:name><!--31010-->
+				<dcc:name lang="en">density</dcc:name><!--31010-->
+				<dcc:description>
+					<dcc:content lang="de">Dichte bei gegebener Temperatur</dcc:content><!--92110-->
+					<dcc:content lang="en">density at given temperature</dcc:content><!--92110-->
+				</dcc:description>
+				<dcc:outcome><!--32000-->
+					<dcc:data id="Density" comment="Density"><!--32060-->
+						<dcc:quantity><!--33010-->
+							<si:real><!--34020-->
+								<si:value>8012.8</si:value>
+								<si:unit>\kilogram\metre\tothe{-3}</si:unit>
+								<si:uncertainty>3.2</si:uncertainty>
+								<si:coverageFactor>2</si:coverageFactor>
+								<si:coverageProbability>0.95</si:coverageProbability>
+							</si:real>
+							<dcc:ambientConditions><!--34060-->
+								<dcc:quantity><!--33010-->
+									<si:real><!--34020-->
+										<si:value>20</si:value>
+										<si:unit>\degreeCelsius</si:unit>
+									</si:real>
+								</dcc:quantity>
+							</dcc:ambientConditions>
+						</dcc:quantity>
+					</dcc:data>				
+				</dcc:outcome>
+    		</dcc:result>	
+
+	    	<dcc:result><!--3060M-->
+				<dcc:name lang="de">Volumen</dcc:name><!--31010-->
+				<dcc:name lang="en">Volume</dcc:name><!--31010-->
+				<dcc:description>
+					<dcc:content lang="de">Volumen bei gegebener Temperatur</dcc:content><!--92110-->
+					<dcc:content lang="en">volume at given temperature</dcc:content><!--92110-->
+				</dcc:description>
+				<dcc:outcome><!--32000-->
+					<dcc:data id="Volume" comment="Volume"><!--32060-->
+						<dcc:quantity><!--33010-->
+							<si:real><!--34020-->
+								<si:value>1.2480E-6</si:value>
+								<si:unit>\metre\tothe{3}</si:unit>
+								<si:uncertainty>0.0005E-6</si:uncertainty>
+								<si:coverageFactor>2</si:coverageFactor>
+								<si:coverageProbability>0.95</si:coverageProbability>
+							</si:real>
+							<dcc:ambientConditions><!--34060-->
+								<dcc:quantity><!--33010-->
+									<si:real><!--34020-->
+										<si:value>20</si:value>
+										<si:unit>\degreeCelsius</si:unit>
+									</si:real>
+								</dcc:quantity>
+							</dcc:ambientConditions>
+						</dcc:quantity>
+					</dcc:data>
+				</dcc:outcome>
+    		</dcc:result>	
+		</dcc:results>
+	</dcc:measurementResults>
+ 
+</dcc:digitalCalibrationCertificate>
