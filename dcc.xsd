@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" elementFormDefault="qualified">
+<xs:schema version="1.9.2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" elementFormDefault="qualified">
 
 <xs:import namespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" 
 schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI/SI_Format_v1.0.1.xsd"/>
 
 <xs:annotation>
 	<xs:documentation>
-								+-------------------------------+
-								| DCC-Schema Version 1.8.5 beta |
-								+-------------------------------+
 	</xs:documentation>
 </xs:annotation>
 	
@@ -19,19 +16,13 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 				<xs:element name="administrativeData"><!--00100-->
 					<xs:complexType>
 						<xs:all>
-							<xs:element name="usedSoftware" type="dcc:usedSoftwareParameter"/><!--00110-->
+							<xs:element name="dccSoftware" type="dcc:softwareParameter" /><!--00110-->
 							<xs:element name="coreData" type="dcc:coreDataParameter"/><!--00120-->
 							<xs:element name="items" type="dcc:itemParameter"/><!--00130-->
 							<xs:element name="calibrationLaboratory" type="dcc:calibrationLaboratoryParameter"/><!--00140-->
-							<xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter"/><!--00150-->
 							<xs:element name="respPersons" type="dcc:respPersonParameter"/><!--00160-->
-							<xs:element name="usedMethods" type="dcc:usedMethodParameter"/><!--00170-->
 							<xs:element name="customer" type="dcc:contact"/><!--00180-->
-							<xs:element name="owner" type="dcc:contact" minOccurs="0"/><!--00200-->
-							<xs:element name="externals" type="dcc:externalParameter" minOccurs="0"/><!--00210-->
-							<xs:element name="sampledMaterials" type="dcc:sampledMaterialParameter" minOccurs="0"/><!--00220-->
 							<xs:element name="statements" type="dcc:statementParameter" minOccurs="0"/><!--00230-->
-							<xs:element name="metrologicallyTraceable" type="dcc:metrologicallyTraceableParameter" minOccurs="0"/><!--00240-->
 						</xs:all>
 					</xs:complexType>
 				</xs:element>
@@ -39,7 +30,18 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 				<xs:element name="measurementResults"><!--00300-->
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="influenceConditions" type="dcc:influenceConditionParameter"/><!--00301-->
+							<!-- kommt aus administrativeData 
+                            <xs:element name="condition" type="dcc:textBlock" minOccurs="0"/>
+                            <xs:element name="usedSoftware" type="dcc:softwareParameter" />
+                            <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
+                            <xs:element name="samplingDate" type="xs:date" minOccurs="0"/>
+                            <xs:element name="sampledMaterials" type="dcc:sampledMaterialParameter" minOccurs="0"/>
+                            <xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter"/>
+                            <xs:element name="externals" type="dcc:externalParameter" minOccurs="0"/>
+                            <xs:element name="metrologicallyTraceable" type="dcc:metrologicallyTraceableParameter" minOccurs="0"/>
+                            -->
+                            
+                            <xs:element name="influenceConditions" type="dcc:influenceConditionParameter"/><!--00301-->
 							<xs:element name="adjustmentBeforeConditions" type="dcc:adjustmentConditionParameter" minOccurs="0" /><!--00302-->
 							<xs:element name="adjustmentAfterConditions" type="dcc:adjustmentConditionParameter" minOccurs="0" /><!--00303-->
 							<xs:element name="repairBeforeConditions" type="dcc:repairConditionParameter" minOccurs="0" /><!--00304-->
@@ -51,7 +53,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 				
 				<xs:element name="comments" type="xs:string" minOccurs="0"/><!--00700-->
 				
-				<xs:element name="document" type="dcc:humanReadable" minOccurs="0"/><!--00800-->
+				<xs:element name="document" type="dcc:byteDataBlock" minOccurs="0"/><!--00800-->
 				
 			</xs:sequence>
 		</xs:complexType>
@@ -61,7 +63,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 
 			Elements of the administrativeData part of the DCC
 -->
-	<xs:complexType name="usedSoftwareParameter"><!--11000-->
+	<xs:complexType name="softwareParameter"><!--11000-->
 		<xs:annotation>
 			<xs:documentation>
 				Clear description of the software-version and the creator of the software used to create and process the DCC
@@ -72,32 +74,9 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="name" type="xs:string"/><!--11010-->
-						<xs:element name="purposes"><!--11020-->
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="purpose" type="xs:string" maxOccurs="unbounded"/><!--11021-->
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
 						<xs:element name="release" type="xs:string"/><!--11030-->
-						<xs:element name="addOns" minOccurs="0"><!--11040-->
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="addOn" type="xs:string" maxOccurs="unbounded"/><!--11041-->
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="langCodeISO639_1" type="dcc:elementStringISO639" minOccurs="0"/><!--11050-->
-						<xs:element name="source" type="xs:string" minOccurs="0"/><!--11060-->
-						<xs:element name="parameters" minOccurs="0"><!--11070-->
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="parameter" type="xs:string" maxOccurs="unbounded"/><!--11071-->
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
+						<xs:element name="description" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded" />            
 					</xs:sequence>
-					<xs:attribute name="lang" type="xs:string" use="optional"/><!--1100M_A_L-->
 					<xs:attribute name="id" type="xs:ID" use="optional"/><!--1100M_A_I-->
 				</xs:complexType>
 			</xs:element>
@@ -112,14 +91,27 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166"/><!--12010-->
-			<xs:element name="langCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/><!--12020-->
-			<xs:element name="mandatoryLangISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/><!--12030-->
+			<xs:element name="usedLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/><!--12020-->
+			<xs:element name="mandatoryLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/><!--12030-->
 			<xs:element name="uniqueIdentifier" type="xs:string"/><!--12040-->
 			<xs:element name="receiptDate" type="xs:date" minOccurs="0"/><!--12050-->
-			<xs:element name="samplingDate" type="xs:date" minOccurs="0"/><!--12060-->
-			<xs:element name="beginPerformanceDate" type="xs:date"/><!--12070-->
-			<xs:element name="endPerformanceDate" type="xs:date"/><!--12080-->
-			<xs:element name="previousReport" type="dcc:hash" minOccurs="0"/><!--12090-->
+            
+            <!-- Wir setzen uns bewusst über die DIN ISO 17025 hinweg, 
+            indem wir die Elemente "endPerformanceDate" und 
+            "beginPerformanceDate" als Mandatory definieren. 
+            In der 17025 steht drin: 
+            Beide Angaben können weggelassen werden, 
+            wenn es begründet wird. 
+            Aber, es müssen diese beiden Angaben 
+            beim Ausführenden der Kalibrierung vorgehalten werden.
+            
+            Wenn es nur einen Wert gibt, 
+            müssen beide Felder mit einem identischen Wert gefüllt werden! -->
+            
+            <xs:element name="beginPerformanceDate" type="xs:date" /><!--12070-->
+            <xs:element name="endPerformanceDate" type="xs:date"/><!--12080-->
+			
+            <xs:element name="previousReport" type="dcc:hash" minOccurs="0"/><!--12090-->
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -130,28 +122,46 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="item" maxOccurs="unbounded"><!--1300M-->
+			<xs:element name="name" type="dcc:textBlock" />
+            <xs:element name="description" type="dcc:textBlock" />
+            
+            <xs:element name="item" maxOccurs="unbounded"><!--1300M-->
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="name" type="dcc:elementStringWithLang" maxOccurs="unbounded"/><!--13010-->
+						<xs:element name="name" type="dcc:textBlock" /><!--13010-->
+						<xs:element name="owner" type="dcc:contact" minOccurs="0"/><!--00200-->
+						
 						<xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/><!--13020-->
-						<xs:element name="condition" type="dcc:textBlock" minOccurs="0"/><!--13030-->
-						<xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/><!--13040-->
-<!-- SH 2019-01-18 Es gibt durchaus Kalibriergüter, die keinen Manufacturer haben oder sehr alt sind oder schon mehrmals weiterverkauft wurden. Zusätzlich ist hier das Element "model" eingefügt worden, weil es sehr oft benutzt wird. -->
-						<xs:element name="manufacturer" type="dcc:contact"/><!--13050-->
-<!-- SH 2019-01-18 model eingefügt. -->
+						
+                        <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/><!--13040-->
+						
+                        <xs:element name="manufacturer" type="dcc:contactNotStrict" /><!--13050-->
 						<xs:element name="model" type="xs:string" minOccurs="0"/>
 						
-						<xs:element name="identNumber" maxOccurs="unbounded"><!--13060-->
+						<xs:element name="identifications" ><!--13060-->
 							<xs:complexType>
 								<xs:sequence>
-									<xs:element name="manufacturer" type="xs:string" maxOccurs="unbounded"/><!--13061-->
-									<xs:element name="calibrationLaboratory" type="xs:string" minOccurs="0" maxOccurs="unbounded"/><!--13062-->
-									<xs:element name="customer" type="xs:string" minOccurs="0" maxOccurs="unbounded"/><!--13063-->
-									<xs:element name="owner" type="xs:string" minOccurs="0" maxOccurs="unbounded"/><!--13064-->
-									<xs:element name="other" type="xs:string" minOccurs="0" maxOccurs="unbounded"/><!--13065-->
+                                    <xs:element name="identification" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="issuer" type="xs:string">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="manufacturer" />
+                                                            <xs:enumeration value="calibrationLaboratory" />
+                                                            <xs:enumeration value="customer" />
+                                                            <xs:enumeration value="owner" />
+                                                            <xs:enumeration value="other" />
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="value" type="xs:string" />
+                                                <xs:element name="description" type="dcc:textBlock" />
+                                            </xs:sequence>
+                                            <xs:attribute name="id" type="xs:ID" use="optional"/><!--1300M_A_I-->
+                                        </xs:complexType>
+                                    </xs:element>
 								</xs:sequence>
-								<xs:attribute name="lang" type="xs:string" use="optional"/><!--13060_A_L-->
 							</xs:complexType>
 						</xs:element>
 					</xs:sequence>
@@ -183,10 +193,10 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			<xs:element name="calibrationLocation" maxOccurs="unbounded"><!--1500M-->
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="calibrationLocationSites" type="dcc:elementStringWithLang" maxOccurs="unbounded"/><!--15010-->
+						<xs:element name="calibrationLocationSites" type="dcc:textBlock" /><!--15010-->
 						<xs:element name="beginLocationCalDateTime" type="xs:dateTime" minOccurs="0"/><!--15020-->
 						<xs:element name="endLocationCalDateTime" type="xs:dateTime" minOccurs="0"/><!--15030-->
-						<xs:element name="location" type="dcc:location" minOccurs="0" maxOccurs="unbounded"/><!--15040-->
+						<xs:element name="location" type="dcc:location" minOccurs="0"/><!--15040-->
 					</xs:sequence>
 					<xs:attribute name="id" type="xs:ID" use="optional"/><!--1500M_A_I-->
 				</xs:complexType>
@@ -212,12 +222,12 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 -->
 						<xs:element name="person" type="xs:string"/><!--16010-->
 						<xs:element name="mainSigner" type="xs:boolean" minOccurs="0"/><!--16020-->
-						<xs:element name="kryptElectronicSeal" type="xs:boolean" minOccurs="0"/><!--16030-->
-						<xs:element name="kryptElectronicSignature" type="xs:boolean" minOccurs="0"/><!--16040-->
-						<xs:element name="kryptElectronicTimeStamp" type="xs:boolean" minOccurs="0"/><!--16050-->
+						<xs:element name="cryptElectronicSeal" type="xs:boolean" minOccurs="0"/><!--16030-->
+						<xs:element name="cryptElectronicSignature" type="xs:boolean" minOccurs="0"/><!--16040-->
+						<xs:element name="cryptElectronicTimeStamp" type="xs:boolean" minOccurs="0"/><!--16050-->
 						<xs:element name="eMailPerson" type="xs:string" minOccurs="0"/><!--16060-->
-						<xs:element name="furtherInfoPerson" type="dcc:elementStringWithLang" minOccurs="0" maxOccurs="unbounded"/><!--16070-->
-						<xs:element name="location" type="dcc:location" minOccurs="0" maxOccurs="unbounded"/><!--16070-->
+						<xs:element name="furtherInfoPerson" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded"/><!--16070-->
+						<xs:element name="location" type="dcc:location" minOccurs="0" /><!--16070-->
 					</xs:sequence>
 					<xs:attribute name="id" type="xs:ID" use="optional"/><!--1600M_A_I-->
 				</xs:complexType>
@@ -235,7 +245,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			<xs:element name="usedMethod" maxOccurs="unbounded"><!--1700M-->
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="name" type="dcc:elementStringWithLang" maxOccurs="unbounded"/><!--17010-->
+						<xs:element name="name" type="dcc:textBlock"/><!--17010-->
 						<xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/><!--17020-->
 						<xs:element name="norm" type="xs:string" minOccurs="0" maxOccurs="unbounded"/><!--17030-->
 						<xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/><!--17040-->
@@ -286,28 +296,26 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="statement" maxOccurs="unbounded"><!--2300M-->
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166" minOccurs="0" maxOccurs="unbounded"/><!--23010-->
-                        <xs:element name="convention" type="xs:string" minOccurs="0"/><!--23020-->
-                        <xs:element name="norm" type="xs:string" minOccurs="0"/><!--23030-->
-                        <xs:element name="reference" type="xs:string" minOccurs="0"/><!--23040-->
-                        <xs:element name="value" type="xs:string" minOccurs="0"/><!--23040-->
-                        <xs:element name="valueBool" type="xs:boolean" minOccurs="0"/><!--23060-->
-<!-- SH expire Date Time Duration	...	-->
-                        <xs:element name="conventionDate" type="xs:date" minOccurs="0"/><!--23070-->
-<!-- SH 2019-01-18 deleted 	<xs:element name="conventionTime" type="xs:time" minOccurs="0"/>-->
-                        <xs:element name="conventionPeriod" type="xs:duration" minOccurs="0"/><!--23080-->
-<!-- SH 	expire	Date	Time	Duration	...	-->
-                    </xs:sequence>
-					<xs:attribute name="lang" type="dcc:elementStringISO639" use="optional"/><!--2300M_A_L-->
-					<xs:attribute name="id" type="xs:ID" use="optional"/><!--2300M_A_I-->
-				</xs:complexType>
-			</xs:element>
+            <xs:element name="statement" type="dcc:statementMetaDataParameter" maxOccurs="unbounded" /><!--2300M-->
 		</xs:sequence>
 	</xs:complexType>
 	
+    <xs:complexType name="statementMetaDataParameter"> 
+        <xs:sequence>
+            <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166" minOccurs="0" maxOccurs="unbounded"/><!--23010-->
+            <xs:element name="convention" type="xs:string" minOccurs="0"/><!--23020-->
+            <xs:element name="traceable" type="xs:boolean" minOccurs="0"/><!--23040-->
+            <xs:element name="norm" type="xs:string" minOccurs="0"/><!--23030-->
+            <xs:element name="reference" type="xs:string" minOccurs="0"/><!--23040-->
+            <xs:element name="declaration" type="dcc:textBlock" minOccurs="0"/><!--23040-->
+            <xs:element name="valid" type="xs:boolean" minOccurs="0"/><!--23060-->
+            <xs:element name="refId" type="xs:IDREF" minOccurs="0"/><!--23060-->
+            <xs:element name="date" type="xs:date" minOccurs="0"/><!--23070-->
+            <xs:element name="period" type="xs:duration" minOccurs="0"/><!--23080-->
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/><!--2300M_A_I-->
+    </xs:complexType>
+    
 	<xs:complexType name="metrologicallyTraceableParameter"><!--24000-->
 		<xs:annotation>
 			<xs:documentation>
@@ -451,7 +459,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	     	</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" type="dcc:elementStringWithLang" minOccurs="0" maxOccurs="unbounded"/><!--34010-->
+			<xs:element name="name" type="dcc:textBlock" minOccurs="0" /><!--34010-->
 			<xs:choice>
 				<xs:element ref="si:real"/><!--34020-->
 				<xs:element ref="si:realCS"/><!--34030-->
@@ -481,7 +489,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" type="dcc:elementStringWithLang" minOccurs="0" maxOccurs="unbounded"/><!--35010-->
+			<xs:element name="name" type="dcc:textBlock" minOccurs="0" /><!--35010-->
 			<xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/><!--35020-->
 			<xs:choice>
 				<xs:element name="dccList" type="dcc:dccList" maxOccurs="unbounded" /><!--35030-->
@@ -522,15 +530,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	     	</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="metaData" maxOccurs="unbounded"><!--36210-->
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="name" type="xs:string"/><!--36211-->
-						<xs:element name="value" type="xs:string" minOccurs="0"/><!--36212-->
-						<xs:element name="idRef" type="xs:IDREF" minOccurs="0"/><!--36213-->
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
+			<xs:element name="metaData" type="dcc:statementMetaData" maxOccurs="unbounded" /><!--36210-->
 		</xs:sequence>
 	</xs:complexType>
 	
@@ -566,24 +566,6 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	
 	<!--   #####################################################################################
 
-			Definition of the human readable part of the DCC
--->
-	<xs:complexType name="humanReadable"><!--80000-->
-		<xs:annotation>
-			<xs:documentation>
-				The human readable part of the DCC (not regulated and not mandatory)
-			</xs:documentation>
-		</xs:annotation>
-		<xs:sequence>
-			<xs:element name="fileName" type="xs:string"/><!--80010-->
-			<xs:element name="mimeType" type="xs:string"/><!--80020-->
-			<xs:element name="humanReadablePDFBase64" type="xs:base64Binary"/><!--80030-->
-		</xs:sequence>
-	</xs:complexType>
-
-	
-	<!--   #####################################################################################
-
 			Useful elements with the numbers .gt. 90000
 -->
 
@@ -610,27 +592,33 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	
 	<xs:complexType name="location"><!--91100-->
 		<xs:choice maxOccurs="unbounded">
-			<xs:element name="further" type="dcc:elementStringWithLang"/><!--91110-->
-			<xs:element name="street" type="dcc:elementStringWithLang"/><!--91120-->
-			<xs:element name="streetNo" type="dcc:elementStringWithLang"/><!--91130-->
-			<xs:element name="postOfficeBox" type="dcc:elementStringWithLang"/><!--91140-->
-			<xs:element name="postCode" type="dcc:elementStringWithLang"/><!--91150-->
-			<xs:element name="city" type="dcc:elementStringWithLang"/><!--91160-->
-			<xs:element name="state" type="dcc:elementStringWithLang"/><!--91170-->
+			<xs:element name="further" type="dcc:textBlock"/><!--91110-->
+			<xs:element name="street" type="xs:string"/><!--91120-->
+			<xs:element name="streetNo" type="xs:string"/><!--91130-->
+			<xs:element name="postOfficeBox" type="xs:string"/><!--91140-->
+			<xs:element name="postCode" type="xs:string"/><!--91150-->
+			<xs:element name="city" type="xs:string"/><!--91160-->
+			<xs:element name="state" type="xs:string"/><!--91170-->
 			<xs:element name="countryCode" type="dcc:elementStringISO3166"/><!--91180-->
 			<xs:element name="descriptionData" type="dcc:byteDataBlock"/><!--91190-->
 		</xs:choice>
-		<xs:attribute name="lang" type="xs:string" use="optional"/><!--91100_A_L-->
 	</xs:complexType>
 	
 	<xs:complexType name="contact"><!--91300-->
 		<xs:sequence>
 			<xs:element name="name" type="xs:string"/><!--91310-->
 			<xs:element name="eMail" type="xs:string"/><!--91320-->
-<!-- SH 2019-01-18: maxOccurs="unbounded" bei 91330 hinterfragen. Evtl. contacts einführen! -->
-			<xs:element name="location" type="dcc:location" maxOccurs="unbounded"/><!--91330-->
+			<xs:element name="location" type="dcc:location" /><!--91330-->
 		</xs:sequence>
-		<xs:attribute name="lang" type="xs:string" use="optional"/><!--91300_A_L-->
+		<xs:attribute name="id" type="xs:ID" use="optional"/><!--91300_A_I-->
+	</xs:complexType>
+
+	<xs:complexType name="contactNotStrict"><!--91300-->
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/><!--91310-->
+			<xs:element name="eMail" type="xs:string" minOccurs="0"/><!--91320-->
+			<xs:element name="location" type="dcc:location" minOccurs="0" /><!--91330-->
+		</xs:sequence>
 		<xs:attribute name="id" type="xs:ID" use="optional"/><!--91300_A_I-->
 	</xs:complexType>
 	
@@ -656,7 +644,6 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 		<xs:sequence>
 			<xs:element name="content" type="dcc:elementStringWithLang" maxOccurs="unbounded"/><!--92110-->
 		</xs:sequence>
-		<xs:attribute name="lang" type="xs:string" use="optional"/><!--92100_A_L-->
 		<xs:attribute name="id" type="xs:ID" use="optional"/><!--92100_A_I-->
 	</xs:complexType>
 	
@@ -680,7 +667,6 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			<xs:element name="mimeType" type="xs:string"/><!--92220-->
 			<xs:element name="data" type="xs:base64Binary"/><!--92230-->
 		</xs:sequence>
-		<xs:attribute name="lang" type="xs:string" use="optional"/><!--92200_A_L-->
 		<xs:attribute name="id" type="xs:ID" use="optional"/><!--92200_A_I-->
 	</xs:complexType>
 	
@@ -715,7 +701,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 				<xs:attribute name="id" type="xs:ID" use="optional"/><!--92400_A_I-->
 			</xs:extension>
 		</xs:simpleContent>
-<!-- SH		<xs:any namespace="##other" minOccurs="0"/>	-->
+		<xs:any namespace="##other" minOccurs="0"/>
 	</xs:complexType>
 	
 </xs:schema>
