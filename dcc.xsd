@@ -144,7 +144,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                                     <xs:element name="identification" maxOccurs="unbounded">
                                         <xs:complexType>
                                             <xs:sequence>
-                                                <xs:element name="issuer" type="xs:string">
+                                                <xs:element name="issuer">
                                                     <xs:simpleType>
                                                         <xs:restriction base="xs:string">
                                                             <xs:enumeration value="manufacturer" />
@@ -520,9 +520,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	<xs:complexType name="measurementMetaDataType"><!--36200-->
 		<xs:annotation>
 			<xs:documentation>
-							TODO: noch anpassen an neue Struktur 
-							
-							
+				  TODO: noch anpassen an neue Struktur 
 				  The measurement meta data comprises optional information that lead to a measurement result. 
 				  The sub-elements should reference the specific and detailed information in the administrative part.
 				  Each element is optional and the user should only provide the elements that are relevant
@@ -530,7 +528,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	     	</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="metaData" type="dcc:statementMetaData" maxOccurs="unbounded" /><!--36210-->
+			<xs:element name="metaData" type="dcc:statementMetaDataParameter" maxOccurs="unbounded" /><!--36210-->
 		</xs:sequence>
 	</xs:complexType>
 	
