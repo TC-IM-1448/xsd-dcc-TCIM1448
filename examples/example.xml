@@ -211,18 +211,18 @@
             <dcc:respPerson id="Responsible"><!--1600M-->
                 <dcc:person>Vorname2 Name2</dcc:person><!--16010-->
                 <dcc:mainSigner>true</dcc:mainSigner><!--16020-->
-                <dcc:eMailResponsiblePerson>vorname2.name2@ptb.de</dcc:eMailResponsiblePerson><!--16050-->
+                <dcc:eMailPerson>vorname2.name2@ptb.de</dcc:eMailPerson><!--16050-->
             </dcc:respPerson>
 
             <dcc:respPerson id="Technician"><!--1600M-->
                 <dcc:person>Vorname3 Name3</dcc:person><!--16010-->
-                <dcc:eMailResponsiblePerson>vorname3.name3@ptb.de</dcc:eMailResponsiblePerson><!--16050-->
+                <dcc:eMailPerson>vorname3.name3@ptb.de</dcc:eMailPerson><!--16050-->
             </dcc:respPerson>
 
             <dcc:respPerson id="Signature"><!--1600M-->
                 <dcc:person>Vorname4 Name4</dcc:person><!--16010-->
                 <dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature><!--16040-->
-                <dcc:eMailResponsiblePerson>vorname4.name4@ptb.de</dcc:eMailResponsiblePerson><!--16050-->
+                <dcc:eMailPerson>vorname4.name4@ptb.de</dcc:eMailPerson><!--16050-->
             </dcc:respPerson>
         </dcc:respPersons>
 
