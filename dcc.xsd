@@ -693,13 +693,9 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 				The optional attribute ID is for a unique ID of this block.
 			</xs:documentation>
 		</xs:annotation>
-		<xs:simpleContent>
-			<xs:extension base="xs:string">
-				<xs:attribute name="lang" type="xs:string" use="optional"/><!--92400_A_L-->
-				<xs:attribute name="id" type="xs:ID" use="optional"/><!--92400_A_I-->
-			</xs:extension>
-		</xs:simpleContent>
-		<xs:any namespace="##other" minOccurs="0"/>
+		<xs:sequence>
+            <xs:any namespace="##other" minOccurs="0"/>
+        </xs:sequence>
 	</xs:complexType>
 	
 </xs:schema>
