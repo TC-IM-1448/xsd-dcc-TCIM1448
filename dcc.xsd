@@ -156,7 +156,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                                                     </xs:simpleType>
                                                 </xs:element>
                                                 <xs:element name="value" type="xs:string" />
-                                                <xs:element name="description" type="dcc:textBlock" />
+                                                <xs:element name="description" type="dcc:textBlock" minOccurs="0" />
                                             </xs:sequence>
                                             <xs:attribute name="id" type="xs:ID" use="optional"/><!--1300M_A_I-->
                                         </xs:complexType>

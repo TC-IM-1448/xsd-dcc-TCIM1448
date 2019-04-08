@@ -16,11 +16,11 @@
             <dcc:software id="Notepad_plusplus"><!--1100M-->
                 <dcc:name>Notepad++ (32-bit)</dcc:name><!--11010-->
                 <dcc:release>v7.5.8</dcc:release><!--11030-->
-                <dcc:description id="44-1">
+                <dcc:description id="dcc44-1">
                     <dcc:content lang="de">Hier steht Text.</dcc:content>
                     <dcc:content lang="en">This is Text.</dcc:content>
                 </dcc:description>
-                <dcc:description id="44-2">
+                <dcc:description id="dcc44-2">
                     <dcc:content lang="de">Hier steht Text.</dcc:content>
                     <dcc:content lang="en">This is Text.</dcc:content>
                 </dcc:description>
@@ -54,7 +54,7 @@
                 <dcc:content lang="de">weitere Beschreibung</dcc:content>
             </dcc:description>
 
-            <dcc:item id="10g"><!--1300M-->
+            <dcc:item id="dcc10g"><!--1300M-->
 
                 <dcc:name>
                     <dcc:content lang="de">1 Gewichtstück zu 10 g</dcc:content>
@@ -92,28 +92,28 @@
 
                 <dcc:identifications><!--13060-->
 
-                    <dcc:identification id="52">
+                    <dcc:identification id="dcc52">
                         <dcc:issuer>manufacturer</dcc:issuer>
                         <dcc:value>1040917</dcc:value><!--12061-->
-                        <dcc:description id="53">
+                        <dcc:description id="dcc53">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
 
-                    <dcc:identification id="54">
+                    <dcc:identification id="dcc54">
                         <dcc:issuer>other</dcc:issuer>
                         <dcc:value>PTB4711</dcc:value><!--12061-->
-                        <dcc:description id="55">
+                        <dcc:description id="dcc55">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
 
-                    <dcc:identification id="56">
+                    <dcc:identification id="dcc56">
                         <dcc:issuer>customer</dcc:issuer>
                         <dcc:value>0815</dcc:value><!--12061-->
-                        <dcc:description id="57">
+                        <dcc:description id="dcc57">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
@@ -123,7 +123,7 @@
 
             </dcc:item>
 
-            <dcc:item id="100g"><!--1300M-->
+            <dcc:item id="dcc100g"><!--1300M-->
 
                 <dcc:name>
                     <dcc:content lang="de">1 Gewichtstück zu 100 g</dcc:content>
@@ -153,28 +153,28 @@
 
                 <dcc:identifications><!--13060-->
 
-                    <dcc:identification id="42">
+                    <dcc:identification id="dcc42">
                         <dcc:issuer>manufacturer</dcc:issuer>
                         <dcc:value>1040917</dcc:value><!--12061-->
-                        <dcc:description id="43">
+                        <dcc:description id="dcc43">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
 
-                    <dcc:identification id="44">
+                    <dcc:identification id="dcc44">
                         <dcc:issuer>other</dcc:issuer>
                         <dcc:value>PTB4711</dcc:value><!--12061-->
-                        <dcc:description id="45">
+                        <dcc:description id="dcc45">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
 
-                    <dcc:identification id="46">
+                    <dcc:identification id="dcc46">
                         <dcc:issuer>customer</dcc:issuer>
                         <dcc:value>0815</dcc:value><!--12061-->
-                        <dcc:description id="47">
+                        <dcc:description id="dcc47">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
@@ -342,7 +342,7 @@
         </dcc:usedMethods>
 
         <dcc:calibrationLocations><!--00150-->
-            <dcc:calibrationLocation id="">
+            <dcc:calibrationLocation id="dcc">
                 <dcc:calibrationLocationSites>Innerstädtisch</dcc:calibrationLocationSites>
                 <dcc:location>
                     <dcc:street>Bohlweg</dcc:street><!--91120-->
