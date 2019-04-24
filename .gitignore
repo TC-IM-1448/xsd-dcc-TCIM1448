@@ -66,3 +66,4 @@ local.properties
 
 # JetBrains IDEs
 .idea
+/.project

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="1.9.2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" elementFormDefault="qualified">
+<xs:schema version="1.9.3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" elementFormDefault="qualified">
 
 <xs:import namespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" 
 schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI/SI_Format_v1.0.1.xsd"/>
@@ -73,7 +73,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			<xs:element name="software" maxOccurs="unbounded"><!--1100M-->
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="name" type="xs:string"/><!--11010-->
+						<xs:element name="name" type="dcc:textBlock"/><!--11010-->
 						<xs:element name="release" type="xs:string"/><!--11030-->
 						<xs:element name="description" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded" />            
 					</xs:sequence>
@@ -124,12 +124,12 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 		<xs:sequence>
 			<xs:element name="name" type="dcc:textBlock" />
             <xs:element name="description" type="dcc:textBlock" />
+            <xs:element name="owner" type="dcc:contact" minOccurs="0"/><!--00200-->
             
             <xs:element name="item" maxOccurs="unbounded"><!--1300M-->
 				<xs:complexType>
 					<xs:sequence>
 						<xs:element name="name" type="dcc:textBlock" /><!--13010-->
-						<xs:element name="owner" type="dcc:contact" minOccurs="0"/><!--00200-->
 						
 						<xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/><!--13020-->
 						
@@ -389,7 +389,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			</xs:documentation>
 		</xs:annotation>
 			<xs:sequence>
-				<xs:element name="name" type="dcc:elementStringWithLang" maxOccurs="unbounded"/><!--31010-->
+				<xs:element name="name" type="dcc:textBlock"/><!--31010-->
 				<xs:element name="description" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded"/><!--31020-->
 				<xs:element name="condition" type="dcc:textBlock" minOccurs="0"/><!--31030-->
 				<xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/><!--31040-->
@@ -548,7 +548,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	     	</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" type="dcc:elementStringWithLang" minOccurs="0" maxOccurs="unbounded"/><!--37010-->
+			<xs:element name="name" type="dcc:textBlock" minOccurs="0" /><!--37010-->
 			<xs:choice>
 				<xs:element ref="si:real"/><!--37020-->
 				<xs:element ref="si:realCS"/><!--37030-->
@@ -604,7 +604,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	
 	<xs:complexType name="contact"><!--91300-->
 		<xs:sequence>
-			<xs:element name="name" type="xs:string"/><!--91310-->
+			<xs:element name="name" type="dcc:textBlock"/><!--91310-->
 			<xs:element name="eMail" type="xs:string"/><!--91320-->
 			<xs:element name="location" type="dcc:location" /><!--91330-->
 		</xs:sequence>
@@ -613,7 +613,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 
 	<xs:complexType name="contactNotStrict"><!--91300-->
 		<xs:sequence>
-			<xs:element name="name" type="xs:string"/><!--91310-->
+			<xs:element name="name" type="dcc:textBlock"/><!--91310-->
 			<xs:element name="eMail" type="xs:string" minOccurs="0"/><!--91320-->
 			<xs:element name="location" type="dcc:location" minOccurs="0" /><!--91330-->
 		</xs:sequence>
@@ -623,10 +623,10 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 	<xs:complexType name="hash"><!--91400-->
 		<xs:sequence>
 			<xs:element name="reference" type="dcc:textBlock"/><!--91410-->
-			<xs:element name="referenceID" type="dcc:textBlock"/><!--91420-->
+			<xs:element name="referenceID" type="xs:string"/><!--91420-->
 			<xs:element name="procedure" type="xs:string"/><!--91430-->
 			<xs:element name="value" type="xs:string"/><!--91440-->
-			<xs:element name="linkedReports" type="dcc:hash" minOccurs="0"/><!--91450-->		
+			<xs:element name="linkedReport" type="dcc:hash" minOccurs="0"/><!--91450-->		
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:ID" use="optional"/><!--91400_A_I-->
 	</xs:complexType>
