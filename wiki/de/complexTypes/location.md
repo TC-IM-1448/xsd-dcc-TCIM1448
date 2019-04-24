@@ -20,16 +20,16 @@ Dieser complexType kann zur Darstellung einer Adresse (weltweit) verwendet werde
 ```
 
 ## Hinweise
-1. Die Verwendung von <choice maxOccurs="unbounded"> ist bewusst gewählt. Dadurch können alle Einträge mehrfach und in beliebiger Reihenfolge verwendet werden.
+1. Die Verwendung von <choice maxOccurs="unbounded"> ist bewusst gewÃ¤hlt. Dadurch kÃ¶nnen alle EintrÃ¤ge mehrfach und in beliebiger Reihenfolge verwendet werden.
 
 ## Elemente
 ### [further](wiki/de/complexTypes/textBlock.md)
-Das Element mit den meisten Möglichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
+Das Element mit den meisten Mï¿½glichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
 
 Datentyp: [dcc:textBlock](wiki/de/complexTypes/textBlock.md)
 
 ### street
-Angabe der Straße
+Angabe der Straï¿½e
 
 Datentyp: xs:String
 
@@ -72,13 +72,13 @@ Datentyp: [dcc:descriptionData](wiki/de/complexTypes/byteDataBlock.md)
 --keine--
 
 ## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](wiki/de/namespace.md) dargestellt.
+Die Beispiele werden der Ãœbersichtlichkeit halber ohne [Namespace](wiki/de/namespace.md) dargestellt.
 
 
-### Einfaches Beispiel einer Adresse, ohne Name (o.ä.)
+### Einfaches Beispiel einer Adresse, ohne Name (o. Ã¤.)
 ```xml
 <location>
-    <street>Herstellerstraße</street>
+    <street>HerstellerstraÃŸe</street>
     <streetNo>42</streetNo>
     <postCode>12345</postCode>
     <city>Herstellerort</city>
@@ -86,14 +86,14 @@ Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](wiki/de/names
 </location>
 ```            
 
-### Einfaches Beispiel einer Adresse, ohne Name (o.ä.) - Reihenfolge ist egal!
+### Einfaches Beispiel einer Adresse, ohne Name (o.Ã¤.) - Reihenfolge ist egal!
 ```xml
 <location>
     <countryCode>DE</countryCode>
     <streetNo>42</streetNo>
     <postCode>12345</postCode>
     <city>Herstellerort</city>
-    <street>Herstellerstraße</street>
+    <street>HerstellerstraÃŸe</street>
 </location>
 ```            
 
@@ -120,11 +120,11 @@ Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](wiki/de/names
         <content lang="en">Division 1 Mechanics and Acoustics</content><!--91110-->
     </further>
     <further>
-        <content lang="de">Fachbereich 1.1 Masse – Weitergabe der Einheit</content><!--91110-->
+        <content lang="de">Fachbereich 1.1 Masse - Weitergabe der Einheit</content><!--91110-->
         <content lang="en">Department 1.1 Mass - Dissemination of the Unit</content><!--91110-->
     </further>
     <further>
-        <content lang="de">Arbeitsgruppe 1.15 Metrologie in der Wägetechnik</content><!--91110-->
+        <content lang="de">Arbeitsgruppe 1.15 Metrologie in der WÃ¤getechnik</content><!--91110-->
         <content lang="en">Working Group 1.15 Metrology in Weighing Technology</content><!--91110-->
     </further>
     <further>
