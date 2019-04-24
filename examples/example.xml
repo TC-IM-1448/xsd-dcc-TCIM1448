@@ -14,7 +14,9 @@
         <dcc:dccSoftware><!--00110-->
 
             <dcc:software id="Notepad_plusplus"><!--1100M-->
-                <dcc:name>Notepad++ (32-bit)</dcc:name><!--11010-->
+                <dcc:name>
+                	<dcc:content>Notepad++ (32-bit)</dcc:content>
+                </dcc:name><!--11010-->
                 <dcc:release>v7.5.8</dcc:release><!--11030-->
                 <dcc:description id="dcc44-1">
                     <dcc:content lang="de">Hier steht Text.</dcc:content>
@@ -27,7 +29,9 @@
             </dcc:software>
 
             <dcc:software id="Altova_XML"><!--1100M-->
-                <dcc:name>Altova XMLSpy</dcc:name><!--11010-->
+                <dcc:name>
+                	<dcc:content>Altova XMLSpy</dcc:content>
+                </dcc:name><!--11010-->
                 <dcc:release>2018 SP 1 (x64) Enterprise Edition</dcc:release><!--11030-->
             </dcc:software>
 
@@ -79,7 +83,9 @@
                 </dcc:description>
 
                 <dcc:manufacturer><!--13050-->
-                    <dcc:name>Hersteller</dcc:name><!--91310-->
+                    <dcc:name>
+                    	<dcc:content>Hersteller</dcc:content>
+                    </dcc:name><!--91310-->
                     <dcc:eMail>info@hersteller.de</dcc:eMail><!--91320-->
                     <dcc:location><!--91330-->
                         <dcc:street>Herstellerstraße</dcc:street><!--91120-->
@@ -148,7 +154,9 @@
                 </dcc:description>
 
                 <dcc:manufacturer><!--13050-->
-                    <dcc:name>kein Hersteller bekannt</dcc:name><!--91310-->
+                    <dcc:name>
+                    	<dcc:content>kein Hersteller bekannt</dcc:content>
+                    </dcc:name><!--91310-->
                 </dcc:manufacturer>
 
                 <dcc:identifications><!--13060-->
@@ -188,7 +196,9 @@
 
         <dcc:calibrationLaboratory><!--00140-->
             <dcc:contact><!--91300-->
-                <dcc:name>Physikalisch-Technische Bundesanstalt (PTB)</dcc:name><!--91310-->
+                <dcc:name>
+                	<dcc:content>Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
+                </dcc:name><!--91310-->
                 <dcc:eMail>info@ptb.de</dcc:eMail><!--91320-->
                 <dcc:location><!--91330-->
                     <dcc:further id="zusatz">
@@ -227,7 +237,9 @@
         </dcc:respPersons>
 
         <dcc:customer><!--00180-->
-            <dcc:name>Physikalisch-Technische Bundesanstalt (PTB)</dcc:name><!--91310-->
+            <dcc:name>
+            	<dcc:content>Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
+            </dcc:name><!--91310-->
             <dcc:eMail>info@ptb.de</dcc:eMail><!--91320-->
 
             <dcc:location><!--91330-->
@@ -399,17 +411,22 @@
         <dcc:influenceConditions><!--00301-->
 
             <dcc:influenceCondition lang="de" id="Umgebungsbedingungen"><!--3010M-->
-                <dcc:name>Umgebungsbedingungen</dcc:name><!--31010-->
+                <dcc:name>
+                	<dcc:content>Umgebungsbedingungen</dcc:content>
+                </dcc:name><!--31010-->
                 <dcc:outcome><!--32000-->
 
                     <dcc:data><!--32060-->
 
                         <dcc:dccList><!--35000-->
-                            <dcc:name>Die Kalibrierung wurde bei folgenden Umgebungsbedingungen ausgeführt:
+                            <dcc:name>
+                            	<dcc:content>Die Kalibrierung wurde bei folgenden Umgebungsbedingungen ausgeführt:</dcc:content>
                             </dcc:name><!--35010-->
 
                             <dcc:dccList><!--35000-->
-                                <dcc:name>Temperatur</dcc:name><!--35010-->
+                                <dcc:name>
+                                	<dcc:content>Temperatur</dcc:content>
+                                </dcc:name><!--35010-->
                                 <dcc:quantity><!--35040-->
                                     <si:real>
                                         <si:value>21.4,21.5</si:value>
@@ -423,7 +440,9 @@
                             </dcc:dccList>
 
                             <dcc:dccList><!--35000-->
-                                <dcc:name>rel. Luftfeuchte</dcc:name><!--35010-->
+                                <dcc:name>
+                                	<dcc:content>rel. Luftfeuchte</dcc:content>
+                                </dcc:name><!--35010-->
                                 <dcc:quantity><!--35040-->
                                     <si:real>
                                         <si:value>46,47</si:value>
@@ -437,7 +456,9 @@
                             </dcc:dccList>
 
                             <dcc:dccList><!--35000-->
-                                <dcc:name>Luftdruck</dcc:name><!--35010-->
+                                <dcc:name>
+                                	<dcc:content>Luftdruck</dcc:content>
+                                </dcc:name><!--35010-->
                                 <dcc:quantity><!--35040-->
                                     <si:real>
                                         <si:value>1007.0,1009.9</si:value>
@@ -457,17 +478,22 @@
 
 
             <dcc:influenceCondition lang="en" id="Ambient_conditions"><!--3010M-->
-                <dcc:name>Ambient conditions</dcc:name><!--31010-->
+                <dcc:name>
+                	<dcc:content>Ambient conditions</dcc:content>
+                </dcc:name><!--31010-->
                 <dcc:outcome><!--32000-->
 
                     <dcc:data><!--32060-->
 
                         <dcc:dccList><!--35000-->
-                            <dcc:name>The calibration was carried out under the following ambient conditions:
+                            <dcc:name>
+                            	<dcc:content>The calibration was carried out under the following ambient conditions:</dcc:content>
                             </dcc:name><!--35010-->
 
                             <dcc:dccList><!--35000-->
-                                <dcc:name>temperature</dcc:name><!--35010-->
+                                <dcc:name>
+                                	<dcc:content>temperature</dcc:content>
+                                </dcc:name><!--35010-->
                                 <dcc:quantity><!--35040-->
                                     <si:real>
                                         <si:value>21.4,21.5</si:value>
@@ -481,7 +507,9 @@
                             </dcc:dccList>
 
                             <dcc:dccList><!--35000-->
-                                <dcc:name>relative humidity</dcc:name><!--35010-->
+                                <dcc:name>
+                               		<dcc:content>relative humidity</dcc:content>
+                               	</dcc:name><!--35010-->
                                 <dcc:quantity><!--35040-->
                                     <si:real>
                                         <si:value>46,47</si:value>
@@ -495,7 +523,9 @@
                             </dcc:dccList>
 
                             <dcc:dccList><!--35000-->
-                                <dcc:name>air pressure</dcc:name><!--35010-->
+                                <dcc:name>
+                                	<dcc:content>air pressure</dcc:content>
+                                </dcc:name><!--35010-->
                                 <dcc:quantity><!--35040-->
                                     <si:real>
                                         <si:value>1007.0,1009.9</si:value>
@@ -516,10 +546,10 @@
 
         <dcc:results><!--00306-->
             <dcc:result><!--3060M-->
-                <dcc:name lang="de">Konventioneller Wägewert und Fehlergrenze entsprechend OIML R 111
-                </dcc:name><!--31010-->
-                <dcc:name lang="en">Conventional mass and maximum permissible error corresponding to OIML R 111
-                </dcc:name><!--31010-->
+                <dcc:name>
+                	<dcc:content lang="de">Konventioneller Wägewert und Fehlergrenze entsprechend OIML R 111</dcc:content>
+	                <dcc:content lang="en">Conventional mass and maximum permissible error corresponding to OIML R 111</dcc:content><!--31010-->
+                </dcc:name>
                 <dcc:outcome><!--32000-->
                     <dcc:data id="OIML_R_111"
                               comment="Conventional mass and maximum permissible error corresponding to OIML R 111"><!--32060-->
@@ -550,8 +580,10 @@
             </dcc:result>
 
             <dcc:result><!--3060M-->
-                <dcc:name lang="de">Masse</dcc:name><!--31010-->
-                <dcc:name lang="en">mass</dcc:name><!--31010-->
+                <dcc:name>
+                	<dcc:content lang="de">Masse</dcc:content><!--31010-->
+                	<dcc:content lang="en">mass</dcc:content><!--31010-->
+                </dcc:name>
                 <dcc:outcome><!--32000-->
                     <dcc:data id="Mass" comment="Mass"><!--32060-->
                         <dcc:quantity><!--33010-->
@@ -568,8 +600,10 @@
             </dcc:result>
 
             <dcc:result><!--3060M-->
-                <dcc:name lang="de">Dichte</dcc:name><!--31010-->
-                <dcc:name lang="en">density</dcc:name><!--31010-->
+                <dcc:name>
+                	<dcc:content lang="de">Dichte</dcc:content><!--31010-->
+                	<dcc:content lang="en">density</dcc:content><!--31010-->
+                </dcc:name>
                 <dcc:description>
                     <dcc:content lang="de">Dichte bei gegebener Temperatur</dcc:content><!--92110-->
                     <dcc:content lang="en">density at given temperature</dcc:content><!--92110-->
@@ -598,8 +632,10 @@
             </dcc:result>
 
             <dcc:result><!--3060M-->
-                <dcc:name lang="de">Volumen</dcc:name><!--31010-->
-                <dcc:name lang="en">Volume</dcc:name><!--31010-->
+                <dcc:name>
+                	<dcc:content lang="de">Volumen</dcc:content><!--31010-->
+                	<dcc:content lang="en">Volume</dcc:content><!--31010-->
+                </dcc:name>
                 <dcc:description>
                     <dcc:content lang="de">Volumen bei gegebener Temperatur</dcc:content><!--92110-->
                     <dcc:content lang="en">volume at given temperature</dcc:content><!--92110-->
