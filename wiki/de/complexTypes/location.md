@@ -23,38 +23,47 @@
 ## Elemente
 ### [further](wiki/de/complexTypes/textBlock.md)
 Das Element mit den meisten Möglichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
+
 Datentyp: [dcc:textBlock](wiki/de/complexTypes/textBlock.md)
 
 ### street
 Angabe der Straße
+
 Datentyp: xs:String
 
 ### streetNo
 Angabe der Hausnummer
+
 Datentyp: xs:String
 
 ### postOfficeBox
 Angabe des Postfachs
+
 Datentyp: xs:String
 
 ### postCode
 Angabe der PostLeitZahl
+
 Datentyp: xs:String
 
 ### city
 Angabe der Stadt
+
 Datentyp: xs:String
 
 ### state
 Angabe des Bundeslandes
+
 Datentyp: xs:String
 
 ### [countryCode](wiki/de/complexTypes/elementStringISO3166.md)
 Angabe des Landes
+
 Datentyp: [dcc:elementStringISO3166](wiki/de/complexTypes/elementStringISO3166.md)
 
 ### [descriptionData](wiki/de/complexTypes/byteDataBlock.md)
 Angabe einer Datei
+
 Datentyp: [dcc:descriptionData](wiki/de/complexTypes/byteDataBlock.md)
 
 ## Attribute
