@@ -20,16 +20,16 @@ Dieser complexType kann zur Darstellung einer Adresse (weltweit) verwendet werde
 ```
 
 ## Hinweise
-1. Die Verwendung von <choice maxOccurs="unbounded"> ist bewusst gewählt. Dadurch können alle Einträge mehrfach und in beliebiger Reihenfolge verwendet werden.
+1. Die Verwendung von `<choice maxOccurs="unbounded">` ist bewusst gewählt. Dadurch können alle Einträge mehrfach und in beliebiger Reihenfolge verwendet werden.
 
 ## Elemente
 ### [further](wiki/de/complexTypes/textBlock.md)
-Das Element mit den meisten M�glichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
+Das Element mit den meisten Möglichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
 
 Datentyp: [dcc:textBlock](wiki/de/complexTypes/textBlock.md)
 
 ### street
-Angabe der Stra�e
+Angabe der Straße
 
 Datentyp: xs:String
 

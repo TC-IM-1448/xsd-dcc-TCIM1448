@@ -9,10 +9,10 @@
 ## Hinweise
 
 ## Elemente
-### [further](wiki/de/complexTypes/textBlock.md)
+### [further](textBlock.md)
 Das Element mit den meisten M�glichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
 
-Datentyp: [dcc:textBlock](wiki/de/complexTypes/textBlock.md)
+Datentyp: [dcc:textBlock](textBlock.md)
 
 ## Attribute
 --keine--
