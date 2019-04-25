@@ -67,4 +67,4 @@ local.properties
 # JetBrains IDEs
 .idea
 /.project
-/node_modules/
+node_modules/

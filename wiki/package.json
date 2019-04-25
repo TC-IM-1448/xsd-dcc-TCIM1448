@@ -1,5 +1,5 @@
 {
-  "name": "xsd-dcc",
+  "name": "xsd-dcc-wiki",
   "version": "1.9.3",
   "description": "DCC",
   "private": true,
@@ -8,8 +8,8 @@
     "url": "https://gitlab1.ptb.de/abteilung-1/dcc/xsd-dcc.git"
   },
   "scripts": {
-    "wiki:dev": "vuepress dev wiki",
-    "wiki:build": "vuepress build wiki"
+    "dev": "vuepress dev",
+    "build": "vuepress build"
   },
   "devDependencies": {
     "vuepress": "^0.14.11"
