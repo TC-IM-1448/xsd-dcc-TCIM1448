@@ -2,7 +2,7 @@
 
 Dieser complexType kann zur Darstellung einer Adresse (weltweit) verwendet werden. Durch die flexible Verwendung der Felder (Reihenfolge und Anzahl ist beliebig) kann jede Adresse die es Weltweit gibt abgebildet werden. Im Element further ist die Mehrsprachigkeit enthalten.
 
-## Der Aufbau
+## Aufbau
 ```xml
 <xs:complexType name="location">
 	<xs:choice maxOccurs="unbounded">
@@ -23,10 +23,10 @@ Dieser complexType kann zur Darstellung einer Adresse (weltweit) verwendet werde
 1. Die Verwendung von `<choice maxOccurs="unbounded">` ist bewusst gewählt. Dadurch können alle Einträge mehrfach und in beliebiger Reihenfolge verwendet werden.
 
 ## Elemente
-### [further](wiki/de/complexTypes/textBlock.md)
+### [further](textBlock.md)
 Das Element mit den meisten Möglichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
 
-Datentyp: [dcc:textBlock](wiki/de/complexTypes/textBlock.md)
+Datentyp: [dcc:textBlock](textBlock.md)
 
 ### street
 Angabe der Straße
@@ -58,21 +58,21 @@ Angabe des Bundeslandes
 
 Datentyp: xs:String
 
-### [countryCode](wiki/de/complexTypes/elementStringISO3166.md)
+### [countryCode](elementStringISO3166.md)
 Angabe des Landes
 
-Datentyp: [dcc:elementStringISO3166](wiki/de/complexTypes/elementStringISO3166.md)
+Datentyp: [dcc:elementStringISO3166](elementStringISO3166.md)
 
-### [descriptionData](wiki/de/complexTypes/byteDataBlock.md)
+### [descriptionData](byteDataBlock.md)
 Angabe einer Datei
 
-Datentyp: [dcc:descriptionData](wiki/de/complexTypes/byteDataBlock.md)
+Datentyp: [dcc:descriptionData](byteDataBlock.md)
 
 ## Attribute
 --keine--
 
 ## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](wiki/de/namespace.md) dargestellt.
+Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
 
 
 ### Einfaches Beispiel einer Adresse, ohne Name (o. ä.)

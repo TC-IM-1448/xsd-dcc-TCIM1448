@@ -2,7 +2,7 @@
 
 Verfügbare Sprachen:
 
-## [Deutsch](wiki/de/README.md)
+[Deutsch](de/README.md)
 
 
-## [Englisch](wiki/en/README.md)
+[Englisch](en/README.md)

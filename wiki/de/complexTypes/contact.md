@@ -1,7 +1,7 @@
 # complexType element
 
 
-## Der Aufbau
+## Aufbau
 ```xml
 
 ```
@@ -10,7 +10,7 @@
 
 ## Elemente
 ### [further](textBlock.md)
-Das Element mit den meisten M�glichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
+Das Element mit den meisten Möglichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
 
 Datentyp: [dcc:textBlock](textBlock.md)
 
@@ -18,7 +18,7 @@ Datentyp: [dcc:textBlock](textBlock.md)
 --keine--
 
 ## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](wiki/de/namespace.md) dargestellt.
+Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
 
 
 ### Einfaches Beispiel einer Adresse, ohne Name (o. ä.)

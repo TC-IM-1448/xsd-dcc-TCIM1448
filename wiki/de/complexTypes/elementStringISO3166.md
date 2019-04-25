@@ -1,8 +1,8 @@
 # complexType elementStringISO3166
 
-Dieser complexType wird zur Darstellung von LänderKürzeln nach ISO 3166 verwendet.
+Dieser complexType wird zur Darstellung von LÃ¤nderKÃ¼rzeln nach ISO 3166 verwendet.
 
-## Der Aufbau
+## Aufbau
 ```xml
 <xs:simpleType name="elementStringISO3166">
 	<xs:restriction base="xs:string">

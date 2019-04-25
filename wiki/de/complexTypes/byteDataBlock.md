@@ -1,8 +1,8 @@
 # complexType byteDataBlock
 
-Dieser complexType wird zur Darstellung einer Binärdatei (PDF, DOCX, XLSX, etc.) verwendet.
+Dieser complexType wird zur Darstellung einer BinÃ¤rdatei (PDF, DOCX, XLSX, etc.) verwendet.
 
-## Der Aufbau
+## Aufbau
 ```xml
 <xs:complexType name="byteDataBlock">
 	<xs:sequence>
@@ -20,8 +20,8 @@ Dieser complexType wird zur Darstellung einer Binärdatei (PDF, DOCX, XLSX, etc.)
 ## Attribute
 
 ### ID
-Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird. 
+Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermÃ¶glicht wird. 
 
-Datentyp: [xs:ID](wiki/de/xsd/xs-ID.md)
+Datentyp: [xs:ID](../xsd/xs-ID.md)
 
 
