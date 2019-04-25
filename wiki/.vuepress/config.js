@@ -1,13 +1,21 @@
 module.exports = {
     dest: 'vuepress',
+    serviceWorker: true,
+    markdown: {
+        lineNumbers: true
+    },
     locales: {
         '/de/': {
             lang: 'de-DE',
             title: 'Digitaler Kalibrierschein',
             description: 'Wiki für den DCC'
+        },
+        '/en/': {
+            lang: 'en-US',
+            title: 'Digital Calibration Certificate',
+            description: 'Wiki for the DCC'
         }
     },
-    serviceWorker: true,
     themeConfig: {
         repo: 'https://gitlab1.ptb.de/abteilung-1/dcc/xsd-dcc',
         editLinks: true,
@@ -27,7 +35,7 @@ module.exports = {
                 },
                 nav: [
                     {
-                        text: 'AdministrativeData',
+                        text: 'Administrative Data',
                         link: '/de/administrativeData/',
                     },
                     {
@@ -39,6 +47,11 @@ module.exports = {
                         link: '/de/measurementResults/'
                     },
                 ],
+                sidebar: 'auto'
+            },
+            '/en/': {
+                label: 'English',
+                editLinkText: 'Edit this Page on GitLab!',
                 sidebar: 'auto'
             }
         }
