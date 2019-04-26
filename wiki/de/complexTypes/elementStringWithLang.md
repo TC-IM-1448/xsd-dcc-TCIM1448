@@ -2,7 +2,7 @@
 
 Dieser complexType wird zur Darstellung von Text mit einer Angabe der Sprache (lang) und einer ID verwendet.
 
-## Der Aufbau
+## Aufbau
 ```xml
 <xs:complexType name="elementStringWithLang">
 	<xs:simpleContent>

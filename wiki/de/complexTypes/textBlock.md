@@ -2,7 +2,7 @@
 
 Dieser complexType kann zur Darstellung von beliebigem Text verwendet werden. Im Element content ist die Mehrsprachigkeit enthalten.
 
-## Der Aufbau
+## Aufbau
 ```xml
 <xs:complexType name="textBlock">
 	<xs:sequence>
@@ -16,21 +16,21 @@ Dieser complexType kann zur Darstellung von beliebigem Text verwendet werden. Im
 Das Attribut "lang" ist bewusst nicht mehr am Element "textBlock" enthalten. Dadurch kann eine einheitliche Darstellung der Mehrsprachigkeit am Element "content" erreicht werden. 
 
 ## Elemente
-### [elementStringWithLang](wiki/de/complexTypes/elementStringWithLang.md)
-Das Element wird zum Eintragen von jeglichem Text verwendet. Über den Datentyp wird das Attribut "lang" für die Mehrsprachigkeit implementiert.
+### [elementStringWithLang](elementStringWithLang.md)
+Das Element wird zum Eintragen von jeglichem Text verwendet. Ãœber den Datentyp wird das Attribut "lang" fÃ¼r die Mehrsprachigkeit implementiert.
 
-Datentyp: [dcc:elementStringWithLang](wiki/de/complexTypes/elementStringWithLang.md)
+Datentyp: [dcc:elementStringWithLang](elementStringWithLang.md)
 
 
 ## Attribute
 
 ### ID
-Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird. 
+Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermÃ¶glicht wird. 
 
-Datentyp: [xs:ID](wiki/de/xsd/xs-ID.md)
+Datentyp: [xs:ID](../xsd/xs-ID.md)
 
 ## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](wiki/de/namespace.md) dargestellt.
+Die Beispiele werden der Ãœbersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
 
 
 ### Einfaches Beispiel ohne Mehrsprachigkeit
