@@ -122,9 +122,9 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
 			</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
-			<xs:element name="name" type="dcc:textBlock" />
-            <xs:element name="description" type="dcc:textBlock" />
-            <xs:element name="owner" type="dcc:contact" minOccurs="0"/><!--00200-->
+			<xs:element name="name" type="dcc:textBlock" minOccurs="0" />
+            <xs:element name="description" type="dcc:textBlock" minOccurs="0" />
+            <xs:element name="owner" type="dcc:contact" minOccurs="0" /><!--00200-->
             
             <xs:element name="item" maxOccurs="unbounded"><!--1300M-->
 				<xs:complexType>
