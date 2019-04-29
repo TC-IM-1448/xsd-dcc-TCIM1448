@@ -34,7 +34,7 @@ Wesentliche Informationen zur Identifizierung des Kalibriergutes sowie der globa
 
 ## Hinweise
 
-### 1
+### 1. Hinweis
 Wir setzen uns bewusst über die DIN ISO 17025 hinweg, indem wir die Elemente "endPerformanceDate" und "beginPerformanceDate" als Mandatory definieren. In der 17025 steht drin: Beide Angaben können weggelassen werden, wenn es begründet wird. Aber, es müssen diese beiden Angaben beim Ausführenden der Kalibrierung vorgehalten werden. 
 
 Wenn es nur einen Wert gibt, müssen beide Felder mit einem identischen Wert gefüllt werden!
