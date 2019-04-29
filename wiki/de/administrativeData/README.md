@@ -27,7 +27,7 @@ Es ist der Ring 1.
 ### [dccSoftware](dccSoftware.md)
 Wesentlichen Informationen zur Identifizierung der eingesetzten Software zur Erstellung und Bearbeitung des DCC sind hier hinterlegt. 
 
-Welche Software (mit Versionsangabe) wurde für die Erstellung verwendet. Hieraus können Rückschlüsse gezogen werden, bei fehlerhaftem XML. Diese Angabe ist z. B. für die Fehlersuche imens wichtig.
+Welche Software (mit Versionsangabe) wurde für die Erstellung verwendet. Hieraus können Rückschlüsse gezogen werden, bei fehlerhaftem XML. Diese Angabe ist z. B. für die Fehlersuche immens wichtig.
 
 ### [coreData](coreData.md)
 Wesentliche Informationen zur Identifizierung des Kalibriergutes sowie der globalen Einordnung des Kalibrierscheins.
