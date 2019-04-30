@@ -8,45 +8,46 @@ Beteiligte
 T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J.-H. Loewe, Ch. Schlegel
 
 
-Thema 
+**Thema**
+
 Diskussion measurementResults Teil
 
-Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
-•	dataBlock			                ja	
-•	Typ der “condition“ Elemente		ja
-•	usedSoftware				        ja
-•	usedMethods				            ja
-•	metrologicallyTraceability		    ja
+#### Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
+*	dataBlock			                ja	
+*	Typ der “condition“ Elemente		ja
+*	usedSoftware				        ja
+*	usedMethods				            ja
+*	metrologicallyTraceability		    ja
 
 
-Übersicht der getroffenen Entscheidungen
+#### Übersicht der getroffenen Entscheidungen
 
-Diskussion outcomeBlock
+##### Diskussion outcomeBlock
 * **Entscheidung:** Das Unterelement dataBlock in outcomeBlock wird durch dcc:quantity und dcc:list ersetzt (Vereinfachung).
 * **Entscheidung:** Der Typ outcomeBlock wird in dataBlock umbenannt.
 
-Diskussion results
+##### Diskussion results
 * **Entscheidung:** Element outcome wird in data umbenannt und bekommt den Typ dataBlock.
 
-Diskussion finale Struktur influenceConditions
+##### Diskussion finale Struktur influenceConditions
 * **Entscheidung:** Element outcome wird in data umbenannt und bekommt den Typ dataBlock.
 * **Entscheidung:** Die Unterelemente condition und descriptionData werden entfernt.
 * **Hinweis:** Die Informationen aus dem Element descriptionData können weiterhin im Unterelement data gegeben werden (Baukastenprinzip).
 * **Entscheidung:** Das Element description wird optional und nur einmal angebar gesetzt.
 * **Entscheidung:** Das Attribut "lang" für die Mehrsprachigkeit wird entfernt.
 
-Diskussion usedSoftware
+##### Diskussion usedSoftware
 * **Entscheidung:** Element usedSoftware wie dccSoftware im administrativen Teil definiert.
 * **Entscheidung:** Element usedSoftware wird nach influenceCondition verschoben. Dort steht es auf der gleichen Ebene wie influenceCondition.
 
-Diskussion usedmethod
+##### Diskussion usedmethod
 * **Entscheidung:** Unterelemente name, description und norm beibehalten.
 * **Entscheidung:** Element descriptionData entfernt. 
 * **Entscheidung:** Element usedMethods kapselt die einzelnen usedMethod Elemente.
 * **Entscheidung:** usedMethods hat die globale Positionierung im Messergebnisteil und zusätzlich die lokale Position unter dcc:quantity und dcc:list wie die influenceConditions.
 
 
-Diskussion metrologicallyTraceable
+##### Diskussion metrologicallyTraceable
 * **Entscheidung:** Zunächst wird metrologicallyTraceability auskommentiert (für Workshop 2019).
 * **Entscheidung:** Die auskommentierte struktur wird überarbeitet. hinzu kommen die Komponenten name (Typ dcc:textBlock), description (dcc:textBlock) und identifier (dcc:hash). Entfernt werden alle alten Komponenten und die boolschen Flags.
 
