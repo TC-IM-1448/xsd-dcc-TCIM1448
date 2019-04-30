@@ -13,11 +13,11 @@ T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J.-H. Loewe, 
 Diskussion measurementResults Teil
 
 #### Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
-*	dataBlock			                ja	
-*	Typ der “condition“ Elemente		ja
-*	usedSoftware				        ja
-*	usedMethods				            ja
-*	metrologicallyTraceability		    ja
+*	dataBlock                       ja	
+*	Typ der “condition“ Elemente    ja
+*	usedSoftware                    ja
+*	usedMethods                     ja
+*	metrologicallyTraceability      ja
 
 
 #### Übersicht der getroffenen Entscheidungen
