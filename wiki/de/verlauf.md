@@ -64,39 +64,35 @@ T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J.-H. Loewe, 
 Thema 
 Diskussion measurementResults Teil
 
-Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
-•	dataBlock				ja
-•	 „Flag System“				ja
-•	Typ der “condition“ Elemente		ja 
-•	usedSoftware				nein
-•	usedMethods				nein
-•	sampledMaterial und samlingDate	ja
-•	calibrationLocations			ja
-•	externals				ja
-•	metrologicallyTraceability		nein
+### Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
+*	dataBlock				ja
+*	 „Flag System“				ja
+*	Typ der “condition“ Elemente		ja 
+*	usedSoftware				nein
+*	usedMethods				nein
+*	sampledMaterial und samlingDate	ja
+*	calibrationLocations			ja
+*	externals				ja
+*	metrologicallyTraceability		nein
 
 
-Übersicht der getroffenen Entscheidungen
+###Übersicht der getroffenen Entscheidungen
 
 Diskussion items im administrativen Teil
-•	Entscheidung: globale Angabe name, description und owner sind optional. Bei dem einzelnen item muss immer der name angegeben werden.
+*	Entscheidung: globale Angabe name, description und owner sind optional. Bei dem einzelnen item muss immer der name angegeben werden.
 
 Diskussion influenceCondition
-•	Entscheidung: Einführung einer Enumeration mit dem calibration state (beforeRepair, afterAdjustment,…) im Typ der condition. Die Komponente heißt dcc:state. Die genaue Integration in influenceCondition wurde noch nicht festgelegt, da influenceCondition noch diskutiert wird.
-•	Hinweis: Das state Feld ist optional. Wenn es nicht angegeben wird, handelt es sich um eine influenceCondition während einer Standardkalibrierung ohne Adjustement und Repair.
+*	Entscheidung: Einführung einer Enumeration mit dem calibration state (beforeRepair, afterAdjustment,…) im Typ der condition. Die Komponente heißt dcc:state. Die genaue Integration in influenceCondition wurde noch nicht festgelegt, da influenceCondition noch diskutiert wird.
+*	Hinweis: Das state Feld ist optional. Wenn es nicht angegeben wird, handelt es sich um eine influenceCondition während einer Standardkalibrierung ohne Adjustement und Repair.
 
 Diskussion Typ von outcome
-•	Entscheidung: Unterelemente image und chart werden mit byteData vereint zum Element byteData.
+*	Entscheidung: Unterelemente image und chart werden mit byteData vereint zum Element byteData.
 
 Diskussion weitere Struktur measurementResults Teil
-•	Entscheidung: Element condition, dass aus dem administrativen Teil von item zu den Messergebnissen verschoben wurde wird gelöscht.
-•	Entscheidung: Elemente sampledMaterial und samplingDate bleiben auskommentiert und werden in der Workshop Juni 2019 Version noch nicht behandelt.
-•	Entscheidung: Element externals bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
-•	Entscheidung: Element calibrationLocations bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
-
-
-
-
+*	Entscheidung: Element condition, dass aus dem administrativen Teil von item zu den Messergebnissen verschoben wurde wird gelöscht.
+*	Entscheidung: Elemente sampledMaterial und samplingDate bleiben auskommentiert und werden in der Workshop Juni 2019 Version noch nicht behandelt.
+*	Entscheidung: Element externals bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
+*	Entscheidung: Element calibrationLocations bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
 
 
 
@@ -109,17 +105,17 @@ T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, J.-H. Loewe
 Thema 
 Diskussion Tabellen und measurementResults Teile
 
-Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
-•	dataBlock				nein
-•	 „Flag System“				nein
-•	Typ der “condition“ Elemente		ja 
-•	usedSoftware				nein
-•	usedMethods				nein
-•	sampledMaterial und samlingDate	nein
-•	calibrationLocations			nein
-•	externals				nein
-•	metrologicallyTraceability		nein
-•	Konzepte Darstellung von Tabellen	ja
+### Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
+*	dataBlock				nein
+*	 „Flag System“				nein
+*	Typ der “condition“ Elemente		ja 
+*   usedSoftware				nein
+*	usedMethods				nein
+*	sampledMaterial und samlingDate	nein
+*	calibrationLocations			nein
+*	externals				nein
+*	metrologicallyTraceability		nein
+*	Konzepte Darstellung von Tabellen	ja
 
 
 Übersicht der getroffenen Entscheidungen
