@@ -1,6 +1,18 @@
 # Der Verlauf der Entscheidungen
 
 
+## nächste Besprechung
+
+* usedMethods in influenceCondition: sollte eigentlich in sigular ausgeführt werden. Wird aber in measurementResult im plural verwendet. An beiden Stellen besser gleich verwenden? oder doch unterschiedliche Implementierungen verwenden?
+* usedSoftware in influenceCondition: selbes Problem in zusammenhang mit dccSoftware (selber Datentyp)
+* calibrationLocations in influenceCondition: wäre dann (sofern die beiden obigen Punkte als liste bleiben) als einziges keine Liste = schlechtes Design.
+
+
+
+
+
+
+
 
 ## DCC Besprechung und Designentscheidungen vom30.04.2019
 
