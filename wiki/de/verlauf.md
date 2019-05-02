@@ -18,7 +18,7 @@
 ## DCC Besprechung und Designentscheidungen vom30.04.2019
 
 Beteiligte
-T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J.-H. Loewe, Ch. Schlegel
+T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J. Loewe, Ch. Schlegel
 
 
 **Thema**
@@ -71,7 +71,7 @@ Diskussion measurementResults Teil
 ## DCC Besprechung und Designentscheidungen vom 29.04.2019
 
 Beteiligte
-T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J.-H. Loewe, Ch. Schlegel
+T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J. Loewe, Ch. Schlegel
 
 
 Thema 
@@ -112,7 +112,7 @@ Diskussion weitere Struktur measurementResults Teil
 ## DCC Besprechung und Designentscheidungen vom 25.04.2019
 
 Beteiligte
-T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, J.-H. Loewe
+T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, J. Loewe
 
 
 Thema 
@@ -148,7 +148,7 @@ Struktur measurementResultsTeil
 ## DCC Besprechung und Designentscheidungen vom 24.04.2019
 
 Beteiligte
-T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, J.-H. Loewe A. Scheibner, T. Wiedenhöfer
+T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, J. Loewe, A. Scheibner, T. Wiedenhöfer
 
 
 Thema 
@@ -192,7 +192,7 @@ Diskussion Tabellen für den measurementResults Teil
 ## DCC Besprechung und Designentscheidungen vom 02.04.2019
 
 Beteiligte
-S. Hackel, F. Härtig, W. Heeren, D. Hutzschenreuter, J. Jagieniak, J.-H. Loewe A. Scheibner, M. Spoors, T. Wiedenhöfer
+S. Hackel, F. Härtig, W. Heeren, D. Hutzschenreuter, J. Jagieniak, J. Loewe, A. Scheibner, M. Spoors, T. Wiedenhöfer
 
 
 Thema 
@@ -248,7 +248,7 @@ Diskussion Erweiterung statement
 ## DCC Besprechung und Designentscheidungen vom 29.03.2019
 
 Beteiligte
-T. Bruns, S. Hackel, F. Härtig, W. Heeren, D. Hutzschenreuter, J. Jagieniak, J.-H. Loewe A. Scheibner, M. Spoors, T. Wiedenhöfer
+T. Bruns, S. Hackel, F. Härtig, W. Heeren, D. Hutzschenreuter, J. Jagieniak, J. Loewe, A. Scheibner, M. Spoors, T. Wiedenhöfer
 
 
 Thema 
