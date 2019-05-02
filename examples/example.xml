@@ -28,11 +28,11 @@
                 </dcc:description>
             </dcc:software>
 
-            <dcc:software id="Altova_XML"><!--1100M-->
+            <dcc:software id="GEMIMEG_Tool"><!--1100M-->
                 <dcc:name>
-                	<dcc:content>Altova XMLSpy</dcc:content>
+                	<dcc:content>GEMIMEG Tool</dcc:content>
                 </dcc:name><!--11010-->
-                <dcc:release>2018 SP 1 (x64) Enterprise Edition</dcc:release><!--11030-->
+                <dcc:release>0.0.2</dcc:release><!--11030-->
             </dcc:software>
 
         </dcc:dccSoftware>
@@ -45,27 +45,34 @@
             <dcc:uniqueIdentifier>PTB - 11044 17</dcc:uniqueIdentifier><!--12040-->
             <dcc:beginPerformanceDate>2017-09-20</dcc:beginPerformanceDate><!--12080-->
             <dcc:endPerformanceDate>2017-09-20</dcc:endPerformanceDate><!--12080-->
-
         </dcc:coreData>
 
         <dcc:items>
 
             <dcc:name>
                 <dcc:content lang="de">Gewichtssatz</dcc:content>
+                <!-- TODO: translate -->
             </dcc:name>
             <dcc:description>
-                <dcc:content lang="de">Messaufbau</dcc:content>
-                <dcc:content lang="de">weitere Beschreibung</dcc:content>
+                <dcc:content lang="de">
+                    Messaufbau
+                    weitere Beschreibung
+                </dcc:content>
+                <dcc:content lang="en">
+                    <!-- TODO: translate -->
+                </dcc:content>
             </dcc:description>
-
+            <!-- TODO: konsistente IDs -->
             <dcc:item id="dcc10g"><!--1300M-->
 
                 <dcc:name>
                     <dcc:content lang="de">1 Gewichtstück zu 10 g</dcc:content>
+                    <!-- TODO: translate -->
                 </dcc:name><!--13010-->
 
                 <dcc:description id="Gewicht-10g-Description0"><!--13020-->
                     <dcc:content lang="de">1 Gewichtstück zu 10 g</dcc:content><!--92110-->
+                    <!-- TODO: translate -->
                 </dcc:description>
 
                 <dcc:description id="Gewicht-10g-Description1"><!--13020-->
@@ -133,12 +140,15 @@
 
                 <dcc:name>
                     <dcc:content lang="de">1 Gewichtstück zu 100 g</dcc:content>
+                    <!-- TODO: translate -->
                 </dcc:name><!--13010-->
 
                 <dcc:description id="Gewicht-100g-Description0"><!--13020-->
                     <dcc:content lang="de">1 Gewichtstück zu 100 g</dcc:content><!--92110-->
+                    <!-- TODO: translate -->
                 </dcc:description>
 
+                <!-- TODO: Zusammenfassen zu einem Block -->
                 <dcc:description id="Gewicht-100g-Description1"><!--13020-->
                     <dcc:content lang="de">Aufbewahrung</dcc:content><!--92110-->
                     <dcc:content lang="en">Case</dcc:content><!--92110-->
@@ -163,7 +173,7 @@
 
                     <dcc:identification id="dcc42">
                         <dcc:issuer>manufacturer</dcc:issuer>
-                        <dcc:value>1040917</dcc:value><!--12061-->
+                        <dcc:value>1040918</dcc:value><!--12061-->
                         <dcc:description id="dcc43">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
@@ -172,7 +182,7 @@
 
                     <dcc:identification id="dcc44">
                         <dcc:issuer>other</dcc:issuer>
-                        <dcc:value>PTB4711</dcc:value><!--12061-->
+                        <dcc:value>PTB4712</dcc:value><!--12061-->
                         <dcc:description id="dcc45">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
@@ -181,7 +191,7 @@
 
                     <dcc:identification id="dcc46">
                         <dcc:issuer>customer</dcc:issuer>
-                        <dcc:value>0815</dcc:value><!--12061-->
+                        <dcc:value>0816</dcc:value><!--12061-->
                         <dcc:description id="dcc47">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
@@ -205,9 +215,6 @@
                         <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content>
                         <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content>
                     </dcc:further><!--91110-->
-                    <dcc:further id="lustig">
-                        <dcc:content>4711</dcc:content>
-                    </dcc:further><!--91110-->
                     <dcc:street>Bundesallee</dcc:street><!--91120-->
                     <dcc:streetNo>100</dcc:streetNo><!--91130-->
                     <dcc:postCode>38116</dcc:postCode><!--91150-->
@@ -219,20 +226,24 @@
 
         <dcc:respPersons><!--00160-->
             <dcc:respPerson id="Responsible"><!--1600M-->
-                <dcc:person>Vorname2 Name2</dcc:person><!--16010-->
+                <dcc:person>Vorname1 Name1</dcc:person><!--16010-->
                 <dcc:mainSigner>true</dcc:mainSigner><!--16020-->
-                <dcc:eMailPerson>vorname2.name2@ptb.de</dcc:eMailPerson><!--16050-->
+                <dcc:eMailPerson>vorname1.name1@ptb.de</dcc:eMailPerson><!--16050-->
             </dcc:respPerson>
 
             <dcc:respPerson id="Technician"><!--1600M-->
-                <dcc:person>Vorname3 Name3</dcc:person><!--16010-->
-                <dcc:eMailPerson>vorname3.name3@ptb.de</dcc:eMailPerson><!--16050-->
+                <dcc:person>Vorname2 Name2</dcc:person><!--16010-->
+                <dcc:eMailPerson>vorname2.name2@ptb.de</dcc:eMailPerson><!--16050-->
             </dcc:respPerson>
 
             <dcc:respPerson id="Signature"><!--1600M-->
-                <dcc:person>Vorname4 Name4</dcc:person><!--16010-->
+                <dcc:person>Vorname3 Name3</dcc:person><!--16010-->
                 <dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature><!--16040-->
-                <dcc:eMailPerson>vorname4.name4@ptb.de</dcc:eMailPerson><!--16050-->
+                <dcc:eMailPerson>vorname3.name3@ptb.de</dcc:eMailPerson><!--16050-->
+                <dcc:furtherInfoPerson>
+                    <dcc:content lang="de">Signaturstelle</dcc:content>
+                    <!-- TODO: translate -->
+                </dcc:furtherInfoPerson>
             </dcc:respPerson>
         </dcc:respPersons>
 
@@ -247,6 +258,8 @@
                     <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content><!--91110-->
                     <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content><!--91110-->
                 </dcc:further>
+
+                <!-- TODO: Zusammenfassen zu einem Further Block -->
                 <dcc:further>
                     <dcc:content lang="de">Fachbereich 1.1 Masse – Weitergabe der Einheit</dcc:content><!--91110-->
                     <dcc:content lang="en">Department 1.1 Mass - Dissemination of the Unit</dcc:content><!--91110-->
@@ -268,14 +281,6 @@
         </dcc:customer>
 
         <dcc:statements><!--00230-->
-            <dcc:statement id="st1"><!--2300M-->
-                <dcc:declaration>
-                    <dcc:content lang="de">Ist oben beschädigt.</dcc:content>
-                    <dcc:content lang="en">Has a damage on the Top.</dcc:content>
-                </dcc:declaration><!--23040-->
-                <dcc:refId>100g</dcc:refId>
-            </dcc:statement>
-
             <dcc:statement id="ISO_17025_7.8.2.1_l_de"><!--2300M-->
                 <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm><!--23030-->
                 <dcc:reference>7.8.2.1 l)</dcc:reference><!--23040-->
@@ -295,7 +300,8 @@
             <dcc:statement><!--2300M-->
                 <dcc:convention>Tracebility</dcc:convention>    <!--23020-->
                 <dcc:declaration>
-                    <dcc:content>Die Messung ist rückführbar</dcc:content>
+                    <dcc:content lang="de">Die Messung ist rückführbar</dcc:content>
+                    <!-- TODO: translate -->
                 </dcc:declaration>
                 <dcc:valid>true</dcc:valid><!--23060-->
             </dcc:statement>
@@ -314,6 +320,8 @@
                 </dcc:declaration>
             </dcc:statement>
 
+            <!-- TODO: Statement für Unsicherheit -->
+
         </dcc:statements>
 
     </dcc:administrativeData>
@@ -322,8 +330,8 @@
 
             End of administrativeData part of the DCC
 -->
+    <!-- TODO: an neuste Version des Schemas anpassen -->
     <dcc:measurementResults><!--00300-->
-
         <dcc:usedMethods><!--00170-->
             <dcc:usedMethod><!--1700M-->
                 <dcc:name id="Methode">
