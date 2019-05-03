@@ -313,14 +313,16 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
         </xs:annotation>
         <xs:sequence>
             
+<!-- Diskussion für Singular in nächster Sitzung -->
+
 <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
-            <xs:element name="usedSoftware" type="dcc:softwareParameter"  maxOccurs="unbounded"/>
+            <xs:element name="usedSoftware" type="dcc:softwareParameter" maxOccurs="unbounded"/>
 <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
             <xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter" maxOccurs="unbounded"/>
 <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
             <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
             
-            <xs:element name="influenceCondition" type="dcc:analysis" maxOccurs="unbounded"/>
+            <xs:element name="influenceCondition" type="dcc:conditionBlock" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -346,7 +348,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
         
     </xs:complexType>
 
-    <xs:complexType name="analysis">
+    <xs:complexType name="conditionBlock">
         <xs:annotation>
             <xs:documentation>
                 All neccessary informations for one part of a measurement
@@ -355,9 +357,16 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             <xs:sequence>
                 <xs:element name="name" type="dcc:textBlock"/>
                 <xs:element name="description" type="dcc:textBlock" minOccurs="0" />
-<!-- vervollständigen!! -->
-                <xs:element name="state" /> 
-                
+                <xs:element name="state" >
+                    <xs:simpleType >
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="beforeAdjustment"/>
+                            <xs:enumeration value="afterAdjustment"/>
+                            <xs:enumeration value="beforeRepair"/>
+                            <xs:enumeration value="afterRepair"/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element> 
                 <xs:element name="data" type="dcc:dataBlock"/>
             </xs:sequence>
             <xs:attribute name="id" type="xs:ID" use="optional"/>
@@ -370,7 +379,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="result" type="dcc:analysis" maxOccurs="unbounded"/>
+            <xs:element name="result" type="dcc:conditionBlock" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -420,8 +429,8 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
             </xs:choice>
-            <xs:element name="ambientConditions" type="dcc:ambientConditionType" minOccurs="0"/>
-            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataType" minOccurs="0"/>
+            <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
+            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -450,28 +459,14 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                 <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded" />
                 <xs:element name="offSysQuantity" type="dcc:offSysQuantity" maxOccurs="unbounded" />
             </xs:choice>
-            <xs:element name="ambientConditions" type="dcc:ambientConditionType" minOccurs="0"/>
-            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataType" minOccurs="0"/>
+            <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
+            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
 
-    <xs:complexType name="ambientConditionType">
-        <xs:annotation>
-            <xs:documentation>
-                A simple structure which is based on atomic measured quantities and lists for
-                the statement of ambient conditions at the measurement.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:choice>
-            <xs:element name="quantity" type="dcc:quantity"/>
-            <xs:element name="dccList" type="dcc:dccList"/>
-        </xs:choice>
-        <xs:attribute name="id" type="xs:ID" use="optional"/>
-    </xs:complexType>
-    
-    <xs:complexType name="measurementMetaDataType">
+    <xs:complexType name="measurementMetaDataParameter">
         <xs:annotation>
             <xs:documentation>
                   TODO: noch anpassen an neue Struktur 
@@ -508,8 +503,8 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                 <xs:element ref="si:realCS"/>
                 <xs:element ref="si:list"/>
             </xs:choice>
-            <xs:element name="ambientConditions" type="dcc:ambientConditionType" minOccurs="0"/>
-            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataType" minOccurs="0"/>
+            <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
+            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
             <xs:any namespace="##other" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>

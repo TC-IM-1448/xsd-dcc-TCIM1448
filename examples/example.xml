@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v1.8.4.xsd"
+        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v1.9.3.xsd"
         xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
         xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI">
 
@@ -361,6 +361,17 @@
             </dcc:usedMethod>
         </dcc:usedMethods>
 
+        <dcc:influenceConditions><!--00301-->
+
+        <dcc:usedSoftware>
+            <dcc:software>
+                <dcc:name>
+                    <dcc:content>keine Software verwendet</dcc:content>
+                </dcc:name>
+                <dcc:release>0815 4711</dcc:release>
+            </dcc:software>
+        </dcc:usedSoftware>
+
         <dcc:calibrationLocations><!--00150-->
             <dcc:calibrationLocation id="dcc">
                 <dcc:calibrationLocationSites>Innerstädtisch</dcc:calibrationLocationSites>
@@ -416,72 +427,67 @@
             </dcc:calibrationLocation>
         </dcc:calibrationLocations>
 
-        <dcc:influenceConditions><!--00301-->
-
             <dcc:influenceCondition lang="de" id="Umgebungsbedingungen"><!--3010M-->
                 <dcc:name>
                 	<dcc:content>Umgebungsbedingungen</dcc:content>
                 </dcc:name><!--31010-->
-                <dcc:outcome><!--32000-->
+                <dcc:state>beforeAdjustment</dcc:state>
+                <dcc:data><!--32000-->
 
-                    <dcc:data><!--32060-->
+                    <dcc:dccList><!--35000-->
+                        <dcc:name>
+                        	<dcc:content>Die Kalibrierung wurde bei folgenden Umgebungsbedingungen ausgeführt:</dcc:content>
+                        </dcc:name><!--35010-->
 
                         <dcc:dccList><!--35000-->
                             <dcc:name>
-                            	<dcc:content>Die Kalibrierung wurde bei folgenden Umgebungsbedingungen ausgeführt:</dcc:content>
+                            	<dcc:content>Temperatur</dcc:content>
                             </dcc:name><!--35010-->
-
-                            <dcc:dccList><!--35000-->
-                                <dcc:name>
-                                	<dcc:content>Temperatur</dcc:content>
-                                </dcc:name><!--35010-->
-                                <dcc:quantity><!--35040-->
-                                    <si:real>
-                                        <si:value>21.4,21.5</si:value>
-                                        <si:unit>\degreeCelsius</si:unit>
-                                        <si:label>von,bis</si:label>
-                                        <si:uncertainty>0.2</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:dccList>
-
-                            <dcc:dccList><!--35000-->
-                                <dcc:name>
-                                	<dcc:content>rel. Luftfeuchte</dcc:content>
-                                </dcc:name><!--35010-->
-                                <dcc:quantity><!--35040-->
-                                    <si:real>
-                                        <si:value>46,47</si:value>
-                                        <si:unit>\percent</si:unit>
-                                        <si:label>von,bis</si:label>
-                                        <si:uncertainty>5</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:dccList>
-
-                            <dcc:dccList><!--35000-->
-                                <dcc:name>
-                                	<dcc:content>Luftdruck</dcc:content>
-                                </dcc:name><!--35010-->
-                                <dcc:quantity><!--35040-->
-                                    <si:real>
-                                        <si:value>1007.0,1009.9</si:value>
-                                        <si:unit>\milli\bar</si:unit>
-                                        <si:label>von,bis</si:label>
-                                        <si:uncertainty>0.2</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:dccList>
-
+                            <dcc:quantity><!--35040-->
+                                <si:real>
+                                    <si:value>21.4,21.5</si:value>
+                                    <si:unit>\degreeCelsius</si:unit>
+                                    <si:label>von,bis</si:label>
+                                    <si:uncertainty>0.2</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
                         </dcc:dccList>
-                    </dcc:data>
-                </dcc:outcome>
+
+                        <dcc:dccList><!--35000-->
+                            <dcc:name>
+                            	<dcc:content>rel. Luftfeuchte</dcc:content>
+                            </dcc:name><!--35010-->
+                            <dcc:quantity><!--35040-->
+                                <si:real>
+                                    <si:value>46,47</si:value>
+                                    <si:unit>\percent</si:unit>
+                                    <si:label>von,bis</si:label>
+                                    <si:uncertainty>5</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:dccList>
+
+                        <dcc:dccList><!--35000-->
+                            <dcc:name>
+                            	<dcc:content>Luftdruck</dcc:content>
+                            </dcc:name><!--35010-->
+                            <dcc:quantity><!--35040-->
+                                <si:real>
+                                    <si:value>1007.0,1009.9</si:value>
+                                    <si:unit>\milli\bar</si:unit>
+                                    <si:label>von,bis</si:label>
+                                    <si:uncertainty>0.2</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:dccList>
+                    </dcc:dccList>
+                </dcc:data>
             </dcc:influenceCondition>
 
 
@@ -489,66 +495,63 @@
                 <dcc:name>
                 	<dcc:content>Ambient conditions</dcc:content>
                 </dcc:name><!--31010-->
-                <dcc:outcome><!--32000-->
-
-                    <dcc:data><!--32060-->
+                <dcc:state>beforeAdjustment</dcc:state>
+                <dcc:data><!--32060-->
+                    <dcc:dccList><!--35000-->
+                        <dcc:name>
+                        	<dcc:content>The calibration was carried out under the following ambient conditions:</dcc:content>
+                        </dcc:name><!--35010-->
 
                         <dcc:dccList><!--35000-->
                             <dcc:name>
-                            	<dcc:content>The calibration was carried out under the following ambient conditions:</dcc:content>
+                            	<dcc:content>temperature</dcc:content>
                             </dcc:name><!--35010-->
-
-                            <dcc:dccList><!--35000-->
-                                <dcc:name>
-                                	<dcc:content>temperature</dcc:content>
-                                </dcc:name><!--35010-->
-                                <dcc:quantity><!--35040-->
-                                    <si:real>
-                                        <si:value>21.4,21.5</si:value>
-                                        <si:unit>\degreeCelsius</si:unit>
-                                        <si:label>von,bis</si:label>
-                                        <si:uncertainty>0.2</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:dccList>
-
-                            <dcc:dccList><!--35000-->
-                                <dcc:name>
-                               		<dcc:content>relative humidity</dcc:content>
-                               	</dcc:name><!--35010-->
-                                <dcc:quantity><!--35040-->
-                                    <si:real>
-                                        <si:value>46,47</si:value>
-                                        <si:unit>\percent</si:unit>
-                                        <si:label>von,bis</si:label>
-                                        <si:uncertainty>5</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:dccList>
-
-                            <dcc:dccList><!--35000-->
-                                <dcc:name>
-                                	<dcc:content>air pressure</dcc:content>
-                                </dcc:name><!--35010-->
-                                <dcc:quantity><!--35040-->
-                                    <si:real>
-                                        <si:value>1007.0,1009.9</si:value>
-                                        <si:unit>\milli\bar</si:unit>
-                                        <si:label>von,bis</si:label>
-                                        <si:uncertainty>0.2</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:dccList>
-
+                            <dcc:quantity><!--35040-->
+                                <si:real>
+                                    <si:value>21.4,21.5</si:value>
+                                    <si:unit>\degreeCelsius</si:unit>
+                                    <si:label>von,bis</si:label>
+                                    <si:uncertainty>0.2</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
                         </dcc:dccList>
-                    </dcc:data>
-                </dcc:outcome>
+
+                        <dcc:dccList><!--35000-->
+                            <dcc:name>
+                           		<dcc:content>relative humidity</dcc:content>
+                           	</dcc:name><!--35010-->
+                            <dcc:quantity><!--35040-->
+                                <si:real>
+                                    <si:value>46,47</si:value>
+                                    <si:unit>\percent</si:unit>
+                                    <si:label>von,bis</si:label>
+                                    <si:uncertainty>5</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:dccList>
+
+                        <dcc:dccList><!--35000-->
+                            <dcc:name>
+                            	<dcc:content>air pressure</dcc:content>
+                            </dcc:name><!--35010-->
+                            <dcc:quantity><!--35040-->
+                                <si:real>
+                                    <si:value>1007.0,1009.9</si:value>
+                                    <si:unit>\milli\bar</si:unit>
+                                    <si:label>von,bis</si:label>
+                                    <si:uncertainty>0.2</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:dccList>
+
+                    </dcc:dccList>
+                </dcc:data>
             </dcc:influenceCondition>
         </dcc:influenceConditions>
 
@@ -558,33 +561,31 @@
                 	<dcc:content lang="de">Konventioneller Wägewert und Fehlergrenze entsprechend OIML R 111</dcc:content>
 	                <dcc:content lang="en">Conventional mass and maximum permissible error corresponding to OIML R 111</dcc:content><!--31010-->
                 </dcc:name>
-                <dcc:outcome><!--32000-->
-                    <dcc:data id="OIML_R_111"
-                              comment="Conventional mass and maximum permissible error corresponding to OIML R 111"><!--32060-->
-                        <dcc:quantity><!--33010-->
-                            <si:real><!--34020-->
-                                <si:value>10.000006E-3</si:value>
-                                <si:unit>\kilogram</si:unit>
-                                <si:uncertainty>0.000004E-3</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
+                <dcc:data id="OIML_R_111"
+                          comment="Conventional mass and maximum permissible error corresponding to OIML R 111"><!--32060-->
+                    <dcc:quantity><!--33010-->
+                        <si:real><!--34020-->
+                            <si:value>10.000006E-3</si:value>
+                            <si:unit>\kilogram</si:unit>
+                            <si:uncertainty>0.000004E-3</si:uncertainty>
+                            <si:coverageFactor>2</si:coverageFactor>
+                            <si:coverageProbability>0.95</si:coverageProbability>
+                        </si:real>
 
-                            <dcc:measurementMetaData>
-                                <dcc:metaData>
-                                    <dcc:valueBool>true</dcc:valueBool>
-                                    <dcc:valueID>MRA</dcc:valueID>
-                                </dcc:metaData>
+                        <dcc:measurementMetaData>
+                            <dcc:metaData>
+                                <dcc:valueBool>true</dcc:valueBool>
+                                <dcc:valueID>MRA</dcc:valueID>
+                            </dcc:metaData>
 
-                                <dcc:metaData>
-                                    <dcc:condition>Regler 23</dcc:condition>
-                                    <dcc:reference>Stufe 5</dcc:reference>
-                                </dcc:metaData>
+                            <dcc:metaData>
+                                <dcc:condition>Regler 23</dcc:condition>
+                                <dcc:reference>Stufe 5</dcc:reference>
+                            </dcc:metaData>
 
-                            </dcc:measurementMetaData>
-                        </dcc:quantity>
-                    </dcc:data>
-                </dcc:outcome>
+                        </dcc:measurementMetaData>
+                    </dcc:quantity>
+                </dcc:data>
             </dcc:result>
 
             <dcc:result><!--3060M-->
@@ -592,19 +593,17 @@
                 	<dcc:content lang="de">Masse</dcc:content><!--31010-->
                 	<dcc:content lang="en">mass</dcc:content><!--31010-->
                 </dcc:name>
-                <dcc:outcome><!--32000-->
-                    <dcc:data id="Mass" comment="Mass"><!--32060-->
-                        <dcc:quantity><!--33010-->
-                            <si:real><!--34020-->
-                                <si:value>10.000003E-3</si:value>
-                                <si:unit>\kilogram</si:unit>
-                                <si:uncertainty>0.000004E-3</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
-                        </dcc:quantity>
-                    </dcc:data>
-                </dcc:outcome>
+                <dcc:data id="Mass"><!--32060-->
+                    <dcc:quantity><!--33010-->
+                        <si:real><!--34020-->
+                            <si:value>10.000003E-3</si:value>
+                            <si:unit>\kilogram</si:unit>
+                            <si:uncertainty>0.000004E-3</si:uncertainty>
+                            <si:coverageFactor>2</si:coverageFactor>
+                            <si:coverageProbability>0.95</si:coverageProbability>
+                        </si:real>
+                    </dcc:quantity>
+                </dcc:data>
             </dcc:result>
 
             <dcc:result><!--3060M-->
@@ -616,27 +615,25 @@
                     <dcc:content lang="de">Dichte bei gegebener Temperatur</dcc:content><!--92110-->
                     <dcc:content lang="en">density at given temperature</dcc:content><!--92110-->
                 </dcc:description>
-                <dcc:outcome><!--32000-->
-                    <dcc:data id="Density" comment="Density"><!--32060-->
-                        <dcc:quantity><!--33010-->
-                            <si:real><!--34020-->
-                                <si:value>8012.8</si:value>
-                                <si:unit>\kilogram\metre\tothe{-3}</si:unit>
-                                <si:uncertainty>3.2</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
-                            <dcc:ambientConditions><!--34060-->
-                                <dcc:quantity><!--33010-->
-                                    <si:real><!--34020-->
-                                        <si:value>20</si:value>
-                                        <si:unit>\degreeCelsius</si:unit>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:ambientConditions>
-                        </dcc:quantity>
-                    </dcc:data>
-                </dcc:outcome>
+                <dcc:data id="Density" comment="Density"><!--32060-->
+                    <dcc:quantity><!--33010-->
+                        <si:real><!--34020-->
+                            <si:value>8012.8</si:value>
+                            <si:unit>\kilogram\metre\tothe{-3}</si:unit>
+                            <si:uncertainty>3.2</si:uncertainty>
+                            <si:coverageFactor>2</si:coverageFactor>
+                            <si:coverageProbability>0.95</si:coverageProbability>
+                        </si:real>
+                        <dcc:ambientConditions><!--34060-->
+                            <dcc:quantity><!--33010-->
+                                <si:real><!--34020-->
+                                    <si:value>20</si:value>
+                                    <si:unit>\degreeCelsius</si:unit>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:ambientConditions>
+                    </dcc:quantity>
+                </dcc:data>
             </dcc:result>
 
             <dcc:result><!--3060M-->
@@ -648,27 +645,25 @@
                     <dcc:content lang="de">Volumen bei gegebener Temperatur</dcc:content><!--92110-->
                     <dcc:content lang="en">volume at given temperature</dcc:content><!--92110-->
                 </dcc:description>
-                <dcc:outcome><!--32000-->
-                    <dcc:data id="Volume" comment="Volume"><!--32060-->
-                        <dcc:quantity><!--33010-->
-                            <si:real><!--34020-->
-                                <si:value>1.2480E-6</si:value>
-                                <si:unit>\metre\tothe{3}</si:unit>
-                                <si:uncertainty>0.0005E-6</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
-                            <dcc:ambientConditions><!--34060-->
-                                <dcc:quantity><!--33010-->
-                                    <si:real><!--34020-->
-                                        <si:value>20</si:value>
-                                        <si:unit>\degreeCelsius</si:unit>
-                                    </si:real>
-                                </dcc:quantity>
-                            </dcc:ambientConditions>
-                        </dcc:quantity>
-                    </dcc:data>
-                </dcc:outcome>
+                <dcc:data id="Volume" comment="Volume"><!--32060-->
+                    <dcc:quantity><!--33010-->
+                        <si:real><!--34020-->
+                            <si:value>1.2480E-6</si:value>
+                            <si:unit>\metre\tothe{3}</si:unit>
+                            <si:uncertainty>0.0005E-6</si:uncertainty>
+                            <si:coverageFactor>2</si:coverageFactor>
+                            <si:coverageProbability>0.95</si:coverageProbability>
+                        </si:real>
+                        <dcc:ambientConditions><!--34060-->
+                            <dcc:quantity><!--33010-->
+                                <si:real><!--34020-->
+                                    <si:value>20</si:value>
+                                    <si:unit>\degreeCelsius</si:unit>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:ambientConditions>
+                    </dcc:quantity>
+                </dcc:data>
             </dcc:result>
         </dcc:results>
     </dcc:measurementResults>
