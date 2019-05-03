@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="1.9.3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC" elementFormDefault="qualified">
+<xs:schema version="1.9.3" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
+           xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
+           targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
+           elementFormDefault="qualified">
 
-<xs:import namespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI" 
-schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI/SI_Format_v1.0.1.xsd"/>
+    <xs:import
+            namespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
+            schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI/SI_Format_v1.0.1.xsd"/>
 
-<xs:annotation>
-    <xs:documentation>
-    </xs:documentation>
-</xs:annotation>
-    
+    <xs:annotation>
+        <xs:documentation>
+        </xs:documentation>
+    </xs:annotation>
+
     <xs:element name="digitalCalibrationCertificate">
-    
+
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="administrativeData">
                     <xs:complexType>
                         <xs:all>
-                            <xs:element name="dccSoftware" type="dcc:softwareParameter" />
+                            <xs:element name="dccSoftware" type="dcc:softwareParameter"/>
                             <xs:element name="coreData" type="dcc:coreDataParameter"/>
                             <xs:element name="items" type="dcc:itemParameter"/>
                             <xs:element name="calibrationLaboratory" type="dcc:calibrationLaboratoryParameter"/>
@@ -26,7 +31,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                         </xs:all>
                     </xs:complexType>
                 </xs:element>
-                
+
                 <xs:element name="measurementResults">
                     <xs:complexType>
                         <xs:sequence>
@@ -42,37 +47,38 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                             <xs:element name="metrologicallyTraceable" type="dcc:metrologicallyTraceableParameter" minOccurs="0"/>
                             
                             -->
-                            
+
                             <xs:element name="measurementResult">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="usedMethods" type="dcc:usedMethodParameter" />
-                                        <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" />
-                                        
+                                        <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
+                                        <xs:element name="influenceConditions" type="dcc:influenceConditionParameter"/>
+
                                         <xs:element name="results" type="dcc:resultParameter"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            
+
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                
+
                 <xs:element name="comments" type="xs:string" minOccurs="0"/>
-                
+
                 <xs:element name="document" type="dcc:byteDataBlock" minOccurs="0"/>
-                
+
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    
-<!--   #####################################################################################
-            Elements of the administrativeData part of the DCC
-       #####################################################################################-->
+
+    <!--   #####################################################################################
+                Elements of the administrativeData part of the DCC
+           #####################################################################################-->
     <xs:complexType name="softwareParameter">
         <xs:annotation>
             <xs:documentation>
-                Clear description of the software-version and the creator of the software used to create and process the DCC
+                Clear description of the software-version and the creator of the software used to create and process the
+                DCC
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -81,14 +87,14 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                     <xs:sequence>
                         <xs:element name="name" type="dcc:textBlock"/>
                         <xs:element name="release" type="xs:string"/>
-                        <xs:element name="description" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded" />
+                        <xs:element name="description" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                     <xs:attribute name="id" type="xs:ID" use="optional"/>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="coreDataParameter">
         <xs:annotation>
             <xs:documentation>
@@ -101,7 +107,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             <xs:element name="mandatoryLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/>
             <xs:element name="uniqueIdentifier" type="xs:string"/>
             <xs:element name="receiptDate" type="xs:date" minOccurs="0"/>
-            
+
             <!-- Wir setzen uns bewusst über die DIN ISO 17025 hinweg, 
             indem wir die Elemente "endPerformanceDate" und 
             "beginPerformanceDate" als Mandatory definieren. 
@@ -113,14 +119,14 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             
             Wenn es nur einen Wert gibt, 
             müssen beide Felder mit einem identischen Wert gefüllt werden! -->
-            
-            <xs:element name="beginPerformanceDate" type="xs:date" />
+
+            <xs:element name="beginPerformanceDate" type="xs:date"/>
             <xs:element name="endPerformanceDate" type="xs:date"/>
-            
+
             <xs:element name="previousReport" type="dcc:hash" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="itemParameter">
         <xs:annotation>
             <xs:documentation>
@@ -128,21 +134,22 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0" />
-            <xs:element name="description" type="dcc:textBlock" minOccurs="0" />
-            <xs:element name="owner" type="dcc:contact" minOccurs="0" />
-            
+            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="owner" type="dcc:contact" minOccurs="0"/>
+
             <xs:element name="item" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="name" type="dcc:textBlock" />
+                        <xs:element name="name" type="dcc:textBlock"/>
                         <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
-                        <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
-                        
-                        <xs:element name="manufacturer" type="dcc:contactNotStrict" />
+                        <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0"
+                                    maxOccurs="unbounded"/>
+
+                        <xs:element name="manufacturer" type="dcc:contactNotStrict"/>
                         <xs:element name="model" type="xs:string" minOccurs="0"/>
-                        
-                        <xs:element name="identifications" >
+
+                        <xs:element name="identifications">
                             <xs:complexType>
                                 <xs:sequence>
                                     <xs:element name="identification" maxOccurs="unbounded">
@@ -151,16 +158,16 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                                                 <xs:element name="issuer">
                                                     <xs:simpleType>
                                                         <xs:restriction base="xs:string">
-                                                            <xs:enumeration value="manufacturer" />
-                                                            <xs:enumeration value="calibrationLaboratory" />
-                                                            <xs:enumeration value="customer" />
-                                                            <xs:enumeration value="owner" />
-                                                            <xs:enumeration value="other" />
+                                                            <xs:enumeration value="manufacturer"/>
+                                                            <xs:enumeration value="calibrationLaboratory"/>
+                                                            <xs:enumeration value="customer"/>
+                                                            <xs:enumeration value="owner"/>
+                                                            <xs:enumeration value="other"/>
                                                         </xs:restriction>
                                                     </xs:simpleType>
                                                 </xs:element>
-                                                <xs:element name="value" type="xs:string" />
-                                                <xs:element name="description" type="dcc:textBlock" minOccurs="0" />
+                                                <xs:element name="value" type="xs:string"/>
+                                                <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
                                             </xs:sequence>
                                             <xs:attribute name="id" type="xs:ID" use="optional"/>
                                         </xs:complexType>
@@ -174,7 +181,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="calibrationLaboratoryParameter">
         <xs:annotation>
             <xs:documentation>
@@ -186,7 +193,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             <xs:element name="contact" type="dcc:contact" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="respPersonParameter">
         <xs:annotation>
             <xs:documentation>
@@ -204,7 +211,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                         <xs:element name="cryptElectronicTimeStamp" type="xs:boolean" minOccurs="0"/>
                         <xs:element name="eMailPerson" type="xs:string" minOccurs="0"/>
                         <xs:element name="furtherInfoPerson" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded"/>
-                        <xs:element name="location" type="dcc:location" minOccurs="0" />
+                        <xs:element name="location" type="dcc:location" minOccurs="0"/>
                     </xs:sequence>
                     <xs:attribute name="id" type="xs:ID" use="optional"/>
                 </xs:complexType>
@@ -219,70 +226,70 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="statement" type="dcc:statementMetaDataParameter" maxOccurs="unbounded" />
+            <xs:element name="statement" type="dcc:statementMetaDataParameter" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
-<!--   #####################################################################################
-            Elements of the measurementResult part of the DCC
-       ##################################################################################### -->
+    <!--   #####################################################################################
+                Elements of the measurementResult part of the DCC
+           ##################################################################################### -->
 
-<!-- We need community input about the following:
-     Talk to us: gemimeg@ptb.de
+    <!-- We need community input about the following:
+         Talk to us: gemimeg@ptb.de
 
-    <xs:complexType name="externalParameter">
-        <xs:annotation>
-            <xs:documentation>
-                Information about the external partners
-                
-                Community input needed! Talk to us: gemimeg@ptb.de
-            </xs:documentation>
-        </xs:annotation>
-        <xs:sequence>
-            <xs:element name="external" type="dcc:contact" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-    
-    <xs:complexType name="sampledMaterialParameter">
-        <xs:annotation>
-            <xs:documentation>
-                Information about the sampled material
-                
-                Community input needed! Talk to us: gemimeg@ptb.de
-            </xs:documentation>
-        </xs:annotation>
-        <xs:sequence>
-            <xs:element name="sampledMaterial" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="plan" type="dcc:textBlock"/>
-                        <xs:element name="method" type="dcc:textBlock"/>
-                        <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
-                        <xs:element name="externalSampler" type="dcc:contact" minOccurs="0" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                    <xs:attribute name="id" type="xs:ID" use="optional"/>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
-    
-    <xs:complexType name="metrologicallyTraceableParameter">
-        <xs:annotation>
-            <xs:documentation>
-                Elements for metrologically traceable measurements
-                
-                Community input needed! Talk to us: gemimeg@ptb.de
-                
-            </xs:documentation>
-        </xs:annotation>
-        <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" />
-            <xs:element name="description" type="dcc:textBlock" />
-            <xs:element name="identifier" type="dcc:hash" />
-        </xs:sequence>
-    </xs:complexType>
+        <xs:complexType name="externalParameter">
+            <xs:annotation>
+                <xs:documentation>
+                    Information about the external partners
 
--->
+                    Community input needed! Talk to us: gemimeg@ptb.de
+                </xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:element name="external" type="dcc:contact" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:complexType name="sampledMaterialParameter">
+            <xs:annotation>
+                <xs:documentation>
+                    Information about the sampled material
+
+                    Community input needed! Talk to us: gemimeg@ptb.de
+                </xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:element name="sampledMaterial" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="plan" type="dcc:textBlock"/>
+                            <xs:element name="method" type="dcc:textBlock"/>
+                            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="externalSampler" type="dcc:contact" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:ID" use="optional"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+
+        <xs:complexType name="metrologicallyTraceableParameter">
+            <xs:annotation>
+                <xs:documentation>
+                    Elements for metrologically traceable measurements
+
+                    Community input needed! Talk to us: gemimeg@ptb.de
+
+                </xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:element name="name" type="dcc:textBlock" />
+                <xs:element name="description" type="dcc:textBlock" />
+                <xs:element name="identifier" type="dcc:hash" />
+            </xs:sequence>
+        </xs:complexType>
+
+    -->
 
     <xs:complexType name="usedMethodParameter">
         <xs:annotation>
@@ -307,21 +314,21 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
     <xs:complexType name="influenceConditionParameter">
         <xs:annotation>
             <xs:documentation>
-                Elements for the conditions (e.g. environmental) under which the calibrations were 
+                Elements for the conditions (e.g. environmental) under which the calibrations were
                 made that have an influence on the measurement results
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            
-<!-- Diskussion für Singular in nächster Sitzung -->
 
-<!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
+            <!-- Diskussion für Singular in nächster Sitzung -->
+
+            <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
             <xs:element name="usedSoftware" type="dcc:softwareParameter" maxOccurs="unbounded"/>
-<!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
+            <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
             <xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter" maxOccurs="unbounded"/>
-<!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
+            <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
             <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
-            
+
             <xs:element name="influenceCondition" type="dcc:conditionBlock" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
@@ -336,7 +343,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             <xs:element name="calibrationLocation" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="calibrationLocationSites" type="dcc:textBlock" />
+                        <xs:element name="calibrationLocationSites" type="dcc:textBlock"/>
                         <xs:element name="beginLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
                         <xs:element name="endLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
                         <xs:element name="location" type="dcc:location" minOccurs="0"/>
@@ -345,7 +352,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        
+
     </xs:complexType>
 
     <xs:complexType name="conditionBlock">
@@ -354,28 +361,28 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
                 All neccessary informations for one part of a measurement
             </xs:documentation>
         </xs:annotation>
-            <xs:sequence>
-                <xs:element name="name" type="dcc:textBlock"/>
-                <xs:element name="description" type="dcc:textBlock" minOccurs="0" />
-                <xs:element name="state" >
-                    <xs:simpleType >
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="beforeAdjustment"/>
-                            <xs:enumeration value="afterAdjustment"/>
-                            <xs:enumeration value="beforeRepair"/>
-                            <xs:enumeration value="afterRepair"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element> 
-                <xs:element name="data" type="dcc:dataBlock"/>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:sequence>
+            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="state">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="beforeAdjustment"/>
+                        <xs:enumeration value="afterAdjustment"/>
+                        <xs:enumeration value="beforeRepair"/>
+                        <xs:enumeration value="afterRepair"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="data" type="dcc:dataBlock"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultParameter">
         <xs:annotation>
             <xs:documentation>
-                Elements for the  measurement results
+                Elements for the measurement results
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -386,43 +393,44 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
     <xs:complexType name="dataBlock">
         <xs:annotation>
             <xs:documentation>
-                In the Element "outcome", any of the elements 
+                In the Element "outcome", any of the elements
                 "text", "formula", "byteData", "chart", "image", "data" and "xml"
                 can be used multiple times in an arbitrary order. The usage of each element
                 is optional. At least one of the elements must be provided.
             </xs:documentation>
         </xs:annotation>
-            <xs:choice maxOccurs="unbounded">
-                <xs:element name="text" type="dcc:textBlock"/>
-                <xs:element name="formula" type="dcc:formulaBlock"/>
-                <xs:element name="byteData" type="dcc:byteDataBlock"/>
-                <xs:element name="xml" type="dcc:xmlBlock"/>
-                <xs:element name="quantity" type="dcc:quantity"/>
-                <xs:element name="dccList" type="dcc:dccList"/>
-            </xs:choice>
-            <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:choice maxOccurs="unbounded">
+            <xs:element name="text" type="dcc:textBlock"/>
+            <xs:element name="formula" type="dcc:formulaBlock"/>
+            <xs:element name="byteData" type="dcc:byteDataBlock"/>
+            <xs:element name="xml" type="dcc:xmlBlock"/>
+            <xs:element name="quantity" type="dcc:quantity"/>
+            <xs:element name="dccList" type="dcc:dccList"/>
+        </xs:choice>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-<!--  #####################################################################################
-            Elements for the specification of measurement data (quantities) in the DCC
-            (XMl Schema for the secure exchange of measurement data in ICT applications)
-      #####################################################################################-->
-  
+    <!--  #####################################################################################
+                Elements for the specification of measurement data (quantities) in the DCC
+                (XMl Schema for the secure exchange of measurement data in ICT applications)
+          #####################################################################################-->
+
     <xs:complexType name="quantity">
         <xs:annotation>
             <xs:documentation>
-                  Basic element for the statement of measurement values in a DCC.
-                  The measurement value, its unit and uncertainty are defined by type 'si:real'.
-                  The 'unit' must be defined in the SI-system (siunitx format).
-                  Additional information can be made according to MRA, Ilac and external 
-                  measurements in the 'measurementMetaData' element.
-                  In addition, the 'quantity' can contain a comma separated list of independent real quantities ('si:realCS').
-                  The 'quantity' has an optional 'name' element and it can have a unique ID.
-                  The 'name' element can be repeated with different languages.
-             </xs:documentation>
+                Basic element for the statement of measurement values in a DCC.
+                The measurement value, its unit and uncertainty are defined by type 'si:real'.
+                The 'unit' must be defined in the SI-system (siunitx format).
+                Additional information can be made according to MRA, Ilac and external
+                measurements in the 'measurementMetaData' element.
+                In addition, the 'quantity' can contain a comma separated list of independent real quantities
+                ('si:realCS').
+                The 'quantity' has an optional 'name' element and it can have a unique ID.
+                The 'name' element can be repeated with different languages.
+            </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0" />
+            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
             <xs:choice>
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:realCS"/>
@@ -438,10 +446,10 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
     <xs:complexType name="dccList">
         <xs:annotation>
             <xs:documentation>
-                The 'list' element allows to define a collection of measurement results 
+                The 'list' element allows to define a collection of measurement results
                 which are subject to structures with integrity. Basic structures are
                 vector quantities. A recursive usage of 'list' allows the creation of
-                matrix and tensor structures as well as structures of higher dimension. The 'list' 
+                matrix and tensor structures as well as structures of higher dimension. The 'list'
                 may also be used to give measurement results in combination with some
                 ambient conditions at the measurement.
                 In this version of the data format, the 'list' supports a global definition of uncertainties
@@ -452,12 +460,12 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0" />
+            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/>
             <xs:choice>
-                <xs:element name="dccList" type="dcc:dccList" maxOccurs="unbounded" />
-                <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded" />
-                <xs:element name="offSysQuantity" type="dcc:offSysQuantity" maxOccurs="unbounded" />
+                <xs:element name="dccList" type="dcc:dccList" maxOccurs="unbounded"/>
+                <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded"/>
+                <xs:element name="offSysQuantity" type="dcc:offSysQuantity" maxOccurs="unbounded"/>
             </xs:choice>
             <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
@@ -469,35 +477,36 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
     <xs:complexType name="measurementMetaDataParameter">
         <xs:annotation>
             <xs:documentation>
-                  TODO: noch anpassen an neue Struktur 
-                  The measurement meta data comprises optional information that lead to a measurement result. 
-                  The sub-elements should reference the specific and detailed information in the administrative part.
-                  Each element is optional and the user should only provide the elements that are relevant
-                  for the measurement result.
-             </xs:documentation>
+                TODO: noch anpassen an neue Struktur
+                The measurement meta data comprises optional information that lead to a measurement result.
+                The sub-elements should reference the specific and detailed information in the administrative part.
+                Each element is optional and the user should only provide the elements that are relevant
+                for the measurement result.
+            </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="metaData" type="dcc:statementMetaDataParameter" maxOccurs="unbounded" />
+            <xs:element name="metaData" type="dcc:statementMetaDataParameter" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="offSysQuantity">
         <xs:annotation>
             <xs:documentation>
                 Unrecommended element for stating measured quantities outside the SI-system (off system quantity).
                 The statement of measurement units is unchecked and 'offSysQuantities' are not part of the
-                quality infrastructure that is provided for DCCs. The unit inside the 'real' element 
+                quality infrastructure that is provided for DCCs. The unit inside the 'real' element
                 is not regulated.
                 The 'offSysQuantity' has an optional 'name' element and it can have a unique ID.
                 The 'name' element can be repeated with different languages.
-                In addition the quantity can contain a comma separated list of independent real quantities ('si:realCS').
+                In addition the quantity can contain a comma separated list of independent real quantities
+                ('si:realCS').
                 Furthermore, 'offSysQuantity' can be appended by any additional XML elements that
                 is not listed in the DCC schema and data exchange format. Here it is possible to
                 add user specific data structures that are already in use.
-             </xs:documentation>
+            </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0" />
+            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
             <xs:choice>
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:realCS"/>
@@ -509,15 +518,16 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-    
-    
-<!--   #####################################################################################
-            complexTypes for DCC
-       #####################################################################################-->
 
-    <xs:complexType name="statementMetaDataParameter"> 
+
+    <!--   #####################################################################################
+                complexTypes for DCC
+           #####################################################################################-->
+
+    <xs:complexType name="statementMetaDataParameter">
         <xs:sequence>
-            <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166" minOccurs="0"
+                        maxOccurs="unbounded"/>
             <xs:element name="convention" type="xs:string" minOccurs="0"/>
             <xs:element name="traceable" type="xs:boolean" minOccurs="0"/>
             <xs:element name="norm" type="xs:string" minOccurs="0"/>
@@ -536,13 +546,13 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             <xs:pattern value="[A-Z]{2}"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:simpleType name="elementStringISO639">
         <xs:restriction base="xs:string">
             <xs:pattern value="[a-z]{2}"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:complexType name="elementStringWithLang">
         <xs:simpleContent>
             <xs:extension base="xs:string">
@@ -551,7 +561,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-    
+
     <xs:complexType name="location">
         <xs:choice maxOccurs="unbounded">
             <xs:element name="further" type="dcc:textBlock"/>
@@ -565,12 +575,12 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             <xs:element name="descriptionData" type="dcc:byteDataBlock"/>
         </xs:choice>
     </xs:complexType>
-    
+
     <xs:complexType name="contact">
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock"/>
             <xs:element name="eMail" type="xs:string"/>
-            <xs:element name="location" type="dcc:location" />
+            <xs:element name="location" type="dcc:location"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -579,11 +589,11 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock"/>
             <xs:element name="eMail" type="xs:string" minOccurs="0"/>
-            <xs:element name="location" type="dcc:location" minOccurs="0" />
+            <xs:element name="location" type="dcc:location" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-    
+
     <xs:complexType name="hash">
         <xs:sequence>
             <xs:element name="reference" type="dcc:textBlock"/>
@@ -594,12 +604,13 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-    
+
     <xs:complexType name="textBlock">
         <xs:annotation>
             <xs:documentation>
-                The textBlock defines the type for writing text in the DCC. 
-                In this block, the element content can be used many times with different language definition (attribute lang).
+                The textBlock defines the type for writing text in the DCC.
+                In this block, the element content can be used many times with different language definition (attribute
+                lang).
                 The optional attribute ID is for a unique ID.
             </xs:documentation>
         </xs:annotation>
@@ -608,15 +619,15 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-    
+
     <xs:complexType name="byteDataBlock">
         <xs:annotation>
             <xs:documentation>
-                The byteDataBlock defines a type which allows to add 
+                The byteDataBlock defines a type which allows to add
                 binary encoded files to the measurement result section.
-                It is a good practise to use the Base64 
+                It is a good practise to use the Base64
                 Data Encodings standard (see RFC 4648).
-                The file must be encoded as base64Binary, see RFC 4648. 
+                The file must be encoded as base64Binary, see RFC 4648.
                 Examples for the content are image files or ZIP archives.
                 The element fileName gives the name of the original file.
                 Element mimeType is the underlying file type (e.g. zip, jpeg, png).
@@ -633,7 +644,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/><!--92200_A_I-->
     </xs:complexType>
-    
+
     <xs:complexType name="formulaBlock">
         <xs:annotation>
             <xs:documentation>
@@ -654,7 +665,7 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
     <xs:complexType name="xmlBlock">
         <xs:annotation>
             <xs:documentation>
-                This data block is used to add user or application specific XML content to the 
+                This data block is used to add user or application specific XML content to the
                 measurement result section of the DCC.
                 The optional attribute ID is for a unique ID of this block.
             </xs:documentation>
@@ -663,5 +674,5 @@ schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen
             <xs:any namespace="##other" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
-    
+
 </xs:schema>
