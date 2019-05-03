@@ -19,7 +19,7 @@ module.exports = {
     themeConfig: {
         repo: 'https://gitlab1.ptb.de/abteilung-1/dcc/xsd-dcc',
         editLinks: true,
-        docsDir: 'wiki',
+        docsDir: 'docs',
         docsBranch: 'master',
         locales: {
             '/de/': {
