@@ -377,7 +377,10 @@
 
                 <dcc:calibrationLocations><!--00150-->
                     <dcc:calibrationLocation id="dcc">
-                        <dcc:calibrationLocationSites>Innerstädtisch</dcc:calibrationLocationSites>
+                        <dcc:calibrationLocationSites>
+                            <dcc:content lang="de">Innerstädtisch</dcc:content>
+                            <!-- TODO: translate -->
+                        </dcc:calibrationLocationSites>
                         <dcc:location>
                             <dcc:street>Bohlweg</dcc:street><!--91120-->
                             <dcc:streetNo>47</dcc:streetNo><!--91130-->
@@ -387,7 +390,9 @@
                         </dcc:location>
                     </dcc:calibrationLocation>
                     <dcc:calibrationLocation><!--1500M-->
-                        <dcc:calibrationLocationSites>Physikalisch-Technische Bundesanstalt (PTB)
+                        <dcc:calibrationLocationSites>
+                            <dcc:content lang="de">Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
+                            <!-- TODO: translate -->
                         </dcc:calibrationLocationSites><!--15010-->
                         <dcc:location><!--91330-->
                             <!-- 2 Varianten: beide gültig nach Schema!  -->
