@@ -1,16 +1,18 @@
 # Der Verlauf der Entscheidungen
 
 
-## nächste Besprechung
+## diese Besprechung
 
-* usedMethods in influenceCondition: sollte eigentlich in sigular ausgeführt werden. Wird aber in measurementResult im plural verwendet. An beiden Stellen besser gleich verwenden? oder doch unterschiedliche Implementierungen verwenden?
-* usedSoftware in influenceCondition: selbes Problem in zusammenhang mit dccSoftware (selber Datentyp)
-* calibrationLocations in influenceCondition: wäre dann (sofern die beiden obigen Punkte als liste bleiben) als einziges keine Liste = schlechtes Design.
-* Frage zur Entscheidung: "Entscheidung: usedMethods hat die globale Positionierung im Messergebnisteil und zusätzlich die lokale Position unter dcc:quantity und dcc:list wie die influenceConditions." Da die influenceCondition in quantity und dccList enthalten sind, ABER auch in measurementResult(!) ist die angabe der usedMethod osmit an drei (3) stellen möglich! Ist das gewollt?
+Entscheidungen:
 * influenceConditions --> usedSoftware ist eine Pflichtangabe! wäre hier eine optionale Verwendung nicht besser?
+** usedSoftware auf selber Ebene (gleichgestellt) wie influenceConditions
+
+* usedMethods auf selbe Ebene (gleichgestellt) wie influenceCondition
+
+* calibrationLocations werden erstmal auskommentiert!
+
 * influenceCondition --> conditionBlock: state ist Pflicht. Muss das nicht optional sein?
-
-
+** STATE IST OPTIONAL!!
 
 
 
