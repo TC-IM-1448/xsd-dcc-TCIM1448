@@ -22,10 +22,6 @@
                     <dcc:content lang="de">Hier steht Text.</dcc:content>
                     <dcc:content lang="en">This is Text.</dcc:content>
                 </dcc:description>
-                <dcc:description id="dcc44-2">
-                    <dcc:content lang="de">Hier steht Text.</dcc:content>
-                    <dcc:content lang="en">This is Text.</dcc:content>
-                </dcc:description>
             </dcc:software>
 
             <dcc:software id="GEMIMEG_Tool"><!--1100M-->
@@ -71,22 +67,19 @@
                 </dcc:name><!--13010-->
 
                 <dcc:description id="Gewicht-10g-Description0"><!--13020-->
-                    <dcc:content lang="de">1 Gewichtstück zu 10 g</dcc:content><!--92110-->
+                    <dcc:content lang="de">
+                        Aufbewahrung
+
+                        Die Gewichtstücke befinden sich in einem Kasten aus lackiertem Holz;
+                        das Kalibrierzeichen ist auf dem Kasten aufgebracht.
+                    </dcc:content><!--92110-->
+                    <dcc:content lang="de">
+                        Case
+
+                        The weights are accommodated in a box of varnished wood;
+                        the calibration mark is applied to the box.
+                    </dcc:content>
                     <!-- TODO: translate -->
-                </dcc:description>
-
-                <dcc:description id="Gewicht-10g-Description1"><!--13020-->
-                    <dcc:content lang="de">Aufbewahrung</dcc:content><!--92110-->
-                    <dcc:content lang="en">Case</dcc:content><!--92110-->
-                </dcc:description>
-
-                <dcc:description id="Gewicht-10g-Description2"><!--13020-->
-                    <dcc:content lang="de">Die Gewichtstücke befinden sich in einem Kasten aus lackiertem Holz; das
-                        Kalibrierzeichen ist auf dem Kasten aufgebracht.
-                    </dcc:content><!--92110-->
-                    <dcc:content lang="en">The weights are accommodated in a box of varnished wood; the calibration mark
-                        is applied to the box.
-                    </dcc:content><!--92110-->
                 </dcc:description>
 
                 <dcc:manufacturer><!--13050-->
@@ -143,29 +136,25 @@
                     <!-- TODO: translate -->
                 </dcc:name><!--13010-->
 
-                <dcc:description id="Gewicht-100g-Description0"><!--13020-->
-                    <dcc:content lang="de">1 Gewichtstück zu 100 g</dcc:content><!--92110-->
-                    <!-- TODO: translate -->
-                </dcc:description>
-
-                <!-- TODO: Zusammenfassen zu einem Block -->
-                <dcc:description id="Gewicht-100g-Description1"><!--13020-->
-                    <dcc:content lang="de">Aufbewahrung</dcc:content><!--92110-->
-                    <dcc:content lang="en">Case</dcc:content><!--92110-->
-                </dcc:description>
-
                 <dcc:description id="Gewicht-100g-Description2"><!--13020-->
-                    <dcc:content lang="de">Die Gewichtstücke befinden sich in einem Kasten aus lackiertem Holz; das
-                        Kalibrierzeichen ist auf dem Kasten aufgebracht.
+                    <dcc:content lang="de">
+                        Aufbewahrung
+
+                        Die Gewichtstücke befinden sich in einem Kasten aus lackiertem Holz;
+                        das Kalibrierzeichen ist auf dem Kasten aufgebracht.
                     </dcc:content><!--92110-->
-                    <dcc:content lang="en">The weights are accommodated in a box of varnished wood; the calibration mark
-                        is applied to the box.
+                    <dcc:content lang="en">
+                        Case
+
+                        The weights are accommodated in a box of varnished wood;
+                        the calibration mark is applied to the box.
                     </dcc:content><!--92110-->
                 </dcc:description>
 
                 <dcc:manufacturer><!--13050-->
                     <dcc:name>
                         <dcc:content>kein Hersteller bekannt</dcc:content>
+                        <!-- TODO: translate -->
                     </dcc:name><!--91310-->
                 </dcc:manufacturer>
 
@@ -255,22 +244,18 @@
 
             <dcc:location><!--91330-->
                 <dcc:further>
-                    <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content><!--91110-->
-                    <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content><!--91110-->
-                </dcc:further>
-
-                <!-- TODO: Zusammenfassen zu einem Further Block -->
-                <dcc:further>
-                    <dcc:content lang="de">Fachbereich 1.1 Masse – Weitergabe der Einheit</dcc:content><!--91110-->
-                    <dcc:content lang="en">Department 1.1 Mass - Dissemination of the Unit</dcc:content><!--91110-->
-                </dcc:further>
-                <dcc:further>
-                    <dcc:content lang="de">Arbeitsgruppe 1.15 Metrologie in der Wägetechnik</dcc:content><!--91110-->
-                    <dcc:content lang="en">Working Group 1.15 Metrology in Weighing Technology</dcc:content><!--91110-->
-                </dcc:further>
-                <dcc:further>
-                    <dcc:content lang="de">Vorname5 Name5 o. V. i. A.</dcc:content><!--91110-->
-                    <dcc:content lang="en">Vorname5 Name5 or representative in office</dcc:content><!--91110-->
+                    <dcc:content lang="de">
+                        Abteilung 1 Mechanik und Akustik
+                        Fachbereich 1.1 Masse – Weitergabe der Einheit
+                        Arbeitsgruppe 1.15 Metrologie in der Wägetechnik
+                        Vorname4 Name4 o. V. i. A.
+                    </dcc:content><!--91110-->
+                    <dcc:content lang="en">
+                        Division 1 Mechanics and Acoustics
+                        Department 1.1 Mass - Dissemination of the Unit
+                        Working Group 1.15 Metrology in Weighing Technology
+                        Vorname4 Name4 or representative in office
+                    </dcc:content><!--91110-->
                 </dcc:further>
                 <dcc:street>Bundesallee</dcc:street><!--91120-->
                 <dcc:streetNo>100</dcc:streetNo><!--91130-->
@@ -336,6 +321,7 @@
             <dcc:usedMethods><!--00170-->
                 <dcc:usedMethod><!--1700M-->
                     <dcc:name id="Methode">
+                        <dcc:content>Default</dcc:content>
                         <dcc:content lang="de">Hydrostatische Wägemethode</dcc:content>
                         <dcc:content lang="en" id="Method">Hydrostatic weighing method</dcc:content>
                     </dcc:name><!--17010-->

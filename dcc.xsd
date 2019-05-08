@@ -358,13 +358,13 @@
     <xs:complexType name="conditionBlock">
         <xs:annotation>
             <xs:documentation>
-                All neccessary informations for one part of a measurement
+                All necessary information for one part of a measurement
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock"/>
             <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
-            <xs:element name="state">
+            <xs:element name="state" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:enumeration value="beforeAdjustment"/>
@@ -379,6 +379,20 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
+    <xs:complexType name="resultBlock">
+        <xs:annotation>
+            <xs:documentation>
+                The result itself
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="data" type="dcc:dataBlock"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
     <xs:complexType name="resultParameter">
         <xs:annotation>
             <xs:documentation>
@@ -386,7 +400,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="result" type="dcc:conditionBlock" maxOccurs="unbounded"/>
+            <xs:element name="result" type="dcc:resultBlock" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
