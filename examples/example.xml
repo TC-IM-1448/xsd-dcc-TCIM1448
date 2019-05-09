@@ -1,106 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v1.9.3.xsd"
+        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v1.9.4.xsd"
         xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
         xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI">
 
 
-    <!-- ID´s müssen mit einem Buchstaben beginnen! -->
+    <dcc:administrativeData>
 
+        <dcc:dccSoftware>
 
-    <dcc:administrativeData><!--00100-->
-
-        <dcc:dccSoftware><!--00110-->
-
-            <dcc:software id="Notepad_plusplus"><!--1100M-->
+            <dcc:software id="Notepad_plusplus">
                 <dcc:name>
                     <dcc:content>Notepad++ (32-bit)</dcc:content>
-                </dcc:name><!--11010-->
-                <dcc:release>v7.5.8</dcc:release><!--11030-->
+                </dcc:name>
+                <dcc:release>v7.5.8</dcc:release>
                 <dcc:description id="dcc44-1">
                     <dcc:content lang="de">Hier steht Text.</dcc:content>
                     <dcc:content lang="en">This is Text.</dcc:content>
                 </dcc:description>
             </dcc:software>
 
-            <dcc:software id="GEMIMEG_Tool"><!--1100M-->
+            <dcc:software id="GEMIMEG_Tool">
                 <dcc:name>
                     <dcc:content>GEMIMEG Tool</dcc:content>
-                </dcc:name><!--11010-->
-                <dcc:release>0.0.2</dcc:release><!--11030-->
+                </dcc:name>
+                <dcc:release>0.0.2</dcc:release>
             </dcc:software>
 
         </dcc:dccSoftware>
 
-        <dcc:coreData><!--00120-->
-            <dcc:countryCodeISO3166_1>DE</dcc:countryCodeISO3166_1><!--12010-->
-            <dcc:usedLangCodeISO639_1>de</dcc:usedLangCodeISO639_1><!--12020-->
-            <dcc:usedLangCodeISO639_1>en</dcc:usedLangCodeISO639_1><!--12020-->
-            <dcc:mandatoryLangCodeISO639_1>de</dcc:mandatoryLangCodeISO639_1><!--12030-->
-            <dcc:uniqueIdentifier>PTB - 11044 17</dcc:uniqueIdentifier><!--12040-->
-            <dcc:beginPerformanceDate>2017-09-20</dcc:beginPerformanceDate><!--12080-->
-            <dcc:endPerformanceDate>2017-09-20</dcc:endPerformanceDate><!--12080-->
+        <dcc:coreData>
+            <dcc:countryCodeISO3166_1>DE</dcc:countryCodeISO3166_1>
+            <dcc:usedLangCodeISO639_1>de</dcc:usedLangCodeISO639_1>
+            <dcc:usedLangCodeISO639_1>en</dcc:usedLangCodeISO639_1>
+            <dcc:mandatoryLangCodeISO639_1>de</dcc:mandatoryLangCodeISO639_1>
+            <dcc:uniqueIdentifier>PTB - 11044 17</dcc:uniqueIdentifier>
+            <dcc:beginPerformanceDate>2017-09-20</dcc:beginPerformanceDate>
+            <dcc:endPerformanceDate>2017-09-20</dcc:endPerformanceDate>
         </dcc:coreData>
 
         <dcc:items>
 
             <dcc:name>
                 <dcc:content lang="de">Gewichtssatz</dcc:content>
-                <!-- TODO: translate -->
+                <dcc:content lang="en">Weight set</dcc:content>
             </dcc:name>
             <dcc:description>
-                <dcc:content lang="de">
-                    Messaufbau
-                    weitere Beschreibung
-                </dcc:content>
-                <dcc:content lang="en">
-                    <!-- TODO: translate -->
-                </dcc:content>
+                <dcc:content lang="de">Messaufbau weitere Beschreibung</dcc:content>
+                <dcc:content lang="en">measurement setup further description</dcc:content>
             </dcc:description>
-            <!-- TODO: konsistente IDs -->
-            <dcc:item id="dcc10g"><!--1300M-->
 
+            <dcc:item id="dcc10g">
                 <dcc:name>
                     <dcc:content lang="de">1 Gewichtstück zu 10 g</dcc:content>
-                    <!-- TODO: translate -->
-                </dcc:name><!--13010-->
-
-                <dcc:description id="Gewicht-10g-Description0"><!--13020-->
-                    <dcc:content lang="de">
-                        Aufbewahrung
-
+                    <dcc:content lang="en">1 weight to 10 g</dcc:content>
+                </dcc:name>
+                <dcc:description id="dcc10g-Description0">
+                    <dcc:content lang="de">Aufbewahrung
                         Die Gewichtstücke befinden sich in einem Kasten aus lackiertem Holz;
                         das Kalibrierzeichen ist auf dem Kasten aufgebracht.
-                    </dcc:content><!--92110-->
-                    <dcc:content lang="de">
-                        Case
-
+                    </dcc:content>
+                    <dcc:content lang="en">Case
                         The weights are accommodated in a box of varnished wood;
                         the calibration mark is applied to the box.
                     </dcc:content>
-                    <!-- TODO: translate -->
                 </dcc:description>
 
-                <dcc:manufacturer><!--13050-->
+                <dcc:manufacturer>
                     <dcc:name>
                         <dcc:content>Hersteller</dcc:content>
-                    </dcc:name><!--91310-->
-                    <dcc:eMail>info@hersteller.de</dcc:eMail><!--91320-->
-                    <dcc:location><!--91330-->
-                        <dcc:street>Herstellerstraße</dcc:street><!--91120-->
-                        <dcc:streetNo>42</dcc:streetNo><!--91130-->
-                        <dcc:postCode>12345</dcc:postCode><!--91150-->
-                        <dcc:city>Herstellerort</dcc:city><!--91160-->
-                        <dcc:countryCode>DE</dcc:countryCode><!--91180-->
+                    </dcc:name>
+                    <dcc:eMail>info@hersteller.de</dcc:eMail>
+                    <dcc:location>
+                        <dcc:street>Herstellerstraße</dcc:street>
+                        <dcc:streetNo>42</dcc:streetNo>
+                        <dcc:postCode>12345</dcc:postCode>
+                        <dcc:city>Herstellerort</dcc:city>
+                        <dcc:countryCode>DE</dcc:countryCode>
                     </dcc:location>
                 </dcc:manufacturer>
 
-                <dcc:identifications><!--13060-->
-
+                <dcc:identifications>
                     <dcc:identification id="dcc52">
                         <dcc:issuer>manufacturer</dcc:issuer>
-                        <dcc:value>1040917</dcc:value><!--12061-->
+                        <dcc:value>1040917</dcc:value>
                         <dcc:description id="dcc53">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
@@ -109,7 +93,7 @@
 
                     <dcc:identification id="dcc54">
                         <dcc:issuer>other</dcc:issuer>
-                        <dcc:value>PTB4711</dcc:value><!--12061-->
+                        <dcc:value>PTB4711</dcc:value>
                         <dcc:description id="dcc55">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
@@ -118,51 +102,47 @@
 
                     <dcc:identification id="dcc56">
                         <dcc:issuer>customer</dcc:issuer>
-                        <dcc:value>0815</dcc:value><!--12061-->
+                        <dcc:value>0815</dcc:value>
                         <dcc:description id="dcc57">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
 
-                </dcc:identifications><!--13060-->
+                </dcc:identifications>
 
             </dcc:item>
 
-            <dcc:item id="dcc100g"><!--1300M-->
+            <dcc:item id="dcc100g">
 
                 <dcc:name>
                     <dcc:content lang="de">1 Gewichtstück zu 100 g</dcc:content>
-                    <!-- TODO: translate -->
-                </dcc:name><!--13010-->
+                    <dcc:content lang="en">1 weight to 100 g</dcc:content>
+                </dcc:name>
 
-                <dcc:description id="Gewicht-100g-Description2"><!--13020-->
-                    <dcc:content lang="de">
-                        Aufbewahrung
-
+                <dcc:description id="dcc100g-Description2">
+                    <dcc:content lang="de">Aufbewahrung
                         Die Gewichtstücke befinden sich in einem Kasten aus lackiertem Holz;
                         das Kalibrierzeichen ist auf dem Kasten aufgebracht.
-                    </dcc:content><!--92110-->
-                    <dcc:content lang="en">
-                        Case
-
+                    </dcc:content>
+                    <dcc:content lang="en">Case
                         The weights are accommodated in a box of varnished wood;
                         the calibration mark is applied to the box.
-                    </dcc:content><!--92110-->
+                    </dcc:content>
                 </dcc:description>
 
-                <dcc:manufacturer><!--13050-->
+                <dcc:manufacturer>
                     <dcc:name>
                         <dcc:content>kein Hersteller bekannt</dcc:content>
-                        <!-- TODO: translate -->
-                    </dcc:name><!--91310-->
+                        <dcc:content>no manufacturer known</dcc:content>
+                    </dcc:name>
                 </dcc:manufacturer>
 
-                <dcc:identifications><!--13060-->
+                <dcc:identifications>
 
                     <dcc:identification id="dcc42">
                         <dcc:issuer>manufacturer</dcc:issuer>
-                        <dcc:value>1040918</dcc:value><!--12061-->
+                        <dcc:value>1040918</dcc:value>
                         <dcc:description id="dcc43">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
@@ -171,7 +151,7 @@
 
                     <dcc:identification id="dcc44">
                         <dcc:issuer>other</dcc:issuer>
-                        <dcc:value>PTB4712</dcc:value><!--12061-->
+                        <dcc:value>PTB4712</dcc:value>
                         <dcc:description id="dcc45">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
@@ -180,250 +160,168 @@
 
                     <dcc:identification id="dcc46">
                         <dcc:issuer>customer</dcc:issuer>
-                        <dcc:value>0816</dcc:value><!--12061-->
+                        <dcc:value>0816</dcc:value>
                         <dcc:description id="dcc47">
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
 
-                </dcc:identifications><!--13060-->
+                </dcc:identifications>
 
             </dcc:item>
 
         </dcc:items>
 
-        <dcc:calibrationLaboratory><!--00140-->
-            <dcc:contact><!--91300-->
+        <dcc:calibrationLaboratory>
+            <dcc:contact>
                 <dcc:name>
                     <dcc:content>Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
-                </dcc:name><!--91310-->
-                <dcc:eMail>info@ptb.de</dcc:eMail><!--91320-->
-                <dcc:location><!--91330-->
+                </dcc:name>
+                <dcc:eMail>info@ptb.de</dcc:eMail>
+                <dcc:location>
                     <dcc:further id="zusatz">
                         <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content>
                         <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content>
-                    </dcc:further><!--91110-->
-                    <dcc:street>Bundesallee</dcc:street><!--91120-->
-                    <dcc:streetNo>100</dcc:streetNo><!--91130-->
-                    <dcc:postCode>38116</dcc:postCode><!--91150-->
-                    <dcc:city>Braunschweig</dcc:city><!--91160-->
-                    <dcc:countryCode>DE</dcc:countryCode><!--91180-->
+                    </dcc:further>
+                    <dcc:street>Bundesallee</dcc:street>
+                    <dcc:streetNo>100</dcc:streetNo>
+                    <dcc:postCode>38116</dcc:postCode>
+                    <dcc:city>Braunschweig</dcc:city>
+                    <dcc:countryCode>DE</dcc:countryCode>
                 </dcc:location>
             </dcc:contact>
         </dcc:calibrationLaboratory>
 
-        <dcc:respPersons><!--00160-->
-            <dcc:respPerson id="Responsible"><!--1600M-->
-                <dcc:person>Vorname1 Name1</dcc:person><!--16010-->
-                <dcc:mainSigner>true</dcc:mainSigner><!--16020-->
-                <dcc:eMailPerson>vorname1.name1@ptb.de</dcc:eMailPerson><!--16050-->
+        <dcc:respPersons>
+            <dcc:respPerson id="Responsible">
+                <dcc:person>Vorname1 Name1</dcc:person>
+                <dcc:mainSigner>true</dcc:mainSigner>
+                <dcc:eMailPerson>vorname1.name1@ptb.de</dcc:eMailPerson>
             </dcc:respPerson>
 
-            <dcc:respPerson id="Technician"><!--1600M-->
-                <dcc:person>Vorname2 Name2</dcc:person><!--16010-->
-                <dcc:eMailPerson>vorname2.name2@ptb.de</dcc:eMailPerson><!--16050-->
+            <dcc:respPerson id="Technician">
+                <dcc:person>Vorname2 Name2</dcc:person>
+                <dcc:eMailPerson>vorname2.name2@ptb.de</dcc:eMailPerson>
             </dcc:respPerson>
 
-            <dcc:respPerson id="Signature"><!--1600M-->
-                <dcc:person>Vorname3 Name3</dcc:person><!--16010-->
-                <dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature><!--16040-->
-                <dcc:eMailPerson>vorname3.name3@ptb.de</dcc:eMailPerson><!--16050-->
+            <dcc:respPerson id="Signature">
+                <dcc:person>Vorname3 Name3</dcc:person>
+                <dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature>
+                <dcc:eMailPerson>vorname3.name3@ptb.de</dcc:eMailPerson>
                 <dcc:furtherInfoPerson>
                     <dcc:content lang="de">Signaturstelle</dcc:content>
-                    <!-- TODO: translate -->
+                    <dcc:content lang="en">Signaturemember</dcc:content>
                 </dcc:furtherInfoPerson>
             </dcc:respPerson>
         </dcc:respPersons>
 
-        <dcc:customer><!--00180-->
+        <dcc:customer>
             <dcc:name>
                 <dcc:content>Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
-            </dcc:name><!--91310-->
-            <dcc:eMail>info@ptb.de</dcc:eMail><!--91320-->
+            </dcc:name>
+            <dcc:eMail>info@ptb.de</dcc:eMail>
 
-            <dcc:location><!--91330-->
+            <dcc:location>
                 <dcc:further>
                     <dcc:content lang="de">
                         Abteilung 1 Mechanik und Akustik
                         Fachbereich 1.1 Masse – Weitergabe der Einheit
                         Arbeitsgruppe 1.15 Metrologie in der Wägetechnik
                         Vorname4 Name4 o. V. i. A.
-                    </dcc:content><!--91110-->
+                    </dcc:content>
                     <dcc:content lang="en">
                         Division 1 Mechanics and Acoustics
                         Department 1.1 Mass - Dissemination of the Unit
                         Working Group 1.15 Metrology in Weighing Technology
                         Vorname4 Name4 or representative in office
-                    </dcc:content><!--91110-->
+                    </dcc:content>
                 </dcc:further>
-                <dcc:street>Bundesallee</dcc:street><!--91120-->
-                <dcc:streetNo>100</dcc:streetNo><!--91130-->
-                <dcc:postCode>38116</dcc:postCode><!--91150-->
-                <dcc:city>Braunschweig</dcc:city><!--91160-->
-                <dcc:countryCode>DE</dcc:countryCode><!--91180-->
+                <dcc:street>Bundesallee</dcc:street>
+                <dcc:streetNo>100</dcc:streetNo>
+                <dcc:postCode>38116</dcc:postCode>
+                <dcc:city>Braunschweig</dcc:city>
+                <dcc:countryCode>DE</dcc:countryCode>
             </dcc:location>
         </dcc:customer>
 
-        <dcc:statements><!--00230-->
-            <dcc:statement id="ISO_17025_7.8.2.1_l_de"><!--2300M-->
-                <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm><!--23030-->
-                <dcc:reference>7.8.2.1 l)</dcc:reference><!--23040-->
+        <dcc:statements>
+            <dcc:statement id="ISO_17025_7.8.2.1_l_de">
+                <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm>
+                <dcc:reference>7.8.2.1 l)</dcc:reference>
                 <dcc:declaration>
-                    <dcc:content lang="de">Die Ergebnisse beziehen sich nur auf den in diesem DCC beschriebenen
-                        Gegenstand.
-                    </dcc:content>
+                    <dcc:content lang="de">Die Ergebnisse beziehen sich nur auf den in diesem DCC beschriebenen Gegenstand.</dcc:content>
                     <dcc:content lang="en">The results refer only to the object calibrated in this DCC.</dcc:content>
-                </dcc:declaration><!--23040-->
+                </dcc:declaration>
             </dcc:statement>
 
-            <dcc:statement id="MRA"><!--2300M-->
-                <dcc:convention>CIPM-MRA</dcc:convention>    <!--23020-->
-                <dcc:valid>true</dcc:valid><!--23060-->
+            <dcc:statement id="MRA">
+                <dcc:convention>CIPM-MRA</dcc:convention>
+                <dcc:valid>true</dcc:valid>
             </dcc:statement>
 
-            <dcc:statement><!--2300M-->
-                <dcc:convention>Tracebility</dcc:convention>    <!--23020-->
+            <dcc:statement>
+                <dcc:convention>Tracebility</dcc:convention>
                 <dcc:declaration>
                     <dcc:content lang="de">Die Messung ist rückführbar</dcc:content>
-                    <!-- TODO: translate -->
+                    <dcc:content lang="en">The measurement is traceable</dcc:content>
                 </dcc:declaration>
-                <dcc:valid>true</dcc:valid><!--23060-->
+                <dcc:traceable>true</dcc:traceable>
             </dcc:statement>
 
-            <dcc:statement><!--2300M-->
-                <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm><!--23030-->
-                <dcc:reference>7.8.4.3</dcc:reference><!--23040-->
+            <dcc:statement>
+                <dcc:norm>DIN EN ISO/IEC 17025:2018-03</dcc:norm>
+                <dcc:reference>7.8.4.3</dcc:reference>
                 <dcc:declaration>
-                    <dcc:content lang="de">Die Ergebnisse gelten zum Zeitpunkt der Kalibrierung. Es obliegt dem
-                        Antragsteller, zu gegebener Zeit eine Rekalibrierung zu veranlassen.
-                    </dcc:content><!--23040-->
-                    <dcc:content lang="en">The results refer only to the object calibrated in this DCC.The measurement
-                        results are valid at the time of calibration. The applicant is responsible for arranging a
-                        recalibration in due time.
-                    </dcc:content><!--23040-->
+                    <dcc:content lang="de">Die Ergebnisse gelten zum Zeitpunkt der Kalibrierung. Es obliegt dem Antragsteller, zu gegebener Zeit eine Rekalibrierung zu veranlassen.</dcc:content>
+                    <dcc:content lang="en">The results refer only to the object calibrated in this DCC.The measurement results are valid at the time of calibration. The applicant is responsible for arranging a recalibration in due time.</dcc:content>
                 </dcc:declaration>
             </dcc:statement>
-
-            <!-- TODO: Statement für Unsicherheit -->
-
+<!-- TODO: Statement für Unsicherheit -->
         </dcc:statements>
-
     </dcc:administrativeData>
 
     <!--   #####################################################################################
 
             End of administrativeData part of the DCC
 -->
-    <!-- TODO: an neuste Version des Schemas anpassen -->
-    <dcc:measurementResults><!--00300-->
+<!-- TODO: an neuste Version des Schemas anpassen -->
+    <dcc:measurementResults>
         <dcc:measurementResult>
-            <dcc:usedMethods><!--00170-->
-                <dcc:usedMethod><!--1700M-->
+            <dcc:usedMethods>
+                <dcc:usedMethod>
                     <dcc:name id="Methode">
                         <dcc:content>Default</dcc:content>
                         <dcc:content lang="de">Hydrostatische Wägemethode</dcc:content>
                         <dcc:content lang="en" id="Method">Hydrostatic weighing method</dcc:content>
-                    </dcc:name><!--17010-->
+                    </dcc:name>
 
-                    <dcc:description><!--17020-->
-                        <dcc:content lang="de">Verfahren</dcc:content><!--92110-->
-                        <dcc:content lang="en">Procedure</dcc:content><!--92110-->
+                    <dcc:description>
+                        <dcc:content lang="de">Verfahren</dcc:content>
+                        <dcc:content lang="en">Procedure</dcc:content>
                     </dcc:description>
-                    <dcc:description><!--17020-->
+                    <dcc:description>
                         <!--	Demo for formatting HTML or LaTeX	-->
-                        <dcc:content lang="de">
-                            <![CDATA[<p>Die Volumenbestimmung für <latex>$m \ge 1 g$</latex> erfolgte nach der hydrostatischen Wägemethode.</p>]]></dcc:content><!--92110-->
-                        <dcc:content lang="en">
-                            <![CDATA[<p>The volume determination for <latex>$m \ge 1 g$</latex> was carried out with the hydrostatic weighing method.</p>]]></dcc:content><!--92110-->
+                        <dcc:content lang="de"><![CDATA[<p>Die Volumenbestimmung für <latex>$m \ge 1 g$</latex> erfolgte nach der hydrostatischen Wägemethode.</p>]]></dcc:content>
+                        <dcc:content lang="en"><![CDATA[<p>The volume determination for <latex>$m \ge 1 g$</latex> was carried out with the hydrostatic weighing method.</p>]]></dcc:content>
                     </dcc:description>
-                    <dcc:description><!--17020-->
-                        <dcc:content lang="de">Die Kalibrierung erfolgte durch Vergleich mit den Hauptnormalen der PTB
-                            nach
-                            der Substitutionsmethode mit Auftriebskorrektion.
-                        </dcc:content><!--92110-->
-                        <dcc:content lang="en">The calibration was ensued through comparison with the reference
-                            standards of
-                            PTB using the substitution method with air buoyancy correction.
-                        </dcc:content><!--92110-->
+                    <dcc:description>
+                        <dcc:content lang="de">Die Kalibrierung erfolgte durch Vergleich mit den Hauptnormalen der PTB nach der Substitutionsmethode mit Auftriebskorrektion.</dcc:content>
+                        <dcc:content lang="en">The calibration was ensued through comparison with the reference standards of PTB using the substitution method with air buoyancy correction.</dcc:content>
                     </dcc:description>
                 </dcc:usedMethod>
             </dcc:usedMethods>
 
+            <dcc:usedSoftware>
+                <dcc:software>
+                    <dcc:name>
+                        <dcc:content>keine Software verwendet</dcc:content>
+                    </dcc:name>
+                    <dcc:release>0815 4711</dcc:release>
+                </dcc:software>
+            </dcc:usedSoftware>
+
             <dcc:influenceConditions><!--00301-->
-
-                <dcc:usedSoftware>
-                    <dcc:software>
-                        <dcc:name>
-                            <dcc:content>keine Software verwendet</dcc:content>
-                        </dcc:name>
-                        <dcc:release>0815 4711</dcc:release>
-                    </dcc:software>
-                </dcc:usedSoftware>
-
-                <dcc:calibrationLocations><!--00150-->
-                    <dcc:calibrationLocation id="dcc">
-                        <dcc:calibrationLocationSites>
-                            <dcc:content lang="de">Innerstädtisch</dcc:content>
-                            <!-- TODO: translate -->
-                        </dcc:calibrationLocationSites>
-                        <dcc:location>
-                            <dcc:street>Bohlweg</dcc:street><!--91120-->
-                            <dcc:streetNo>47</dcc:streetNo><!--91130-->
-                            <dcc:postCode>38100</dcc:postCode><!--91150-->
-                            <dcc:city>Braunschweig</dcc:city><!--91160-->
-                            <dcc:countryCode>DE</dcc:countryCode><!--91180-->
-                        </dcc:location>
-                    </dcc:calibrationLocation>
-                    <dcc:calibrationLocation><!--1500M-->
-                        <dcc:calibrationLocationSites>
-                            <dcc:content lang="de">Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
-                            <!-- TODO: translate -->
-                        </dcc:calibrationLocationSites><!--15010-->
-                        <dcc:location><!--91330-->
-                            <!-- 2 Varianten: beide gültig nach Schema!  -->
-                            <dcc:further>
-                                <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content><!--91110-->
-                                <dcc:content lang="de">Fachbereich 1.8 Masse – Darstellung der Einheit
-                                </dcc:content><!--91110-->
-                                <dcc:content lang="de">Arbeitsgruppe 1.81 Darstellung Masse</dcc:content><!--91110-->
-                                <dcc:content lang="de">Raum 1.23 im Besselbau</dcc:content><!--91110-->
-                            </dcc:further>
-                            <dcc:further>
-                                <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content><!--91110-->
-                                <dcc:content lang="en">Department 1.8 Mass - Realization of the Unit
-                                </dcc:content><!--91110-->
-                                <dcc:content lang="en">Working Group 1.81 Realization of Mass</dcc:content><!--91110-->
-                                <dcc:content lang="en">Room 1.23 in the Besselbau</dcc:content><!--91110-->
-                            </dcc:further>
-
-                            <!-- 2 Varianten: beide gültig nach Schema!  -->
-                            <dcc:further>
-                                <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content><!--91110-->
-                                <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content><!--91110-->
-                            </dcc:further>
-                            <dcc:further>
-                                <dcc:content lang="de">Fachbereich 1.8 Masse – Darstellung der Einheit
-                                </dcc:content><!--91110-->
-                                <dcc:content lang="en">Department 1.8 Mass - Realization of the Unit
-                                </dcc:content><!--91110-->
-                            </dcc:further>
-                            <dcc:further>
-                                <dcc:content lang="de">Arbeitsgruppe 1.81 Darstellung Masse</dcc:content><!--91110-->
-                                <dcc:content lang="en">Working Group 1.81 Realization of Mass</dcc:content><!--91110-->
-                            </dcc:further>
-                            <dcc:further>
-                                <dcc:content lang="de">Raum 1.23 im Besselbau</dcc:content><!--91110-->
-                                <dcc:content lang="en">Room 1.23 in the Besselbau</dcc:content><!--91110-->
-                            </dcc:further>
-                            <dcc:street>Bundesallee</dcc:street><!--91120-->
-                            <dcc:streetNo>100</dcc:streetNo><!--91130-->
-                            <dcc:postCode>38116</dcc:postCode><!--91150-->
-                            <dcc:city>Braunschweig</dcc:city><!--91160-->
-                            <dcc:countryCode>DE</dcc:countryCode><!--91180-->
-                        </dcc:location>
-                    </dcc:calibrationLocation>
-                </dcc:calibrationLocations>
 
                 <dcc:influenceCondition><!--3010M-->
                     <dcc:name>

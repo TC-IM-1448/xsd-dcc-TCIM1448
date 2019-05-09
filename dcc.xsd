@@ -147,8 +147,7 @@
                     <xs:sequence>
                         <xs:element name="name" type="dcc:textBlock"/>
                         <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
-                        <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0"
-                                    maxOccurs="unbounded"/>
+                        <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
 
                         <xs:element name="manufacturer" type="dcc:contactNotStrict"/>
                         <xs:element name="model" type="xs:string" minOccurs="0"/>
@@ -440,13 +439,14 @@
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
             <xs:choice>
+                <xs:element name="noQuantity" type="dcc:textBlock" />
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:realCS"/>
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
             </xs:choice>
-            <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
-            <xs:element name="usedSoftware" type="dcc:softwareParameter"/>
+            <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
+            <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
         </xs:sequence>
@@ -476,8 +476,8 @@
                 <xs:element name="dccList" type="dcc:dccList" maxOccurs="unbounded"/>
                 <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded"/>
             </xs:choice>
-            <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
-            <xs:element name="usedSoftware" type="dcc:softwareParameter"/>
+            <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
+            <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
         </xs:sequence>
