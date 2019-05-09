@@ -91,23 +91,23 @@ Diskussion measurementResults Teil
 *	metrologicallyTraceability		nein
 
 
-###Übersicht der getroffenen Entscheidungen
+### Übersicht der getroffenen Entscheidungen
 
 Diskussion items im administrativen Teil
-*	Entscheidung: globale Angabe name, description und owner sind optional. Bei dem einzelnen item muss immer der name angegeben werden.
+*	**Entscheidung:** globale Angabe name, description und owner sind optional. Bei dem einzelnen item muss immer der name angegeben werden.
 
 Diskussion influenceCondition
-*	Entscheidung: Einführung einer Enumeration mit dem calibration state (beforeRepair, afterAdjustment,…) im Typ der condition. Die Komponente heißt dcc:state. Die genaue Integration in influenceCondition wurde noch nicht festgelegt, da influenceCondition noch diskutiert wird.
-*	Hinweis: Das state Feld ist optional. Wenn es nicht angegeben wird, handelt es sich um eine influenceCondition während einer Standardkalibrierung ohne Adjustement und Repair.
+*	**Entscheidung:** Einführung einer Enumeration mit dem calibration state (beforeRepair, afterAdjustment,…) im Typ der condition. Die Komponente heißt dcc:state. Die genaue Integration in influenceCondition wurde noch nicht festgelegt, da influenceCondition noch diskutiert wird.
+*	**Hinweis:** Das state Feld ist optional. Wenn es nicht angegeben wird, handelt es sich um eine influenceCondition während einer Standardkalibrierung ohne Adjustement und Repair.
 
 Diskussion Typ von outcome
-*	Entscheidung: Unterelemente image und chart werden mit byteData vereint zum Element byteData.
+*	**Entscheidung:** Unterelemente image und chart werden mit byteData vereint zum Element byteData.
 
 Diskussion weitere Struktur measurementResults Teil
-*	Entscheidung: Element condition, dass aus dem administrativen Teil von item zu den Messergebnissen verschoben wurde wird gelöscht.
-*	Entscheidung: Elemente sampledMaterial und samplingDate bleiben auskommentiert und werden in der Workshop Juni 2019 Version noch nicht behandelt.
-*	Entscheidung: Element externals bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
-*	Entscheidung: Element calibrationLocations bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
+*	**Entscheidung:** Element condition, dass aus dem administrativen Teil von item zu den Messergebnissen verschoben wurde wird gelöscht.
+*	**Entscheidung:** Elemente sampledMaterial und samplingDate bleiben auskommentiert und werden in der Workshop Juni 2019 Version noch nicht behandelt.
+*	**Entscheidung:** Element externals bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
+*	**Entscheidung:** Element calibrationLocations bleibt auskommentiert und wird in der Workshop Juni 2019 Version noch nicht behandelt.
 
 
 
@@ -133,16 +133,17 @@ Diskussion Tabellen und measurementResults Teile
 *	Konzepte Darstellung von Tabellen	ja
 
 
-Übersicht der getroffenen Entscheidungen
+### Übersicht der getroffenen Entscheidungen
 
-Diskussion Darstellung Listen
-•	Entscheidung: Element dcc:list entweder nur mit unterelementen dcc:list oder nur mit Untereelementen vom Typ dcc:quantity
-•	Entscheidung: Bei dcc:quantity die Auswahl der Unterelemente um Element dcc:noQuantity vom Typ dcc:textBlock erweitern für Lücken in Tabellen.
+#### Diskussion Darstellung Listen
+*	**Entscheidung:** Element dcc:list entweder nur mit unterelementen dcc:list oder nur mit Untereelementen vom Typ dcc:quantity
+*	**Entscheidung:** Bei dcc:quantity die Auswahl der Unterelemente um Element dcc:noQuantity vom Typ dcc:textBlock erweitern für Lücken in Tabellen.
 
-Struktur measurementResultsTeil
-•	Entscheidung: Elemente influenceConditions, beforeRepairConditions, afterRepairConditions, before AdjustmentConditions, afterAdjustmentConditions auf eine gemeinsame Komponente influenceConditions zusammenführen.
-•	Entscheidung: Die Komponente influcenceConditions muss mindestens ein Unterelement vom Typ influenceCondition haben.
-•	Entscheidung: Der Typ influenceConditions ersetzt die Komponente ambientConditions bei der dcc:quantity und bei dcc:list.
+
+#### Struktur measurementResultsTeil
+*	**Entscheidung:** Elemente influenceConditions, beforeRepairConditions, afterRepairConditions, before AdjustmentConditions, afterAdjustmentConditions auf eine gemeinsame Komponente influenceConditions zusammenführen.
+*	**Entscheidung:** Die Komponente influcenceConditions muss mindestens ein Unterelement vom Typ influenceCondition haben.
+*	**Entscheidung:** Der Typ influenceConditions ersetzt die Komponente ambientConditions bei der dcc:quantity und bei dcc:list.
 
 
 
@@ -153,36 +154,36 @@ Beteiligte
 T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, J. Loewe, A. Scheibner, T. Wiedenhöfer
 
 
-Thema 
+### Thema 
 Letzte Änderungen bei administrativen Daten und Beginn Diskussion Tabellen
 
-Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
-•	dataBlock				nein
-•	Listen im DCC				ja
-•	„Flag System“				nein
-•	Typ der “condition“ Elemente		nein 
-•	usedSoftware				nein
-•	usedMethods				nein
-•	sampledMaterial und samlingDate	nein
-•	calibrationLocations			nein
-•	externals				nein
-•	metrologicallyTraceability		nein
-•	Lücken in Tabellen			ja
-•	Konzepte Darstellung von Tabellen	nein
+### Übersicht von Aspekten und Angabe zu denen es Diskussionen gab (ja) oder nicht (nein)
+*	dataBlock				nein
+*	Listen im DCC				ja
+*	„Flag System“				nein
+*	Typ der “condition“ Elemente		nein 
+*	usedSoftware				nein
+*	usedMethods				nein
+*	sampledMaterial und samlingDate	nein
+*	calibrationLocations			nein
+*	externals				nein
+*	metrologicallyTraceability		nein
+*	Lücken in Tabellen			ja
+*	Konzepte Darstellung von Tabellen	nein
 
 
-Übersicht der getroffenen Entscheidungen
+### Übersicht der getroffenen Entscheidungen
 
-Diskussion letzte Änderungen im administrativen Teil
-•	Entscheidung: Das Element owner wird von den item Elementen an eine globale Stelle in der items Liste verschoben.
-•	Entscheidung: Alle name Elemente werden durchgängig vom Typ textBlock sein.
-•	Entscheidung: Das Element referenceID in hash bekommt den Typ xs:string.
-•	Entscheidung: Das Element linkedReports wird in den Singular linkedReport umbenannt (auch in Element hash).
+#### Diskussion letzte Änderungen im administrativen Teil
+*	**Entscheidung:** Das Element owner wird von den item Elementen an eine globale Stelle in der items Liste verschoben.
+*	**Entscheidung:** Alle name Elemente werden durchgängig vom Typ textBlock sein.
+*	**Entscheidung:** Das Element referenceID in hash bekommt den Typ xs:string.
+*	**Entscheidung:** Das Element linkedReports wird in den Singular linkedReport umbenannt (auch in Element hash).
 
-Diskussion Tabellen für den measurementResults Teil
-•	Entscheidung: Es gibt die Umbenennung von dcc:dccList zu dcc:list.
-•	Entscheidung: Die dcc:list wird für den Sommerworkshop als Baumstruktur weiter entwickelt. 
-•	Entscheidung: In der dcc:list wird das neue Element noQuantity mit Typ textBlock eingeführt, um Lücken in Listen und Tabellen abzubilden.
+#### Diskussion Tabellen für den measurementResults Teil
+*	**Entscheidung:** Es gibt die Umbenennung von dcc:dccList zu dcc:list.
+*	**Entscheidung:** Die dcc:list wird für den Sommerworkshop als Baumstruktur weiter entwickelt. 
+*	**Entscheidung:** In der dcc:list wird das neue Element noQuantity mit Typ textBlock eingeführt, um Lücken in Listen und Tabellen abzubilden.
 
 
 
