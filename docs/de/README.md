@@ -8,6 +8,14 @@ Der DCC ist in 4 Bereiche (Ringe) gegliedert. Diese sind folgende:
 - [comment](comment.md)
 - [document](document.md)
 
+
+![Die Struktur des DCC](../images/dcc-structure.png)
+
+
+
+
+
+
 ## complexTypes des DCC
 - [location](complexTypes/location.md)
 - [contact](complexTypes/contact.md)
