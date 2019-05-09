@@ -1,12 +1,6 @@
 # Der Verlauf der Entscheidungen
 
 
-## diese Besprechung
-
-Entscheidungen:
-* influenceConditions --> usedSoftware ist eine Pflichtangabe! wäre hier eine optionale Verwendung nicht besser?
-** usedSoftware auf selber Ebene (gleichgestellt) wie influenceConditions
-
 
 ## DCC Besprechung und Designentscheidungen vom 08.05.2019
 
