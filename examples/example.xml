@@ -262,11 +262,11 @@
 
             <dcc:statement>
                 <dcc:convention>Tracebility</dcc:convention>
+                <dcc:traceable>true</dcc:traceable>
                 <dcc:declaration>
                     <dcc:content lang="de">Die Messung ist rückführbar</dcc:content>
                     <dcc:content lang="en">The measurement is traceable</dcc:content>
                 </dcc:declaration>
-                <dcc:traceable>true</dcc:traceable>
             </dcc:statement>
 
             <dcc:statement>
