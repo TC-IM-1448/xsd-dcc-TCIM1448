@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v1.9.4.xsd"
+        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v2.0.0.xsd"
         xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
         xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI">
 
@@ -274,23 +274,15 @@
                 <dcc:reference>7.8.4.3</dcc:reference>
                 <dcc:declaration>
                     <dcc:content lang="de">Die Ergebnisse gelten zum Zeitpunkt der Kalibrierung. Es obliegt dem Antragsteller, zu gegebener Zeit eine Rekalibrierung zu veranlassen.</dcc:content>
-                    <dcc:content lang="en">The results refer only to the object calibrated in this DCC.The measurement results are valid at the time of calibration. The applicant is responsible for arranging a recalibration in due time.</dcc:content>
+                    <dcc:content lang="en">The results refer only to the object calibrated in this DCC. The measurement results are valid at the time of calibration. The applicant is responsible for arranging a recalibration in due time.</dcc:content>
                 </dcc:declaration>
             </dcc:statement>
 <!-- TODO: Statement für Unsicherheit -->
         </dcc:statements>
     </dcc:administrativeData>
 
-    <!--   #####################################################################################
-
-            End of administrativeData part of the DCC
--->
-<!-- TODO: an neuste Version des Schemas anpassen -->
     <dcc:measurementResults>
-
-
         <dcc:measurementResult>
-
             <dcc:usedMethods>
                 <dcc:usedMethod>
                     <dcc:name id="Methode">
@@ -553,7 +545,7 @@
                                 <si:coverageFactor>2</si:coverageFactor>
                                 <si:coverageProbability>0.95</si:coverageProbability>
                             </si:real>
-                            
+
                             <dcc:influenceConditions>
                                 <dcc:influenceCondition>
                                     <dcc:name>
@@ -573,9 +565,6 @@
                         </dcc:quantity>
                     </dcc:data>
                 </dcc:result>
-
-
-
             </dcc:results>
         </dcc:measurementResult>
     </dcc:measurementResults>
