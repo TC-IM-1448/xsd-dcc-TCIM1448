@@ -462,7 +462,7 @@
                             <dcc:measurementMetaData>
                                 <dcc:metaData>
                                     <dcc:valid>true</dcc:valid>
-                                    <dcc:refID>MRA</dcc:refID>
+                                    <dcc:refId>MRA</dcc:refId>
                                 </dcc:metaData>
 
                                 <dcc:metaData>
@@ -517,6 +517,10 @@
 
                             <dcc:influenceConditions>
                                 <dcc:influenceCondition>
+                                    <dcc:name>
+                                        <dcc:content lang="de">Temperatur</dcc:content>
+                                        <dcc:content lang="en">temperature</dcc:content>
+                                    </dcc:name>
                                     <dcc:data>
                                         <dcc:quantity>
                                             <si:real>
@@ -552,6 +556,10 @@
                             
                             <dcc:influenceConditions>
                                 <dcc:influenceCondition>
+                                    <dcc:name>
+                                        <dcc:content lang="de">Temperatur</dcc:content>
+                                        <dcc:content lang="en">temperature</dcc:content>
+                                    </dcc:name>
                                     <dcc:data>
                                         <dcc:quantity>
                                             <si:real>
