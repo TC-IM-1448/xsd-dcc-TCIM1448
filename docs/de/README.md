@@ -9,7 +9,7 @@ Der DCC ist in 4 Bereiche (Ringe) gegliedert. Diese sind folgende:
 - [document](document.md)
 
 
-![Die Struktur des DCC](../images/dcc-structure.png) | ![Die Struktur des DCC als UML](../images/dcc-structure-uml.png)
+![Die Struktur des DCC](../images/dcc-structure.png) ![Die Struktur des DCC als UML](../images/dcc-structure-uml.png)
 
 
 
