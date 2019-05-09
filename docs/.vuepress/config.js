@@ -39,13 +39,13 @@ module.exports = {
                         link: '/de/administrativeData/',
                     },
                     {
-                        text: 'Complex Types',
-                        link: '/de/complexTypes/'
+                        text: 'Measurement Result',
+                        link: '/de/measurementResult/'
                     },
                     {
-                        text: 'Measurement Results',
-                        link: '/de/measurementResults/'
-                    },
+                        text: 'HowTos',
+                        link: '/de/howtos/'
+                    }
                 ],
                 sidebar: 'auto'
             },
