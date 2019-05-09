@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="1.9.3" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="1.9.4" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
            xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
            targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
@@ -11,6 +11,7 @@
 
     <xs:annotation>
         <xs:documentation>
+
         </xs:documentation>
     </xs:annotation>
 
@@ -46,14 +47,17 @@
                             
                             <xs:element name="metrologicallyTraceable" type="dcc:metrologicallyTraceableParameter" minOccurs="0"/>
                             
+                            
+                            <xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter" maxOccurs="unbounded"/>
+                            
                             -->
 
                             <xs:element name="measurementResult">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
+                                        <xs:element name="usedSoftware" type="dcc:softwareParameter"/>
                                         <xs:element name="influenceConditions" type="dcc:influenceConditionParameter"/>
-
                                         <xs:element name="results" type="dcc:resultParameter"/>
                                     </xs:sequence>
                                 </xs:complexType>
@@ -319,16 +323,6 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-
-            <!-- Diskussion für Singular in nächster Sitzung -->
-
-            <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
-            <xs:element name="usedSoftware" type="dcc:softwareParameter" maxOccurs="unbounded"/>
-            <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
-            <xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter" maxOccurs="unbounded"/>
-            <!-- Diese Liste entfernen, nur das SingularElement hier lassen -->
-            <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
-
             <xs:element name="influenceCondition" type="dcc:conditionBlock" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
@@ -451,6 +445,8 @@
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
             </xs:choice>
+            <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
+            <xs:element name="usedSoftware" type="dcc:softwareParameter"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
         </xs:sequence>
@@ -479,8 +475,9 @@
             <xs:choice>
                 <xs:element name="dccList" type="dcc:dccList" maxOccurs="unbounded"/>
                 <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded"/>
-                <xs:element name="offSysQuantity" type="dcc:offSysQuantity" maxOccurs="unbounded"/>
             </xs:choice>
+            <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
+            <xs:element name="usedSoftware" type="dcc:softwareParameter"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
         </xs:sequence>
@@ -501,36 +498,6 @@
         <xs:sequence>
             <xs:element name="metaData" type="dcc:statementMetaDataParameter" maxOccurs="unbounded"/>
         </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="offSysQuantity">
-        <xs:annotation>
-            <xs:documentation>
-                Unrecommended element for stating measured quantities outside the SI-system (off system quantity).
-                The statement of measurement units is unchecked and 'offSysQuantities' are not part of the
-                quality infrastructure that is provided for DCCs. The unit inside the 'real' element
-                is not regulated.
-                The 'offSysQuantity' has an optional 'name' element and it can have a unique ID.
-                The 'name' element can be repeated with different languages.
-                In addition the quantity can contain a comma separated list of independent real quantities
-                ('si:realCS').
-                Furthermore, 'offSysQuantity' can be appended by any additional XML elements that
-                is not listed in the DCC schema and data exchange format. Here it is possible to
-                add user specific data structures that are already in use.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
-            <xs:choice>
-                <xs:element ref="si:real"/>
-                <xs:element ref="si:realCS"/>
-                <xs:element ref="si:list"/>
-            </xs:choice>
-            <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
-            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
-            <xs:any namespace="##other" minOccurs="0"/>
-        </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
 
