@@ -55,8 +55,8 @@
                             <xs:element name="measurementResult">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="usedMethods" type="dcc:usedMethodParameter"/>
-                                        <xs:element name="usedSoftware" type="dcc:softwareParameter"/>
+                                        <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
+                                        <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
                                         <xs:element name="influenceConditions" type="dcc:influenceConditionParameter"/>
                                         <xs:element name="results" type="dcc:resultParameter"/>
                                     </xs:sequence>
