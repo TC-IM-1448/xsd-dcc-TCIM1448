@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC_v2.0.0.xsd"
+        xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC.xsd"
         xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
         xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI">
 
@@ -14,10 +14,20 @@
                 <dcc:name>
                     <dcc:content>Notepad++ (32-bit)</dcc:content>
                 </dcc:name>
-                <dcc:release>v7.5.8</dcc:release>
+                <dcc:release>v7.6.6</dcc:release>
                 <dcc:description id="dcc44-1">
-                    <dcc:content lang="de">Hier steht Text.</dcc:content>
-                    <dcc:content lang="en">This is Text.</dcc:content>
+                    <dcc:content lang="de">Homepage: https://notepad-plus-plus.org/</dcc:content>
+                    <dcc:content lang="de">Installierte Komponenten:</dcc:content>
+                    <dcc:content lang="de">- XML Tools plugin version 2.3.2 unicode beta4 r908</dcc:content>
+                    <dcc:content lang="de">- Npp Hash Maker version 1.0 unicode 2011-07-03</dcc:content>
+                    <dcc:content lang="de">- XML Tools plugin version 2.3.2 unicode beta4 r908</dcc:content>
+                    <dcc:content lang="de">- MIME Tools Version 1.7 unicode</dcc:content>
+                    <dcc:content lang="en">Homepage: https://notepad-plus-plus.org/</dcc:content>
+                    <dcc:content lang="en">Installed components:</dcc:content>
+                    <dcc:content lang="en">- XML Tools plugin version 2.3.2 unicode beta4 r908</dcc:content>
+                    <dcc:content lang="en">- Npp Hash Maker version 1.0 unicode 2011-07-03</dcc:content>
+                    <dcc:content lang="en">- XML Tools plugin version 2.3.2 unicode beta4 r908</dcc:content>
+                    <dcc:content lang="en">- MIME Tools Version 1.7 unicode</dcc:content>
                 </dcc:description>
             </dcc:software>
 
@@ -46,10 +56,6 @@
                 <dcc:content lang="de">Siliziumkugel</dcc:content>
                 <dcc:content lang="en">Silicon sphere</dcc:content>
             </dcc:name>
-            <dcc:description>
-                <dcc:content lang="de"></dcc:content>
-                <dcc:content lang="en"></dcc:content>
-            </dcc:description>
 
             <dcc:item id="dcc10g">
                 <dcc:name>
@@ -67,14 +73,23 @@
 
                 <dcc:manufacturer>
                     <dcc:name>
-                        <dcc:content>Hersteller</dcc:content>
+                        <dcc:content>Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
                     </dcc:name>
-                    <dcc:eMail>info@hersteller.de</dcc:eMail>
+                    <dcc:eMail>info@ptb.de</dcc:eMail>
                     <dcc:location>
-                        <dcc:street>Herstellerstraße</dcc:street>
-                        <dcc:streetNo>42</dcc:streetNo>
-                        <dcc:postCode>12345</dcc:postCode>
-                        <dcc:city>Herstellerort</dcc:city>
+                        <dcc:further id="zusatz_Manufacturer">
+                            <dcc:content lang="de">Abteilung 5 Fertigungsmesstechnik</dcc:content>
+                            <dcc:content lang="de">Fachbereich 5.5 Wissenschaftlicher Gerätebau</dcc:content>
+                            <dcc:content lang="de">Arbeitsgruppe 5.56 Fertigungstechnologie</dcc:content>
+                            <dcc:content lang="en">Division 5 Precision Engineering</dcc:content>
+                            <dcc:content lang="en">Department 5.5 Scientific Instrumentation</dcc:content>
+                            <dcc:content lang="en">Working Group 5.56 Manufacturing Technology</dcc:content>
+                        </dcc:further>
+
+                        <dcc:street>Bundesallee</dcc:street>
+                        <dcc:streetNo>100</dcc:streetNo>
+                        <dcc:postCode>38116</dcc:postCode>
+                        <dcc:city>Braunschweig</dcc:city>
                         <dcc:countryCode>DE</dcc:countryCode>
                     </dcc:location>
                 </dcc:manufacturer>
@@ -86,6 +101,14 @@
                         <dcc:description>
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
+                        </dcc:description>
+                    </dcc:identification>
+                    <dcc:identification id="geschaeftszeichen">
+                        <dcc:issuer>calibrationLaboratory</dcc:issuer>
+                        <dcc:value>1.81-17.019</dcc:value>
+                        <dcc:description>
+                            <dcc:content lang="de">Geschäftszeichen</dcc:content>
+                            <dcc:content lang="en">Reference No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
                 </dcc:identifications>
@@ -101,9 +124,13 @@
                 </dcc:name>
                 <dcc:eMail>info@ptb.de</dcc:eMail>
                 <dcc:location>
-                    <dcc:further id="zusatz">
+                    <dcc:further id="zusatz_calLab">
                         <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content>
+                        <dcc:content lang="de">Fachbereich 1.8 Masse – Darstellung der Einheit</dcc:content>
+                        <dcc:content lang="de">Arbeitsgruppe 1.81 Darstellung Masse</dcc:content>
                         <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content>
+                        <dcc:content lang="en">Department 1.8 Mass - Realization of the Unit</dcc:content>
+                        <dcc:content lang="en">Working Group 1.81 Realization of Mass</dcc:content>
                     </dcc:further>
                     <dcc:street>Bundesallee</dcc:street>
                     <dcc:streetNo>100</dcc:streetNo>
@@ -142,21 +169,14 @@
                 <dcc:content>Physikalisch-Technische Bundesanstalt (PTB)</dcc:content>
             </dcc:name>
             <dcc:eMail>info@ptb.de</dcc:eMail>
-
             <dcc:location>
-                <dcc:further>
-                    <dcc:content lang="de">
-                        Abteilung 1 Mechanik und Akustik
-                        Fachbereich 1.1 Masse – Weitergabe der Einheit
-                        Arbeitsgruppe 1.15 Metrologie in der Wägetechnik
-                        Vorname4 Name4 o. V. i. A.
-                    </dcc:content>
-                    <dcc:content lang="en">
-                        Division 1 Mechanics and Acoustics
-                        Department 1.1 Mass - Dissemination of the Unit
-                        Working Group 1.15 Metrology in Weighing Technology
-                        Vorname4 Name4 or representative in office
-                    </dcc:content>
+                <dcc:further id="zusatz_customer">
+                    <dcc:content lang="de">Abteilung 1 Mechanik und Akustik</dcc:content>
+                    <dcc:content lang="de">Fachbereich 1.1 Masse – Weitergabe der Einheit</dcc:content>
+                    <dcc:content lang="de">Arbeitsgruppe 1.15 Metrologie in der Wägetechnik</dcc:content>
+                    <dcc:content lang="en">Division 1 Mechanics and Acoustics</dcc:content>
+                    <dcc:content lang="en">Department 1.1 Mass - Dissemination of the Unit</dcc:content>
+                    <dcc:content lang="en">Working Group 1.15 Metrology in Weighing Technology</dcc:content>
                 </dcc:further>
                 <dcc:street>Bundesallee</dcc:street>
                 <dcc:streetNo>100</dcc:streetNo>
@@ -198,24 +218,43 @@
                     <dcc:content lang="en">The results refer only to the object calibrated in this DCC. The measurement results are valid at the time of calibration. The applicant is responsible for arranging a recalibration in due time.</dcc:content>
                 </dcc:declaration>
             </dcc:statement>
-<!-- TODO: Statement für Unsicherheit -->
         </dcc:statements>
     </dcc:administrativeData>
 
     <dcc:measurementResults>
         <dcc:measurementResult>
             <dcc:usedMethods>
+
                 <dcc:usedMethod>
-                    <dcc:name id="Methode">
-                        <dcc:content>Default</dcc:content>
-                        <dcc:content lang="de">Substitutionsmethode</dcc:content>
-                        <dcc:content lang="en" id="Method">Substitution method </dcc:content>
+                    <dcc:name id="Unsicherheit">
+                        <dcc:content lang="de">Unsicherheit</dcc:content>
+                        <dcc:content lang="en" id="Uncertainty">Uncertainty</dcc:content>
                     </dcc:name>
 
                     <dcc:description>
-                        <dcc:content lang="de">Verfahren</dcc:content>
-                        <dcc:content lang="en">Procedure</dcc:content>
+                        <dcc:content lang="de">Angegeben ist die erweiterte Messunsicherheit, die sich aus der Standardmessunsicherheit durch Multiplikation mit dem Erweiterungsfaktor k=2 ergibt. Sie wurde gemäß dem „Guide to the Expression of Uncertainty in Measurement (GUM)“ ermittelt. Der Wert der Messgröße liegt dann im Regelfall mit einer Wahrscheinlichkeit von annähernd 95 % im zugeordneten Überdeckungsintervall.</dcc:content>
+                        <dcc:content lang="de">Die erweiterte Messunsicherheit wurde aus Unsicherheitsanteilen der verwendeten Normale, der Wä-gungen und der Luftauftriebskorrektion berechnet. Eine Abschätzung über Langzeitveränderungen ist in der Unsicherheitsangabe nicht enthalten.</dcc:content>
+                        <dcc:content lang="en">The uncertainty stated is the expanded measurement uncertainty obtained by multiplying the standard measurement uncertainty by the
+                            coverage factor k = 2. It has been determined in accordance with the “Guide to the Expression of Uncertainty in Measurement (GUM)”. The value of the measurand then normally lies, with a probability of approximately 95 %, within the attributed coverage interval.</dcc:content>
+                        <dcc:content lang="en">The expanded uncertainty was calculated from the contributions of uncertainty originating from the standards used, from the weighings and the air buoyancy corrections. The reported uncertainty does not include an estimate of long-term variations.</dcc:content>
+                        <dcc:content lang="de">Kovarianzen werden im Allgemeinen nicht angegeben, daher sind für Kombinationen von Gewichtstücken die Unsicherheiten nach der Formel</dcc:content>
+
+                        <dcc:content lang="de" id="Unsicherheitsformel">u mit Index g ist die Summe über i aller u mit Index i</dcc:content>
+
+                        <dcc:content lang="de" id="Unsicherheitsformelbeschreibung">zu addieren. Hierbei sind u mit Index g die Gesamtunsicherheit und u mit Index i die Unsicherheiten der verwendeten Gewichtstücke.</dcc:content>
+
+                        <dcc:content lang="en" id="Uncertaincydescription">Covariances are generally not reported, therefore the uncertainties for combinations of weights must be added according to the above formula, with u with index g the total uncertainty, u wirth index i the uncertainties of the weights used.</dcc:content>
+
                     </dcc:description>
+                </dcc:usedMethod>
+
+
+                <dcc:usedMethod>
+                    <dcc:name id="Methode">
+                        <dcc:content lang="de">Verfahren</dcc:content>
+                        <dcc:content lang="en" id="Method">Procedure</dcc:content>
+                    </dcc:name>
+
                     <dcc:description>
                         <dcc:content lang="de">
                             Die Kalibrierung erfolgte durch Vergleich mit den Hauptnormalen der PTB nach der Substitutionsmethode mit Auftriebskorrektion.
@@ -227,16 +266,8 @@
                         </dcc:content>
                     </dcc:description>
                 </dcc:usedMethod>
-            </dcc:usedMethods>
 
-            <dcc:usedSoftware>
-                <dcc:software>
-                    <dcc:name>
-                        <dcc:content>keine Software verwendet</dcc:content>
-                    </dcc:name>
-                    <dcc:release>0815 4711</dcc:release>
-                </dcc:software>
-            </dcc:usedSoftware>
+            </dcc:usedMethods>
 
             <dcc:influenceConditions>
 
@@ -245,7 +276,7 @@
                         <dcc:content lang="de">Umgebungsbedingungen</dcc:content>
                         <dcc:content lang="en">Ambient conditions</dcc:content>
                     </dcc:name>
-                    <dcc:state>beforeAdjustment</dcc:state>
+
                     <dcc:data>
 
                         <dcc:dccList>
@@ -322,8 +353,8 @@
 
                             <dcc:dccList>
                                 <dcc:name>
-                                    <dcc:content lang="de">air pressure</dcc:content>
-                                    <dcc:content lang="en">Luftdruck</dcc:content>
+                                    <dcc:content lang="de">Luftdruck</dcc:content>
+                                    <dcc:content lang="en">air pressure</dcc:content>
                                 </dcc:name>
                                 <dcc:quantity>
                                     <dcc:name>
@@ -332,7 +363,7 @@
                                     </dcc:name>
                                     <si:real>
                                         <si:value>1007.38</si:value>
-                                        <si:unit>\milli\bar</si:unit>
+                                        <si:unit>\hecto\pascal</si:unit>
                                         <si:uncertainty>0.06</si:uncertainty>
                                         <si:coverageFactor>2</si:coverageFactor>
                                         <si:coverageProbability>0.95</si:coverageProbability>
@@ -345,7 +376,7 @@
                                     </dcc:name>
                                     <si:real>
                                         <si:value>1007.42</si:value>
-                                        <si:unit>\milli\bar</si:unit>
+                                        <si:unit>\hecto\pascal</si:unit>
                                         <si:uncertainty>0.06</si:uncertainty>
                                         <si:coverageFactor>2</si:coverageFactor>
                                         <si:coverageProbability>0.95</si:coverageProbability>
@@ -357,42 +388,9 @@
                 </dcc:influenceCondition>
             </dcc:influenceConditions>
 
+
             <dcc:results>
 
-                <!--
-                TODO: Muss das rein?
-                <dcc:result>
-                    <dcc:name>
-                        <dcc:content lang="de">Konventioneller Wägewert und Fehlergrenze entsprechend OIML R 111</dcc:content>
-                        <dcc:content lang="en">Conventional mass and maximum permissible error corresponding to OIML R 111</dcc:content>
-                    </dcc:name>
-                    <dcc:data id="OIML_R_111">
-                        <dcc:quantity>
-                            <si:real>
-                                <si:value>10.000006E-3</si:value>
-                                <si:unit>\kilogram</si:unit>
-                                <si:uncertainty>0.000004E-3</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
-                            <dcc:measurementMetaData>
-                                <dcc:metaData>
-                                    <dcc:valid>true</dcc:valid>
-                                    <dcc:refId>MRA</dcc:refId>
-                                </dcc:metaData>
-
-                                <dcc:metaData>
-                                    <dcc:convention>Regler 23</dcc:convention>
-                                    <dcc:reference>Stufe 5</dcc:reference>
-                                </dcc:metaData>
-
-                            </dcc:measurementMetaData>
-                        </dcc:quantity>
-                    </dcc:data>
-                </dcc:result>-->
-
-
-                <!-- TODO: Messergebnisse eintragen -->
                 <dcc:result>
                     <dcc:name>
                         <dcc:content lang="de">Masse</dcc:content>
@@ -401,9 +399,10 @@
                     <dcc:data id="Mass">
                         <dcc:quantity>
                             <si:real>
-                                <si:value>10.000003E-3</si:value>
+                                <si:value>1.00007841</si:value>
                                 <si:unit>\kilogram</si:unit>
-                                <si:uncertainty>0.000004E-3</si:uncertainty>
+                                <si:label>1 kg + 78,41 mg</si:label>
+                                <si:uncertainty>0.00000005</si:uncertainty>
                                 <si:coverageFactor>2</si:coverageFactor>
                                 <si:coverageProbability>0.95</si:coverageProbability>
                             </si:real>
