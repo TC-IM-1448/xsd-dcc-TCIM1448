@@ -306,7 +306,6 @@
                     </dcc:description>
                 </dcc:usedMethod>
             </dcc:usedMethods>
-
             <dcc:usedSoftware>
                 <dcc:software>
                     <dcc:name>
@@ -315,9 +314,7 @@
                     <dcc:release>0815 4711</dcc:release>
                 </dcc:software>
             </dcc:usedSoftware>
-
             <dcc:influenceConditions>
-
                 <dcc:influenceCondition>
                     <dcc:name>
                         <dcc:content lang="de">Umgebungsbedingungen</dcc:content>
