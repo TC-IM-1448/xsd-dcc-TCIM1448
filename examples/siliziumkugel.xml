@@ -280,13 +280,13 @@
 
                     <dcc:data>
 
-                        <dcc:dccList>
+                        <dcc:list>
                             <dcc:name>
                                 <dcc:content lang="de">Die Kalibrierung wurde bei folgenden Umgebungsbedingungen ausgeführt: </dcc:content>
                                 <dcc:content lang="en">The calibration was carried out under the following ambient conditions:</dcc:content>
                             </dcc:name>
 
-                            <dcc:dccList id="temperatur">
+                            <dcc:list id="temperatur">
                                 <dcc:name>
                                     <dcc:content lang="de">Temperatur</dcc:content>
                                     <dcc:content lang="en">temperature</dcc:content>
@@ -317,9 +317,9 @@
                                         <si:coverageProbability>0.95</si:coverageProbability>
                                     </si:real>
                                 </dcc:quantity>
-                            </dcc:dccList>
+                            </dcc:list>
 
-                            <dcc:dccList>
+                            <dcc:list>
                                 <dcc:name>
                                     <dcc:content lang="de">rel. Luftfeuchte</dcc:content>
                                     <dcc:content lang="en">relative humidity</dcc:content>
@@ -350,9 +350,9 @@
                                         <si:coverageProbability>0.95</si:coverageProbability>
                                     </si:real>
                                 </dcc:quantity>
-                            </dcc:dccList>
+                            </dcc:list>
 
-                            <dcc:dccList>
+                            <dcc:list>
                                 <dcc:name>
                                     <dcc:content lang="de">Luftdruck</dcc:content>
                                     <dcc:content lang="en">air pressure</dcc:content>
@@ -383,8 +383,8 @@
                                         <si:coverageProbability>0.95</si:coverageProbability>
                                     </si:real>
                                 </dcc:quantity>
-                            </dcc:dccList>
-                        </dcc:dccList>
+                            </dcc:list>
+                        </dcc:list>
                     </dcc:data>
                 </dcc:influenceCondition>
             </dcc:influenceConditions>

@@ -400,7 +400,7 @@
             <xs:element name="byteData" type="dcc:byteDataBlock"/>
             <xs:element name="xml" type="dcc:xmlBlock"/>
             <xs:element name="quantity" type="dcc:quantity"/>
-            <xs:element name="dccList" type="dcc:dccList"/>
+            <xs:element name="list" type="dcc:list"/>
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -441,7 +441,7 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="dccList">
+    <xs:complexType name="list">
         <xs:annotation>
             <xs:documentation>
                 The 'list' element allows to define a collection of measurement results
@@ -461,7 +461,7 @@
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/>
             <xs:choice>
-                <xs:element name="dccList" type="dcc:dccList" maxOccurs="unbounded"/>
+                <xs:element name="list" type="dcc:list" maxOccurs="unbounded"/>
                 <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded"/>
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
