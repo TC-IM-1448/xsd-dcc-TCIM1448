@@ -105,7 +105,7 @@
                     </dcc:identification>
                     <dcc:identification id="geschaeftszeichen">
                         <dcc:issuer>calibrationLaboratory</dcc:issuer>
-                        <dcc:value>1.81-17.019</dcc:value>
+                        <dcc:value>1.81-18.039</dcc:value>
                         <dcc:description>
                             <dcc:content lang="de">Geschäftszeichen</dcc:content>
                             <dcc:content lang="en">Reference No.</dcc:content>
@@ -224,7 +224,7 @@
     <dcc:measurementResults>
         <dcc:measurementResult>
             <dcc:usedMethods>
-
+ 
                 <dcc:usedMethod>
                     <dcc:name id="Unsicherheit">
                         <dcc:content lang="de">Unsicherheit</dcc:content>
@@ -235,12 +235,11 @@
                         <dcc:content lang="de">Angegeben ist die erweiterte Messunsicherheit, die sich aus der Standardmessunsicherheit durch Multiplikation mit dem Erweiterungsfaktor k=2 ergibt. Sie wurde gemäß dem „Guide to the Expression of Uncertainty in Measurement (GUM)“ ermittelt. Der Wert der Messgröße liegt dann im Regelfall mit einer Wahrscheinlichkeit von annähernd 95 % im zugeordneten Überdeckungsintervall.</dcc:content>
                         <dcc:content lang="de">Die erweiterte Messunsicherheit wurde aus Unsicherheitsanteilen der verwendeten Normale, der Wä-gungen und der Luftauftriebskorrektion berechnet. Eine Abschätzung über Langzeitveränderungen ist in der Unsicherheitsangabe nicht enthalten.</dcc:content>
                         <dcc:content lang="en">The uncertainty stated is the expanded measurement uncertainty obtained by multiplying the standard measurement uncertainty by the
-                            coverage factor k = 2. It has been determined in accordance with the “Guide to the Expression of Uncertainty in Measurement (GUM)”. The value of the measurand then normally lies, with a probability of approximately 95 %, within the attributed coverage interval.</dcc:content>
+                        coverage factor k = 2. It has been determined in accordance with the “Guide to the Expression of Uncertainty in Measurement (GUM)”. The value of the measurand then normally lies, with a probability of approximately 95 %, within the attributed coverage interval.</dcc:content>
                         <dcc:content lang="en">The expanded uncertainty was calculated from the contributions of uncertainty originating from the standards used, from the weighings and the air buoyancy corrections. The reported uncertainty does not include an estimate of long-term variations.</dcc:content>
                         <dcc:content lang="de">Kovarianzen werden im Allgemeinen nicht angegeben, daher sind für Kombinationen von Gewichtstücken die Unsicherheiten nach der Formel</dcc:content>
-
-                        <dcc:content lang="de" id="Unsicherheitsformel"><![CDATA[$u_g = \sum_i{u_i}$]]></dcc:content>
-                        <dcc:content lang="en" id="Uncertaincyformula"><![CDATA[$u_g = \sum_i{u_i}$]]></dcc:content>
+                        
+                        <dcc:content lang="de" id="Unsicherheitsformel">u mit Index g ist die Summe über i aller u mit Index i</dcc:content>
 
                         <dcc:content lang="de" id="Unsicherheitsformelbeschreibung">zu addieren. Hierbei sind u mit Index g die Gesamtunsicherheit und u mit Index i die Unsicherheiten der verwendeten Gewichtstücke.</dcc:content>
 
@@ -249,7 +248,7 @@
                     </dcc:description>
                 </dcc:usedMethod>
 
-
+ 
                 <dcc:usedMethod>
                     <dcc:name id="Methode">
                         <dcc:content lang="de">Verfahren</dcc:content>
@@ -391,6 +390,11 @@
 
 
             <dcc:results>
+<!--                <dcc:name>
+                    <dcc:content lang="de">Messergebnisse</dcc:content>
+                    <dcc:content lang="en">Measurement results</dcc:content>
+                </dcc:name>
+-->
 
                 <dcc:result>
                     <dcc:name>
@@ -398,58 +402,47 @@
                         <dcc:content lang="en">mass</dcc:content>
                     </dcc:name>
                     <dcc:data id="Mass">
-                        <dcc:quantity>
-                            <si:real>
-                                <si:value>1.00007841</si:value>
-                                <si:unit>\kilogram</si:unit>
-                                <si:label>1 kg + 78,41 mg</si:label>
-                                <si:uncertainty>0.00000005</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
-                        </dcc:quantity>
-                    </dcc:data>
-                </dcc:result>
 
-
-
-
-                <dcc:result>
-                    <dcc:name>
-                        <dcc:content lang="de">Dichte</dcc:content>
-                        <dcc:content lang="en">density</dcc:content>
-                    </dcc:name>
-                    <dcc:description>
-                        <dcc:content lang="de">Dichte bei gegebener Temperatur</dcc:content>
-                        <dcc:content lang="en">density at given temperature</dcc:content>
-                    </dcc:description>
-                    <dcc:data id="Density">
-                        <dcc:quantity>
-                            <si:real>
-                                <si:value>8012.8</si:value>
-                                <si:unit>\kilogram\metre\tothe{-3}</si:unit>
-                                <si:uncertainty>3.2</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
-
-                            <dcc:influenceConditions>
-                                <dcc:influenceCondition>
-                                    <dcc:name>
-                                        <dcc:content lang="de">Temperatur</dcc:content>
-                                        <dcc:content lang="en">temperature</dcc:content>
-                                    </dcc:name>
-                                    <dcc:data>
-                                        <dcc:quantity>
-                                            <si:real>
-                                                <si:value>20</si:value>
-                                                <si:unit>\degreeCelsius</si:unit>
-                                            </si:real>
-                                        </dcc:quantity>
-                                    </dcc:data>
-                                </dcc:influenceCondition>
-                            </dcc:influenceConditions>
-                        </dcc:quantity>
+                        <dcc:list>
+                        
+                            <dcc:quantity>
+                                <dcc:name>
+                                    <dcc:content lang="de">Nennwert</dcc:content>
+                                    <dcc:content lang="en">nominal value</dcc:content>
+                                </dcc:name>
+                                <dcc:noQuantity>
+                                    <dcc:content>1 kg</dcc:content>
+                                </dcc:noQuantity>
+                            </dcc:quantity>
+                            
+                            <dcc:quantity>
+                                <dcc:name>
+                                    <dcc:content lang="de">Kennzeichnung</dcc:content>
+                                    <dcc:content lang="en">marking</dcc:content>
+                                </dcc:name>
+                                <dcc:noQuantity>
+                                    <dcc:content lang="de">keine</dcc:content>
+                                    <dcc:content lang="en">none</dcc:content>
+                                </dcc:noQuantity>
+                            </dcc:quantity>
+                            
+                            <dcc:quantity>
+                                <dcc:name>
+                                    <dcc:content lang="de" id="Masse_Spalte_3">Masse</dcc:content>
+                                    <dcc:content lang="en" id="mass_column_3">mass</dcc:content>
+                                    <dcc:content lang="de" id="Masse_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
+                                    <dcc:content lang="en" id="mass_uncertaincy_column_4">uncertainty</dcc:content>
+                                </dcc:name>
+                                <si:real>
+                                    <si:value>1.00007841</si:value>
+                                    <si:unit>\kilogram</si:unit>
+                                    <si:label>1 kg + 78,41 mg</si:label>
+                                    <si:uncertainty>0.00000005</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:list>
                     </dcc:data>
                 </dcc:result>
 
@@ -458,39 +451,50 @@
                         <dcc:content lang="de">Volumen</dcc:content>
                         <dcc:content lang="en">Volume</dcc:content>
                     </dcc:name>
-                    <dcc:description>
-                        <dcc:content lang="de">Volumen bei gegebener Temperatur</dcc:content>
-                        <dcc:content lang="en">volume at given temperature</dcc:content>
-                    </dcc:description>
                     <dcc:data id="Volume">
-                        <dcc:quantity>
-                            <si:real>
-                                <si:value>1.2480E-6</si:value>
-                                <si:unit>\metre\tothe{3}</si:unit>
-                                <si:uncertainty>0.0005E-6</si:uncertainty>
-                                <si:coverageFactor>2</si:coverageFactor>
-                                <si:coverageProbability>0.95</si:coverageProbability>
-                            </si:real>
 
-                            <dcc:influenceConditions>
-                                <dcc:influenceCondition>
-                                    <dcc:name>
-                                        <dcc:content lang="de">Temperatur</dcc:content>
-                                        <dcc:content lang="en">temperature</dcc:content>
-                                    </dcc:name>
-                                    <dcc:data>
-                                        <dcc:quantity>
-                                            <si:real>
-                                                <si:value>20</si:value>
-                                                <si:unit>\degreeCelsius</si:unit>
-                                            </si:real>
-                                        </dcc:quantity>
-                                    </dcc:data>
-                                </dcc:influenceCondition>
-                            </dcc:influenceConditions>
-                        </dcc:quantity>
+                        <dcc:list>
+                        
+                            <dcc:quantity>
+                                <dcc:name>
+                                    <dcc:content lang="de">Nennwert</dcc:content>
+                                    <dcc:content lang="en">nominal value</dcc:content>
+                                </dcc:name>
+                                <dcc:noQuantity>
+                                    <dcc:content>1 kg</dcc:content>
+                                </dcc:noQuantity>
+                            </dcc:quantity>
+                            
+                            <dcc:quantity>
+                                <dcc:name>
+                                    <dcc:content lang="de">Kennzeichnung</dcc:content>
+                                    <dcc:content lang="en">marking</dcc:content>
+                                </dcc:name>
+                                <dcc:noQuantity>
+                                    <dcc:content lang="de">keine</dcc:content>
+                                    <dcc:content lang="en">none</dcc:content>
+                                </dcc:noQuantity>
+                            </dcc:quantity>
+                            
+                            <dcc:quantity>
+                                <dcc:name>
+                                    <dcc:content lang="de" id="Volumen_Spalte_3">Volumen bei t = 20 °C</dcc:content>
+                                    <dcc:content lang="en" id="volume_column_3">volume at t = 20 °C</dcc:content>
+                                    <dcc:content lang="de" id="Volumen_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
+                                    <dcc:content lang="en" id="volume_uncertaincy_column_4">uncertainty</dcc:content>
+                                </dcc:name>
+                                <si:real>
+                                    <si:value>431.055119</si:value>
+                                    <si:unit>\centi\metre\tothe{3}</si:unit>
+                                    <si:uncertainty>0.000018</si:uncertainty>
+                                    <si:coverageFactor>2</si:coverageFactor>
+                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                </si:real>
+                            </dcc:quantity>
+                        </dcc:list>
                     </dcc:data>
                 </dcc:result>
+
             </dcc:results>
         </dcc:measurementResult>
     </dcc:measurementResults>
