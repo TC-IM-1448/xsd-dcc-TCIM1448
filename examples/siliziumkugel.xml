@@ -238,8 +238,9 @@
                         coverage factor k = 2. It has been determined in accordance with the “Guide to the Expression of Uncertainty in Measurement (GUM)”. The value of the measurand then normally lies, with a probability of approximately 95 %, within the attributed coverage interval.</dcc:content>
                         <dcc:content lang="en">The expanded uncertainty was calculated from the contributions of uncertainty originating from the standards used, from the weighings and the air buoyancy corrections. The reported uncertainty does not include an estimate of long-term variations.</dcc:content>
                         <dcc:content lang="de">Kovarianzen werden im Allgemeinen nicht angegeben, daher sind für Kombinationen von Gewichtstücken die Unsicherheiten nach der Formel</dcc:content>
-                        
-                        <dcc:content lang="de" id="Unsicherheitsformel">u mit Index g ist die Summe über i aller u mit Index i</dcc:content>
+
+                        <dcc:content lang="de" id="Unsicherheitsformel">$u_g = \sum_i{u_i}$</dcc:content>
+                        <dcc:content lang="en" id="Uncertaincyformula">$u_g = \sum_i{u_i}$</dcc:content>
 
                         <dcc:content lang="de" id="Unsicherheitsformelbeschreibung">zu addieren. Hierbei sind u mit Index g die Gesamtunsicherheit und u mit Index i die Unsicherheiten der verwendeten Gewichtstücke.</dcc:content>
 

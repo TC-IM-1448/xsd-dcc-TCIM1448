@@ -245,17 +245,8 @@
 						<dcc:content lang="en">Procedure</dcc:content>
 					</dcc:description>
 					<dcc:description>
-						<!--	Demo for formatting HTML or LaTeX	-->
-						<dcc:content lang="de"><![CDATA[
-							<p>Die Volumenbestimmung für
-								<latex>$m \ge 1 g$</latex>erfolgte nach der hydrostatischen Wägemethode.
-							</p>]]>
-						</dcc:content>
-						<dcc:content lang="en"><![CDATA[
-							<p>The volume determination for
-								<latex>$m \ge 1 g$</latex>was carried out with the hydrostatic weighing method.
-							</p>]]>
-						</dcc:content>
+						<dcc:content lang="de">Die Volumenbestimmung für $m \ge 1 g$ erfolgte nach der hydrostatischen Wägemethode.</dcc:content>
+						<dcc:content lang="en">The volume determination for $m \ge 1 g$ was carried out with the hydrostatic weighing method.</dcc:content>
 					</dcc:description>
 					<dcc:description>
 						<dcc:content lang="de">Die Kalibrierung erfolgte durch Vergleich mit den Hauptnormalen der PTB nach der Substitutionsmethode mit Auftriebskorrektion.</dcc:content>
