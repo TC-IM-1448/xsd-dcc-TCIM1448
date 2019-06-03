@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved -->
 <xs:schema version="2.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
            xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
@@ -12,7 +11,11 @@
 
     <xs:annotation>
         <xs:documentation>
+            Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
 
+            Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der Software entstehen.
+
+            This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
         </xs:documentation>
     </xs:annotation>
 
@@ -37,20 +40,20 @@
                 <xs:element name="measurementResults">
                     <xs:complexType>
                         <xs:sequence>
-                            <!-- 
-                            For this elements is community input needed. 
-                            Talk to us: gemimeg@ptb.de 
-                            
+                            <!--
+                            For this elements is community input needed.
+                            Talk to us: gemimeg@ptb.de
+
                             <xs:element name="samplingDate" type="xs:date" minOccurs="0"/>
                             <xs:element name="sampledMaterials" type="dcc:sampledMaterialParameter" minOccurs="0"/>
-                            
+
                             <xs:element name="externals" type="dcc:externalParameter" minOccurs="0"/>
-                            
+
                             <xs:element name="metrologicallyTraceable" type="dcc:metrologicallyTraceableParameter" minOccurs="0"/>
-                            
-                            
+
+
                             <xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter" maxOccurs="unbounded"/>
-                            
+
                             -->
 
                             <xs:element name="measurementResult" maxOccurs="unbounded">

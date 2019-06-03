@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved -->
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC DCC.xsd"
         xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
         xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI">
 
+    <!--
+    Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
+
+    Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der Software entstehen.
+
+    This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
+    -->
 
     <dcc:administrativeData>
 
@@ -36,7 +42,7 @@
                 <dcc:name>
                     <dcc:content>GEMIMEG Tool</dcc:content>
                 </dcc:name>
-                <dcc:release>0.0.2</dcc:release>
+                <dcc:release>0.7.1</dcc:release>
             </dcc:software>
 
         </dcc:dccSoftware>
@@ -225,7 +231,7 @@
     <dcc:measurementResults>
         <dcc:measurementResult>
             <dcc:usedMethods>
- 
+
                 <dcc:usedMethod>
                     <dcc:name id="Unsicherheit">
                         <dcc:content lang="de">Unsicherheit</dcc:content>
@@ -250,7 +256,7 @@
                     </dcc:description>
                 </dcc:usedMethod>
 
- 
+
                 <dcc:usedMethod>
                     <dcc:name id="Methode">
                         <dcc:content lang="de">Verfahren</dcc:content>
@@ -406,7 +412,7 @@
                     <dcc:data id="Mass">
 
                         <dcc:list>
-                        
+
                             <dcc:quantity>
                                 <dcc:name>
                                     <dcc:content lang="de">Nennwert</dcc:content>
@@ -416,7 +422,7 @@
                                     <dcc:content>1 kg</dcc:content>
                                 </dcc:noQuantity>
                             </dcc:quantity>
-                            
+
                             <dcc:quantity>
                                 <dcc:name>
                                     <dcc:content lang="de">Kennzeichnung</dcc:content>
@@ -427,7 +433,7 @@
                                     <dcc:content lang="en">none</dcc:content>
                                 </dcc:noQuantity>
                             </dcc:quantity>
-                            
+
                             <dcc:quantity>
                                 <dcc:name>
                                     <dcc:content lang="de" id="Masse_Spalte_3">Masse</dcc:content>
@@ -456,7 +462,7 @@
                     <dcc:data id="Volume">
 
                         <dcc:list>
-                        
+
                             <dcc:quantity>
                                 <dcc:name>
                                     <dcc:content lang="de">Nennwert</dcc:content>
@@ -466,7 +472,7 @@
                                     <dcc:content>1 kg</dcc:content>
                                 </dcc:noQuantity>
                             </dcc:quantity>
-                            
+
                             <dcc:quantity>
                                 <dcc:name>
                                     <dcc:content lang="de">Kennzeichnung</dcc:content>
@@ -477,7 +483,7 @@
                                     <dcc:content lang="en">none</dcc:content>
                                 </dcc:noQuantity>
                             </dcc:quantity>
-                            
+
                             <dcc:quantity>
                                 <dcc:name>
                                     <dcc:content lang="de" id="Volumen_Spalte_3">Volumen bei t = 20 °C</dcc:content>
