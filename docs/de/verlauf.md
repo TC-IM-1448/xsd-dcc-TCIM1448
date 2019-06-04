@@ -1,23 +1,36 @@
 # Der Verlauf der Entscheidungen
 
 
-## diese Besprechung
 
-Entscheidungen:
-* influenceConditions --> usedSoftware ist eine Pflichtangabe! wäre hier eine optionale Verwendung nicht besser?
-** usedSoftware auf selber Ebene (gleichgestellt) wie influenceConditions
+## DCC Besprechung und Designentscheidungen vom 08.05.2019
 
-* usedMethods auf selbe Ebene (gleichgestellt) wie influenceCondition
-
-* calibrationLocations werden erstmal auskommentiert!
-
-* influenceCondition --> conditionBlock: state ist Pflicht. Muss das nicht optional sein?
-** STATE IST OPTIONAL!!
+Beteiligte
+T. Bruns, S. Hackel, D. Hutzschenreuter, A. Scheibner, J. Loewe, J. Jagieniak, T. Wiedenhöfer
 
 
+**Thema**
+
+Diskussion measurementResults Teil
 
 
-## DCC Besprechung und Designentscheidungen vom30.04.2019
+#### Übersicht der getroffenen Entscheidungen
+
+##### Diskussion Hauptstruktur im measurementResults Teil
+* **Entscheidung:** Das Element usedSoftware soll auf der gleichen Ebene wie das Element influenceConditions stehen. D.h., es ist als Hauptelement direkt unter measurementResults angebbar und optional kann es auch in der dcc:quantity und der dcc:list stehen.
+* **Entscheidung:** Das Element usedMethods soll auf der gleichen Ebene wie das Elements influenceConditions stehen. D.h., es ist als Hauptelement direkt unter measurementResults angebbar und optional kann es auch in der dcc:quantity und der dcc:list stehen.
+* **Entscheidung:** Das Element calibrationLocations und sein definierender Typ werden auskommentiert für den Workshop Juni 2019. Sie bleiben aber lesbar im DCC schema stehen.
+
+##### Diskussion results Teil
+* **Entscheidung:** Der neue Typ resultBlock wird für die result Elemente eingeführt.
+* **Entscheidung:** Der Typ resultblock hat alle Elemete wie der Typ conditionBlock bis auf das Element state. Der resultBlock hat kein Element state.
+* **Hinweis:** Die Zuordnung der results zu dem Status wie ***befor repair***, ***after repair***, ***before adjustment*** oder ***after adjustment*** erfolgt indirekt durch das state Element bei zugeordneten influenceConditions.
+
+##### Weitere Diskussion
+* **Hinweis:** Wenn in einem textBlock Elemenent <content> ohne das Attribut ***lang*** angegeben wird, so gilt der Text in <content> für alle Sprachen, die dem DCC zugewiesen sind.
+* **Hinweis:** Unter influenceConditon Elementen dürfen keine zusätzlichen InfluenceCondition Elemente rekursiv eingesetzt werden. Diese Eigenschaft wird voraussichtlich in Zukunft durch einen TraCIM Test abgeprüft, da die Darstellung über das XML Schema zu aufwendig ist.
+* **Hinweis:** Die Elemente usedSoftware und usedMethods sind keine Pflichtangaben im measurementResults Teil.
+
+## DCC Besprechung und Designentscheidungen vom 30.04.2019
 
 Beteiligte
 T. Bruns, S. Hackel, F. Härtig, D. Hutzschenreuter, A. Scheibner, J. Loewe, Ch. Schlegel
