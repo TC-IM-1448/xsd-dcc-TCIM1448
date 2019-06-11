@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="2.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="2.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
            xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
            targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
@@ -11,7 +11,11 @@
 
     <xs:annotation>
         <xs:documentation>
+            Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
 
+            Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der Software entstehen.
+
+            This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
         </xs:documentation>
     </xs:annotation>
 
@@ -36,23 +40,23 @@
                 <xs:element name="measurementResults">
                     <xs:complexType>
                         <xs:sequence>
-                            <!-- 
-                            For this elements is community input needed. 
-                            Talk to us: gemimeg@ptb.de 
-                            
+                            <!--
+                            For this elements is community input needed.
+                            Talk to us: gemimeg@ptb.de
+
                             <xs:element name="samplingDate" type="xs:date" minOccurs="0"/>
                             <xs:element name="sampledMaterials" type="dcc:sampledMaterialParameter" minOccurs="0"/>
-                            
+
                             <xs:element name="externals" type="dcc:externalParameter" minOccurs="0"/>
-                            
+
                             <xs:element name="metrologicallyTraceable" type="dcc:metrologicallyTraceableParameter" minOccurs="0"/>
-                            
-                            
+
+
                             <xs:element name="calibrationLocations" type="dcc:calibrationLocationParameter" maxOccurs="unbounded"/>
-                            
+
                             -->
 
-                            <xs:element name="measurementResult">
+                            <xs:element name="measurementResult" maxOccurs="unbounded">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
@@ -111,18 +115,6 @@
             <xs:element name="mandatoryLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/>
             <xs:element name="uniqueIdentifier" type="xs:string"/>
             <xs:element name="receiptDate" type="xs:date" minOccurs="0"/>
-
-            <!-- Wir setzen uns bewusst über die DIN ISO 17025 hinweg, 
-            indem wir die Elemente "endPerformanceDate" und 
-            "beginPerformanceDate" als Mandatory definieren. 
-            In der 17025 steht drin: 
-            Beide Angaben können weggelassen werden, 
-            wenn es begründet wird. 
-            Aber, es müssen diese beiden Angaben 
-            beim Ausführenden der Kalibrierung vorgehalten werden.
-            
-            Wenn es nur einen Wert gibt, 
-            müssen beide Felder mit einem identischen Wert gefüllt werden! -->
 
             <xs:element name="beginPerformanceDate" type="xs:date"/>
             <xs:element name="endPerformanceDate" type="xs:date"/>
@@ -412,7 +404,7 @@
             <xs:element name="byteData" type="dcc:byteDataBlock"/>
             <xs:element name="xml" type="dcc:xmlBlock"/>
             <xs:element name="quantity" type="dcc:quantity"/>
-            <xs:element name="dccList" type="dcc:dccList"/>
+            <xs:element name="list" type="dcc:list"/>
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -453,7 +445,7 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="dccList">
+    <xs:complexType name="list">
         <xs:annotation>
             <xs:documentation>
                 The 'list' element allows to define a collection of measurement results
@@ -473,7 +465,7 @@
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/>
             <xs:choice>
-                <xs:element name="dccList" type="dcc:dccList" maxOccurs="unbounded"/>
+                <xs:element name="list" type="dcc:list" maxOccurs="unbounded"/>
                 <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded"/>
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>

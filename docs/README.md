@@ -1,8 +1,8 @@
-# Herzlich Willkommen im Wiki zu DCC
+# Welcome to the Wiki to DCC
 
-Verfügbare Sprachen:
-
-[Deutsch](de/README.md)
-
+Available languages:
 
 [Englisch](en/README.md)
+
+[German](de/README.md)
+
