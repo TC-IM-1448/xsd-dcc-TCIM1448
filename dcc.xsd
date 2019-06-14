@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema version="2.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
-           xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
-           targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
+           xmlns:dcc="https://ptb.de/dcc"
+           xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1"
+           targetNamespace="https://ptb.de/dcc"
            elementFormDefault="qualified">
 
     <xs:import
-            namespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
-            schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI/SI_Format_v1.0.1.xsd"/>
+            namespace="https://ptb.de/si/smartcom/d-si/v1_0_1"
+            schemaLocation="https://ptb.de/si/smartcom/d-si/v1_0_1/SI_Format.xsd" />
 
     <xs:annotation>
         <xs:documentation>
