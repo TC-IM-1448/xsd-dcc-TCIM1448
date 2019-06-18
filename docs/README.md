@@ -1,8 +1,8 @@
-# Welcome to the Wiki to DCC
+# Welcome to the Docs for the DCC
 
 Available languages:
 
-[Englisch](en/README.md)
+[English](en/README.md)
 
 [German](de/README.md)
 

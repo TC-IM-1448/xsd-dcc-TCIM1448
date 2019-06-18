@@ -1,6 +1,6 @@
 {
-  "name": "xsd-dcc-wiki",
-  "version": "2.1.0",
+  "name": "xsd-dcc-docs",
+  "version": "2.1.1",
   "description": "DCC",
   "private": true,
   "repository": {
