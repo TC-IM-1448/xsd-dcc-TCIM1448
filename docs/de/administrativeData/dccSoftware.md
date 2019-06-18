@@ -1,4 +1,4 @@
-# dccSoftware
+# Element dccSoftware
 
 
 ## Aufbau
@@ -26,17 +26,17 @@
 ### software (complexType)
 Dieses Element darf mehrfach vorkommen. Jeder Eintrag stellt eine Software dar. Beschrieben über die folgenden Elemente.
 
-### [name](../complexTypes/textBlock.md)
+#### [name](../complexTypes/textBlock.md)
 Stellt den Namen der Software dar. Er kann Mehrsprachig angegeben werden.
 
 Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
 
-### release
+#### release
 Das Release der Software. Mögliche Angaben: Release, Version, etc. Zur eindeutigen Identifizierung der Software im Zusammenhang mit dem Namen. 
 
 Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
 
-### [description](../complexTypes/textBlock.md)
+#### [description](../complexTypes/textBlock.md)
 Jegliche Information die nicht in Name oder Release steht kommt hier hinein. Das Element kann garnicht, einmal oder mehrfach auftreten. Durch den Datentyp textBlock ist hier auch die Mehrsprachigkeit gegeben.
 
 Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)

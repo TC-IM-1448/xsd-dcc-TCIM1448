@@ -1,7 +1,7 @@
 # ComplexType itemParameter
 
 
-## Aufbau
+## Construction
 ```xml
 <xs:complexType name="itemParameter">
     <xs:sequence>
@@ -55,82 +55,83 @@
 </xs:complexType>
 ```
 
-## Hinweise
-Das Element items ist im Schema (dcc.xsd) nicht weiter unterteilt. Es sieht dadurch extrem komplex aus, was es im Prinzip nicht ist.
+## Hints
+The items item is not further subdivided in the schema (dcc.xsd). It looks extremely complex, which in principle is not.
 
-## Elemente
+## Elements
 
 ### [items --> name](../complexTypes/textBlock.md)
-Name des Kalibriergegenstandes, sofern dieser aus mehreren Item-Elementen besteht (z. B. Gewichtssatz)
-.
-Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
+Name of the calibration object, if it consists of several item elements (eg weight set).
+
+Data type: [dcc:textBlock](../complexTypes/textBlock.md)
 
 ### [items --> description](../complexTypes/textBlock.md)
-Beschreibung des Kalibriergegenstandes.
+Description of the calibration object.
 
-Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
+Data type: [dcc:textBlock](../complexTypes/textBlock.md)
 
 ### [items --> owner](../complexTypes/contact.md)
 
-Datentyp: [dcc:textBlock](../complexTypes/contact.md)
+Data type: [dcc:textBlock](../complexTypes/contact.md)
 
 ### items --> item
 
 
 ### [items --> item --> Name](../complexTypes/textBlock.md)
-Name des Kalibriergegenstandes.
+Name of the calibration object.
 
-Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
+Data type: [dcc:textBlock](../complexTypes/textBlock.md)
 
 ### [items --> item --> description](../complexTypes/textBlock.md)
-Beschreibung des Kalibriergegenstandes.
+Description of the calibration object.
 
-Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
+Data type: [dcc:textBlock](../complexTypes/textBlock.md)
 
 ### [items --> item --> descriptionData](../complexTypes/byteDataBlock.md)
-Eine Datei (Base64-codiert), die z. B. ein Foto oder eine Zeichnung oder einen Lageplan enthalten kann.
+A file (Base64-encoded), the z. B. may contain a photo or a drawing or a map.
 
-Datentyp: [dcc:textBlock](../complexTypes/byteDataBlock.md)
+Data type: [dcc:textBlock](../complexTypes/byteDataBlock.md)
 
 ### [items --> item --> manufacturer](../complexTypes/contactNotStrict.md)
-Adresse des Herstellers.
+Address of the manufacturer.
 
-Datentyp: [dcc:textBlock](../complexTypes/contactNotStrict.md)
+Data type: [dcc:textBlock](../complexTypes/contactNotStrict.md)
 
 ### items --> item --> model
 
 
 ### items --> item --> identifications
-Auflistung der eindeutigen Identifikationsmerkmale.
+List of unique identifiers.
 
 ### items --> item --> identifications --> identification
-Ein eindeutiges Identifikationsmerkmal.
+A unique identifier.
 
 ### items --> item --> identifications --> identification --> issuer
-Der Aussteller der Identification. Hier ist nur eine Gruppe von Werten erlaubt:
+The Exhibitor of the Identification. Only one set of values is allowed here:
 - manufacturer
-- calibrationLaboratory
+- calibration Laboratory
 - customer
 - owner
 - other
 
 ### items --> item --> identifications --> identification --> value
-Das eindeutige Identifikationsmerkmal.
+The unique identification feature.
 
 ### [items --> item --> identifications --> identification --> description](../complexTypes/textBlock.md)
-Eine weitergehende Beschreibung zu dieser Identifikation. Mehrsprachigkeit ist hier gegeben.
-Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
+A more detailed description of this identification. Multilingualism is given here.
 
-## Attribute
-Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird. 
+Data type: [dcc:textBlock](../complexTypes/textBlock.md)
 
-Datentyp: [xs:ID](../xsd/xs-ID.md)
+## Attributes
+The unique identification of the object in the DCC. It deliberately uses the xs: ID data type because it allows for validation without any add-ons in different tools.
 
-## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
+Data type: [xs:ID](../xsd/xs-ID.md)
+
+## Examples
+For the sake of clarity, the examples are shown without [namespace] (namespace.md).
 
 
-### Einfaches Beispiel
+### Simple example
 ```xml
 <dcc:items>
 
@@ -166,7 +167,7 @@ Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace
 </dcc:items>
 ```            
 
-### Einfaches Beispiel mit Mehrsprachigkeit
+### Simple example with multilingualism
 ```xml
 <dcc:items>
 
@@ -207,7 +208,7 @@ Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace
 
 
 
-### Beispiel, 2 Item Elemente
+### Example, 2 item elements
 ```xml
 <dcc:items>
 
@@ -301,7 +302,7 @@ Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace
 ```            
 
 
-### Beispiel, 2 Item Elemente mit IDs und Mehrsprachigkeit
+### Example, 2 item elements with IDs and multilingualism
 ```xml
 <dcc:items>
 

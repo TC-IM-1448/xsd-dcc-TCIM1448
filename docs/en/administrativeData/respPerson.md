@@ -1,7 +1,7 @@
 # ComplexType respPersonParameter
 
 
-## Aufbau
+## Construction
 ```xml
 <xs:complexType name="respPersonParameter">
     <xs:sequence>
@@ -24,52 +24,51 @@
 </xs:complexType>
 ```
 
-## Hinweise
---keine--
+## Hints
+--none--
 
-## Elemente
+## Elements
 
 ### respPerson
-Dieses Element enthält alle weiteren Elemente. 
+This element contains all other elements.
 
 #### person
-Der Name der Person. Einfacher Text.
+The name of the person. Simple text.
 
 #### mainSigner
-Ist diese Person der Hauptunterzeichner? Ja/Nein
+Is this person the main signatory? Yes/No
 
 #### cryptElectronicSeal
-...
+...Yes/No
 
 #### cryptElectronicSignature
-...
+...Yes/No
 
 #### cryptElectronicTimeStamp
-...
+...Yes/No
 
 #### eMailPerson
-Die Emailadresse der Person.
+The email address of the person.
 
 #### [furtherInfoPerson](../complexTypes/textBlock.md)
-Das Element ist ein Textblock, welcher beliebig viele mit Mehrsprachigkeit
+The element is a text block, which any number with multilingualism
 
 Data type: [dcc:textBlock](../complexTypes/textBlock.md)
 
 #### [location](../complexTypes/location.md)
-Darstellung einer Adresse.
+Presentation of an address.
 
 Data type: [dcc:location](../complexTypes/location.md)
 
-## Attribute
-Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird. 
+## Attributes
+The unique identification of the object in the DCC. It deliberately uses the xs: ID data type because it allows for validation without any add-ons in different tools.
 
-Datentyp: [xs:ID](../xsd/xs-ID.md)
+Data type: [xs:ID](../xsd/xs-ID.md)
 
-## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
+## Examples
+For the sake of clarity, the examples are shown without [namespace] (namespace.md).
 
-
-### Einfaches Beispiel
+### Simple example
 ```xml
 <respPersons>
     <respPerson>

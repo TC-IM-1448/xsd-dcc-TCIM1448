@@ -1,18 +1,17 @@
-# complexType element
+# Element document
 
 
 ## Aufbau
 ```xml
-
+<xs:element name="document" type="dcc:byteDataBlock" minOccurs="0"/>
 ```
 
 ## Hinweise
+Das menschenlesbare Dokument.
 
 ## Elemente
-### [further](complexTypes/textBlock.md)
-Das Element mit den meisten Möglichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
-
-Datentyp: [dcc:textBlock](complexTypes/textBlock.md)
+Das Element "document" hat den Datentyp byteDataBlock.
+Datentyp: [dcc:byteDataBlock](complexTypes/byteDataBlock.md)
 
 ## Attribute
 --keine--
@@ -20,14 +19,33 @@ Datentyp: [dcc:textBlock](complexTypes/textBlock.md)
 ## Beispiele
 Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](namespace.md) dargestellt.
 
-
-### Einfaches Beispiel einer Adresse, ohne Name (o. ä.)
+### Einfaches Beispiel 
 ```xml
-<location>
-    <street>Herstellerstraße</street>
-    <streetNo>42</streetNo>
-    <postCode>12345</postCode>
-    <city>Herstellerort</city>
-    <countryCode>DE</countryCode>
-</location>
+<document>
+    <name>
+        <content>The humanreadable Document</content>
+    </name>
+    <description>
+        <content>A simple Description</content>
+    </description>
+    <fileName>noOne.txt</fileName>
+    <mimeType>plain/text</mimeType>
+    <data>UGh5c2lrYWxpc2NoIFRlY2huaXNjaGUgQnVuZGVzYW5zdGFsdCwgQnJhdW5zY2h3ZWlnLCBEZXV0c2NobGFuZCwgYWxleGFuZGVyLnNjaGVpYm5lckBwdGIuZGU=</data>
+</document>
 ```            
+
+### Einfaches Beispiel mit ID 
+```xml
+<document id="xyz">
+    <name>
+        <content>The humanreadable Document</content>
+    </name>
+    <description>
+        <content>A simple Description</content>
+    </description>
+    <fileName>noOne.txt</fileName>
+    <mimeType>plain/text</mimeType>
+    <data>UGh5c2lrYWxpc2NoIFRlY2huaXNjaGUgQnVuZGVzYW5zdGFsdCwgQnJhdW5zY2h3ZWlnLCBEZXV0c2NobGFuZCwgYWxleGFuZGVyLnNjaGVpYm5lckBwdGIuZGU=</data>
+</document>
+```            
+

@@ -1,21 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="2.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:dcc="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
-           xmlns:si="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
-           targetNamespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/DCC"
+<xs:schema version="2.1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:dcc="https://ptb.de/dcc"
+           xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1"
+           targetNamespace="https://ptb.de/dcc"
            elementFormDefault="qualified">
 
     <xs:import
-            namespace="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI"
-            schemaLocation="https://intranet.ptb.de/fileadmin/dokumente/intranet/abteilungen/abteilung_1/Digitaler_Kalibrierschein/SI/SI_Format_v1.0.1.xsd"/>
+            namespace="https://ptb.de/si/smartcom/d-si/v1_0_1"
+            schemaLocation="https://ptb.de/si/smartcom/d-si/v1_0_1/SI_Format.xsd" />
 
     <xs:annotation>
         <xs:documentation>
             Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
 
-            Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der Software entstehen.
+            Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich,
+            wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung,
+            egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch
+            konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software.
+            Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für
+            Folgeschäden ab, die durch die Nutzung der Software entstehen.
 
-            This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
+            This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available
+            “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties,
+            and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other
+            characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential
+            damage arising in connection with the use of this software.
+        </xs:documentation>
+        <xs:documentation>
+            Die Entwicklung von Mindestanforderungen für ein digitales Kalibrierzertifikat (DCC) wird teilweise finanziert
+            und unterstützt durch die Verbundprojekt EMPIR 17IND02 (Titel: SmartCom). Die EMPIR-Initiative wird von der
+            Europäischen Kommission kofinanziert. Forschungs- und Innovationsprogramm der Union Horizon 2020 und die
+            EMPIR-Teilnehmerstaaten.
+
+            The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
+            supported by the joint research project EMPIR 17IND02 (title: SmartCom). The EMPIR initiative is co-funded
+            by the European Union's Horizon 2020 research and innovation programme and the EMPIR Participating States.
         </xs:documentation>
     </xs:annotation>
 
@@ -328,7 +347,7 @@
             <xs:element name="calibrationLocation" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="calibrationLocationSites" type="dcc:textBlock"/>
+                        <xs:element name="calibrationLocationSite" type="dcc:textBlock"/>
                         <xs:element name="beginLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
                         <xs:element name="endLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
                         <xs:element name="location" type="dcc:location" minOccurs="0"/>

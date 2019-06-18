@@ -1,18 +1,24 @@
-# complexType element
+# Element statements
 
 
 ## Aufbau
 ```xml
-
+<xs:complexType name="statementParameter">
+    <xs:sequence>
+        <xs:element name="statement" type="dcc:statementMetaDataParameter" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
 ```
 
 ## Hinweise
+--keine--
 
 ## Elemente
-### [further](../complexTypes/textBlock.md)
-Das Element mit den meisten Möglichkeiten. Hier kann alles eingetragen werden - mit Mehrsprachigkeit - was in kein anderes Feld passt.
 
-Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
+### [statement](../complexTypes/statementMetaDataParameter.md)
+Es werden einzelne Statements erfasst. Der complexType "statementMetaDataParameter" wird hier verwendet. 
+
+Datentyp: [dcc:statementMetaDataParameter](../complexTypes/statementMetaDataParameter.md)
 
 ## Attribute
 --keine--
@@ -21,13 +27,11 @@ Datentyp: [dcc:textBlock](../complexTypes/textBlock.md)
 Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
 
 
-### Einfaches Beispiel einer Adresse, ohne Name (o. ä.)
+### Einfaches Beispiel
 ```xml
-<location>
-    <street>Herstellerstraße</street>
-    <streetNo>42</streetNo>
-    <postCode>12345</postCode>
-    <city>Herstellerort</city>
-    <countryCode>DE</countryCode>
-</location>
-```            
+<statements>
+    <statement>
+        <norm>EN45501</norm>
+    </statement>
+</statements>
+```
