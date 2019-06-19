@@ -1,10 +1,45 @@
+const pkg = require('../package');
+
 module.exports = {
-    dest: 'vuepress',
-    serviceWorker: true,
+    base: `/dcc/v${pkg.version}/`,
+    plugins: {
+        '@vuepress/pwa': {
+            serviceWorker: true,
+            updatePopup: {
+                '/de/': {
+                    message: 'Neue Inhalte sind verfügbar.',
+                    buttonText: 'Seite neu laden'
+                },
+                '/en/': {
+                    message: 'New content is available.',
+                    buttonText: 'Reload page'
+                }
+            }
+        },
+        '@vuepress/back-to-top': {},
+        '@vuepress/medium-zoom': {
+            selector: "img"
+        }
+    },
+    head: [
+        ['link', { rel: 'icon', href: '/icons/icon-512x512.png' }],
+        ['link', { rel: 'manifest', href: '/manifest.json' }],
+        ['meta', { name: 'theme-color', content: '#009cd1' }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        ['link', { rel: 'apple-touch-icon', href: `/icons/icon-152x152.png` }],
+        ['meta', { name: 'msapplication-TileImage', content: '/icons/icon-144x144.png' }],
+        ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+    ],
     markdown: {
         lineNumbers: true
     },
     locales: {
+        '/': {
+            lang: 'en-US',
+            title: 'Digital Calibration Certificate',
+            description: 'Wiki for the DCC'
+        },
         '/de/': {
             lang: 'de-DE',
             title: 'Digitaler Kalibrierschein',
@@ -17,7 +52,7 @@ module.exports = {
         }
     },
     themeConfig: {
-        repo: 'https://gitlab1.ptb.de/abteilung-1/dcc/xsd-dcc',
+        repo: 'https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc',
         editLinks: true,
         docsDir: 'docs',
         docsBranch: 'master',
@@ -27,12 +62,6 @@ module.exports = {
                 selectText: 'Sprachen',
                 editLinkText: 'Bearbeiten Sie diese Seite auf GitLab!',
                 lastUpdated: 'Zuletzt aktualisiert',
-                serviceWorker: {
-                    updatePopup: {
-                        message: 'Neue Inhalte sind verfügbar.',
-                        buttonText: 'Seite neu laden'
-                    }
-                },
                 nav: [
                     {
                         text: 'Administrative Data',
@@ -52,6 +81,22 @@ module.exports = {
             '/en/': {
                 label: 'English',
                 editLinkText: 'Edit this Page on GitLab!',
+                selectText: 'Languages',
+                lastUpdated: 'Last updated',
+                nav: [
+                    {
+                        text: 'Administrative Data',
+                        link: '/en/administrativeData/',
+                    },
+                    {
+                        text: 'Measurement Result',
+                        link: '/en/measurementResult/'
+                    },
+                    {
+                        text: 'HowTos',
+                        link: '/en/howtos/'
+                    }
+                ],
                 sidebar: 'auto'
             }
         }

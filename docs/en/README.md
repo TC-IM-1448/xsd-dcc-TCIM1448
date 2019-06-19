@@ -1,4 +1,4 @@
-# digital calibration certificate
+# Digital Calibration Certificate
 In the following only called DCC.
 
 

@@ -69,4 +69,7 @@ local.properties
 /.project
 node_modules/
 
-docs/vuepress
+# Some IDEs download the SI Format into the project
+SI_Format.xsd
+
+docs/.vuepress/dist
