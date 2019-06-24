@@ -45,7 +45,3 @@ cd gemimeg-tool
       <td align="center"><a href="mailto:jan.loewe@ptb.de">jan.loewe@ptb.de</a></td>
   </tr>
 </table>
-
-#### Credits
-
-Design based on the work of Falk Drieschner
