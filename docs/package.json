@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://gitlab1.ptb.de/abteilung-1/dcc/xsd-dcc.git"
+    "url": "https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc.git"
   },
   "scripts": {
     "dev": "vuepress dev",
