@@ -24,7 +24,7 @@ Talk measurementResults part
 * ** Note: ** Assigning the results to the status such as *** befor repair ***, *** after repair ***, *** before adjustment *** or *** after adjustment *** is done indirectly by the state element at associated influenceConditions.
 
 ##### Further discussion
-* ** Note: ** If in a textBlock element <content> is specified without the attribute *** lang ***, the text in <content> applies to all languages ​​assigned to the DCC.
+* ** Note: ** If in a textBlock element `<content>` is specified without the attribute *** lang ***, the text in `<content>` applies to all languages ​​assigned to the DCC.
 * ** Note: ** Under influenceConditon elements no additional InfluenceCondition elements may be used recursively. This feature is expected to be audited in the future by a TraCIM test, since the representation via the XML schema is too costly.
 * ** Note: ** The elements usedSoftware and usedMethods are not mandatory in the measurementResults part.
 
@@ -304,7 +304,7 @@ o valueID
 
 Talk items and item presentation
 • Decision: In the section "administrativeData" there is a list of 1 to n items
-(<xs: element name = "item" maxOccurs = "unbounded">)
+(`<xs: element name = "item" maxOccurs = "unbounded">`)
 • Decision: Each item in the list must provide at least one identification information (serial number or similar)
 • Decision: The list of items has global information for the overall description and description (such as "weight set" or "chain xyz")
 • Decision: Each item has the optional information
