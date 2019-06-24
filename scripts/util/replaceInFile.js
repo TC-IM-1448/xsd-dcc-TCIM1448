@@ -5,7 +5,7 @@ module.exports = function (fileName, text, replacement) {
         if (err) {
             return console.log(err);
         }
-        let result = data.replace(new RegExp(text), replacement);
+        let result = data.split(text).join(replacement);
 
         fs.writeFile(fileName, result, "utf8", function (err) {
             if (err) return console.log(err);
