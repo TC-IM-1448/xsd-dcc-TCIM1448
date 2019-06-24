@@ -8,7 +8,20 @@
 
 ## Access to the Schema
 
-TODO
+You can access the latest version of the Schema at:
+```bash
+https://ptb.de/dcc/dcc.xsd
+```
+
+Or a specific version at:
+```bash
+https://ptb.de/dcc/v2.1.1/dcc.xsd
+```
+
+## Access to the Docs
+
+You can find the Docs at [https://ptb.de/dcc/v2.1.1/](https://ptb.de/dcc/v2.1.1/)
+
  
 ## Development
 
@@ -23,7 +36,7 @@ This Project uses [semantic versioning](https://semver.org/).
 git clone https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc.git
 
 # Go into the repository
-cd gemimeg-tool
+cd xsd-dcc
 ```
 
 ## Team
