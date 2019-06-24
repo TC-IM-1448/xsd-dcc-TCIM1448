@@ -6,22 +6,46 @@
 </div>
 <br />
 
+## Access to the Docs
+
+You can find the Docs at [https://ptb.de/dcc/v2.1.1/](https://ptb.de/dcc/v2.1.1/).
+
+Or here in this Repository at [docs/README.md](docs/README.md).
+
 ## Access to the Schema
 
-You can access the latest version of the Schema at:
-```bash
-https://ptb.de/dcc/dcc.xsd
-```
+### Specific Version
 
-Or a specific version at:
+To use the Schema use the URL with a specific version below.
+This is the recommended way.
+
 ```bash
 https://ptb.de/dcc/v2.1.1/dcc.xsd
 ```
 
-## Access to the Docs
+```xml
+<dcc:digitalCalibrationCertificate
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.1.1/dcc.xsd"
+        xmlns:dcc="https://ptb.de/dcc"
+        xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1">
+        <!--
+        ...
+        -->
+</dcc:digitalCalibrationCertificate>
+```
 
-You can find the Docs at [https://ptb.de/dcc/v2.1.1/](https://ptb.de/dcc/v2.1.1/)
+### Latest Version
+You can access the latest version of the Schema at the URL below.
 
+**:warning: Warning :warning:**
+
+The usage of this URL in **NOT** recommended.
+Using this URL could break your Software! The Version of this Schema is changing continuously.
+
+```bash
+https://ptb.de/dcc/dcc.xsd
+```
  
 ## Development
 
@@ -46,15 +70,37 @@ cd xsd-dcc
     <th><a href="https://gitlab1.ptb.de/hackel03" target="_blank"><img width="200" src="https://gitlab1.ptb.de/uploads/-/system/user/avatar/31/avatar.png?width=90"/></a></th>
     <th><a href="https://gitlab1.ptb.de/AScheibner" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
     <th><a href="https://gitlab1.ptb.de/jloewe" target="_blank"><img width="200" src="https://gitlab1.ptb.de/uploads/-/system/user/avatar/38/avatar.png"/></a></th>
+    <th><a href="https://gitlab1.ptb.de/DHutzschenreuter" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
   </tr>
   <tr>
     <td align="center"><a href="https://gitlab1.ptb.de/hackel03" target="_blank">Siegfried Hackel</a></td>
     <td align="center"><a href="https://gitlab1.ptb.de/AScheibner" target="_blank">Alexander Scheibner</a></td>
     <td align="center"><a href="https://gitlab1.ptb.de/jloewe" target="_blank">Jan Henry Loewe</a></td>
+    <td align="center"><a href="https://gitlab1.ptb.de/DHutzschenreuter" target="_blank">Daniel Hutzschenreuter</a></td>
   </tr>
   <tr>
       <td align="center"><a href="mailto:siegfried.hackel@ptb.de">siegfried.hackel@ptb.de</a></td>
       <td align="center"><a href="mailto:alexander.scheibner@ptb.de">alexander.scheibner@ptb.de</a></td>
       <td align="center"><a href="mailto:jan.loewe@ptb.de">jan.loewe@ptb.de</a></td>
+      <td align="center"><a href="mailto:daniel.hutzschenreuter@ptb.de">daniel.hutzschenreuter@ptb.de</a></td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <th><a href="https://gitlab1.ptb.de/jjagieniak" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
+    <th><a href="https://gitlab1.ptb.de/LDoering" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
+    <th><a href="https://gitlab1.ptb.de/bgloger" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://gitlab1.ptb.de/jjagieniak" target="_blank">Justin Jagieniak</a></td>
+    <td align="center"><a href="https://gitlab1.ptb.de/LDoering" target="_blank">Lutz Doering</a></td>
+    <td align="center"><a href="https://gitlab1.ptb.de/jloewe" target="_blank">Benjamin Gloger</a></td>
+  </tr>
+  <tr>
+      <td align="center"><a href="mailto:justin.jagieniak@ptb.de">justin.jagieniak@ptb.de</a></td>
+      <td align="center"><a href="mailto:lutz.doering@ptb.de">lutz.doering@ptb.de</a></td>
+      <td align="center"><a href="mailto:benjamin.gloger@ptb.de">benjamin.gloger@ptb.de</a></td>
   </tr>
 </table>
