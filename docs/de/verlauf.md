@@ -26,7 +26,7 @@ Diskussion measurementResults Teil
 * **Hinweis:** Die Zuordnung der results zu dem Status wie ***befor repair***, ***after repair***, ***before adjustment*** oder ***after adjustment*** erfolgt indirekt durch das state Element bei zugeordneten influenceConditions.
 
 ##### Weitere Diskussion
-* **Hinweis:** Wenn in einem textBlock Elemenent <content> ohne das Attribut ***lang*** angegeben wird, so gilt der Text in <content> für alle Sprachen, die dem DCC zugewiesen sind.
+* **Hinweis:** Wenn in einem textBlock Elemenent `<content>` ohne das Attribut ***lang*** angegeben wird, so gilt der Text in `<content>` für alle Sprachen, die dem DCC zugewiesen sind.
 * **Hinweis:** Unter influenceConditon Elementen dürfen keine zusätzlichen InfluenceCondition Elemente rekursiv eingesetzt werden. Diese Eigenschaft wird voraussichtlich in Zukunft durch einen TraCIM Test abgeprüft, da die Darstellung über das XML Schema zu aufwendig ist.
 * **Hinweis:** Die Elemente usedSoftware und usedMethods sind keine Pflichtangaben im measurementResults Teil.
 
@@ -309,7 +309,7 @@ o	valueID
 
 Diskussion items und item Darstellung
 •	Entscheidung: Im Bereich „administrativeData“ gibt es eine Liste von 1 bis n Items
-(<xs:element name="item" maxOccurs="unbounded">)
+(`<xs:element name="item" maxOccurs="unbounded">`)
 •	Entscheidung: Jedes item in der Liste muss mindestens eine Information zur Identifikation liefern (Seriennummer oder ähnlich)
 •	Entscheidung: Die Liste der Item hat globale Informationen für die Gesamtbezeichnung und Beschreibung (wie „Gewichtssatz“ oder „Messkette xyz“)
 •	Entscheidung: Jedes item hat die optionalen Angaben
