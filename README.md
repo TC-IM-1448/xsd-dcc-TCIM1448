@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://ptb.de/dcc" traget="_blank"><img src="docs/images/logo.png" alt="" width="600"/></a>
+  <a href="https://ptb.de/dcc" traget="_blank"><img src="docs/images/logo.png" alt="" width="400"/></a>
   <br />
   <h1>xsd-dcc</h1>
   <p>This repository contains the XSD, a documentation and examples for the DCC (Digital Calibration Certificate).</p>
@@ -19,7 +19,7 @@ Or here in this Repository at [docs/README.md](docs/README.md).
 To use the Schema use the URL with a specific version below.
 This is the recommended way.
 
-```bash
+```
 https://ptb.de/dcc/v2.1.1/dcc.xsd
 ```
 
@@ -43,7 +43,7 @@ You can access the latest version of the Schema at the URL below.
 The usage of this URL in **NOT** recommended.
 Using this URL could break your Software! The Version of this Schema is changing continuously.
 
-```bash
+```
 https://ptb.de/dcc/dcc.xsd
 ```
  
