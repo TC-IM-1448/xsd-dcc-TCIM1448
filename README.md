@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://ptb.de/dcc" traget="_blank"><img src="docs/images/DCC-Logo.png" alt="" width="600"/></a>
+  <a href="https://ptb.de/dcc" traget="_blank"><img src="docs/images/DCC-Logo.png" alt="" width="400"/></a>
   <br />
   <h1>xsd-dcc</h1>
   <p>This repository contains the XSD, a documentation and examples for the DCC (Digital Calibration Certificate).</p>
