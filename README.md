@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://ptb.de/dcc" traget="_blank"><img src="docs/images/logo.png" alt="" width="400"/></a>
+  <a href="https://ptb.de/dcc" traget="_blank"><img src="docs/images/logo.png" alt="DCC Logo" width="400"/></a>
   <br />
   <h1>xsd-dcc</h1>
   <p>This repository contains the XSD, a documentation and examples for the DCC (Digital Calibration Certificate).</p>
@@ -67,7 +67,7 @@ cd xsd-dcc
 
 <table>
   <tr>
-    <th><a href="https://gitlab1.ptb.de/hackel03" target="_blank"><img width="200" src="https://gitlab1.ptb.de/uploads/-/system/user/avatar/31/avatar.png?width=90"/></a></th>
+    <th><a href="https://gitlab1.ptb.de/hackel03" target="_blank"><img width="200" src="https://gitlab1.ptb.de/uploads/-/system/user/avatar/31/avatar.png"/></a></th>
     <th><a href="https://gitlab1.ptb.de/AScheibner" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
     <th><a href="https://gitlab1.ptb.de/jloewe" target="_blank"><img width="200" src="https://gitlab1.ptb.de/uploads/-/system/user/avatar/38/avatar.png"/></a></th>
     <th><a href="https://gitlab1.ptb.de/DHutzschenreuter" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
@@ -89,7 +89,7 @@ cd xsd-dcc
 
 <table>
   <tr>
-    <th><a href="https://gitlab1.ptb.de/jjagieniak" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
+    <th><a href="https://gitlab1.ptb.de/jjagieniak" target="_blank"><img width="200" src="https://gitlab1.ptb.de/uploads/-/system/user/avatar/61/avatar.png"/></a></th>
     <th><a href="https://gitlab1.ptb.de/LDoering" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
     <th><a href="https://gitlab1.ptb.de/bgloger" target="_blank"><img width="200" src="docs/images/unknown-user.png"/></a></th>
   </tr>
