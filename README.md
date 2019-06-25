@@ -96,7 +96,7 @@ cd xsd-dcc
   <tr>
     <td align="center"><a href="https://gitlab1.ptb.de/jjagieniak" target="_blank">Justin Jagieniak</a></td>
     <td align="center"><a href="https://gitlab1.ptb.de/LDoering" target="_blank">Lutz Doering</a></td>
-    <td align="center"><a href="https://gitlab1.ptb.de/jloewe" target="_blank">Benjamin Gloger</a></td>
+    <td align="center"><a href="https://gitlab1.ptb.de/bgloger" target="_blank">Benjamin Gloger</a></td>
   </tr>
   <tr>
       <td align="center"><a href="mailto:justin.jagieniak@ptb.de">justin.jagieniak@ptb.de</a></td>
