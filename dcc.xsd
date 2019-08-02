@@ -183,7 +183,7 @@
         </xs:annotation>
         <xs:sequence>
 			<xs:element name="reference" type="xs:string"/>
-			<xs:element name="classID" maxOccurs="unbounded"/>
+			<xs:element name="classID" type="xs:string" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
