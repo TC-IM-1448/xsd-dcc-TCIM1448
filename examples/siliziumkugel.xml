@@ -165,24 +165,34 @@
 
         <dcc:respPersons>
             <dcc:respPerson id="Responsible">
-                <dcc:person>Vorname1 Name1</dcc:person>
+                <dcc:person>
+                    <dcc:name>
+                        <dcc:content>Vorname1 Name1</dcc:content>
+                    </dcc:name>
+                    <dcc:eMail>vorname1.name1@ptb.de</dcc:eMail>
+                </dcc:person>
                 <dcc:mainSigner>true</dcc:mainSigner>
-                <dcc:eMailPerson>vorname1.name1@ptb.de</dcc:eMailPerson>
             </dcc:respPerson>
-
             <dcc:respPerson id="Technician">
-                <dcc:person>Vorname2 Name2</dcc:person>
-                <dcc:eMailPerson>vorname2.name2@ptb.de</dcc:eMailPerson>
+                <dcc:person>
+                    <dcc:name>
+                        <dcc:content>Vorname2 Name2</dcc:content>
+                    </dcc:name>
+                    <dcc:eMail>vorname2.name2@ptb.de</dcc:eMail>
+                </dcc:person>
             </dcc:respPerson>
-
             <dcc:respPerson id="Signature">
-                <dcc:person>Vorname3 Name3</dcc:person>
-                <dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature>
-                <dcc:eMailPerson>vorname3.name3@ptb.de</dcc:eMailPerson>
-                <dcc:furtherInfoPerson>
+                <dcc:person>
+                    <dcc:name>
+                        <dcc:content>Vorname3 Name3</dcc:content>
+                    </dcc:name>
+                    <dcc:eMail>vorname3.name3@ptb.de</dcc:eMail>
+                </dcc:person>
+                <dcc:description>
                     <dcc:content lang="de">Signaturstelle</dcc:content>
                     <dcc:content lang="en">Signaturemember</dcc:content>
-                </dcc:furtherInfoPerson>
+                </dcc:description>
+                <dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature>
             </dcc:respPerson>
         </dcc:respPersons>
 

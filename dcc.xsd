@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="2.1.1_DCC_Branch_SH" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="2.1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://ptb.de/dcc"
            xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1"
            targetNamespace="https://ptb.de/dcc"
@@ -266,14 +266,12 @@
             <xs:element name="respPerson" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="person" type="xs:string"/>
+                        <xs:element name="person" type="dcc:contactNotStrict"/>
+                        <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
                         <xs:element name="mainSigner" type="xs:boolean" minOccurs="0"/>
                         <xs:element name="cryptElectronicSeal" type="xs:boolean" minOccurs="0"/>
                         <xs:element name="cryptElectronicSignature" type="xs:boolean" minOccurs="0"/>
                         <xs:element name="cryptElectronicTimeStamp" type="xs:boolean" minOccurs="0"/>
-                        <xs:element name="eMailPerson" type="xs:string" minOccurs="0"/>
-                        <xs:element name="furtherInfoPerson" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded"/>
-                        <xs:element name="location" type="dcc:location" minOccurs="0"/>
                     </xs:sequence>
                     <xs:attribute name="id" type="xs:ID" use="optional"/>
                 </xs:complexType>
