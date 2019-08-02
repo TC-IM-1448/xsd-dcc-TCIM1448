@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="2.1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="2.1.1_DCC_Branch_SH" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://ptb.de/dcc"
            xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1"
            targetNamespace="https://ptb.de/dcc"
@@ -13,25 +13,9 @@
         <xs:documentation>
             Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
 
-            Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich,
-            wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung,
-            egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch
-            konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software.
-            Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für
-            Folgeschäden ab, die durch die Nutzung der Software entstehen.
+            Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der Software entstehen.
 
-            This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available
-            “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties,
-            and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other
-            characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential
-            damage arising in connection with the use of this software.
-        </xs:documentation>
-        <xs:documentation>
-            This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
-            and from the European Union's Horizon 2020 research and innovation programme.
-
-            The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
-            supported by the joint research project EMPIR 17IND02 (title: SmartCom).
+            This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
         </xs:documentation>
     </xs:annotation>
 
@@ -77,6 +61,7 @@
                                     <xs:sequence>
                                         <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
                                         <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
+                                        <xs:element name="measuringEquipments" type="dcc:measuringEquipmentParameter" minOccurs="0"/>
                                         <xs:element name="influenceConditions" type="dcc:influenceConditionParameter"/>
                                         <xs:element name="results" type="dcc:resultParameter"/>
                                     </xs:sequence>
@@ -98,6 +83,7 @@
     <!--   #####################################################################################
                 Elements of the administrativeData part of the DCC
            #####################################################################################-->
+
     <xs:complexType name="softwareParameter">
         <xs:annotation>
             <xs:documentation>
@@ -119,6 +105,58 @@
         </xs:sequence>
     </xs:complexType>
 
+
+    <xs:complexType name="measuringEquipmentParameter">
+        <xs:annotation>
+            <xs:documentation>
+                Informations about the instruments used
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="measuringEquipment" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="name" type="dcc:textBlock" />
+						<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" /> 
+                        <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
+                        <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="certificate" type="dcc:hash" minOccurs="0"/>
+                        <xs:element name="manufacturer" type="dcc:contactNotStrict" minOccurs="0"/>
+                        <xs:element name="model" type="xs:string" minOccurs="0"/>
+
+                        <xs:element name="identifications" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="identification" maxOccurs="unbounded">
+                                        <xs:complexType>
+                                            <xs:sequence>
+                                                <xs:element name="issuer">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="manufacturer"/>
+                                                            <xs:enumeration value="calibrationLaboratory"/>
+                                                            <xs:enumeration value="customer"/>
+                                                            <xs:enumeration value="owner"/>
+                                                            <xs:enumeration value="other"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:element>
+                                                <xs:element name="value" type="xs:string"/>
+                                                <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+                                            </xs:sequence>
+                                            <xs:attribute name="id" type="xs:ID" use="optional"/>
+                                        </xs:complexType>
+                                    </xs:element>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:ID" use="optional"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="coreDataParameter">
         <xs:annotation>
             <xs:documentation>
@@ -131,12 +169,23 @@
             <xs:element name="mandatoryLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/>
             <xs:element name="uniqueIdentifier" type="xs:string"/>
             <xs:element name="receiptDate" type="xs:date" minOccurs="0"/>
-
             <xs:element name="beginPerformanceDate" type="xs:date"/>
             <xs:element name="endPerformanceDate" type="xs:date"/>
-
             <xs:element name="previousReport" type="dcc:hash" minOccurs="0"/>
         </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="equipmentClassParameter">
+        <xs:annotation>
+            <xs:documentation>
+                Clear name(s) of the item(s) and identifier(s)
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+			<xs:element name="reference" type="xs:string"/>
+			<xs:element name="classID" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="itemParameter">
@@ -147,13 +196,15 @@
         </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
+			<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />
             <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="owner" type="dcc:contact" minOccurs="0"/>
 
             <xs:element name="item" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="name" type="dcc:textBlock"/>
+                        <xs:element name="name" type="dcc:textBlock" />
+						<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" /> 
                         <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
                         <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
 
@@ -453,12 +504,39 @@
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
             </xs:choice>
+			<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimParameter" minOccurs="0"/>
             <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataParameter" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="toleranceOneDimParameter">
+        <xs:annotation>
+            <xs:documentation>
+                This element is necessary to handle tolerances.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="lowerLimit" minOccurs="0">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element ref="si:real"/>
+						<xs:element ref="si:hybrid"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+            <xs:element name="upperLimit" minOccurs="0">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element ref="si:real"/>
+						<xs:element ref="si:hybrid"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="list">
@@ -491,7 +569,6 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-
 
     <xs:complexType name="measurementMetaDataParameter">
         <xs:annotation>
@@ -552,15 +629,14 @@
 
     <xs:complexType name="location">
         <xs:choice maxOccurs="unbounded">
-            <xs:element name="further" type="dcc:textBlock"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="countryCode" type="dcc:elementStringISO3166"/>
+            <xs:element name="postCode" type="xs:string"/>
+            <xs:element name="postOfficeBox" type="xs:string"/>
+            <xs:element name="state" type="xs:string"/>
             <xs:element name="street" type="xs:string"/>
             <xs:element name="streetNo" type="xs:string"/>
-            <xs:element name="postOfficeBox" type="xs:string"/>
-            <xs:element name="postCode" type="xs:string"/>
-            <xs:element name="city" type="xs:string"/>
-            <xs:element name="state" type="xs:string"/>
-            <xs:element name="countryCode" type="dcc:elementStringISO3166"/>
-            <xs:element name="descriptionData" type="dcc:byteDataBlock"/>
+            <xs:element name="further" type="dcc:textBlock"/>
         </xs:choice>
     </xs:complexType>
 
@@ -568,7 +644,10 @@
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock"/>
             <xs:element name="eMail" type="xs:string"/>
+            <xs:element name="phone" type="xs:string" minOccurs="0"/>
+            <xs:element name="fax" type="xs:string" minOccurs="0"/>
             <xs:element name="location" type="dcc:location"/>
+            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -577,7 +656,10 @@
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock"/>
             <xs:element name="eMail" type="xs:string" minOccurs="0"/>
+            <xs:element name="phone" type="xs:string" minOccurs="0"/>
+            <xs:element name="fax" type="xs:string" minOccurs="0"/>
             <xs:element name="location" type="dcc:location" minOccurs="0"/>
+            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
