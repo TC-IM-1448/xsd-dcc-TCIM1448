@@ -381,8 +381,8 @@
 							</dcc:list>
 							<dcc:list>
 								<dcc:name>
-									<dcc:content lang="de">air pressure</dcc:content>
-									<dcc:content lang="en">Luftdruck</dcc:content>
+									<dcc:content lang="de">Luftdruck</dcc:content>
+									<dcc:content lang="en">air pressure</dcc:content>
 								</dcc:name>
 								<dcc:quantity>
 									<dcc:name>
