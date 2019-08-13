@@ -28,7 +28,7 @@ https://ptb.de/dcc/v2.1.1/dcc.xsd
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.1.1/dcc.xsd"
         xmlns:dcc="https://ptb.de/dcc"
-        xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1">
+        xmlns:si="https://ptb.de/si">
         <!--
         ...
         -->
