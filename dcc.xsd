@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema version="2.1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://ptb.de/dcc"
-           xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1"
+           xmlns:si="https://ptb.de/si"
            targetNamespace="https://ptb.de/dcc"
            elementFormDefault="qualified">
 
     <xs:import
-            namespace="https://ptb.de/si/smartcom/d-si/v1_0_1"
-            schemaLocation="https://ptb.de/si/smartcom/d-si/v1_0_1/SI_Format.xsd" />
+            namespace="https://ptb.de/si"
+            schemaLocation="https://ptb.de/si/v1.3.0/SI_Format.xsd" />
 
     <xs:annotation>
         <xs:documentation>
@@ -498,7 +498,6 @@
             <xs:choice>
                 <xs:element name="noQuantity" type="dcc:textBlock" />
                 <xs:element ref="si:real"/>
-                <xs:element ref="si:realCS"/>
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
             </xs:choice>

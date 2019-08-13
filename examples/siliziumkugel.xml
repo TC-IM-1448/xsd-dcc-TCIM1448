@@ -3,7 +3,7 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.1.1/dcc.xsd"
         xmlns:dcc="https://ptb.de/dcc"
-        xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1">
+        xmlns:si="https://ptb.de/si">
 
     <!--
     Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
@@ -331,9 +331,11 @@
                                     <si:real>
                                         <si:value>20.775</si:value>
                                         <si:unit>\degreeCelsius</si:unit>
-                                        <si:uncertainty>0.020</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                        <si:expandedUnc>
+                                            <si:uncertainty>0.020</si:uncertainty>
+                                            <si:coverageFactor>2</si:coverageFactor>
+                                            <si:coverageProbability>0.95</si:coverageProbability>
+                                        </si:expandedUnc>
                                     </si:real>
                                 </dcc:quantity>
                                 <dcc:quantity>
@@ -344,9 +346,11 @@
                                     <si:real>
                                         <si:value>20.778</si:value>
                                         <si:unit>\degreeCelsius</si:unit>
-                                        <si:uncertainty>0.020</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                        <si:expandedUnc>
+                                            <si:uncertainty>0.020</si:uncertainty>
+                                            <si:coverageFactor>2</si:coverageFactor>
+                                            <si:coverageProbability>0.95</si:coverageProbability>
+                                        </si:expandedUnc>
                                     </si:real>
                                 </dcc:quantity>
                             </dcc:list>
@@ -364,9 +368,11 @@
                                     <si:real>
                                         <si:value>46.8</si:value>
                                         <si:unit>\percent</si:unit>
-                                        <si:uncertainty>1.0</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                        <si:expandedUnc>
+                                            <si:uncertainty>1.0</si:uncertainty>
+                                            <si:coverageFactor>2</si:coverageFactor>
+                                            <si:coverageProbability>0.95</si:coverageProbability>
+                                        </si:expandedUnc>
                                     </si:real>
                                 </dcc:quantity>
                                 <dcc:quantity>
@@ -377,9 +383,11 @@
                                     <si:real>
                                         <si:value>47.4</si:value>
                                         <si:unit>\percent</si:unit>
-                                        <si:uncertainty>1.0</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                        <si:expandedUnc>
+                                            <si:uncertainty>1.0</si:uncertainty>
+                                            <si:coverageFactor>2</si:coverageFactor>
+                                            <si:coverageProbability>0.95</si:coverageProbability>
+                                        </si:expandedUnc>
                                     </si:real>
                                 </dcc:quantity>
                             </dcc:list>
@@ -397,9 +405,11 @@
                                     <si:real>
                                         <si:value>1007.38</si:value>
                                         <si:unit>\hecto\pascal</si:unit>
-                                        <si:uncertainty>0.06</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                        <si:expandedUnc>
+                                            <si:uncertainty>0.06</si:uncertainty>
+                                            <si:coverageFactor>2</si:coverageFactor>
+                                            <si:coverageProbability>0.95</si:coverageProbability>
+                                        </si:expandedUnc>
                                     </si:real>
                                 </dcc:quantity>
                                 <dcc:quantity>
@@ -410,9 +420,11 @@
                                     <si:real>
                                         <si:value>1007.42</si:value>
                                         <si:unit>\hecto\pascal</si:unit>
-                                        <si:uncertainty>0.06</si:uncertainty>
-                                        <si:coverageFactor>2</si:coverageFactor>
-                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                        <si:expandedUnc>
+                                            <si:uncertainty>0.06</si:uncertainty>
+                                            <si:coverageFactor>2</si:coverageFactor>
+                                            <si:coverageProbability>0.95</si:coverageProbability>
+                                        </si:expandedUnc>
                                     </si:real>
                                 </dcc:quantity>
                             </dcc:list>
@@ -423,12 +435,6 @@
 
 
             <dcc:results>
-<!--                <dcc:name>
-                    <dcc:content lang="de">Messergebnisse</dcc:content>
-                    <dcc:content lang="en">Measurement results</dcc:content>
-                </dcc:name>
--->
-
                 <dcc:result>
                     <dcc:name>
                         <dcc:content lang="de">Masse</dcc:content>
@@ -467,12 +473,14 @@
                                     <dcc:content lang="en" id="mass_uncertaincy_column_4">uncertainty</dcc:content>
                                 </dcc:name>
                                 <si:real>
+                                    <si:label>1 kg + 78,41 mg</si:label>
                                     <si:value>1.00007841</si:value>
                                     <si:unit>\kilogram</si:unit>
-                                    <si:label>1 kg + 78,41 mg</si:label>
-                                    <si:uncertainty>0.00000005</si:uncertainty>
-                                    <si:coverageFactor>2</si:coverageFactor>
-                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                    <si:expandedUnc>
+                                        <si:uncertainty>0.00000005</si:uncertainty>
+                                        <si:coverageFactor>2</si:coverageFactor>
+                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                    </si:expandedUnc>
                                 </si:real>
                             </dcc:quantity>
                         </dcc:list>
@@ -519,9 +527,11 @@
                                 <si:real>
                                     <si:value>431.055119</si:value>
                                     <si:unit>\centi\metre\tothe{3}</si:unit>
-                                    <si:uncertainty>0.000018</si:uncertainty>
-                                    <si:coverageFactor>2</si:coverageFactor>
-                                    <si:coverageProbability>0.95</si:coverageProbability>
+                                    <si:expandedUnc>
+                                        <si:uncertainty>0.000018</si:uncertainty>
+                                        <si:coverageFactor>2</si:coverageFactor>
+                                        <si:coverageProbability>0.95</si:coverageProbability>
+                                    </si:expandedUnc>
                                 </si:real>
                             </dcc:quantity>
                         </dcc:list>
