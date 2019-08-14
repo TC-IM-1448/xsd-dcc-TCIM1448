@@ -117,7 +117,7 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="name" type="dcc:textBlock" />
-						<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" /> 
+						<!-- <xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" /> -->
                         <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
                         <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
 						<xs:element name="certificate" type="dcc:hash" minOccurs="0"/>
@@ -149,6 +149,10 @@
         </xs:sequence>
     </xs:complexType>
 
+    <!--
+    This is a preview for equipmentClass.
+    See the discussion at https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/issues/59
+
     <xs:complexType name="equipmentClassParameter">
         <xs:annotation>
             <xs:documentation>
@@ -161,6 +165,7 @@
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
+    -->
 
     <xs:complexType name="itemParameter">
         <xs:annotation>
@@ -170,7 +175,7 @@
         </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
-			<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />
+			<!--<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />-->
             <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="owner" type="dcc:contact" minOccurs="0"/>
 
@@ -178,7 +183,7 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="name" type="dcc:textBlock" />
-						<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" /> 
+						<!--<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />-->
                         <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
                         <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
 
