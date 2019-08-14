@@ -479,7 +479,7 @@
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
-			    <xs:element name="toleranceOneDim" type="dcc:toleranceOneDimParameter"/>
+			    <!--<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimParameter"/>-->
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
@@ -488,6 +488,10 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
+
+    <!--
+    This is a preview for toleranceOneDim.
+    See the discussion at https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/issues/68
 
     <xs:complexType name="toleranceOneDimParameter">
         <xs:annotation>
@@ -514,6 +518,7 @@
 			</xs:element>
         </xs:sequence>
     </xs:complexType>
+    -->
 
     <xs:complexType name="list">
         <xs:annotation>
