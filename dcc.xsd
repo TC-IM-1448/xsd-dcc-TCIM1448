@@ -123,33 +123,7 @@
 						<xs:element name="certificate" type="dcc:hash" minOccurs="0"/>
                         <xs:element name="manufacturer" type="dcc:contactNotStrict" minOccurs="0"/>
                         <xs:element name="model" type="xs:string" minOccurs="0"/>
-
-                        <xs:element name="identifications" minOccurs="0">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="identification" maxOccurs="unbounded">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="issuer">
-                                                    <xs:simpleType>
-                                                        <xs:restriction base="xs:string">
-                                                            <xs:enumeration value="manufacturer"/>
-                                                            <xs:enumeration value="calibrationLaboratory"/>
-                                                            <xs:enumeration value="customer"/>
-                                                            <xs:enumeration value="owner"/>
-                                                            <xs:enumeration value="other"/>
-                                                        </xs:restriction>
-                                                    </xs:simpleType>
-                                                </xs:element>
-                                                <xs:element name="value" type="xs:string"/>
-                                                <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
-                                            </xs:sequence>
-                                            <xs:attribute name="id" type="xs:ID" use="optional"/>
-                                        </xs:complexType>
-                                    </xs:element>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
+                        <xs:element name="identifications" type="dcc:identificationsParameter" minOccurs="0" />
                     </xs:sequence>
                     <xs:attribute name="id" type="xs:ID" use="optional"/>
                 </xs:complexType>
@@ -211,32 +185,32 @@
                         <xs:element name="manufacturer" type="dcc:contactNotStrict"/>
                         <xs:element name="model" type="xs:string" minOccurs="0"/>
 
-                        <xs:element name="identifications">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="identification" maxOccurs="unbounded">
-                                        <xs:complexType>
-                                            <xs:sequence>
-                                                <xs:element name="issuer">
-                                                    <xs:simpleType>
-                                                        <xs:restriction base="xs:string">
-                                                            <xs:enumeration value="manufacturer"/>
-                                                            <xs:enumeration value="calibrationLaboratory"/>
-                                                            <xs:enumeration value="customer"/>
-                                                            <xs:enumeration value="owner"/>
-                                                            <xs:enumeration value="other"/>
-                                                        </xs:restriction>
-                                                    </xs:simpleType>
-                                                </xs:element>
-                                                <xs:element name="value" type="xs:string"/>
-                                                <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
-                                            </xs:sequence>
-                                            <xs:attribute name="id" type="xs:ID" use="optional"/>
-                                        </xs:complexType>
-                                    </xs:element>
-                                </xs:sequence>
-                            </xs:complexType>
+                        <xs:element name="identifications" type="dcc:identificationsParameter" />
+                    </xs:sequence>
+                    <xs:attribute name="id" type="xs:ID" use="optional"/>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="identificationsParameter">
+        <xs:sequence>
+            <xs:element name="identification" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="issuer">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:enumeration value="manufacturer"/>
+                                    <xs:enumeration value="calibrationLaboratory"/>
+                                    <xs:enumeration value="customer"/>
+                                    <xs:enumeration value="owner"/>
+                                    <xs:enumeration value="other"/>
+                                </xs:restriction>
+                            </xs:simpleType>
                         </xs:element>
+                        <xs:element name="value" type="xs:string"/>
+                        <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
                     </xs:sequence>
                     <xs:attribute name="id" type="xs:ID" use="optional"/>
                 </xs:complexType>
