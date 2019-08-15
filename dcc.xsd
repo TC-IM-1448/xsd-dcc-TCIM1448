@@ -481,6 +481,7 @@
                 <xs:element ref="si:hybrid"/>
 			    <!--<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimParameter"/>-->
             </xs:choice>
+			<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimParameter" minOccurs="0"/>
             <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>

@@ -2,7 +2,4 @@
 
 Available languages:
 
-[English](en/README.md)
-
 [German](de/README.md)
-
