@@ -1,17 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.1.1/dcc.xsd"
+		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.2.0/dcc.xsd"
 		xmlns:dcc="https://ptb.de/dcc"
-		xmlns:si="https://ptb.de/si/smartcom/d-si/v1_0_1">
+		xmlns:si="https://ptb.de/si">
 
-	<!--
+    <!--
     Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
 
-    Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der Software entstehen.
+    Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich,
+    wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung,
+    egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch
+    konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software.
+    Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für
+    Folgeschäden ab, die durch die Nutzung der Software entstehen.
 
-    This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
+    This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available
+    “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties,
+    and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other
+    characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential
+    damage arising in connection with the use of this software.
+
+    This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
+    and from the European Union's Horizon 2020 research and innovation programme.
+
+    The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
+    supported by the joint research project EMPIR 17IND02 (title: SmartCom).
     -->
+
 	<dcc:administrativeData>
 		<dcc:dccSoftware>
 			<dcc:software id="Notepad_plusplus">
@@ -170,22 +186,34 @@
 		</dcc:calibrationLaboratory>
 		<dcc:respPersons>
 			<dcc:respPerson id="Responsible">
-				<dcc:person>Vorname1 Name1</dcc:person>
+				<dcc:person>
+					<dcc:name>
+						<dcc:content>Vorname1 Name1</dcc:content>
+					</dcc:name>
+					<dcc:eMail>vorname1.name1@ptb.de</dcc:eMail>
+				</dcc:person>
 				<dcc:mainSigner>true</dcc:mainSigner>
-				<dcc:eMailPerson>vorname1.name1@ptb.de</dcc:eMailPerson>
 			</dcc:respPerson>
 			<dcc:respPerson id="Technician">
-				<dcc:person>Vorname2 Name2</dcc:person>
-				<dcc:eMailPerson>vorname2.name2@ptb.de</dcc:eMailPerson>
+				<dcc:person>
+					<dcc:name>
+						<dcc:content>Vorname2 Name2</dcc:content>
+					</dcc:name>
+					<dcc:eMail>vorname2.name2@ptb.de</dcc:eMail>
+				</dcc:person>
 			</dcc:respPerson>
 			<dcc:respPerson id="Signature">
-				<dcc:person>Vorname3 Name3</dcc:person>
-				<dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature>
-				<dcc:eMailPerson>vorname3.name3@ptb.de</dcc:eMailPerson>
-				<dcc:furtherInfoPerson>
+				<dcc:person>
+					<dcc:name>
+						<dcc:content>Vorname3 Name3</dcc:content>
+					</dcc:name>
+					<dcc:eMail>vorname3.name3@ptb.de</dcc:eMail>
+				</dcc:person>
+				<dcc:description>
 					<dcc:content lang="de">Signaturstelle</dcc:content>
 					<dcc:content lang="en">Signaturemember</dcc:content>
-				</dcc:furtherInfoPerson>
+				</dcc:description>
+				<dcc:cryptElectronicSignature>true</dcc:cryptElectronicSignature>
 			</dcc:respPerson>
 		</dcc:respPersons>
 		<dcc:customer>
@@ -300,9 +328,11 @@
 									<si:real>
 										<si:value>21.4</si:value>
 										<si:unit>\degreeCelsius</si:unit>
-										<si:uncertainty>0.2</si:uncertainty>
-										<si:coverageFactor>2</si:coverageFactor>
-										<si:coverageProbability>0.95</si:coverageProbability>
+										<si:expandedUnc>
+											<si:uncertainty>0.2</si:uncertainty>
+											<si:coverageFactor>2</si:coverageFactor>
+											<si:coverageProbability>0.95</si:coverageProbability>
+										</si:expandedUnc>
 									</si:real>
 								</dcc:quantity>
 								<dcc:quantity>
@@ -313,9 +343,11 @@
 									<si:real>
 										<si:value>21.5</si:value>
 										<si:unit>\degreeCelsius</si:unit>
-										<si:uncertainty>0.2</si:uncertainty>
-										<si:coverageFactor>2</si:coverageFactor>
-										<si:coverageProbability>0.95</si:coverageProbability>
+										<si:expandedUnc>
+											<si:uncertainty>0.2</si:uncertainty>
+											<si:coverageFactor>2</si:coverageFactor>
+											<si:coverageProbability>0.95</si:coverageProbability>
+										</si:expandedUnc>
 									</si:real>
 								</dcc:quantity>
 							</dcc:list>
@@ -332,9 +364,11 @@
 									<si:real>
 										<si:value>46</si:value>
 										<si:unit>\percent</si:unit>
-										<si:uncertainty>5</si:uncertainty>
-										<si:coverageFactor>2</si:coverageFactor>
-										<si:coverageProbability>0.95</si:coverageProbability>
+										<si:expandedUnc>
+											<si:uncertainty>5</si:uncertainty>
+											<si:coverageFactor>2</si:coverageFactor>
+											<si:coverageProbability>0.95</si:coverageProbability>
+										</si:expandedUnc>
 									</si:real>
 								</dcc:quantity>
 								<dcc:quantity>
@@ -345,16 +379,18 @@
 									<si:real>
 										<si:value>47</si:value>
 										<si:unit>\percent</si:unit>
-										<si:uncertainty>5</si:uncertainty>
-										<si:coverageFactor>2</si:coverageFactor>
-										<si:coverageProbability>0.95</si:coverageProbability>
+										<si:expandedUnc>
+											<si:uncertainty>5</si:uncertainty>
+											<si:coverageFactor>2</si:coverageFactor>
+											<si:coverageProbability>0.95</si:coverageProbability>
+										</si:expandedUnc>
 									</si:real>
 								</dcc:quantity>
 							</dcc:list>
 							<dcc:list>
 								<dcc:name>
-									<dcc:content lang="de">air pressure</dcc:content>
-									<dcc:content lang="en">Luftdruck</dcc:content>
+									<dcc:content lang="de">Luftdruck</dcc:content>
+									<dcc:content lang="en">air pressure</dcc:content>
 								</dcc:name>
 								<dcc:quantity>
 									<dcc:name>
@@ -364,9 +400,11 @@
 									<si:real>
 										<si:value>1007.0</si:value>
 										<si:unit>\milli\bar</si:unit>
-										<si:uncertainty>0.2</si:uncertainty>
-										<si:coverageFactor>2</si:coverageFactor>
-										<si:coverageProbability>0.95</si:coverageProbability>
+										<si:expandedUnc>
+											<si:uncertainty>0.2</si:uncertainty>
+											<si:coverageFactor>2</si:coverageFactor>
+											<si:coverageProbability>0.95</si:coverageProbability>
+										</si:expandedUnc>
 									</si:real>
 								</dcc:quantity>
 								<dcc:quantity>
@@ -377,9 +415,11 @@
 									<si:real>
 										<si:value>1009.9</si:value>
 										<si:unit>\milli\bar</si:unit>
-										<si:uncertainty>0.2</si:uncertainty>
-										<si:coverageFactor>2</si:coverageFactor>
-										<si:coverageProbability>0.95</si:coverageProbability>
+										<si:expandedUnc>
+											<si:uncertainty>0.2</si:uncertainty>
+											<si:coverageFactor>2</si:coverageFactor>
+											<si:coverageProbability>0.95</si:coverageProbability>
+										</si:expandedUnc>
 									</si:real>
 								</dcc:quantity>
 							</dcc:list>
@@ -421,12 +461,14 @@
 									<dcc:content lang="en" id="mass_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 									<si:real>
+										<si:label>10 g + 0,006 mg</si:label>
 										<si:value>10.000006E-3</si:value>
 										<si:unit>\kilogram</si:unit>
-										<si:label>10 g + 0,006 mg</si:label>
-										<si:uncertainty>0.000004E-3</si:uncertainty>
-										<si:coverageFactor>2</si:coverageFactor>
-										<si:coverageProbability>0.95</si:coverageProbability>
+										<si:expandedUnc>
+											<si:uncertainty>0.000004E-3</si:uncertainty>
+											<si:coverageFactor>2</si:coverageFactor>
+											<si:coverageProbability>0.95</si:coverageProbability>
+										</si:expandedUnc>
 									</si:real>
 									<dcc:measurementMetaData>
 										<dcc:metaData>
@@ -475,12 +517,14 @@
 									<dcc:content lang="en" id="mass2_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 								<si:real>
+									<si:label>10g + 0,003mg</si:label>
 									<si:value>10.000003E-3</si:value>
 									<si:unit>\kilogram</si:unit>
-									<si:label>10g + 0,003mg</si:label>
-									<si:uncertainty>0.000004E-3</si:uncertainty>
-									<si:coverageFactor>2</si:coverageFactor>
-									<si:coverageProbability>0.95</si:coverageProbability>
+									<si:expandedUnc>
+										<si:uncertainty>0.000004E-3</si:uncertainty>
+										<si:coverageFactor>2</si:coverageFactor>
+										<si:coverageProbability>0.95</si:coverageProbability>
+									</si:expandedUnc>
 								</si:real>
 							</dcc:quantity>
 						</dcc:list>
@@ -525,9 +569,11 @@
 							<si:real>
 								<si:value>8012.8</si:value>
 								<si:unit>\kilogram\metre\tothe{-3}</si:unit>
-								<si:uncertainty>3.2</si:uncertainty>
-								<si:coverageFactor>2</si:coverageFactor>
-								<si:coverageProbability>0.95</si:coverageProbability>
+								<si:expandedUnc>
+									<si:uncertainty>3.2</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
 							</si:real>
 							<dcc:influenceConditions>
 								<dcc:influenceCondition>
@@ -588,9 +634,11 @@
 							<si:real>
 								<si:value>1.2480E-6</si:value>
 								<si:unit>\metre\tothe{3}</si:unit>
-								<si:uncertainty>0.0005E-6</si:uncertainty>
-								<si:coverageFactor>2</si:coverageFactor>
-								<si:coverageProbability>0.95</si:coverageProbability>
+								<si:expandedUnc>
+									<si:uncertainty>0.0005E-6</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
 							</si:real>
 							<dcc:influenceConditions>
 								<dcc:influenceCondition>

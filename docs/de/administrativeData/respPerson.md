@@ -1,91 +1,100 @@
-# ComplexType respPersonParameter
+# dcc:respPersonParameter
+
+Der Elementtyp *dcc:respPersonParameter* wird die für die Freigabe des Berichts verantwortliche 
+Person benötigt.
+
+## Baumstruktur 
+
+Die Baumstruktur des Elementtyps *dcc:respPersonParameter* hat folgendes Aussehen:
+
+<img src="../../images/respPersonParameter.png" alt="respPersonParameter" width="665" />
+
+[Diagrammsoftware](../XSD_diagramviewer.md)
 
 
-## Aufbau
+## Grobstruktur des Datentyps *dcc:respPersonParameter* vom Element *respPersons*
 ```xml
 <xs:complexType name="respPersonParameter">
-    <xs:sequence>
-        <xs:element name="respPerson" maxOccurs="unbounded">
-            <xs:complexType>
-                <xs:sequence>
-                    <xs:element name="person" type="xs:string"/>
-                    <xs:element name="mainSigner" type="xs:boolean" minOccurs="0"/>
-                    <xs:element name="cryptElectronicSeal" type="xs:boolean" minOccurs="0"/>
-                    <xs:element name="cryptElectronicSignature" type="xs:boolean" minOccurs="0"/>
-                    <xs:element name="cryptElectronicTimeStamp" type="xs:boolean" minOccurs="0"/>
-                    <xs:element name="eMailPerson" type="xs:string" minOccurs="0"/>
-                    <xs:element name="furtherInfoPerson" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="location" type="dcc:location" minOccurs="0"/>
-                </xs:sequence>
-                <xs:attribute name="id" type="xs:ID" use="optional"/>
-            </xs:complexType>
-        </xs:element>
-    </xs:sequence>
+	<xs:sequence>
+		<xs:element name="respPerson" maxOccurs="unbounded">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="person" type="dcc:contactNotStrict"/>
+					<xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+					<xs:element name="mainSigner" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="cryptElectronicSeal" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="cryptElectronicSignature" type="xs:boolean" minOccurs="0"/>
+					<xs:element name="cryptElectronicTimeStamp" type="xs:boolean" minOccurs="0"/>
+				</xs:sequence>
+				<xs:attribute name="id" type="xs:ID" use="optional"/>
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
 </xs:complexType>
 ```
 
-## Hinweise
---keine--
 
-## Elemente
+## Ausfüllanweisungen
 
-### respPerson
-Dieses Element enthält alle weiteren Elemente. 
+Weitere Informationen zu den Ausfüllanweisungen sind in dem Unterabschnitt Elemente
+zu finden.
 
-#### person
-Der Name der Person. Einfacher Text.
+### Mindestangaben
 
-#### mainSigner
-Ist diese Person der Hauptunterzeichner? Ja/Nein
+im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
+"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
+werden mit einem "[O]" gekennzeichnet. 
 
-#### cryptElectronicSeal
-...
+Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
+Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
 
-#### cryptElectronicSignature
-...
+### Elemente
 
-#### cryptElectronicTimeStamp
-...
+#### dcc:person [R]
+Name der Person und die Kontaktdaten. 
 
-#### eMailPerson
-Die Emailadresse der Person.
+Datentyp: [dcc:contactNotStrict](../auxElements/contactNotStrict.md)
 
-#### [furtherInfoPerson](../complexTypes/textBlock.md)
-Das Element ist ein Textblock, welcher beliebig viele mit Mehrsprachigkeit
+#### dcc:description [O]
+Weitergehende Beschreibung zur Person, soweit sie nicht im Element *person* 
+erfolgen konnte. 
 
-Data type: [dcc:textBlock](../complexTypes/textBlock.md)
+Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
 
-#### [location](../complexTypes/location.md)
-Darstellung einer Adresse.
+#### dcc:mainSigner [R|O]
+Eine Person soll die Gesamtverantwortung für den DCC übernehmen. Daher soll 
+der Wert für das Kindelement *mainSigner* bei genau einem Element von *respPerson* 
+den Wert "WAHR" haben. 
 
-Data type: [dcc:location](../complexTypes/location.md)
+Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
 
-## Attribute
-Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird. 
+#### dcc:cryptElectronicSeal [O]
+Ist die Person für die Anbringung des kryptographischen elektronischen Siegels 
+verantwortlich? In diesem Fall soll das ELement *cryptElectronicSeal* 
+den Wert "WAHR" haben. 
 
-Datentyp: [xs:ID](../xsd/xs-ID.md)
+Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
 
-## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
+#### dcc:cryptElectronicSignature [O]
+Ist die Person für die Anbringung der kryptographischen elektronischen Signatur 
+verantwortlich? In diesem Fall soll das ELement *cryptElectronicSignature* 
+den Wert "WAHR" haben. 
 
+Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
 
-### Einfaches Beispiel
-```xml
-<respPersons>
-    <respPerson>
-        <person>Vorname Nachname</person>
-        <mainSigner>true</mainSigner>
-        <cryptElectronicSeal>false</cryptElectronicSeal>
-        <cryptElectronicSignature>false</cryptElectronicSignature>
-        <cryptElectronicTimeStamp>false</cryptElectronicTimeStamp>
-        <eMailPerson>vorname.nachname@ptb.de</eMailPerson>
-        <furtherInfoPerson>
-            <content>further information</content>
-            <content>further information</content>
-        </furtherInfoPerson>
-        <location>
-            <further>hier kann eine genaze Adresse stehen siehe complexType loction<further>
-        </location>
-    </respPerson>
-</respPersons>
-```
+#### dcc:cryptElectronicTimeStamp [O]
+Ist die Person für die Anbringung des kryptographischen elektronischen Zeitstempels 
+verantwortlich? In diesem Fall soll das ELement *cryptElectronicTimeStamp* 
+den Wert "WAHR" haben. 
+
+Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
+
+### Attribute
+
+#### xs:ID
+Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er 
+dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
+xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
+Tools ermöglicht wird.
+
+Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)

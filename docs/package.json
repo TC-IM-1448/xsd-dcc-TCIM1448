@@ -1,17 +1,26 @@
 {
   "name": "xsd-dcc-docs",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "DCC",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://gitlab1.ptb.de/abteilung-1/dcc/xsd-dcc.git"
+    "url": "https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc.git"
   },
   "scripts": {
     "dev": "vuepress dev",
-    "build": "vuepress build"
+    "dev-print": "cross-env VUEPRESS_PRINT_MODE=\"true\" vuepress dev",
+    "build": "vuepress build",
+    "build-sh": "cross-env VUEPRESS_BASE_URL=\"/dcc/sh/\" VUEPRESS_PRINT_MODE=\"true\" vuepress build"
   },
   "devDependencies": {
-    "vuepress": "^0.14.11"
+    "@vuepress/plugin-back-to-top": "^1.0.3",
+    "@vuepress/plugin-medium-zoom": "^1.0.3",
+    "@vuepress/plugin-pwa": "^1.0.3",
+    "copy-webpack-plugin": "^5.0.4",
+    "cross-env": "^5.2.0",
+    "file-loader": "^4.1.0",
+    "markdown-it-footnote": "^3.0.2",
+    "vuepress": "^1.0.3"
   }
 }

@@ -1,7 +1,17 @@
-# complexType calibrationLaboratoryParameter
+# dcc:calibrationLaboratory
 
+Im Elementtyp *dcc:calibrationLaboratory* sind wesentliche Informationen zum 
+Kalibrierlaboratorium hinterlegt.
 
-## Aufbau
+## Baumstruktur
+
+Die Baumstruktur des Elementtypss *dcc:calibrationLaboratory* hat folgendes Aussehen:
+
+<img src="../../images/calibrationLaboratoryParameter.png" alt="calibrationLaboratoryParameter" width="500" />
+
+[Diagrammsoftware](../XSD_diagramviewer.md)
+
+## Grobstruktur des Datentyps *dcc:coreDataParameter* vom Element *calibrationLaboratory*
 ```xml
 <xs:complexType name="calibrationLaboratoryParameter">
     <xs:sequence>
@@ -11,86 +21,49 @@
 </xs:complexType>
 ```
 
-## Hinweise
---keine--
+## Ausfüllanweisungen
 
-## Elemente
-### calibrationLaboratoryCode
-Die eindeutige Kennzeichnung des Labors.
+Weitere Informationen zu den Ausfüllanweisungen sind in dem Unterabschnitt Elemente
+zu finden.
 
-### [contact](../complexTypes/contact.md)
-Der Ansprechpartner für das Labor. Dieses Element kann mehrmals verwendet werden.
+### Mindestangaben
 
-Datentyp: [dcc:contact](../complexTypes/contact.md)
+im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
+"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
+werden mit einem "[O]" gekennzeichnet. 
 
-## Attribute
---keine--
+Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
+Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
 
-## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
+### <img src="../../images/flagPTB_DE.jpg" alt="PTB" width="55" /> 
+PTB-spezifische Eingaben sind durch das Logo der PTB gekennzeichnet.
 
+### <img src="../../images/flagDAkkS_DE.png" alt="DAkkS" width="65" />
+DAkkS-spezifische Eingaben sind durch das Logo der DAkkS gekennzeichnet.
 
-### Einfaches Beispiel
-```xml
-<calibrationLaboratory>
-    <calibrationLaboratoryCode>xyz123abc</calibrationLaboratoryCode>
-    <contact>
-        <name>Hr. Muster</name>
-        <eMail>email.muster@ptb.de</eMail>
-        <location>
-            <street>Herstellerstraße</street>
-            <streetNo>42</streetNo>
-            <postCode>12345</postCode>
-            <city>Herstellerort</city>
-            <countryCode>DE</countryCode>
-        </location>
-    </contact>
-</calibrationLaboratory>
-```            
+### Elemente
 
-### Einfaches Beispiel mit ID
-```xml
-<calibrationLaboratory>
-    <calibrationLaboratoryCode>xyz123abc</calibrationLaboratoryCode>
-    <contact id="abc1">
-        <name>Hr. Muster</name>
-        <eMail>email.muster@ptb.de</eMail>
-        <location id="abc2">
-            <street>Herstellerstraße</street>
-            <streetNo>42</streetNo>
-            <postCode>12345</postCode>
-            <city>Herstellerort</city>
-            <countryCode>DE</countryCode>
-        </location>
-    </contact>
-</calibrationLaboratory>
-```            
+#### dcc:calibrationLaboratoryCode [O|R]
+Hat das Kalibrierlaboratorium eine ihm zugewiesene Kennung, so ist sie an dieser Stelle 
+einzutragen.
 
-### Beispiel mit ID und mehreren contact`s
-```xml
-<calibrationLaboratory>
-    <calibrationLaboratoryCode>xyz123abc</calibrationLaboratoryCode>
-    <contact id="abc1">
-        <name>Hr. Muster</name>
-        <eMail>email.muster@ptb.de</eMail>
-        <location id="abc2">
-            <street>Herstellerstraße</street>
-            <streetNo>42</streetNo>
-            <postCode>12345</postCode>
-            <city>Herstellerort</city>
-            <countryCode>DE</countryCode>
-        </location>
-    </contact>
-    <contact id="abc3">
-        <name>Hr. Nobody</name>
-        <eMail>email.nobody@ptb.de</eMail>
-        <location id="abc4">
-            <street>Herstellerstraße</street>
-            <streetNo>42</streetNo>
-            <postCode>12345</postCode>
-            <city>Herstellerort</city>
-            <countryCode>DE</countryCode>
-        </location>
-    </contact>
-</calibrationLaboratory>
-```            
+Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
+
+##### <img src="../../images/flagPTB_DE.jpg" alt="PTB" width="55" />
+
+Die PTB hat keine zugewiesene Kennung. Daher bleibt dieses Element leer.
+
+##### <img src="../../images/flagDAkkS_DE.png" alt="DAkkS" width="65" />
+
+Die von der Deutschen Akkreditierungsstelle GmbH (DAkkS) akkreditierten 
+Kalibrierlaboratorien haben eine Kennung zugewiesen bekommen. Diese ist 
+hier einzutragen.
+
+#### dcc:contact [R]
+
+Das Element *contact* enthält alle notwendigen Informationen, um das 
+Kalibrierlaboratorium indeutig zu identifizieren. 
+
+Die Struktur des Datentyps *dcc:contact* vom Element *contact* wird 
+[hier](../auxElements/contact.md) beschrieben.
+
