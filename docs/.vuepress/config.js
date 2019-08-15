@@ -25,6 +25,7 @@ module.exports = {
         }
     },
     head: [
+        ["link", {rel: "shortcut icon", type:"image/x-icon", href: `/icons/favicon.ico`}],
         ["link", {rel: "icon", href: "/icons/icon-512x512.png"}],
         ["link", {rel: "manifest", href: "/manifest.json"}],
         ["meta", {name: "theme-color", content: "#009cd1"}],
