@@ -1,23 +1,16 @@
-# Element customer
+# dcc:customer
 
+Im Element *dcc:customer* sind wesentliche Informationen zum Kunden des 
+Kalibrierlaboratoriums hinterlegt.
 
-## Aufbau
+## Grobstruktur des Datentyps *dcc:coreDataParameter* vom Element *customer*
 ```xml
 <xs:element name="customer" type="dcc:contact"/>
 ```
 
-## Hinweise
---keine--
+Datentyp: [dcc:contact](../auxElements/contact.md)
 
-## Elemente
-Das Element "customer" hat den Datentyp contact.
+## Ausfüllanweisungen
 
-Datentyp: [dcc:contact](../complexTypes/contact.md)
-
-## Attribute
---keine--
-
-## Beispiele
-Die Beispiele werden der Übersichtlichkeit halber ohne [Namespace](../namespace.md) dargestellt.
-
-Siehe: [complexType contact](../complexTypes/contact.md)
+Weitere Informationen zu den Ausfüllanweisungen sind in der Beschreibung zum 
+Datentyp [dcc:contact](../auxElements/contact.md) zu finden.
