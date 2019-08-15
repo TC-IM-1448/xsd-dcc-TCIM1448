@@ -8,7 +8,7 @@
 
 ## Access to the Docs
 
-You can find the Docs at [https://ptb.de/dcc/v2.1.1/](https://ptb.de/dcc/v2.1.1/).
+You can find the Docs at [https://ptb.de/dcc/v2.2.0/](https://ptb.de/dcc/v2.2.0/).
 
 Or here in this Repository at [docs/README.md](docs/README.md).
 
@@ -20,13 +20,13 @@ To use the Schema use the URL with a specific version below.
 This is the recommended way.
 
 ```
-https://ptb.de/dcc/v2.1.1/dcc.xsd
+https://ptb.de/dcc/v2.2.0/dcc.xsd
 ```
 
 ```xml
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.1.1/dcc.xsd"
+        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.2.0/dcc.xsd"
         xmlns:dcc="https://ptb.de/dcc"
         xmlns:si="https://ptb.de/si">
         <!--
