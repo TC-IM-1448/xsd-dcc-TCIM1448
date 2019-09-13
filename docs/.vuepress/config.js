@@ -22,6 +22,13 @@ module.exports = {
         "@vuepress/back-to-top": {},
         "@vuepress/medium-zoom": {
             selector: "img"
+        },
+        "@vuepress/last-updated": {
+            transformer: (timestamp, lang) => {
+                const moment = require("moment");
+                moment.locale(lang);
+                return moment(timestamp).fromNow();
+            }
         }
     },
     head: [
