@@ -116,6 +116,12 @@ export default {
   },
 
   mounted () {
+    const { themeConfig } = this.$site
+    if(themeConfig.print) {
+      require("prismjs/themes/prism.css")
+    } else {
+      require("prismjs/themes/prism-tomorrow.css")
+    }
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })

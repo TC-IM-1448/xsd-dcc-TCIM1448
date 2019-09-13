@@ -22,6 +22,4 @@ für die Zuordnung von zwei Großbuchstaben[^1] zu einem Staat.
 Das Element elementStringISO3166 ist so konfiguriert, dass es genau zwei Großbuchstaben 
 aufnehmen kann. 
 
-----
-
 [^1]: https://www.iso.org/obp/ui/#search/code

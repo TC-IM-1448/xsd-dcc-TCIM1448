@@ -28,75 +28,33 @@ Die grobe Baumstruktur des Elementtyps *dcc:contact* hat folgendes Aussehen:
 
 ## Ausfüllanweisungen
 
-Der Elementtyp *dcc:contact* wird teilweise angewendet. Wenn er angewendet 
-wird, so sind im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift 
-mit einem "[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente
-werden mit einem "[O]" gekennzeichnet.
-
 ### Mindestangaben
 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
+Wenn ein Element vom Type *dcc:contact* verwendet wird, enthält dieses Pflichtfelder die wie folgt gekennzeichnet sind.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
-
-#### <img src="../../images/flagDE.png" alt="DE" width="50" /> <img src="../../images/flagPTB_DE.jpg" alt="PTB" width="55" />
-
-Für den Sitz in Deutschland gilt:
-
-Bei juristischen Personen sind die Angaben aus dem Handelsregister und bei
-natürlichen Personen der Erstwohnsitz anzugeben. Bei Behörden sind die Angaben 
-aus dem Impressum des Webauftritts anzugeben.
+|<img src="../../images/flagDE.png" alt="DE" height="30" /> <img src="../../images/flagPTB_DE.jpg" alt="PTB" height="30" />|
+|-|
+|Für den Sitz in Deutschland gilt:<br>Bei juristischen Personen sind die Angaben aus dem Handelsregister und bei natürlichen Personen der Erstwohnsitz anzugeben.<br>Bei Behörden sind die Angaben aus dem Impressum des Webauftritts anzugeben.
 
 ### Elemente
 
-#### dcc:name [R]
-
-Angabe des Namens der juristischen oder natürlichen Person.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-#### dcc:eMail [R]
-
-Angabe der E-Mail-Adresse der juristischen oder natürlichen Person.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### dcc:phone [O]
-
-Angabe der Telefonnummer der juristischen oder natürlichen Person.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### dcc:fax [O]
-
-Angabe der Telefaxnummer der juristischen oder natürlichen Person.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### dcc:location [R]
-
-Angaben zur Adresse der juristischen oder natürlichen Person.
-
-Datentyp: [dcc:location](../auxElements/location.md)
-
-#### dcc:descriptionData [O]
-
-Zusätzliche Angaben der juristischen oder natürlichen Person.
-
-Datentyp: [dcc:byteDataBlock](../auxElements/byteDataBlock.md)
+|Element||Bemerkung|
+|-|-|-|
+|dcc:name<br>[dcc:textBlock](../auxElements/textBlock.md)|[R]|Angabe des Namens der juristischen oder natürlichen Person.|
+|dcc:eMail<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|Angabe der E-Mail-Adresse der juristischen oder natürlichen Person.|
+|dcc:phone<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[O]|Angabe der Telefonnummer der juristischen oder natürlichen Person.|
+|dcc:fax<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[O]|Angabe der Telefaxnummer der juristischen oder natürlichen Person.|
+|dcc:location<br>[dcc:location](../auxElements/location.md)|[R]|Angaben zur Adresse der juristischen oder natürlichen Person.|
+|dcc:descriptionData<br>[dcc:byteDataBlock](../auxElements/byteDataBlock.md)|[O]|Zusätzliche Angaben der juristischen oder natürlichen Person.|
 
 ### Attribute
 
-#### xs:ID
-Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er 
-dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
-xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
-Tools ermöglicht wird.
-
-Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)
+|Attribut|Bemerkung|
+|-|-|
+|xs:ID<br>[xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)|Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird.|
 
 ## Beispiele
 

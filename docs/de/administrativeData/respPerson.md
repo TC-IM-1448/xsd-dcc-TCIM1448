@@ -12,7 +12,7 @@ Die Baumstruktur des Elementtyps *dcc:respPersonParameter* hat folgendes Aussehe
 [Diagrammsoftware](../XSD_diagramviewer.md)
 
 
-## Grobstruktur des Datentyps *dcc:respPersonParameter* vom Element *respPersons*
+## Grobstruktur des Elementtyps *dcc:respPersonParameter* vom Element *respPersons*
 ```xml
 <xs:complexType name="respPersonParameter">
 	<xs:sequence>
@@ -41,60 +41,23 @@ zu finden.
 
 ### Mindestangaben
 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
-
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
 ### Elemente
+|Element||Bemerkung|
+|-|:-:|-|
+|dcc:person <br>[dcc:contactNotStrict](../auxElements/contactNotStrict.md)|[R]|Name der Person und ihre Kontaktdaten.| 
+|dcc:description<br>[dcc:textBlock](../auxElements/textBlock.md)| [O]|Weitergehende Beschreibung zur Person, soweit sie nicht im Element *person* erfolgen konnte. |
+|dcc:mainSigner <br>[xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)|[R\|O]|Eine Person soll die Gesamtverantwortung für den DCC übernehmen. Daher soll der Wert für das Kindelement *mainSigner* bei genau einem Element von *respPerson* den Wert "WAHR" haben.| 
+|dcc:cryptElectronicSeal <br>[xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)|[O]|Ist die Person für die Anbringung des kryptographischen elektronischen Siegels verantwortlich? In diesem Fall soll das ELement *cryptElectronicSeal* den Wert "WAHR" haben.| 
+|dcc:cryptElectronicSignature <br>[xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)|[O]|Ist die Person für die Anbringung der kryptographischen elektronischen Signatur verantwortlich? In diesem Fall soll das Element *cryptElectronicSignature* den Wert "WAHR" haben.| 
+|dcc:cryptElectronicTimeStamp <br>[xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)|[O]|Ist die Person für die Anbringung des kryptographischen elektronischen Zeitstempels verantwortlich? In diesem Fall soll das ELement *cryptElectronicTimeStamp* den Wert "WAHR" haben. |
 
-#### dcc:person [R]
-Name der Person und die Kontaktdaten. 
-
-Datentyp: [dcc:contactNotStrict](../auxElements/contactNotStrict.md)
-
-#### dcc:description [O]
-Weitergehende Beschreibung zur Person, soweit sie nicht im Element *person* 
-erfolgen konnte. 
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-#### dcc:mainSigner [R|O]
-Eine Person soll die Gesamtverantwortung für den DCC übernehmen. Daher soll 
-der Wert für das Kindelement *mainSigner* bei genau einem Element von *respPerson* 
-den Wert "WAHR" haben. 
-
-Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
-
-#### dcc:cryptElectronicSeal [O]
-Ist die Person für die Anbringung des kryptographischen elektronischen Siegels 
-verantwortlich? In diesem Fall soll das ELement *cryptElectronicSeal* 
-den Wert "WAHR" haben. 
-
-Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
-
-#### dcc:cryptElectronicSignature [O]
-Ist die Person für die Anbringung der kryptographischen elektronischen Signatur 
-verantwortlich? In diesem Fall soll das ELement *cryptElectronicSignature* 
-den Wert "WAHR" haben. 
-
-Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
-
-#### dcc:cryptElectronicTimeStamp [O]
-Ist die Person für die Anbringung des kryptographischen elektronischen Zeitstempels 
-verantwortlich? In diesem Fall soll das ELement *cryptElectronicTimeStamp* 
-den Wert "WAHR" haben. 
-
-Datentyp: [xs:boolean](https://www.w3.org/TR/xmlschema-2/#boolean)
 
 ### Attribute
 
-#### xs:ID
-Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er 
-dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
-xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
-Tools ermöglicht wird.
-
-Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)
+|Attribut|Bemerkung|
+|-|-|
+|xs:ID<br>[xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)|Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird.|

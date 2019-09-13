@@ -13,10 +13,10 @@ module.exports = {
                     message: "Neue Inhalte sind verfügbar.",
                     buttonText: "Seite neu laden"
                 },
-                /*"/en/": {
+                "/en/": {
                     message: "New content is available.",
                     buttonText: "Reload page"
-                }*/
+                }
             }
         },
         "@vuepress/back-to-top": {},
@@ -25,7 +25,7 @@ module.exports = {
         }
     },
     head: [
-        ["link", {rel: "shortcut icon", type:"image/x-icon", href: `/icons/favicon.ico`}],
+        ["link", {rel: "shortcut icon", type: "image/x-icon", href: `/icons/favicon.ico`}],
         ["link", {rel: "icon", href: "/icons/icon-512x512.png"}],
         ["link", {rel: "manifest", href: "/manifest.json"}],
         ["meta", {name: "theme-color", content: "#009cd1"}],
@@ -35,7 +35,7 @@ module.exports = {
         ["meta", {name: "msapplication-TileImage", content: "/icons/icon-144x144.png"}],
         ["meta", {name: "msapplication-TileColor", content: "#000000"}]
     ],
-    chainWebpack: (config, isServer) => {
+    chainWebpack: (config) => {
         // config is an instance of ChainableConfig
         config
             .plugin("copy")
@@ -46,20 +46,22 @@ module.exports = {
     markdown: {
         lineNumbers: !print,
         extendMarkdown: md => {
-            md.use(require("markdown-it-footnote"))
+            md
+                .use(require("markdown-it-footnote"))
+                .use(require("markdown-it-include"));
         }
     },
     locales: {
         "/de/": {
             lang: "de-DE",
-            title: "Digitaler Kalibrierschein",
+            title: `Digitaler Kalibrierschein - v${pkg.version}`,
             description: "Wiki für den DCC"
         },
-        /*"/en/": {
+        "/en/": {
             lang: "en-US",
-            title: "Digital Calibration Certificate",
+            title: `Digital Calibration Certificate - v${pkg.version}`,
             description: "Wiki for the DCC"
-        }*/
+        }
     },
     themeConfig: {
         print: print,
@@ -76,41 +78,33 @@ module.exports = {
                 lastUpdated: "Zuletzt aktualisiert",
                 nav: [
                     {
-                        text: "Administrative Data",
-                        link: "/de/administrativeData/",
+                        text: "Baumdiagramm",
+                        link: "/de/diagram.html",
                     },
                     {
-                        text: "Measurement Result",
-                        link: "/de/measurementResult/"
-                    },
-                    {
-                        text: "HowTos",
-                        link: "/de/howtos/"
+                        text: "Root-Element",
+                        link: "/de/rootelement.html",
                     }
                 ],
                 sidebar: "auto"
             },
-            /*"/en/": {
+            "/en/": {
                 label: "English",
                 editLinkText: "Edit this Page on GitLab!",
                 selectText: "Languages",
                 lastUpdated: "Last updated",
                 nav: [
                     {
-                        text: "Administrative Data",
-                        link: "/en/administrativeData/",
+                        text: "Overview",
+                        link: "/en/diagram.html",
                     },
                     {
-                        text: "Measurement Result",
-                        link: "/en/measurementResult/"
-                    },
-                    {
-                        text: "HowTos",
-                        link: "/en/howtos/"
+                        text: "Root Element",
+                        link: "/en/rootelement.html",
                     }
                 ],
                 sidebar: "auto"
-            }*/
+            }
         }
     }
 };

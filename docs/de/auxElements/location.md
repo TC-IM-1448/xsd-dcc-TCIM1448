@@ -10,7 +10,7 @@ Die grobe Baumstruktur des Elementtyps *dcc:location* hat folgendes Aussehen:
 
 [Diagrammsoftware](../XSD_diagramviewer.md)
 
-## Grobstruktur des Datentyps *dcc:location* 
+## Grobstruktur des Elementtyps *dcc:location* 
 ```xml
 <xs:complexType name="location">
 	<xs:choice maxOccurs="unbounded">
@@ -28,16 +28,12 @@ Die grobe Baumstruktur des Elementtyps *dcc:location* hat folgendes Aussehen:
 
 ## Ausfüllanweisungen
 
-Der Elementtyp *dcc:location* ist je nach Anwendung ein Pflichtfeld oder optional. 
-
 ### Mindestangaben
 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
-
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
+Wenn ein Element vom Type *dcc:location* verwendet wird, enthält dieses Pflichtfelder die wie folgt gekennzeichnet sind.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
 ### Bemerkungen
 
@@ -49,51 +45,13 @@ Die Überprüfung auf logische Rictigkeit kann nicht durch das XML-Schema erfolg
 
 ### Elemente
 
-#### city [O|R]
-
-Der Name der Stadt.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### countryCode [O|R]
-
-Der Ländercode, bestehend aus zwei Großbuchstaben.
-
-Datentyp: [dcc:elementStringISO3166](../auxElements/elementStringISO3166.md)
-
-#### postCode [O|R]
-
-Die Postleitzahl.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### postOfficeBox [O|R]
-
-Das Postfach.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### state [O|R]
-
-Das Bundesland.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### street [O|R]
-
-Der Straßenname.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### streetNo [O|R]
-
-Die Hausnummer.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### further [O|R]
-
-Angabe von zusätzlichen Informationen, die für eine genaue Postanschrift dienlich sind.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
+|Element||Bemerkung|
+|-|:-:|-|
+|city<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)| [O\|R]|Der Name der Stadt.|
+|countryCode<br>[dcc:elementStringISO3166](../auxElements/elementStringISO3166.md)|[O\|R]|Der Ländercode, bestehend aus zwei Großbuchstaben.|
+|postCode<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)| [O\|R]|Die Postleitzahl.|
+|postOfficeBox<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)| [O\|R]|Das Postfach.|
+|state <br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)| [O\|R]|Das Bundesland.|
+|street<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)| [O\|R]|Der Straßenname.|
+|streetNo<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)| [O\|R]|Die Hausnummer.|
+|further<br>[dcc:textBlock](../auxElements/textBlock.md) |[O\|R]|Angabe von zusätzlichen Informationen, die für eine genaue Postanschrift dienlich sind.|

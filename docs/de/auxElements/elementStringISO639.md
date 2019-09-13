@@ -22,6 +22,4 @@ für die Sprachenkennung mit zwei Kleinbuchstaben[^1].
 Das Element elementStringISO639 ist so konfiguriert, dass es genau zwei Kleinbuchstaben 
 aufnehmen kann. 
 
-----
-
 [^1]: https://www.bib-bvb.de/web/kkb-online/rda-sprachencode-nach-iso-639
