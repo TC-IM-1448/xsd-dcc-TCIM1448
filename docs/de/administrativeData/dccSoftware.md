@@ -9,7 +9,7 @@ Fehlersuche immens wichtig.
 
 ## Baumstruktur
 
-Die Baumstruktur des Elements *dccSoftware* ergibt sich über den Elementtyp
+Die Baumstruktur des Elements *dcc:dccSoftware* ergibt sich über den Elementtyp
 *dcc:SoftwareParameter*. Er hat folgendes Aussehen:
 
 <img src="../../images/softwareParameter.png" alt="softwareParameter" width="560" />
@@ -44,44 +44,24 @@ in dem Unterabschnitt Elemente zu finden.
 
 ### Mindestangaben
 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.| 
 
 ### Elemente
 
-#### dcc:software [R]
-Das Element *dcc:software* darf mehrfach vorkommen. Jeder Eintrag steht für genau eine 
-Software, die für die Erstellung XML-Datei eingesetzt wurde. 
-
-##### dcc:name [R]
-In dieses Element wird der Name der Software eingegeben. Er kann mehrsprachig 
-angegeben werden.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-##### dcc:release [R]
-Das Release der Software. Mögliche Angaben: Release, Version, etc. Dies dient der 
-eindeutigen Identifizierung der Software im Zusammenhang mit dem Namen. 
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-##### dcc:description [O]
-Sonstige Informationen, die nicht in den Elementen *dcc:name* oder *dcc:release* angegeben sind, 
-können hier angegeben werden. Das Element kann garnicht, einmal oder mehrfach 
-auftreten. Durch den Datentyp textBlock ist hier auch die Mehrsprachigkeit gegeben.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
+| Element  || Bemerkung |
+|----|:-:|----|
+| dcc:software |[R]| Das Element *dcc:software* darf mehrfach vorkommen. Jeder Eintrag steht für genau eine Software, die für die Erstellung XML-Datei eingesetzt wurde. |
+| dcc:name <br> [dcc:textBlock](../auxElements/textBlock.md) | [R]| In dieses Element wird der Name der Software eingegeben. Er kann mehrsprachig angegeben werden.|
+|dcc:release<br> [xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|Das Release der Software. Mögliche Angaben: Release, Version, etc. Dies dient der eindeutigen Identifizierung der Software im Zusammenhang mit dem Namen. |
+|dcc:description<br>[dcc:textBlock](../auxElements/textBlock.md)|[O]|Sonstige Informationen, die nicht in den Elementen *dcc:name* oder *dcc:release* angegeben sind, können hier angegeben werden. Das Element kann garnicht, einmal oder mehrfach auftreten. Durch den Datentyp textBlock ist hier auch die Mehrsprachigkeit gegeben.|
 
 ### Attribute
 
-#### xs:ID
-Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er 
-dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
-xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
-Tools ermöglicht wird.
-
-Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)
+|Attribut|Bemerkung|
+|-|-|
+|xs:ID<br>[xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)|Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird.|
 
 ## Beispiele
 Die Beispiele sind Auszüge aus DCC's.

@@ -30,40 +30,23 @@ Die Baumstruktur des Elements *dcc:administrativeData* hat folgendes Aussehen:
 ```
 ## Ausfüllanweisungen
 
-Weitere Informationen zu den Ausfüllanweisungen sind in dem Unterabschnitt Elemente
-zu finden.
+Weitere Informationen zu den Ausfüllanweisungen sind in dem Unterabschnitt Elemente zu finden.
 
 ### Mindestangaben
-
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
-
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
 
 ### Elemente
 
-#### [dcc:dccSoftware [R]](dccSoftware.md)
-Wesentlichen Informationen zur Identifizierung der eingesetzten Software zur Erstellung 
-und Bearbeitung des DCC sind hier hinterlegt. 
 
-#### [dcc:coreData [R]](coreData.md)
-Wesentliche Informationen zur Identifizierung des Kalibriergutes sowie der globalen 
-Einordnung des Kalibrierscheins.
- 
-#### [dcc:items [R]](items.md)
-Eindeutige Identifizierung, Beschreibung und ggf. Zustand des Kalibriergegenstands.
-
-#### [dcc:calibrationLaboratory [R]](calibrationLaboratory.md)
-Wesentlichen Informationen zur Identifizierung des Kalibrierlaboratoriums.
-
-#### [dcc:respPersons [R]](respPersons.md)
-Benennung der für die Freigabe des Berichts verantwortlichen Person(en).
-
-#### [dcc:customer [R]](customer.md)
-Identifizierung des Auftraggebers der Kalibrierung.
-
-#### [dcc:statements [O]](statements.md)
-Element für die Eingabe diverser Statements.
+| Element|| Bemerkung  |
+|---|:-:|-----|
+| [dcc:dccSoftware ](dccSoftware.md) |[R]  | Wesentlichen Informationen zur Identifizierung der eingesetzten Software zur Erstellung und Bearbeitung des DCC sind hier hinterlegt. |
+| [dcc:coreData ](coreData.md) | [R] | Wesentliche Informationen zur Identifizierung des Kalibriergutes sowie der globalen Einordnung des Kalibrierscheins. |
+| [dcc:items ](items.md)|[R] | Eindeutige Identifizierung, Beschreibung und ggf. Zustand des Kalibriergegenstands. |
+| [dcc:calibrationLaboratory ](calibrationLaboratory.md) |[R]| Wesentlichen Informationen zur Identifizierung des Kalibrierlaboratoriums. |
+| [dcc:respPersons ](respPersons.md)  |[R] | Benennung der für die Freigabe des Berichts verantwortlichen Person(en).  |
+| [dcc:customer ](customer.md)  |[R] | Identifizierung des Auftraggebers der Kalibrierung.|
+| [dcc:statements ](statements.md) |[O] | Element für die Eingabe diverser Statements. |

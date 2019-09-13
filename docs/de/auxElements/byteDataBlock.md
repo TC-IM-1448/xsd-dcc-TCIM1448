@@ -10,7 +10,7 @@ Die grobe Baumstruktur des Elementtyps *byteDataBlock* hat folgendes Aussehen:
 
 [Diagrammsoftware](../XSD_diagramviewer.md)
 
-## Grobstruktur des Datentyps *dcc:byteDataBlock* 
+## Grobstruktur des Elemettyps *dcc:byteDataBlock* 
 ```xml
 <xs:complexType name="byteDataBlock">
 	<xs:sequence>
@@ -26,49 +26,25 @@ Die grobe Baumstruktur des Elementtyps *byteDataBlock* hat folgendes Aussehen:
 
 ## Ausfüllanweisungen
 
-Der Elementtyp *dcc:byteDataBlock* wird manchmal aufgerufen. Wenn er aufgerufen wird, 
-so sind im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift 
-mit einem "[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet.
+### Mindestangaben
+
+Wenn ein Element vom Type *dcc:byteDataBlock* verwendet wird, enthält dieses Pflichtfelder die wie folgt gekennzeichnet sind.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
 ### Elemente
+|Element||Bemerkung|
+|-|-|-|
+|dcc:name<br>[dcc:textBlock](../auxElements/textBlock.md) |[R]|Angabe des Themas zu der Datei, die beigefügt ist.|
+|dcc:description<br>[dcc:textBlock](../auxElements/textBlock.md)| [R]|Angabe des Inhalts der beigefügten Datei.|
+|dcc:fileName <br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|Name der beigefügten Datei.|
+|dcc:mimeType <br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|Angabe des MIME-Typs der beigefügten Datei.|
+|dcc:data <br>[xs:base64Binary](https://www.w3.org/TR/xmlschema-2/#base64Binary)|[R]|In diesem Element werden die Daten abgelegt, nachdem sie nach dem Base64-Verfahren [^1] codiert wurden.
 
-#### dcc:name [R]
+### Bemerkungen:
 
-Angabe des Themas zu der Datei, die beigefügt ist.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-#### dcc:description [R]
-
-Angabe des Inhalts der beigefügten Datei.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-#### dcc:fileName [R]
-
-Name der beigefügten Datei.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### dcc:mimeType [R]
-
-Angabe des MIME-Typs der beigefügten Datei.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### dcc:data [R]
-
-In diesem Element werden die Daten abgelegt, nachdem sie nach dem Base64-Verfahren [^1]
-codiert wurden.
-
-Datentyp: [xs:base64Binary](https://www.w3.org/TR/xmlschema-2/#base64Binary)
-
-##### Bemerkungen:
-
-Der byteDataBlock definiert einen Typ, der es erlaubt, binär kodierte Dateien 
-hinzuzufügen. Es ist eine bewährte Vorgehensweise, den Base64 Data Encodings Standard 
-zu verwenden, RFC 4648 [^1].
+Der byteDataBlock definiert einen Typ, der es erlaubt, binär kodierte Dateien hinzuzufügen. Es ist eine bewährte Vorgehensweise, den Base64 Data Encodings Standard zu verwenden, RFC 4648 [^1].
 
 Beispiele für den Inhalt sind Bilddateien oder ZIP-Archive. Das Element fileName gibt 
 den Namen der Originaldatei an. Das Element mimeType ist der zugrunde liegende Dateityp 
@@ -76,13 +52,8 @@ den Namen der Originaldatei an. Das Element mimeType ist der zugrunde liegende D
 
 ### Attribute
 
-#### xs:ID
-Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er 
-dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
-xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
-Tools ermöglicht wird.
+|Attribut|Bemerkung|
+|-|-|
+|xs:ID<br>[xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)|Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird.|
 
-Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)
-
-----
 [^1]: Base64 Data Encodings standard, siehe RFC 4648: https://tools.ietf.org/html/rfc4648

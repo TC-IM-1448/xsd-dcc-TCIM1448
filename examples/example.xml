@@ -457,8 +457,6 @@
 									<dcc:name>
 									<dcc:content lang="de" id="Masse_Spalte_3">Masse</dcc:content>
 									<dcc:content lang="en" id="mass_column_3">mass</dcc:content>
-									<dcc:content lang="de" id="Masse_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-									<dcc:content lang="en" id="mass_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 									<si:real>
 										<si:label>10 g + 0,006 mg</si:label>
@@ -513,8 +511,6 @@
 								<dcc:name>
 									<dcc:content lang="de" id="Masse2_Spalte_3">Masse</dcc:content>
 									<dcc:content lang="en" id="mass2_column_3">mass</dcc:content>
-									<dcc:content lang="de" id="Masse2_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-									<dcc:content lang="en" id="mass2_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 								<si:real>
 									<si:label>10g + 0,003mg</si:label>

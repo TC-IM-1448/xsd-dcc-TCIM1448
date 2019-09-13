@@ -1,6 +1,6 @@
 # dcc:elementStringWithLang
 
-Dieses Element wird zur Darstellung von Text verwendet. Über das Attribut "lang" 
+Dieser Elementtyp wird zur Darstellung von Text verwendet. Über das Attribut "lang" 
 wird die Amtssprache angegeben, die in diesem Text benutzt wird, siehe weiter unten.
 
 ## Struktur im XML-Schema
@@ -23,19 +23,8 @@ wird die Amtssprache angegeben, die in diesem Text benutzt wird, siehe weiter un
 
 ## Attribute
 
-### xs:ID
-Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet.
-
-Die eindeutige Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
-xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
-Tools ermöglicht wird.
-
-Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)
-
-
-### dcc:lang
-
-Über dieses Attribut wird die Amtssprache festgelegt, die in dem Element 
-*elementStringWithLang* abgespeichert wird. Die möglichen Sprachen werden über das
-Element *dcc:elementStringISO0639* gesteuert.
+|Attribut|Bemerkung|
+|-|-|
+|xs:ID<br>[xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)|Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird.|
+|dcc:lang|Über dieses Attribut wird die Amtssprache festgelegt, die in dem Element *elementStringWithLang* abgespeichert wird. Die möglichen Sprachen werden über das Element *dcc:elementStringISO0639* gesteuert.
 

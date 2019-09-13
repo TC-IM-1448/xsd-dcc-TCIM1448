@@ -27,10 +27,10 @@ Anschauungsgründen verzichtet. In der nun folgenden XML-Darstellung wird dafür
 <xs:element name="item" maxOccurs="unbounded"></xs:element>
 ```
 
-als Platzhalter verwendet. Der Wiki zum Element *item* ist hier zu finden:
+als Platzhalter verwendet. Der Wiki zum Element *dcc.item* ist hier zu finden:
 [dcc:item](item.md)
 
-### Grobstruktur des Datentyps *dcc:itemParameter* vom Element *items*
+### Grobstruktur des Elementtyp *dcc:itemParameter* vom Element *dcc:items*
 
 ```xml
 <xs:complexType name="itemParameter">
@@ -51,39 +51,15 @@ zu finden.
 
 ### Mindestangaben
 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
-
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
 ### Elemente
+|Element||Bemerkung|
+|-|:-:|-|
+|dcc:name <br>[dcc:textBlock](../auxElements/textBlock.md)|[O]|In dieses Element wird der Name des des Kalibrierguts bzw. des zu kalibrierenden Ensembles angegeben.|
+|dcc:description <br>[dcc:textBlock](../auxElements/textBlock.md)|[O]|Sonstige Informationen, die nicht in den Elementen *dcc:name* oder *dcc:equipmentClass* angegeben sind, können hier angegeben werden.|
+|dcc:owner <br>[dcc:contact](../auxElements/contact.md)|[O]|Das Element *dcc:owner* enthält alle notwendigen Informationen, um den Eigentümer des Kalibriergegenstandes bzw. der Kalibriergegenstände eindeutig zu identifizieren.|
+|dcc:item [R]<br>[dcc:item](item.md)|[R]|Das Element *dcc:item* enthält alle notwendigen Informationen jedes einzelnen Kalibriergegenstandes, um ihn eindeutig zu identifizieren. |
 
-#### dcc:name [O]
-
-In dieses Element wird der Name des des Kalibrierguts bzw. des zu kalibrierenden 
-Ensembles angegeben.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-#### dcc:description [O]
-
-Sonstige Informationen, die nicht in den Elementen *dcc:name* oder *dcc:equipmentClass* 
-angegeben sind, können hier angegeben werden.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-#### dcc:owner [O]
-
-Das Element *dcc:owner* enthält alle notwendigen Informationen, um den Eigentümer 
-des Kalibriergegenstandes bzw. der Kalibriergegenstände eindeutig zu identifizieren.
-
-Datentyp: [dcc:contact](../auxElements/contact.md)
-
-#### [dcc:item [R]](item.md)
-
-Das Element *dcc:item* enthält alle notwendigen Informationen jedes einzelnen  
-Kalibriergegenstandes, um ihn eindeutig zu identifizieren. 
-
-Datentyp: [dcc:item](item.md)

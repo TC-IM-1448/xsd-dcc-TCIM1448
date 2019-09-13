@@ -3,7 +3,7 @@
 Im Element *dcc:customer* sind wesentliche Informationen zum Kunden des 
 Kalibrierlaboratoriums hinterlegt.
 
-## Grobstruktur des Datentyps *dcc:coreDataParameter* vom Element *customer*
+## Grobstruktur des Elementtyp *dcc:contact* vom Element *customer*
 ```xml
 <xs:element name="customer" type="dcc:contact"/>
 ```

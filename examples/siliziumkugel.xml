@@ -469,8 +469,6 @@
                                 <dcc:name>
                                     <dcc:content lang="de" id="Masse_Spalte_3">Masse</dcc:content>
                                     <dcc:content lang="en" id="mass_column_3">mass</dcc:content>
-                                    <dcc:content lang="de" id="Masse_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-                                    <dcc:content lang="en" id="mass_uncertaincy_column_4">uncertainty</dcc:content>
                                 </dcc:name>
                                 <si:real>
                                     <si:label>1 kg + 78,41 mg</si:label>
@@ -521,8 +519,6 @@
                                 <dcc:name>
                                     <dcc:content lang="de" id="Volumen_Spalte_3">Volumen bei t = 20 °C</dcc:content>
                                     <dcc:content lang="en" id="volume_column_3">volume at t = 20 °C</dcc:content>
-                                    <dcc:content lang="de" id="Volumen_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-                                    <dcc:content lang="en" id="volume_uncertaincy_column_4">uncertainty</dcc:content>
                                 </dcc:name>
                                 <si:real>
                                     <si:value>431.055119</si:value>

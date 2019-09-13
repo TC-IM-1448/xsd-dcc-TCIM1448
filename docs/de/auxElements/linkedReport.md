@@ -34,59 +34,26 @@ zu finden.
 
 ### Mindestangaben
 
-Das Element previousReport selbst ist optional. Wenn es ausgefüllt wird, so sind 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
-
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
+Wenn ein Element vom Type *dcc:hash* verwendet wird, enthält dieses Pflichtfelder die wie folgt gekennzeichnet sind.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
 ### Elemente
 
-#### dcc:reference [R]
-Hier erfolgen die Angaben und Beschreibungen zum vorherigen Kalibrierzertifikat, 
-idealerweise bereits eines DCC. 
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
-
-#### dcc:referenceID [R]
-Der Identifier (die Kalibrierscheinnummer) des vorherigen Kalibrierzertifikates 
-wird hier eingegeben.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### dcc:procedure [R]
-Das Vorgänger-Kalibrierzertifikat wird mit einem Hashwertalgorithmus eindeutig 
-identifiziert. Beim DCC erfolgt dies automatisch mit der Anbringung einer digitalen 
-Signatur. In dieses Feld wird der Algorithmus genannt, mit dem der Hashwert, dem im 
-Element *value* abgelegt ist, berechnet wurde.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### dcc:value [R]
-In diesem Element wird der Hashwert abgelegt. Er wurde mit dem im Element *dcc:procedure* 
-genannten Hashwertalgorithmus durch Anwendung auf das Kalibierzertifikat gewonnen.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-#### [dcc:linkedReport [O]](linkedReport.md)
-
-Das Element  *dcc:linkedReport* gibt die Möglichkeit, auf das Vor-Vorgängerkalibrierzertifikat 
-zu verweisen, die durch diesen DCC ersetzt wurde. Es kann eine Kette von 
-Kalibrierzertifikaten angeggeben werden. 
-
-Der Aufbau vom Element *dcc:linkedReport* ist identisch mit dem vom Element *dcc:previousReport*.
+|Element||Bemerkung|
+|-|:---:|-|
+|dcc:reference<br>[dcc:textBlock](../auxElements/textBlock.md)|[R]|Hier erfolgen die Angaben und Beschreibungen zum vorherigen Kalibrierzertifikat, idealerweise bereits eines DCC.| 
+|dcc:referenceID<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|Der Identifier (die Kalibrierscheinnummer) des vorherigen Kalibrierzertifikates wird hier eingegeben.|
+|dcc:procedure<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|Das Vorgänger-Kalibrierzertifikat wird mit einem Hashwertalgorithmus eindeutig identifiziert. Beim DCC erfolgt dies automatisch mit der Anbringung einer digitalen Signatur. In dieses Feld wird der Algorithmus genannt, mit dem der Hashwert, dem im Element *dcc:value* abgelegt ist, berechnet wurde.|
+|dcc:value<br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|In diesem Element wird der Hashwert abgelegt. Er wurde mit dem im Element *dcc:procedure* genannten Hashwertalgorithmus durch Anwendung auf das Kalibierzertifikat gewonnen.|
+|dcc:linkedReport<br>[dcc:linkedReport](../auxElements/linkedReport.md)|[O]|Das Element  *dcc:linkedReport* gibt die Möglichkeit, auf das Vor-Vorgängerkalibrierzertifikat zu verweisen, die durch diesen DCC ersetzt wurde. Es kann eine Kette von Kalibrierzertifikaten angeggeben werden.<br><br>Der Aufbau vom Element *dcc:linkedReport* ist identisch mit dem vom Element *dcc:previousReport*.|
 
 ### Attribute
 
-#### xs:ID
-Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er 
-dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
-xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
-Tools ermöglicht wird.
-
-Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)
+|Attribut|Bemerkung|
+|-|-|
+|xs:ID<br>[xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)|Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird.|
 
 ## Beispiele
 
@@ -135,6 +102,5 @@ gewesen. Es wurde mit dem Hashwertalgorithmus *MD5* gehasht. Der Hashwert lautet
 </previousReport>
 ```
 
-----
 [^1]: DIN EN ISO/IEC 17025:2018-03 General requirements for the competence of testing 
 and calibration laboratories 
