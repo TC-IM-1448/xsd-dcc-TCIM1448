@@ -559,8 +559,6 @@
 							<dcc:name>
 									<dcc:content lang="de" id="Dichte_Spalte_3">Dichte bei t = 20 °C</dcc:content>
 									<dcc:content lang="en" id="density_column_3">density at t = 20 °C</dcc:content>
-									<dcc:content lang="de" id="Dichte_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-									<dcc:content lang="en" id="density_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 							<si:real>
 								<si:value>8012.8</si:value>
@@ -624,8 +622,6 @@
 							<dcc:name>
 								<dcc:content lang="de" id="Volumen_Spalte_3">Volumen bei t = 20 °C</dcc:content>
 								<dcc:content lang="en" id="volume_column_3">volume at t = 20 °C</dcc:content>
-								<dcc:content lang="de" id="Volumen_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-								<dcc:content lang="en" id="volume_uncertaincy_column_4">uncertainty</dcc:content>
 							</dcc:name>
 							<si:real>
 								<si:value>1.2480E-6</si:value>
