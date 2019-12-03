@@ -23,7 +23,7 @@ module.exports = {
         "@vuepress/medium-zoom": {
             selector: "img"
         },
-        "@vuepress/last-updated": {
+        "@vuepress/last-updated": print ? false : {
             transformer: (timestamp, lang) => {
                 const moment = require("moment");
                 moment.locale(lang);
@@ -72,9 +72,10 @@ module.exports = {
     },
     themeConfig: {
         print: print,
+        navbar: !print,
         displayAllHeaders: true,
         repo: "https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc",
-        editLinks: true,
+        editLinks: !print,
         docsDir: "docs",
         docsBranch: "master",
         locales: {
@@ -93,7 +94,7 @@ module.exports = {
                         link: "/de/rootelement.html",
                     }
                 ],
-                sidebar: "auto"
+                sidebar: print ? false : "auto"
             },
             "/en/": {
                 label: "English",
@@ -110,7 +111,7 @@ module.exports = {
                         link: "/en/rootelement.html",
                     }
                 ],
-                sidebar: "auto"
+                sidebar: print ? false : "auto"
             }
         }
     }
