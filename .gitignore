@@ -73,3 +73,6 @@ node_modules/
 SI_Format.xsd
 
 docs/.vuepress/dist
+
+# xjparse used for validating the examples
+xjparse-app-3.0.0.jar

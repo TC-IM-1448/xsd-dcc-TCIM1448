@@ -1,0 +1,17 @@
+image: openjdk:11.0.5
+
+test-xsd:
+  stage: test
+  script:
+    - apt update
+    - apt install libxml2-utils -y
+    - xmllint --noout dcc.xsd
+
+test-examples:
+  stage: test
+  cache:
+    paths:
+      - xjparse-app-3.0.0.jar
+  script:
+    - chmod +x scripts/validateExamples.sh
+    - ./scripts/validateExamples.sh
