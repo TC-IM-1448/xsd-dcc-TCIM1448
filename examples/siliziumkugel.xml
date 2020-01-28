@@ -68,6 +68,16 @@
             <dcc:usedLangCodeISO639_1>en</dcc:usedLangCodeISO639_1>
             <dcc:mandatoryLangCodeISO639_1>de</dcc:mandatoryLangCodeISO639_1>
             <dcc:uniqueIdentifier>PTB - 11129 18</dcc:uniqueIdentifier>
+            <dcc:identifications>
+                <dcc:identification>
+                    <dcc:issuer>calibrationLaboratory</dcc:issuer>
+                    <dcc:value>1.81-18.039</dcc:value>
+                    <dcc:description>
+                        <dcc:content lang="de">Geschäftszeichen</dcc:content>
+                        <dcc:content lang="en">Reference No.</dcc:content>
+                    </dcc:description>
+                </dcc:identification>
+            </dcc:identifications>
             <dcc:beginPerformanceDate>2018-10-12</dcc:beginPerformanceDate>
             <dcc:endPerformanceDate>2018-10-12</dcc:endPerformanceDate>
         </dcc:coreData>
@@ -123,14 +133,6 @@
                         <dcc:description>
                             <dcc:content lang="de">Kennnummer</dcc:content>
                             <dcc:content lang="en">Serial No.</dcc:content>
-                        </dcc:description>
-                    </dcc:identification>
-                    <dcc:identification id="geschaeftszeichen">
-                        <dcc:issuer>calibrationLaboratory</dcc:issuer>
-                        <dcc:value>1.81-18.039</dcc:value>
-                        <dcc:description>
-                            <dcc:content lang="de">Geschäftszeichen</dcc:content>
-                            <dcc:content lang="en">Reference No.</dcc:content>
                         </dcc:description>
                     </dcc:identification>
                 </dcc:identifications>
