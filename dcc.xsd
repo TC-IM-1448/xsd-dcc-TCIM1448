@@ -178,6 +178,7 @@
 			<!--<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />-->
             <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="owner" type="dcc:contact" minOccurs="0"/>
+            <xs:element name="identifications" type="dcc:identificationsParameter" minOccurs="0"/>
 
             <xs:element name="item" maxOccurs="unbounded">
                 <xs:complexType>
@@ -196,6 +197,7 @@
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="identificationsParameter">
