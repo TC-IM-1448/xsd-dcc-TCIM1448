@@ -1,5 +1,7 @@
 #!/bin/bash
-# WARNING: THIS SCRIPT HAS TO BE CALLED FROM THE ROOT FOLDER OF THIS REPO.
+
+# get directory of this script
+DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # check if xjparse jar exists
 if [ -f xjparse-app-3.0.0.jar ]; then
@@ -26,7 +28,11 @@ else
   fi
 fi
 
-FILES=examples/*.xml
+# get absolute examples folder
+EXAMPLES_FOLDER=$(cd "$DIR/../examples/"; pwd)
+
+# all xml files in the example folder
+FILES="$EXAMPLES_FOLDER/*.xml"
 
 # loop through all examples
 for f in $FILES; do
