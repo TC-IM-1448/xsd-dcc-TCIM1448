@@ -1,13 +1,19 @@
-image: openjdk:11.0.5
-
 test-xsd:
+  image: alpine:latest
   stage: test
+  cache:
+    paths:
+      - /var/cache/apk
+  before_script:
+    - mkdir -p /var/cache/apk
+    - ln -s /var/cache/apk /etc/apk/cache
   script:
-    - apt update
-    - apt install libxml2-utils -y
+    - apk update
+    - apk add libxml2-utils
     - xmllint --noout dcc.xsd
 
 test-examples:
+  image: openjdk:11.0.5
   stage: test
   cache:
     paths:
