@@ -2,11 +2,12 @@ test-xsd:
   image: alpine:latest
   stage: test
   cache:
+    key: apk-cache
     paths:
-      - /var/cache/apk
+      - apk-cache/
   before_script:
-    - mkdir -p /var/cache/apk
-    - ln -s /var/cache/apk /etc/apk/cache
+    - mkdir -p apk-cache
+    - ln -s apk-cache /etc/apk/cache
   script:
     - apk update
     - apk add libxml2-utils
