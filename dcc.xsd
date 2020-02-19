@@ -197,7 +197,6 @@
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="identificationsParameter">
