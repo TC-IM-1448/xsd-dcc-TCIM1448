@@ -67,5 +67,5 @@ cd xsd-dcc
 
 Contact person: Siegfried Hackel
 
-Alexander Scheibner, Benjamin Gloger, Daniel Hutzschenreuter, Frank Härtig, Jan Henry Loewe, Justin Jagieniak, Lutz Doering, Shanna Schönhals, Siegfried Hackel, Wiebke Heeren
+Alexander Scheibner, Benjamin Gloger, Daniel Hutzschenreuter, Frank Härtig, Jan Henry Loewe, Justin Jagieniak, Lutz Doering, Thomas Wiedenhöfer, Shanna Schönhals, Siegfried Hackel, Wiebke Heeren
 
