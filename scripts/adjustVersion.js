@@ -33,7 +33,9 @@ if(process.argv.length > 2) {
         }
 
         console.log("Adjusting schema");
-        replaceInFile(__dirname + "/../dcc.xsd", `version="${oldVersion}"`, `version="${newVersion}"`);
+        let schemaPath = __dirname + "/../dcc.xsd";
+        replaceInFile(schemaPath, `version="${oldVersion}"`, `version="${newVersion}"`);
+        replaceInFile(schemaPath, `<xs:pattern value="${oldVersion}"/>`, `<xs:pattern value="${newVersion}"/>`);
     } else {
         console.log("Please pass a valid version number");
     }
