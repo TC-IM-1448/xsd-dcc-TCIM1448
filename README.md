@@ -62,3 +62,10 @@ git clone https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc.git
 # Go into the repository
 cd xsd-dcc
 ```
+
+## Team
+
+Contact person: Siegfried Hackel
+
+Alexander Scheibner, Benjamin Gloger, Daniel Hutzschenreuter, Frank Härtig, Jan Henry Loewe, Justin Jagieniak, Lutz Doering, Thomas Wiedenhöfer, Shanna Schönhals, Siegfried Hackel, Wiebke Heeren
+
