@@ -142,6 +142,7 @@
             <xs:element name="usedLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/>
             <xs:element name="mandatoryLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/>
             <xs:element name="uniqueIdentifier" type="xs:string"/>
+            <xs:element name="identifications" type="dcc:identificationsParameter" minOccurs="0"/>
             <xs:element name="receiptDate" type="xs:date" minOccurs="0"/>
             <xs:element name="beginPerformanceDate" type="xs:date"/>
             <xs:element name="endPerformanceDate" type="xs:date"/>
