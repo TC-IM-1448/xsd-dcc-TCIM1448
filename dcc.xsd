@@ -77,6 +77,13 @@
                 <xs:element name="document" type="dcc:byteDataBlock" minOccurs="0"/>
 
             </xs:sequence>
+            <xs:attribute name="schemaVersion" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="2.2.0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
         </xs:complexType>
     </xs:element>
 
