@@ -62,7 +62,7 @@
                                         <xs:element name="usedMethods" type="dcc:usedMethodParameter" minOccurs="0"/>
                                         <xs:element name="usedSoftware" type="dcc:softwareParameter" minOccurs="0"/>
                                         <xs:element name="measuringEquipments" type="dcc:measuringEquipmentParameter" minOccurs="0"/>
-                                        <xs:element name="influenceConditions" type="dcc:influenceConditionParameter"/>
+                                        <xs:element name="influenceConditions" type="dcc:influenceConditionParameter" minOccurs="0"/>
                                         <xs:element name="results" type="dcc:resultParameter"/>
                                     </xs:sequence>
                                 </xs:complexType>
