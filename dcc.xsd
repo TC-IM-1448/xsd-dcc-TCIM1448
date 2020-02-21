@@ -120,7 +120,7 @@
                         <xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />
                         <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
                         <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
-						<xs:element name="certificate" type="dcc:hash" minOccurs="0"/>
+                        <xs:element name="certificate" type="dcc:hash" minOccurs="0"/>
                         <xs:element name="manufacturer" type="dcc:contactNotStrict" minOccurs="0"/>
                         <xs:element name="model" type="xs:string" minOccurs="0"/>
                         <xs:element name="identifications" type="dcc:identificationsParameter" minOccurs="0" />
@@ -171,7 +171,7 @@
         </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
-			<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />
+            <xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />
             <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="owner" type="dcc:contact" minOccurs="0"/>
             <xs:element name="identifications" type="dcc:identificationsParameter" minOccurs="0"/>
@@ -180,7 +180,7 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="name" type="dcc:textBlock" />
-						<xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />
+                        <xs:element name="equipmentClass" type="dcc:equipmentClassParameter" minOccurs="0" />
                         <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
                         <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
 
