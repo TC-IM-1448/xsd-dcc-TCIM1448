@@ -16,6 +16,8 @@
             Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der Software entstehen.
 
             This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
+
+            Documentation: https://ptb.de/dcc/v2.2.0/
         </xs:documentation>
     </xs:annotation>
 
