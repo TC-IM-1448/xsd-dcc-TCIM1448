@@ -62,7 +62,7 @@
             <xs:element name="calibrationLaboratory" type="dcc:calibrationLaboratoryType"/>
             <xs:element name="respPersons" type="dcc:respPersonListType"/>
             <xs:element name="customer" type="dcc:contact"/>
-            <xs:element name="statements" type="dcc:statementType" minOccurs="0"/>
+            <xs:element name="statements" type="dcc:statementListType" minOccurs="0"/>
         </xs:all>
     </xs:complexType>
 
@@ -236,7 +236,7 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="statementType">
+    <xs:complexType name="statementListType">
         <xs:annotation>
             <xs:documentation>
                 Elements for the statements
