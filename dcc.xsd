@@ -21,11 +21,11 @@
         </xs:documentation>
     </xs:annotation>
 
-    <xs:element name="digitalCalibrationCertificate" type="dcc:digitalCalibrationCertificate"/>
+    <xs:element name="digitalCalibrationCertificate" type="dcc:digitalCalibrationCertificateType"/>
 
-    <xs:complexType name="digitalCalibrationCertificate">
+    <xs:complexType name="digitalCalibrationCertificateType">
         <xs:sequence>
-            <xs:element name="administrativeData" type="dcc:administrativeData"/>
+            <xs:element name="administrativeData" type="dcc:administrativeDataType"/>
 
             <xs:element name="measurementResults" type="dcc:measurementResultListType"/>
 
@@ -37,7 +37,7 @@
                 </xs:complexType>
             </xs:element>
 
-            <xs:element name="document" type="dcc:byteDataBlock" minOccurs="0"/>
+            <xs:element name="document" type="dcc:byteDataType" minOccurs="0"/>
 
         </xs:sequence>
 
@@ -54,14 +54,14 @@
                 Elements of the administrativeData part of the DCC
            #####################################################################################-->
 
-    <xs:complexType name="administrativeData">
+    <xs:complexType name="administrativeDataType">
         <xs:all>
             <xs:element name="dccSoftware" type="dcc:softwareListType"/>
             <xs:element name="coreData" type="dcc:coreDataType"/>
             <xs:element name="items" type="dcc:itemListType"/>
             <xs:element name="calibrationLaboratory" type="dcc:calibrationLaboratoryType"/>
             <xs:element name="respPersons" type="dcc:respPersonListType"/>
-            <xs:element name="customer" type="dcc:contact"/>
+            <xs:element name="customer" type="dcc:contactType"/>
             <xs:element name="statements" type="dcc:statementListType" minOccurs="0"/>
         </xs:all>
     </xs:complexType>
@@ -80,9 +80,9 @@
 
     <xs:complexType name="softwareType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="name" type="dcc:textType"/>
             <xs:element name="release" type="xs:string"/>
-            <xs:element name="description" type="dcc:textBlock" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="description" type="dcc:textType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -100,12 +100,12 @@
 
     <xs:complexType name="measuringEquipmentType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="name" type="dcc:textType"/>
             <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
-            <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
-            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="certificate" type="dcc:hash" minOccurs="0"/>
-            <xs:element name="manufacturer" type="dcc:contactNotStrict" minOccurs="0"/>
+            <xs:element name="description" type="dcc:textType" maxOccurs="unbounded"/>
+            <xs:element name="descriptionData" type="dcc:byteDataType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="certificate" type="dcc:hashType" minOccurs="0"/>
+            <xs:element name="manufacturer" type="dcc:contactNotStrictType" minOccurs="0"/>
             <xs:element name="model" type="xs:string" minOccurs="0"/>
             <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
         </xs:sequence>
@@ -119,15 +119,15 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166"/>
-            <xs:element name="usedLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/>
-            <xs:element name="mandatoryLangCodeISO639_1" type="dcc:elementStringISO639" maxOccurs="unbounded"/>
+            <xs:element name="countryCodeISO3166_1" type="dcc:stringISO3166Type"/>
+            <xs:element name="usedLangCodeISO639_1" type="dcc:stringISO639Type" maxOccurs="unbounded"/>
+            <xs:element name="mandatoryLangCodeISO639_1" type="dcc:stringISO639Type" maxOccurs="unbounded"/>
             <xs:element name="uniqueIdentifier" type="xs:string"/>
             <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
             <xs:element name="receiptDate" type="xs:date" minOccurs="0"/>
             <xs:element name="beginPerformanceDate" type="xs:date"/>
             <xs:element name="endPerformanceDate" type="xs:date"/>
-            <xs:element name="previousReport" type="dcc:hash" minOccurs="0"/>
+            <xs:element name="previousReport" type="dcc:hashType" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -151,10 +151,10 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="name" type="dcc:textType" minOccurs="0"/>
             <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
-            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
-            <xs:element name="owner" type="dcc:contact" minOccurs="0"/>
+            <xs:element name="description" type="dcc:textType" minOccurs="0"/>
+            <xs:element name="owner" type="dcc:contactType" minOccurs="0"/>
             <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
 
             <xs:element name="item" type="dcc:itemType" maxOccurs="unbounded"/>
@@ -163,12 +163,12 @@
 
     <xs:complexType name="itemType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="name" type="dcc:textType"/>
             <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
-            <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
-            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="description" type="dcc:textType" maxOccurs="unbounded"/>
+            <xs:element name="descriptionData" type="dcc:byteDataType" minOccurs="0" maxOccurs="unbounded"/>
 
-            <xs:element name="manufacturer" type="dcc:contactNotStrict"/>
+            <xs:element name="manufacturer" type="dcc:contactNotStrictType"/>
             <xs:element name="model" type="xs:string" minOccurs="0"/>
 
             <xs:element name="identifications" type="dcc:identificationListType"/>
@@ -196,7 +196,7 @@
                 </xs:simpleType>
             </xs:element>
             <xs:element name="value" type="xs:string"/>
-            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="description" type="dcc:textType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -209,7 +209,7 @@
         </xs:annotation>
         <xs:sequence>
             <xs:element name="calibrationLaboratoryCode" type="xs:string" minOccurs="0"/>
-            <xs:element name="contact" type="dcc:contact" maxOccurs="unbounded"/>
+            <xs:element name="contact" type="dcc:contactType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -226,8 +226,8 @@
 
     <xs:complexType name="respPersonType">
         <xs:sequence>
-            <xs:element name="person" type="dcc:contactNotStrict"/>
-            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="person" type="dcc:contactNotStrictType"/>
+            <xs:element name="description" type="dcc:textType" minOccurs="0"/>
             <xs:element name="mainSigner" type="xs:boolean" minOccurs="0"/>
             <xs:element name="cryptElectronicSeal" type="xs:boolean" minOccurs="0"/>
             <xs:element name="cryptElectronicSignature" type="xs:boolean" minOccurs="0"/>
@@ -295,7 +295,7 @@
                 </xs:documentation>
             </xs:annotation>
             <xs:sequence>
-                <xs:element name="external" type="dcc:contact" maxOccurs="unbounded"/>
+                <xs:element name="external" type="dcc:contactType" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
 
@@ -311,10 +311,10 @@
                 <xs:element name="sampledMaterial" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="plan" type="dcc:textBlock"/>
-                            <xs:element name="method" type="dcc:textBlock"/>
-                            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
-                            <xs:element name="externalSampler" type="dcc:contact" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="plan" type="dcc:textType"/>
+                            <xs:element name="method" type="dcc:textType"/>
+                            <xs:element name="descriptionData" type="dcc:byteDataType" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="externalSampler" type="dcc:contactType" minOccurs="0" maxOccurs="unbounded"/>
                         </xs:sequence>
                         <xs:attribute name="id" type="xs:ID" use="optional"/>
                     </xs:complexType>
@@ -332,9 +332,9 @@
                 </xs:documentation>
             </xs:annotation>
             <xs:sequence>
-                <xs:element name="name" type="dcc:textBlock" />
-                <xs:element name="description" type="dcc:textBlock" />
-                <xs:element name="identifier" type="dcc:hash" />
+                <xs:element name="name" type="dcc:textType" />
+                <xs:element name="description" type="dcc:textType" />
+                <xs:element name="identifier" type="dcc:hashType" />
             </xs:sequence>
         </xs:complexType>
 
@@ -353,8 +353,8 @@
 
     <xs:complexType name="usedMethodType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
-            <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
+            <xs:element name="name" type="dcc:textType"/>
+            <xs:element name="description" type="dcc:textType" maxOccurs="unbounded"/>
             <xs:element name="norm" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
@@ -368,7 +368,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="influenceCondition" type="dcc:conditionBlock" maxOccurs="unbounded"/>
+            <xs:element name="influenceCondition" type="dcc:conditionType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -386,23 +386,23 @@
 
     <xs:complexType name="calibrationLocationType">
         <xs:sequence>
-            <xs:element name="calibrationLocationSite" type="dcc:textBlock"/>
+            <xs:element name="calibrationLocationSite" type="dcc:textType"/>
             <xs:element name="beginLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="endLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
-            <xs:element name="location" type="dcc:location" minOccurs="0"/>
+            <xs:element name="location" type="dcc:locationType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="conditionBlock">
+    <xs:complexType name="conditionType">
         <xs:annotation>
             <xs:documentation>
                 All necessary information for one part of a measurement
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
-            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="name" type="dcc:textType"/>
+            <xs:element name="description" type="dcc:textType" minOccurs="0"/>
             <xs:element name="state" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
@@ -413,21 +413,21 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
-            <xs:element name="data" type="dcc:dataBlock"/>
+            <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="resultBlock">
+    <xs:complexType name="resultType">
         <xs:annotation>
             <xs:documentation>
                 The result itself
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
-            <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
-            <xs:element name="data" type="dcc:dataBlock"/>
+            <xs:element name="name" type="dcc:textType"/>
+            <xs:element name="description" type="dcc:textType" minOccurs="0"/>
+            <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -439,11 +439,11 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="result" type="dcc:resultBlock" maxOccurs="unbounded"/>
+            <xs:element name="result" type="dcc:resultType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="dataBlock">
+    <xs:complexType name="dataType">
         <xs:annotation>
             <xs:documentation>
                 In the Element "outcome", any of the elements
@@ -453,12 +453,12 @@
             </xs:documentation>
         </xs:annotation>
         <xs:choice maxOccurs="unbounded">
-            <xs:element name="text" type="dcc:textBlock"/>
-            <xs:element name="formula" type="dcc:formulaBlock"/>
-            <xs:element name="byteData" type="dcc:byteDataBlock"/>
-            <xs:element name="xml" type="dcc:xmlBlock"/>
-            <xs:element name="quantity" type="dcc:quantity"/>
-            <xs:element name="list" type="dcc:list"/>
+            <xs:element name="text" type="dcc:textType"/>
+            <xs:element name="formula" type="dcc:formulaType"/>
+            <xs:element name="byteData" type="dcc:byteDataType"/>
+            <xs:element name="xml" type="dcc:xmlType"/>
+            <xs:element name="quantity" type="dcc:quantityType"/>
+            <xs:element name="list" type="dcc:listType"/>
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -468,7 +468,7 @@
                 (XMl Schema for the secure exchange of measurement data in ICT applications)
           #####################################################################################-->
 
-    <xs:complexType name="quantity">
+    <xs:complexType name="quantityType">
         <xs:annotation>
             <xs:documentation>
                 Basic element for the statement of measurement values in a DCC.
@@ -483,9 +483,9 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="name" type="dcc:textType" minOccurs="0"/>
             <xs:choice>
-                <xs:element name="noQuantity" type="dcc:textBlock"/>
+                <xs:element name="noQuantity" type="dcc:textType"/>
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
@@ -531,7 +531,7 @@
     </xs:complexType>
     -->
 
-    <xs:complexType name="list">
+    <xs:complexType name="listType">
         <xs:annotation>
             <xs:documentation>
                 The 'list' element allows to define a collection of measurement results
@@ -548,11 +548,11 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="name" type="dcc:textType" minOccurs="0"/>
             <xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/>
             <xs:choice>
-                <xs:element name="list" type="dcc:list" maxOccurs="unbounded"/>
-                <xs:element name="quantity" type="dcc:quantity" maxOccurs="unbounded"/>
+                <xs:element name="list" type="dcc:listType" maxOccurs="unbounded"/>
+                <xs:element name="quantity" type="dcc:quantityType" maxOccurs="unbounded"/>
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
@@ -584,13 +584,13 @@
 
     <xs:complexType name="statementMetaDataType">
         <xs:sequence>
-            <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166" minOccurs="0"
+            <xs:element name="countryCodeISO3166_1" type="dcc:stringISO3166Type" minOccurs="0"
                         maxOccurs="unbounded"/>
             <xs:element name="convention" type="xs:string" minOccurs="0"/>
             <xs:element name="traceable" type="xs:boolean" minOccurs="0"/>
             <xs:element name="norm" type="xs:string" minOccurs="0"/>
             <xs:element name="reference" type="xs:string" minOccurs="0"/>
-            <xs:element name="declaration" type="dcc:textBlock" minOccurs="0"/>
+            <xs:element name="declaration" type="dcc:textType" minOccurs="0"/>
             <xs:element name="valid" type="xs:boolean" minOccurs="0"/>
             <xs:element name="refId" type="xs:IDREF" minOccurs="0"/>
             <xs:element name="date" type="xs:date" minOccurs="0"/>
@@ -599,94 +599,94 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:simpleType name="elementStringISO3166">
+    <xs:simpleType name="stringISO3166Type">
         <xs:restriction base="xs:string">
             <xs:pattern value="[A-Z]{2}"/>
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="elementStringISO639">
+    <xs:simpleType name="stringISO639Type">
         <xs:restriction base="xs:string">
             <xs:pattern value="[a-z]{2}"/>
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:complexType name="elementStringWithLang">
+    <xs:complexType name="stringWithLangType">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="lang" type="dcc:elementStringISO639" use="optional"/>
+                <xs:attribute name="lang" type="dcc:stringISO639Type" use="optional"/>
                 <xs:attribute name="id" type="xs:ID" use="optional"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
 
-    <xs:complexType name="location">
+    <xs:complexType name="locationType">
         <xs:choice maxOccurs="unbounded">
             <xs:element name="city" type="xs:string"/>
-            <xs:element name="countryCode" type="dcc:elementStringISO3166"/>
+            <xs:element name="countryCode" type="dcc:stringISO3166Type"/>
             <xs:element name="postCode" type="xs:string"/>
             <xs:element name="postOfficeBox" type="xs:string"/>
             <xs:element name="state" type="xs:string"/>
             <xs:element name="street" type="xs:string"/>
             <xs:element name="streetNo" type="xs:string"/>
-            <xs:element name="further" type="dcc:textBlock"/>
+            <xs:element name="further" type="dcc:textType"/>
         </xs:choice>
     </xs:complexType>
 
-    <xs:complexType name="contact">
+    <xs:complexType name="contactType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="name" type="dcc:textType"/>
             <xs:element name="eMail" type="xs:string"/>
             <xs:element name="phone" type="xs:string" minOccurs="0"/>
             <xs:element name="fax" type="xs:string" minOccurs="0"/>
-            <xs:element name="location" type="dcc:location"/>
-            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0"/>
+            <xs:element name="location" type="dcc:locationType"/>
+            <xs:element name="descriptionData" type="dcc:byteDataType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="contactNotStrict">
+    <xs:complexType name="contactNotStrictType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="name" type="dcc:textType"/>
             <xs:element name="eMail" type="xs:string" minOccurs="0"/>
             <xs:element name="phone" type="xs:string" minOccurs="0"/>
             <xs:element name="fax" type="xs:string" minOccurs="0"/>
-            <xs:element name="location" type="dcc:location" minOccurs="0"/>
-            <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0"/>
+            <xs:element name="location" type="dcc:locationType" minOccurs="0"/>
+            <xs:element name="descriptionData" type="dcc:byteDataType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="hash">
+    <xs:complexType name="hashType">
         <xs:sequence>
-            <xs:element name="reference" type="dcc:textBlock"/>
+            <xs:element name="reference" type="dcc:textType"/>
             <xs:element name="referenceID" type="xs:string"/>
             <xs:element name="procedure" type="xs:string"/>
             <xs:element name="value" type="xs:string"/>
-            <xs:element name="linkedReport" type="dcc:hash" minOccurs="0"/>
+            <xs:element name="linkedReport" type="dcc:hashType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="textBlock">
+    <xs:complexType name="textType">
         <xs:annotation>
             <xs:documentation>
-                The textBlock defines the type for writing text in the DCC.
-                In this block, the element content can be used many times with different language definition (attribute
+                The textType defines the type for writing text in the DCC.
+                In this Type, the element content can be used many times with different language definition (attribute
                 lang).
                 The optional attribute ID is for a unique ID.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="content" type="dcc:elementStringWithLang" maxOccurs="unbounded"/>
+            <xs:element name="content" type="dcc:stringWithLangType" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="byteDataBlock">
+    <xs:complexType name="byteDataType">
         <xs:annotation>
             <xs:documentation>
-                The byteDataBlock defines a type which allows to add
+                The byteDataType defines a type which allows to add
                 binary encoded files to the measurement result section.
                 It is a good practise to use the Base64
                 Data Encodings standard (see RFC 4648).
@@ -699,8 +699,8 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock"/>
-            <xs:element name="description" type="dcc:textBlock"/>
+            <xs:element name="name" type="dcc:textType"/>
+            <xs:element name="description" type="dcc:textType"/>
             <xs:element name="fileName" type="xs:string"/>
             <xs:element name="mimeType" type="xs:string"/>
             <xs:element name="data" type="xs:base64Binary"/>
@@ -708,7 +708,7 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/><!--92200_A_I-->
     </xs:complexType>
 
-    <xs:complexType name="formulaBlock">
+    <xs:complexType name="formulaType">
         <xs:annotation>
             <xs:documentation>
                 This data block is used to add formulas and equations to the measurement result section of the DCC.
@@ -725,7 +725,7 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="xmlBlock">
+    <xs:complexType name="xmlType">
         <xs:annotation>
             <xs:documentation>
                 This data block is used to add user or application specific XML content to the
