@@ -7,7 +7,7 @@
 
     <xs:import
             namespace="https://ptb.de/si"
-            schemaLocation="https://ptb.de/si/v1.3.0/SI_Format.xsd" />
+            schemaLocation="https://ptb.de/si/v1.3.0/SI_Format.xsd"/>
 
     <xs:annotation>
         <xs:documentation>
@@ -100,14 +100,14 @@
 
     <xs:complexType name="measuringEquipmentType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" />
-            <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0" />
+            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
             <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
             <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="certificate" type="dcc:hash" minOccurs="0"/>
             <xs:element name="manufacturer" type="dcc:contactNotStrict" minOccurs="0"/>
             <xs:element name="model" type="xs:string" minOccurs="0"/>
-            <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0" />
+            <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -138,10 +138,10 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-			<xs:element name="reference" type="xs:string"/>
-			<xs:element name="classID" type="xs:string"/>
-		</xs:sequence>
-		<xs:attribute name="id" type="xs:ID" use="optional"/>
+            <xs:element name="reference" type="xs:string"/>
+            <xs:element name="classID" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="itemListType">
@@ -152,7 +152,7 @@
         </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
-            <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0" />
+            <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
             <xs:element name="description" type="dcc:textBlock" minOccurs="0"/>
             <xs:element name="owner" type="dcc:contact" minOccurs="0"/>
             <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
@@ -163,15 +163,15 @@
 
     <xs:complexType name="itemType">
         <xs:sequence>
-            <xs:element name="name" type="dcc:textBlock" />
-            <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0" />
+            <xs:element name="name" type="dcc:textBlock"/>
+            <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
             <xs:element name="description" type="dcc:textBlock" maxOccurs="unbounded"/>
             <xs:element name="descriptionData" type="dcc:byteDataBlock" minOccurs="0" maxOccurs="unbounded"/>
 
             <xs:element name="manufacturer" type="dcc:contactNotStrict"/>
             <xs:element name="model" type="xs:string" minOccurs="0"/>
 
-            <xs:element name="identifications" type="dcc:identificationListType" />
+            <xs:element name="identifications" type="dcc:identificationListType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
@@ -485,13 +485,13 @@
         <xs:sequence>
             <xs:element name="name" type="dcc:textBlock" minOccurs="0"/>
             <xs:choice>
-                <xs:element name="noQuantity" type="dcc:textBlock" />
+                <xs:element name="noQuantity" type="dcc:textBlock"/>
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
-			    <!--<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimType"/>-->
+                <!--<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimType"/>-->
             </xs:choice>
-			<!--<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimType" minOccurs="0"/>-->
+            <!--<xs:element name="toleranceOneDim" type="dcc:toleranceOneDimType" minOccurs="0"/>-->
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionListType" minOccurs="0"/>
@@ -584,7 +584,8 @@
 
     <xs:complexType name="statementMetaDataType">
         <xs:sequence>
-            <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="countryCodeISO3166_1" type="dcc:elementStringISO3166" minOccurs="0"
+                        maxOccurs="unbounded"/>
             <xs:element name="convention" type="xs:string" minOccurs="0"/>
             <xs:element name="traceable" type="xs:boolean" minOccurs="0"/>
             <xs:element name="norm" type="xs:string" minOccurs="0"/>
