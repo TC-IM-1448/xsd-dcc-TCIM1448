@@ -1,4 +1,4 @@
-# measurementResult
+# measurementResult (in der Entwicklung)
 
 Das Element *measurementResults* enthält alle Ergebnisse der Messungen und Auswertungen 
 Informationen zur Kalibrierung. Die Eintragungen in diesem Bereich sind immer so, dass 
@@ -50,25 +50,4 @@ Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] geke
 
 ### Elemente
 
-#### [dccSoftware [R]](dccSoftware.md)
-Wesentlichen Informationen zur Identifizierung der eingesetzten Software zur Erstellung 
-und Bearbeitung des DCC sind hier hinterlegt. 
 
-#### [coreData [R]](coreData.md)
-Wesentliche Informationen zur Identifizierung des Kalibriergutes sowie der globalen 
-Einordnung des Kalibrierscheins.
- 
-#### [items [R]](items.md)
-Eindeutige Identifizierung, Beschreibung und ggf. Zustand des Kalibriergegenstands.
-
-#### [calibrationLaboratory [R]](calibrationLaboratory.md)
-Wesentlichen Informationen zur Identifizierung des Kalibrierlaboratoriums.
-
-#### [respPersons [R]](respPersons.md)
-Benennung der für die Freigabe des Berichts verantwortlichen Person(en).
-
-#### [customer [R]](customer.md)
-Identifizierung des Auftraggebers der Kalibrierung.
-
-#### [statements [O]](statements.md)
-Element für die Eingabe diverser Statements.

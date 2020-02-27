@@ -1,6 +1,7 @@
 const pkg = require("../docs/package");
 const replaceInFile = require("./util/replaceInFile");
 const semverRegEx = require("./util/semverRegEx");
+const filesByExtension = require("./util/filesByExtension");
 
 
 if(process.argv.length > 2) {
@@ -25,11 +26,17 @@ if(process.argv.length > 2) {
         replaceInFile(__dirname + "/../docs/package.json", `"version": "${oldVersion}"`, `"version": "${newVersion}"`);
 
         console.log("Adjusting examples");
-        replaceInFile(__dirname + "/../examples/example.xml", oldUrl, newUrl);
-        replaceInFile(__dirname + "/../examples/siliziumkugel.xml", oldUrl, newUrl);
+        let examples = filesByExtension(__dirname + "/../examples", "xml");
+        for (let example of examples) {
+            replaceInFile(example, oldUrl, newUrl);
+            replaceInFile(example, `schemaVersion="${oldVersion}"`, `schemaVersion="${newVersion}"`);
+        }
 
-        console.log("Adjusting examples");
-        replaceInFile(__dirname + "/../dcc.xsd", `version="${oldVersion}"`, `version="${newVersion}"`);
+        console.log("Adjusting schema");
+        let schemaPath = __dirname + "/../dcc.xsd";
+        replaceInFile(schemaPath, oldUrl, newUrl);
+        replaceInFile(schemaPath, `version="${oldVersion}"`, `version="${newVersion}"`);
+        replaceInFile(schemaPath, `<xs:pattern value="${oldVersion}"/>`, `<xs:pattern value="${newVersion}"/>`);
     } else {
         console.log("Please pass a valid version number");
     }

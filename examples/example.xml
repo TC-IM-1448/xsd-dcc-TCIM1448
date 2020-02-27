@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.2.0/dcc.xsd"
+		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.3.0/dcc.xsd"
 		xmlns:dcc="https://ptb.de/dcc"
-		xmlns:si="https://ptb.de/si">
+		xmlns:si="https://ptb.de/si"
+		schemaVersion="2.3.0">
 
     <!--
     Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
@@ -457,8 +458,6 @@
 									<dcc:name>
 									<dcc:content lang="de" id="Masse_Spalte_3">Masse</dcc:content>
 									<dcc:content lang="en" id="mass_column_3">mass</dcc:content>
-									<dcc:content lang="de" id="Masse_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-									<dcc:content lang="en" id="mass_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 									<si:real>
 										<si:label>10 g + 0,006 mg</si:label>
@@ -513,8 +512,6 @@
 								<dcc:name>
 									<dcc:content lang="de" id="Masse2_Spalte_3">Masse</dcc:content>
 									<dcc:content lang="en" id="mass2_column_3">mass</dcc:content>
-									<dcc:content lang="de" id="Masse2_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-									<dcc:content lang="en" id="mass2_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 								<si:real>
 									<si:label>10g + 0,003mg</si:label>
@@ -563,8 +560,6 @@
 							<dcc:name>
 									<dcc:content lang="de" id="Dichte_Spalte_3">Dichte bei t = 20 °C</dcc:content>
 									<dcc:content lang="en" id="density_column_3">density at t = 20 °C</dcc:content>
-									<dcc:content lang="de" id="Dichte_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-									<dcc:content lang="en" id="density_uncertaincy_column_4">uncertainty</dcc:content>
 								</dcc:name>
 							<si:real>
 								<si:value>8012.8</si:value>
@@ -628,8 +623,6 @@
 							<dcc:name>
 								<dcc:content lang="de" id="Volumen_Spalte_3">Volumen bei t = 20 °C</dcc:content>
 								<dcc:content lang="en" id="volume_column_3">volume at t = 20 °C</dcc:content>
-								<dcc:content lang="de" id="Volumen_Unsicherheit_Spalte_4">Unsicherheit</dcc:content>
-								<dcc:content lang="en" id="volume_uncertaincy_column_4">uncertainty</dcc:content>
 							</dcc:name>
 							<si:real>
 								<si:value>1.2480E-6</si:value>

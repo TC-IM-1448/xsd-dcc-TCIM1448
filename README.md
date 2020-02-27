@@ -8,7 +8,7 @@
 
 ## Access to the Docs
 
-You can find the Docs at [https://ptb.de/dcc/v2.2.0/](https://ptb.de/dcc/v2.2.0/).
+You can find the Docs at [https://ptb.de/dcc/v2.3.0/](https://ptb.de/dcc/v2.3.0/).
 
 Or here in this Repository at [docs/README.md](docs/README.md).
 
@@ -20,13 +20,13 @@ To use the Schema use the URL with a specific version below.
 This is the recommended way.
 
 ```
-https://ptb.de/dcc/v2.2.0/dcc.xsd
+https://ptb.de/dcc/v2.3.0/dcc.xsd
 ```
 
 ```xml
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.2.0/dcc.xsd"
+        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.3.0/dcc.xsd"
         xmlns:dcc="https://ptb.de/dcc"
         xmlns:si="https://ptb.de/si">
         <!--
@@ -62,3 +62,10 @@ git clone https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc.git
 # Go into the repository
 cd xsd-dcc
 ```
+
+## Team
+
+Contact person: Siegfried Hackel
+
+Alexander Scheibner, Benjamin Gloger, Daniel Hutzschenreuter, Frank Härtig, Jan Henry Loewe, Justin Jagieniak, Lutz Doering, Thomas Wiedenhöfer, Shanna Schönhals, Siegfried Hackel, Wiebke Heeren
+

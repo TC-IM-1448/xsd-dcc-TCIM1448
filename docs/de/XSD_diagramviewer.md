@@ -2,10 +2,7 @@
 
 ## Quelle
 
-Für die Darstellung der Struktur des DCC-Schemas nutzen wir zwei verschiendene Softwaretools. 
-Bei einfachen Strukturen wird die Software *XSD Diagram* [^1] verwendet. Wenn es wichtig ist, 
-mehr Informationen darzustellen, wie z. B, den verwendeten Datentyp eines Elements, dann nutzen 
-wir die Software *Altova XMLSpy 2018* [^2]. Diese Darstellugnen sind mit dem Softwarehinweis versehen.
+Für die Darstellung der Struktur des DCC-Schemas nutzen wir zwei verschiendene Softwaretools. Bei einfachen Strukturen wird die Software *XSD Diagram* [^1] verwendet. Wenn es wichtig ist, mehr Informationen darzustellen,wie z. B, den verwendeten Datentyp eines Elements oder seine Attribute, dann nutzen wir die Software *Altova XMLSpy 2018* [^2]. Diese Darstellugnen sind mit dem Softwarehinweis versehen.
 
 [^1]: *XSD Diagram is a free xml schema definition diagram viewer (http://regis.cosnier.free.fr).
 Version 1.2 Copyright (c) 2006-2018 Regis Cosnier, All Rights Reserved.
@@ -17,11 +14,9 @@ https://www.altova.com/de/xmlspy-xml-editor
 
 ## Nomenklatur
 
-
 ### Häufigkeit der Elemente
 
-XML-Elemente können unterschiedlich oft auftreten. Dazu verwendet *XSD Diagram* die 
-folgende Nomenklatur:
+XML-Elemente können unterschiedlich oft auftreten. Dazu verwendet *XSD Diagram* die folgende Nomenklatur:
 
 ||||
 |-|-|-|
@@ -32,8 +27,7 @@ folgende Nomenklatur:
 
 ### Kindelelemente
 
-Wenn ein Element Kindelemente hat, dann ist auf der rechten Seite ein aufklappbarer Link 
-mit einem "+" vermerkt. Klickt man darauf, so sieht man die Elemente der nächsten Ebene.
+Wenn ein Element Kindelemente hat, dann ist auf der rechten Seite ein aufklappbarer Link mit einem "+" vermerkt. Klickt man darauf, so sieht man die Elemente der nächsten Ebene.
 
 | | |
 |---|---|
@@ -48,15 +42,7 @@ mit einem "+" vermerkt. Klickt man darauf, so sieht man die Elemente der nächst
 | | |
 |---|---|
 |Die Kindelemente können in **belibieger Reihenfolge** angeordnet werden.|<img src="../XSD_diagram_SW/all.png" alt="xs_all" width="70" />|
-|Die Kindelemente müssen in **aktueller Reihenfolge** angeordnet werden.|<img src="../XSD_diagram_SW/sequence.png" alt="xs_sequence" width="70" />|
+|Die Kindelemente müssen in **vorgegebener Reihenfolge** angeordnet werden.|<img src="../XSD_diagram_SW/sequence.png" alt="xs_sequence" width="70" />|
 |Genau **ein** Kindelement muss ausgewählt werden.|<img src="../XSD_diagram_SW/choice.png" alt="xs_choice" width="70" />|
+|Rekursiv aufgerufene Elemente<br>hier als Beispiel das Element *dcc:hash* - werden wiefolgt dargestellt:|<img src="../XSD_diagram_SW/recursive.jpg" alt="recursive" width="400" />
 
-### Rekursiv aufgerufene Elemente
-
-Rekursiv aufgerufene Elemente - hier als Beispiel das Element *dcc:hash* - werden 
-wiefolgt dargestellt:
-
-<img src="../XSD_diagram_SW/recursive.jpg" alt="recursive" width="400" />
-
-
----

@@ -14,26 +14,19 @@ Element content ist die Mehrsprachigkeit enthalten.
 ```
 
 ## Elemente
-### dcc:content
-Das Element wird zum Eintragen von jeglichem Text verwendet. Über den Datentyp 
-wird das Attribut "lang" für die Mehrsprachigkeit implementiert.
 
-Datentyp: [dcc:elementStringWithLang](elementStringWithLang.md)
-
+|Element||Bemerkung
+|-|:-:|-|
+|dcc:content<br>[dcc:elementStringWithLang](elementStringWithLang.md)||Das Element wird zum Eintragen von jeglichem Text verwendet. Über den Datentyp wird das Attribut "lang" für die Mehrsprachigkeit implementiert.
 
 ## Attribute
 
-#### xs:ID
-Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er 
-dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp 
-xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen 
-Tools ermöglicht wird.
-
-Datentyp: [xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)
+|Attribut|Bemerkung|
+|-|-|
+|xs:ID<br>[xs:ID](https://www.w3.org/TR/xmlschema-2/#ID)|Dieser Standard dataType von XML wird zur Darstellung einer eindeutigen ID verwendet. Er dient der eindeutigen Kennzeichnung des Objektes im DCC. Es wird hier bewusst der Datentyp xs:ID verwendet, da hiermit eine Validierung ohne irgendwelche AddOns in verschiedenen Tools ermöglicht wird.|
 
 ## Beispiele
 Die Beispiele sind Auszüge aus DCC's.
-
 
 ### Beispiel 1
 Hier ein einfaches Beispiel ohne Mehrsprachigkeit:

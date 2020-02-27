@@ -1,10 +1,8 @@
 # dcc:identifications
 
-Jedes Kalibriergut wird neben seiner in den weiter oben aufgeführten Inhalte in den 
-Elementen noch durch einen oder mehrere Identifier eindeutig gekennzeichnet. Das 
-Element *dcc:identifications* ist der Ort, wo diese Information(en) abgespeichert werden.
+Jedes Kalibriergut wird neben seiner in den weiter oben aufgeführten Inhalte in den Elementen noch durch einen oder mehrere Identifier eindeutig gekennzeichnet. Das Element *dcc:identifications* ist der Ort, wo diese Informationen abgespeichert werden.
 
-## Bemerkung
+#### Bemerkung
 
 In sehr seltenen Fällen kann es vorkommen, dass keine Identifier an dem Kalibiergut 
 vorhanden sind. Daher ist die Eingabe nicht zwingend vorgeschrieben. Es wird empfohlen, 
@@ -12,7 +10,9 @@ dass das Kalibrierlaboratorium diesen Mangel abstellt.
 
 ## Baumstruktur
 
-Die Baumstruktur des Elements *identifications* hat folgendes Aussehen:
+Die Baumstruktur des Elements *dcc:identifications* ergibt sich über den Elementtyp 
+*dcc:identificationsParameter*. Er hat folgendes Aussehen:
+
 
 <img src="../../images/identifications.png" alt="identifications" width="725" />
 
@@ -21,7 +21,7 @@ Die Baumstruktur des Elements *identifications* hat folgendes Aussehen:
 ## Struktur im XML-Schema
 
 ```xml
-<xs:element name="identifications" minOccurs="0">
+<xs:element name="identificationsParameter" minOccurs="0">
 	<xs:complexType>
 		<xs:sequence>
 			<xs:element name="identification" maxOccurs="unbounded">
@@ -56,51 +56,21 @@ zu finden.
 
 ### Mindestangaben
 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
-
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
 
 ### Elemente
 
-#### dcc:identifications [R]
-Das Element ist das Wurzelelement für die Eingabe der Identifier. Es beinhaltet die
-Kindelement *identification*, in welchem dann der jeweilige Identifier einzutragen 
-ist.
+|Element||Bemerkung|
+|-|:-:|-|
+|dcc:identifications|[R]|Das Element ist das Wurzelelement für die Eingabe der Identifier. Es beinhaltet die Kindelement *identification*, in welchem dann der jeweilige Identifier einzutragen ist.|
+|dcc:identification |[R]|Mindestens ein Element von *dcc:identification* muss ausgefüllt werden.|
+| dcc:issuer |[R]|In das Element *issuer* kann nur eines der folgenden Worte eingetragen werden.<br>- manufacturer<br>- calibrationLaboratory<br>- customer<br>- owner<br>- other<br>Wird das Element mit einem anderen Inhalt gefüllt, so entsteht bei der Prüfung gegenüber dem XML-Schema ein Fehler. |
+|dcc:value <br>[xs:string](https://www.w3.org/TR/xmlschema-2/#string)|[R]|Hier wird der Identifier eingetragen.| 
+|dcc:description <br>[dcc:textBlock](../auxElements/textBlock.md)|[O]|Sonstige Informationen zum Identifier.|
 
-##### dcc:identification [R]
-
-Mindestens ein Element von *dcc:identification* muss ausgefüllt werden. Das Element das 
-Kindelelement *dcc:issuer*.
-
-###### dcc:issuer [R]
-
-Das Element *issuer* kann jeweils nur eines der folgenden Inhalte haben:
-
-- manufacturer
-- calibrationLaboratory
-- customer
-- owner
-- other
-
-Wird das Element mit einem anderen Inhalt gefüllt, so entsteht bei der Prüfung
-gegenüber dem XML-Schema ein Fehler. 
-
-
-###### dcc:value [R]
-
-Hier wird der Identifier eingetragen. 
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-###### dcc:description [O]
-
-Sonstige Informationen zum Identifier.
-
-Datentyp: [dcc:textBlock](../auxElements/textBlock.md)
 
 ## Beispiele
 

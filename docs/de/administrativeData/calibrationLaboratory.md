@@ -5,13 +5,14 @@ Kalibrierlaboratorium hinterlegt.
 
 ## Baumstruktur
 
-Die Baumstruktur des Elementtypss *dcc:calibrationLaboratory* hat folgendes Aussehen:
+Die Baumstruktur des Elements *dcc:calibrationLaboratory* ergibt sich über den Elementtyp 
+*dcc:calibrationLaboratoryParameter*. Er hat folgendes Aussehen:
 
 <img src="../../images/calibrationLaboratoryParameter.png" alt="calibrationLaboratoryParameter" width="500" />
 
 [Diagrammsoftware](../XSD_diagramviewer.md)
 
-## Grobstruktur des Datentyps *dcc:coreDataParameter* vom Element *calibrationLaboratory*
+## Grobstruktur des Datentyps *dcc:calibrationLaboratoryParameter* vom Element *dcc:calibrationLaboratory*
 ```xml
 <xs:complexType name="calibrationLaboratoryParameter">
     <xs:sequence>
@@ -28,42 +29,19 @@ zu finden.
 
 ### Mindestangaben
 
-im Folgenden werden die Elemente, die auszufüllen sind, in der Überschrift mit einem 
-"[R]" (steht für Required) gekennzeichnet. Optional auszufüllende Elemente 
-werden mit einem "[O]" gekennzeichnet. 
+|[R] <br> Required|[O] <br> Optional|[R\|O]<br>Required \| Optional|
+|-|-|-|
+|Es handelt sich um ein Pflichtfeld. | Es handelt sich um ein optionales Feld.|Dieses Feld kann je nach Anwendungsfall ein Pflichtfeld sein.|
 
-Es gibt Elemente, die sind in dem einen Anwendungsfall Pflichtfelder und in dem anderen 
-Anwendungsfall nicht zwingend auszufüllen. Diese Elemente werden mit [O|R] gekennzeichnet.
 
-### <img src="../../images/flagPTB_DE.jpg" alt="PTB" width="55" /> 
-PTB-spezifische Eingaben sind durch das Logo der PTB gekennzeichnet.
 
-### <img src="../../images/flagDAkkS_DE.png" alt="DAkkS" width="65" />
-DAkkS-spezifische Eingaben sind durch das Logo der DAkkS gekennzeichnet.
+|<img src="../../images/flagPTB_DE.jpg" alt="PTB" height="30" />| <img src="../../images/flagDAkkS_DE.png" alt="DAkkS" height="30" />|
+|-|-|
+|PTB-spezifische Eingaben sind durch das Logo der PTB gekennzeichnet.|DAkkS-spezifische Eingaben sind durch das Logo der DAkkS gekennzeichnet.|
 
 ### Elemente
 
-#### dcc:calibrationLaboratoryCode [O|R]
-Hat das Kalibrierlaboratorium eine ihm zugewiesene Kennung, so ist sie an dieser Stelle 
-einzutragen.
-
-Datentyp: [xs:string](https://www.w3.org/TR/xmlschema-2/#string)
-
-##### <img src="../../images/flagPTB_DE.jpg" alt="PTB" width="55" />
-
-Die PTB hat keine zugewiesene Kennung. Daher bleibt dieses Element leer.
-
-##### <img src="../../images/flagDAkkS_DE.png" alt="DAkkS" width="65" />
-
-Die von der Deutschen Akkreditierungsstelle GmbH (DAkkS) akkreditierten 
-Kalibrierlaboratorien haben eine Kennung zugewiesen bekommen. Diese ist 
-hier einzutragen.
-
-#### dcc:contact [R]
-
-Das Element *contact* enthält alle notwendigen Informationen, um das 
-Kalibrierlaboratorium indeutig zu identifizieren. 
-
-Die Struktur des Datentyps *dcc:contact* vom Element *contact* wird 
-[hier](../auxElements/contact.md) beschrieben.
-
+| Element        || Bemerkung  |
+|---|:-:|---|
+| dcc:calibrationLaboratoryCode <br> [xs:string](https://www.w3.org/TR/xmlschema-2/#string) |[O\|R]| Hat das Kalibrierlaboratorium eine ihm zugewiesene Kennung, so ist sie an dieser Stelle einzutragen. <br><br> <img src="../../images/flagPTB_DE.jpg" alt="PTB" height="30" /> <br> Die PTB hat keine zugewiesene Kennung. Daher bleibt dieses Element leer.<br>   <br> <img src="../../images/flagDAkkS_DE.png" alt="DAkkS" height="30" /> <br> Die von der Deutschen Akkreditierungsstelle GmbH (DAkkS) akkreditierten Kalibrierlaboratorien haben eine Kennung zugewiesen bekommen. Diese ist hier einzutragen.               |
+| dcc:contact <br> [dcc:contact](../auxElements/contact.md)| [R]| Das Element *contact* enthält alle notwendigen Informationen, um das Kalibrierlaboratorium eindeutig zu identifizieren. |

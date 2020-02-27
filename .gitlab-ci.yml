@@ -1,0 +1,38 @@
+# === Job: test-xsd ===
+# Description: this job checks the schema for errors.
+test-xsd:
+  image: alpine:latest
+  stage: test
+  # setup caching for apk (alpine package manager)
+  cache:
+    key: apk-cache
+    paths:
+      - apk-cache/
+  before_script:
+    # create folder for apk cache
+    - mkdir -p apk-cache
+    # link created folder to /etc/apk/cache
+    - ln -s apk-cache /etc/apk/cache
+  script:
+    # update apk index of available packages
+    - apk update
+    # install libxml2-utils
+    - apk add libxml2-utils
+    # check dcc.xsd for errors
+    - xmllint --noout dcc.xsd
+
+# === Job: test-examples ===
+# Description: this job checks the examples using xjparse.
+# This is done by running validateExamples.sh in the scripts folder
+test-examples:
+  image: openjdk:11.0.5
+  stage: test
+  # cache xjparse so it doesn't has to be fetched every time
+  cache:
+    paths:
+      - xjparse-app-3.0.0.jar
+  script:
+    # make the script executable
+    - chmod +x scripts/validateExamples.sh
+    # run the script
+    - ./scripts/validateExamples.sh
