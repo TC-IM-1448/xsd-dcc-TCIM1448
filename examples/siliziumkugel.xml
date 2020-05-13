@@ -369,10 +369,10 @@
                                         <dcc:content lang="en">from</dcc:content>
                                     </dcc:name>
                                     <si:real>
-                                        <si:value>46.8</si:value>
-                                        <si:unit>\percent</si:unit>
+                                        <si:value>0.468</si:value>
+                                        <si:unit>\kilogram\tothe{1}\metre\tothe{-3}\kilogram\tothe{-1}\metre\tothe{3}</si:unit>
                                         <si:expandedUnc>
-                                            <si:uncertainty>1.0</si:uncertainty>
+                                            <si:uncertainty>0.01</si:uncertainty>
                                             <si:coverageFactor>2</si:coverageFactor>
                                             <si:coverageProbability>0.95</si:coverageProbability>
                                         </si:expandedUnc>
@@ -384,10 +384,10 @@
                                         <dcc:content lang="en">to</dcc:content>
                                     </dcc:name>
                                     <si:real>
-                                        <si:value>47.4</si:value>
-                                        <si:unit>\percent</si:unit>
+                                        <si:value>0.474</si:value>
+                                        <si:unit>\kilogram\tothe{1}\metre\tothe{-3}\kilogram\tothe{-1}\metre\tothe{3}</si:unit>
                                         <si:expandedUnc>
-                                            <si:uncertainty>1.0</si:uncertainty>
+                                            <si:uncertainty>0.01</si:uncertainty>
                                             <si:coverageFactor>2</si:coverageFactor>
                                             <si:coverageProbability>0.95</si:coverageProbability>
                                         </si:expandedUnc>
