@@ -363,10 +363,10 @@
 										<dcc:content lang="en">from</dcc:content>
 									</dcc:name>
 									<si:real>
-										<si:value>46</si:value>
-										<si:unit>\percent</si:unit>
+										<si:value>0.46</si:value>
+										<si:unit>\kilogram\tothe{1}\metre\tothe{-3}\kilogram\tothe{-1}\metre\tothe{3}</si:unit>
 										<si:expandedUnc>
-											<si:uncertainty>5</si:uncertainty>
+											<si:uncertainty>0.05</si:uncertainty>
 											<si:coverageFactor>2</si:coverageFactor>
 											<si:coverageProbability>0.95</si:coverageProbability>
 										</si:expandedUnc>
@@ -378,10 +378,10 @@
 										<dcc:content lang="en">to</dcc:content>
 									</dcc:name>
 									<si:real>
-										<si:value>47</si:value>
-										<si:unit>\percent</si:unit>
+										<si:value>0.47</si:value>
+										<si:unit>\kilogram\tothe{1}\metre\tothe{-3}\kilogram\tothe{-1}\metre\tothe{3}</si:unit>
 										<si:expandedUnc>
-											<si:uncertainty>5</si:uncertainty>
+											<si:uncertainty>0.05</si:uncertainty>
 											<si:coverageFactor>2</si:coverageFactor>
 											<si:coverageProbability>0.95</si:coverageProbability>
 										</si:expandedUnc>
@@ -400,7 +400,7 @@
 									</dcc:name>
 									<si:real>
 										<si:value>1007.0</si:value>
-										<si:unit>\milli\bar</si:unit>
+										<si:unit>\hecto\pascal</si:unit>
 										<si:expandedUnc>
 											<si:uncertainty>0.2</si:uncertainty>
 											<si:coverageFactor>2</si:coverageFactor>
@@ -415,7 +415,7 @@
 									</dcc:name>
 									<si:real>
 										<si:value>1009.9</si:value>
-										<si:unit>\milli\bar</si:unit>
+										<si:unit>\hecto\pascal</si:unit>
 										<si:expandedUnc>
 											<si:uncertainty>0.2</si:uncertainty>
 											<si:coverageFactor>2</si:coverageFactor>
