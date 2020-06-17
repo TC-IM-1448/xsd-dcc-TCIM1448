@@ -3,6 +3,9 @@
 # get directory of this script
 DIR="$(cd "$(dirname "$0")" && pwd)"
 
+# overall error code
+EXIT_STATUS=0
+
 # check if xjparse jar exists
 if [ -f xjparse-app-3.0.0.jar ]; then
   echo "xjparse found. Continuing..."
@@ -15,16 +18,22 @@ else
   # check if curl is installed
   if hash curl 2>/dev/null; then
     echo "Downloading with curl."
-    curl -L "$XJPARSE_URL" -o xjparse-app-3.0.0.jar
+    curl -L "$XJPARSE_URL" -o xjparse-app-3.0.0.jar || EXIT_STATUS=$?
   else
     # check if wget is installed
     if hash wget 2>/dev/null; then
       echo "Downloading with wget."
-      wget -q --show-progress "$XJPARSE_URL"
+      wget -q --show-progress "$XJPARSE_URL" || EXIT_STATUS=$?
     else
       echo "Please install curl or wget."
       exit 1
     fi
+  fi
+
+  if [ $EXIT_STATUS -eq 1 ]
+  then
+    echo "Could not download xjparse"
+    exit 1
   fi
 fi
 
@@ -40,5 +49,15 @@ for f in $FILES; do
   echo "Validating $f..."
 
   # validate file with xjparse
-  java -jar xjparse-app-3.0.0.jar -f -S dcc.xsd "$f"
+  java -jar xjparse-app-3.0.0.jar -f -S dcc.xsd "$f" || EXIT_STATUS=$?
 done
+
+echo "------------------------------"
+if [ $EXIT_STATUS -eq 0 ]
+then
+  echo "[SUCCESS] No errors found in examples"
+else
+  echo "[ERROR] Errors found in examples"
+fi
+
+exit $EXIT_STATUS
