@@ -49,6 +49,16 @@ module.exports = {
             .use(CopyPlugin, [
                 [{from: "ressources/", to: "ressources/[name].[ext]", toType: "template"}]
             ]);
+
+        // fix for https://github.com/vuejs/vue-loader/issues/1612
+        config.module
+            .rule('images')
+            .test(/\.(png|jpe?g|gif)(\?.*)?$/)
+            .use('url-loader')
+            .loader('url-loader')
+            .options({
+                esModule: false
+            })
     },
     markdown: {
         lineNumbers: !print,
