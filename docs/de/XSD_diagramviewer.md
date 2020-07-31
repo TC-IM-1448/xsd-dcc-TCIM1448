@@ -25,7 +25,7 @@ XML-Elemente können unterschiedlich oft auftreten. Dazu verwendet *XSD Diagram*
 | 0- oder 1-mal: | <img src="../XSD_diagram_SW/0_1_Mal.png" alt="0_1" width="135" /> ||
 
 
-### Kindelelemente
+### Kindelemente
 
 Wenn ein Element Kindelemente hat, dann ist auf der rechten Seite ein aufklappbarer Link mit einem "+" vermerkt. Klickt man darauf, so sieht man die Elemente der nächsten Ebene.
 
