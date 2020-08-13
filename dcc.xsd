@@ -199,6 +199,7 @@
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="calibrationLaboratoryType">
@@ -416,6 +417,7 @@
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultType">
@@ -430,6 +432,8 @@
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultListType">
@@ -496,6 +500,8 @@
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="listType">
@@ -624,6 +630,18 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
+    <xs:simpleType name="stringRefType">
+        <xs:restriction base="xs:string">
+            <!--
+            Regex for the stringRefType
+            Example:
+            /dcc/aBcRefType/cDe/fGh
+		    /dcc/quantityRefType/weight/temperature
+            -->
+            <xs:pattern value="(\/[A-Za-z][A-Za-z0-9]+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:complexType name="hashType">
         <xs:sequence>
             <xs:element name="reference" type="dcc:textType"/>
@@ -704,5 +722,4 @@
             <xs:any namespace="##other" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
-
 </xs:schema>
