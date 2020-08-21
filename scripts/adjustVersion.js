@@ -20,7 +20,9 @@ if(process.argv.length > 2) {
         console.log(`Using URL ${newUrl}`);
 
         console.log("Adjusting README.md");
-        replaceInFile(__dirname + "/../README.md", oldUrl, newUrl);
+        const readMe = __dirname + "/../README.md";
+        replaceInFile(readMe, oldUrl, newUrl);
+        replaceInFile(readMe, `schemaVersion="${oldVersion}"`, `schemaVersion="${newVersion}"`);
 
         console.log("Adjusting package.json");
         replaceInFile(__dirname + "/../docs/package.json", `"version": "${oldVersion}"`, `"version": "${newVersion}"`);
