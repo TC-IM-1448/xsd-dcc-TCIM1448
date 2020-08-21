@@ -90,12 +90,12 @@
                 <dcc:content lang="en">Silicon sphere</dcc:content>
             </dcc:name>
 
-            <dcc:item id="dcc10g">
+            <dcc:item>
                 <dcc:name>
                     <dcc:content lang="de">Siliziumkugel</dcc:content>
                     <dcc:content lang="en">Silicon sphere</dcc:content>
                 </dcc:name>
-                <dcc:description id="dcc10g-Description0">
+                <dcc:description>
                     <dcc:content lang="de">Aufbewahrung
                         Das Massenormal befindet sich in einem Transportbehälter; das Kalibrierzeichen ist auf dem Behälter aufgebracht.
                     </dcc:content>
