@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="2.3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="2.4.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://ptb.de/dcc"
            xmlns:si="https://ptb.de/si"
            targetNamespace="https://ptb.de/dcc"
@@ -7,7 +7,7 @@
 
     <xs:import
             namespace="https://ptb.de/si"
-            schemaLocation="https://ptb.de/si/v1.3.0/SI_Format.xsd"/>
+            schemaLocation="https://ptb.de/si/v1.3.1/SI_Format.xsd"/>
 
     <xs:annotation>
         <xs:documentation>
@@ -17,7 +17,7 @@
 
             This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties, and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential damage arising in connection with the use of this software.
 
-            Documentation: https://ptb.de/dcc/v2.3.0/
+            Documentation: https://ptb.de/dcc/v2.4.0/
         </xs:documentation>
     </xs:annotation>
 
@@ -44,7 +44,7 @@
         <xs:attribute name="schemaVersion" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                    <xs:pattern value="2.3.0"/>
+                    <xs:pattern value="2.4.0"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
@@ -199,6 +199,7 @@
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="calibrationLaboratoryType">
@@ -416,6 +417,7 @@
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultType">
@@ -430,6 +432,8 @@
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultListType">
@@ -496,6 +500,8 @@
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="listType">
@@ -624,6 +630,18 @@
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
+    <xs:simpleType name="stringRefType">
+        <xs:restriction base="xs:string">
+            <!--
+            Regex for the stringRefType
+            Example:
+            /dcc/aBcRefType/cDe/fGh
+		    /dcc/quantityRefType/weight/temperature
+            -->
+            <xs:pattern value="(\/[A-Za-z][A-Za-z0-9]+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:complexType name="hashType">
         <xs:sequence>
             <xs:element name="reference" type="dcc:textType"/>
@@ -704,5 +722,4 @@
             <xs:any namespace="##other" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
-
 </xs:schema>

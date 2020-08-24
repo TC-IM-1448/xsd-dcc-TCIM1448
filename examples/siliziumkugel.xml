@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.3.0/dcc.xsd"
+        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.4.0/dcc.xsd"
         xmlns:dcc="https://ptb.de/dcc"
         xmlns:si="https://ptb.de/si"
-        schemaVersion="2.3.0">
+        schemaVersion="2.4.0">
 
     <!--
     Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
@@ -90,12 +90,12 @@
                 <dcc:content lang="en">Silicon sphere</dcc:content>
             </dcc:name>
 
-            <dcc:item id="dcc10g">
+            <dcc:item>
                 <dcc:name>
                     <dcc:content lang="de">Siliziumkugel</dcc:content>
                     <dcc:content lang="en">Silicon sphere</dcc:content>
                 </dcc:name>
-                <dcc:description id="dcc10g-Description0">
+                <dcc:description>
                     <dcc:content lang="de">Aufbewahrung
                         Das Massenormal befindet sich in einem Transportbehälter; das Kalibrierzeichen ist auf dem Behälter aufgebracht.
                     </dcc:content>
@@ -369,10 +369,10 @@
                                         <dcc:content lang="en">from</dcc:content>
                                     </dcc:name>
                                     <si:real>
-                                        <si:value>46.8</si:value>
-                                        <si:unit>\percent</si:unit>
+                                        <si:value>0.468</si:value>
+                                        <si:unit>\kilogram\tothe{1}\metre\tothe{-3}\kilogram\tothe{-1}\metre\tothe{3}</si:unit>
                                         <si:expandedUnc>
-                                            <si:uncertainty>1.0</si:uncertainty>
+                                            <si:uncertainty>0.01</si:uncertainty>
                                             <si:coverageFactor>2</si:coverageFactor>
                                             <si:coverageProbability>0.95</si:coverageProbability>
                                         </si:expandedUnc>
@@ -384,10 +384,10 @@
                                         <dcc:content lang="en">to</dcc:content>
                                     </dcc:name>
                                     <si:real>
-                                        <si:value>47.4</si:value>
-                                        <si:unit>\percent</si:unit>
+                                        <si:value>0.474</si:value>
+                                        <si:unit>\kilogram\tothe{1}\metre\tothe{-3}\kilogram\tothe{-1}\metre\tothe{3}</si:unit>
                                         <si:expandedUnc>
-                                            <si:uncertainty>1.0</si:uncertainty>
+                                            <si:uncertainty>0.01</si:uncertainty>
                                             <si:coverageFactor>2</si:coverageFactor>
                                             <si:coverageProbability>0.95</si:coverageProbability>
                                         </si:expandedUnc>

@@ -8,15 +8,15 @@
         }"/>
         <PageEdit/>
 
-        <PageNav v-bind=" { sidebarItems }"/>
+        <PageNav v-bind="{ sidebarItems }"/>
 
         <slot name="bottom"/>
     </main>
 </template>
 
 <script>
-    import PageEdit from "@parent-theme/components/PageEdit.vue"
-    import PageNav from "@parent-theme/components/PageNav.vue"
+    import PageEdit from "@theme/components/PageEdit.vue"
+    import PageNav from "@theme/components/PageNav.vue"
 
     export default {
         components: {PageEdit, PageNav},
