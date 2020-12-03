@@ -1,5 +1,4 @@
-<?xml version="1.0" ?>
-<dcc:digitalCalibrationCertificate schemaVersion="2.4.0" xmlns:dcc="https://ptb.de/dcc" xmlns:si="https://ptb.de/si" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.4.0/dcc.xsd">
+<dcc:digitalCalibrationCertificate xmlns:dcc="https://ptb.de/dcc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.4.0" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.4.0/dcc.xsd">
   <!--
     Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte 
     vorbehalten - all rights reserved
@@ -166,16 +165,11 @@
             <dcc:content lang="en">Calibration procedure</dcc:content>
           </dcc:name>
           <dcc:description>
-            <dcc:content lang="en">
-<![CDATA[
-        \label{sec:procedure} The effective accommodation coefficient \(\sigma(p)\) was determined between \SI{0.1}{\pascal} and \SI{1}{\pascal} by using the pressures generated in the PTB primary standard SE3 metrologically linked to the primary standard SE2, which is based on the static expansion method. The extrapolated effective accommodation coefficient \(\sigma_0\) (\(p < \SI{1E-2}{\pascal}\)) was determined by extrapolation for \(p \rightarrow 0\) of the linear regression analysis of the data. A run-in-time of at least 12 h was provided before calibration.\par The measurements were performed with 6 readings for each of the 5 target points.\par The gas temperature \(T\) during calibration using the static expansion method with nitrogen was \SI{295.849+-0.033}{\kelvin} at a room temperature of \SI{296.16+-0.04}{\kelvin}.
+            <dcc:content lang="en">\label{sec:procedure} The effective accommodation coefficient \(\sigma(p)\) was determined between \SI{0.1}{\pascal} and \SI{1}{\pascal} by using the pressures generated in the PTB primary standard SE3 metrologically linked to the primary standard SE2, which is based on the static expansion method. The extrapolated effective accommodation coefficient \(\sigma_0\) (\(p &lt; \SI{1E-2}{\pascal}\)) was determined by extrapolation for \(p \rightarrow 0\) of the linear regression analysis of the data. A run-in-time of at least 12 h was provided before calibration.\par The measurements were performed with 6 readings for each of the 5 target points.\par The gas temperature \(T\) during calibration using the static expansion method with nitrogen was \SI{295.849+-0.033}{\kelvin} at a room temperature of \SI{296.16+-0.04}{\kelvin}.
 
-        The device was operated with the following setup: \begin{quote} \sisetup{detect-all} \begin{tabular}{@{}>{}r@{:~}l@{}} Diameter of the rotor (\(d\))& \SI{4.5}{\milli\metre} \\ Density of the rotor (\(\rho\)) & \SI{7.7}{\gram\per\centi\metre\tothe{3}} \\ Sigma & \num{1.0} \\ Viscosity & \num{0} \\ Unit & 1/s (DCR) \end{tabular} \end{quote} For the measurement with nitrogen, a molar mass (\(M\)) of \( \SI{28.013}{\gram\per\mol} \) was used.
+        The device was operated with the following setup: \begin{quote} \sisetup{detect-all} \begin{tabular}{@{}&gt;{}r@{:~}l@{}} Diameter of the rotor (\(d\))&amp; \SI{4.5}{\milli\metre} \\ Density of the rotor (\(\rho\)) &amp; \SI{7.7}{\gram\per\centi\metre\tothe{3}} \\ Sigma &amp; \num{1.0} \\ Viscosity &amp; \num{0} \\ Unit &amp; 1/s (DCR) \end{tabular} \end{quote} For the measurement with nitrogen, a molar mass (\(M\)) of \( \SI{28.013}{\gram\per\mol} \) was used.
 
-        A sample of the residual drag (RD) including its scatter was measured before the calibration at a base pressure below \(\SI{1E-6}{\pascal}\). Before the measurement with the calibration gas nitrogen, a RD of \SI{1.5429E-06}{\per\second} with a standard deviation of \SI{8.0E-10}{\per\second} was determined. Before each calibration point, RD (6 readings) was checked at the base pressure and subtracted from the subsequent measurement of the relative deceleration rate.
-        ]]>                 
-
-            </dcc:content>
+        A sample of the residual drag (RD) including its scatter was measured before the calibration at a base pressure below \(\SI{1E-6}{\pascal}\). Before the measurement with the calibration gas nitrogen, a RD of \SI{1.5429E-06}{\per\second} with a standard deviation of \SI{8.0E-10}{\per\second} was determined. Before each calibration point, RD (6 readings) was checked at the base pressure and subtracted from the subsequent measurement of the relative deceleration rate.</dcc:content>
           </dcc:description>
         </dcc:usedMethod>
         <dcc:usedMethod>
@@ -183,10 +177,7 @@
             <dcc:content lang="en">Accommodation coefficient</dcc:content>
           </dcc:name>
           <dcc:description>
-            <dcc:content lang="en">
-<![CDATA[
-        The effective accommodation coefficient was obtained by: \[ \sigma(p_\text{cal}) = \frac{1}{p_\text{cal}} \frac{\pi\rho d}{20} \sqrt{\frac{8 R T}{\pi M}} \left( -\frac{\dot{\!\omega}}{\!\omega} - \text{RD}(\omega) \right) \] with \(R\) the gas constant, \(-\,\dot{\!\omega}/\omega\) the relative deceleration rate and \(p_\text{cal}\) the calibration pressure generated by the primary standard. For the calibration with the measurement gas nitrogen the extrapolated effective accommodation coefficient \(\sigma_0\) for \(p < \SI{1E-2}{\pascal}\) was: \[ \sigma_0 = \lim_{p_\text{cal}\rightarrow 0} \sigma(p_\text{cal}) = \SI{0.9555}{}\quad (\text{nitrogen}) \] With this \(\sigma_0\) together with \(d\) and \(\rho\) from the parameter set under section \ref{sec:procedure}, the SRG controller will give the correct reading of pressure within the measurement uncertainties according to this calibration for pressures \(p < \SI{1E-2}{\pascal}\). Alternatively, the pressure can be calculated from the relative deceleration rate according to \[ p_\text{ind} = \frac{\pi\rho d}{20 \sigma_0} \sqrt{\frac{8 R T}{\pi M}} \left( -\frac{\dot{\!\omega}}{\!\omega} - \text{RD}(\omega) \right)\,. \] In both cases offset and temperature have to be determined for each measurement.\par In the pressure range \(p > \SI{1E-2}{\pascal}\) up to \(p = \SI{2}{\pascal}\), the real pressure \(p\) will be received by multiplication of the indicated pressure \(p_{\text{ind}}\) with a correction factor \(f(p_{\text{ind}})\): \[ p = p_{\text{ind}} f(p_{\text{ind}}) \] and viscosity = 0 entered in the controller. From our calibration, \(f(p_{\text{ind}})\) was obtained for this rotor by the following equation: \[ f(p_{\text{ind}}) = (1 + ( \SI{0.01796+-0.0006}{\per\pascal} ) \cdot p_{\text{ind}}) \quad (\text{nitrogen}) \]
-        ]]></dcc:content>
+            <dcc:content lang="en">The effective accommodation coefficient was obtained by: \[ \sigma(p_\text{cal}) = \frac{1}{p_\text{cal}} \frac{\pi\rho d}{20} \sqrt{\frac{8 R T}{\pi M}} \left( -\frac{\dot{\!\omega}}{\!\omega} - \text{RD}(\omega) \right) \] with \(R\) the gas constant, \(-\,\dot{\!\omega}/\omega\) the relative deceleration rate and \(p_\text{cal}\) the calibration pressure generated by the primary standard. For the calibration with the measurement gas nitrogen the extrapolated effective accommodation coefficient \(\sigma_0\) for \(p &lt; \SI{1E-2}{\pascal}\) was: \[ \sigma_0 = \lim_{p_\text{cal}\rightarrow 0} \sigma(p_\text{cal}) = \SI{0.9555}{}\quad (\text{nitrogen}) \] With this \(\sigma_0\) together with \(d\) and \(\rho\) from the parameter set under section \ref{sec:procedure}, the SRG controller will give the correct reading of pressure within the measurement uncertainties according to this calibration for pressures \(p &lt; \SI{1E-2}{\pascal}\). Alternatively, the pressure can be calculated from the relative deceleration rate according to \[ p_\text{ind} = \frac{\pi\rho d}{20 \sigma_0} \sqrt{\frac{8 R T}{\pi M}} \left( -\frac{\dot{\!\omega}}{\!\omega} - \text{RD}(\omega) \right)\,. \] In both cases offset and temperature have to be determined for each measurement.\par In the pressure range \(p &gt; \SI{1E-2}{\pascal}\) up to \(p = \SI{2}{\pascal}\), the real pressure \(p\) will be received by multiplication of the indicated pressure \(p_{\text{ind}}\) with a correction factor \(f(p_{\text{ind}})\): \[ p = p_{\text{ind}} f(p_{\text{ind}}) \] and viscosity = 0 entered in the controller. From our calibration, \(f(p_{\text{ind}})\) was obtained for this rotor by the following equation: \[ f(p_{\text{ind}}) = (1 + ( \SI{0.01796+-0.0006}{\per\pascal} ) \cdot p_{\text{ind}}) \quad (\text{nitrogen}) \]</dcc:content>
           </dcc:description>
         </dcc:usedMethod>
         <dcc:usedMethod>
@@ -194,10 +185,7 @@
             <dcc:content lang="en">Uncertainty</dcc:content>
           </dcc:name>
           <dcc:description>
-            <dcc:content lang="en">
-<![CDATA[
-        The uncertainty of \(\sigma_0\) at the time of calibration is estimated to \SI{0.26}{\percent} (this includes the relative deviation of \(\sigma_0\) with different orientations after a new suspension). The uncertainty stated is the expanded measurement uncertainty obtained by multiplying the standard measurement uncertainty by the coverage factor \(k=2\). It has been determined in accordance with the “Guide to the Expression of Uncertainty in Measurement (GUM)”. The value of the measurand then normally lies, with a probability of approximately \SI{95}{\percent}, within the attributed coverage interval.
-        ]]></dcc:content>
+            <dcc:content lang="en">The uncertainty of \(\sigma_0\) at the time of calibration is estimated to \SI{0.26}{\percent} (this includes the relative deviation of \(\sigma_0\) with different orientations after a new suspension). The uncertainty stated is the expanded measurement uncertainty obtained by multiplying the standard measurement uncertainty by the coverage factor \(k=2\). It has been determined in accordance with the “Guide to the Expression of Uncertainty in Measurement (GUM)”. The value of the measurand then normally lies, with a probability of approximately \SI{95}{\percent}, within the attributed coverage interval.</dcc:content>
           </dcc:description>
         </dcc:usedMethod>
       </dcc:usedMethods>
@@ -213,7 +201,7 @@
                 <dcc:content lang="de">Temperatur des Messgases</dcc:content>
                 <dcc:content lang="en">gas temperature</dcc:content>
               </dcc:name>
-              <si:real>
+              <si:real xmlns:si="https://ptb.de/si">
                 <si:value>295.849</si:value>
                 <si:unit>\kelvin</si:unit>
                 <si:expandedUnc>
@@ -228,7 +216,7 @@
                 <dcc:content lang="de">Raumtemperatur</dcc:content>
                 <dcc:content lang="en">room temperature</dcc:content>
               </dcc:name>
-              <si:real>
+              <si:real xmlns:si="https://ptb.de/si">
                 <si:value>296.16</si:value>
                 <si:unit>\kelvin</si:unit>
                 <si:expandedUnc>
@@ -252,7 +240,7 @@
                 <dcc:content lang="en">effective accommodation coefficient</dcc:content>
               </dcc:name>
               <dcc:quantity>
-                <si:real>
+                <si:real xmlns:si="https://ptb.de/si">
                   <si:value>0.9555</si:value>
                   <si:unit>\one</si:unit>
                   <si:expandedUnc>
@@ -268,7 +256,7 @@
                 <dcc:content lang="en">viscosity correction factor</dcc:content>
               </dcc:name>
               <dcc:quantity>
-                <si:real>
+                <si:real xmlns:si="https://ptb.de/si">
                   <si:value>0.01796</si:value>
                   <si:unit>\kilogram\tothe{-1}\metre\second\tothe{2}</si:unit>
                   <si:expandedUnc>
