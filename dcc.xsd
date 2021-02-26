@@ -635,10 +635,12 @@
             <!--
             Regex for the stringRefType
             Example:
-            /dcc/aBcRefType/cDe/fGh
-		    /dcc/quantityRefType/weight/temperature
+            /example/temperatureRange/min
+            /example/temperatureRange/max
+		    /example/coordinate/x
+		    /example/coordinate/y
             -->
-            <xs:pattern value="(/[A-Za-z][A-Za-z0-9]+)*"/>
+            <xs:pattern value="(/[A-Za-z][A-Za-z0-9]*)+"/>
         </xs:restriction>
     </xs:simpleType>
 
