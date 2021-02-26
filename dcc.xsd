@@ -493,6 +493,8 @@
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
+                <xs:element ref="si:complex"/>
+                <xs:element ref="si:constant"/>
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
