@@ -237,7 +237,6 @@
             <xs:element name="cryptElectronicTimeStamp" type="xs:boolean" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="statementListType">
