@@ -579,11 +579,12 @@
             <xs:element name="reference" type="xs:string" minOccurs="0"/>
             <xs:element name="declaration" type="dcc:textType" minOccurs="0"/>
             <xs:element name="valid" type="xs:boolean" minOccurs="0"/>
-            <xs:element name="refId" type="xs:IDREF" minOccurs="0"/>
             <xs:element name="date" type="xs:date" minOccurs="0"/>
             <xs:element name="period" type="xs:duration" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:simpleType name="stringISO3166Type">
