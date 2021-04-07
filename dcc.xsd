@@ -199,7 +199,7 @@
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="calibrationLaboratoryType">
@@ -417,7 +417,7 @@
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultType">
@@ -433,7 +433,7 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
         <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultListType">
@@ -504,7 +504,7 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
         <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="listType">
@@ -633,18 +633,6 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-
-    <xs:simpleType name="stringRefType">
-        <xs:restriction base="xs:string">
-            <!--
-            Regex for the stringRefType
-            Example:
-            /dcc/aBcRefType/cDe/fGh
-		    /dcc/quantityRefType/weight/temperature
-            -->
-            <xs:pattern value="(/[A-Za-z][A-Za-z0-9]+)*"/>
-        </xs:restriction>
-    </xs:simpleType>
 
     <xs:complexType name="hashType">
         <xs:sequence>
