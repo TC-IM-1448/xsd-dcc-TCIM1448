@@ -496,6 +496,7 @@
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
+            <xs:element name="measuringEquipments" type="dcc:measuringEquipmentListType" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionListType" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
@@ -529,6 +530,7 @@
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
+            <xs:element name="measuringEquipments" type="dcc:measuringEquipmentListType" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionListType" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
