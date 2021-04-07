@@ -201,7 +201,7 @@
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="calibrationLaboratoryType">
@@ -423,7 +423,7 @@
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultType">
@@ -439,7 +439,7 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
         <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultListType">
@@ -501,15 +501,18 @@
                 <xs:element ref="si:real"/>
                 <xs:element ref="si:list"/>
                 <xs:element ref="si:hybrid"/>
+                <xs:element ref="si:complex"/>
+                <xs:element ref="si:constant"/>
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
+            <xs:element name="measuringEquipments" type="dcc:measuringEquipmentListType" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionListType" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
         <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="dcc:stringRefType" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="listType">
@@ -537,6 +540,7 @@
             </xs:choice>
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
+            <xs:element name="measuringEquipments" type="dcc:measuringEquipmentListType" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionListType" minOccurs="0"/>
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
@@ -639,18 +643,6 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-
-    <xs:simpleType name="stringRefType">
-        <xs:restriction base="xs:string">
-            <!--
-            Regex for the stringRefType
-            Example:
-            /dcc/aBcRefType/cDe/fGh
-		    /dcc/quantityRefType/weight/temperature
-            -->
-            <xs:pattern value="(/[A-Za-z][A-Za-z0-9]+)*"/>
-        </xs:restriction>
-    </xs:simpleType>
 
     <xs:complexType name="hashType">
         <xs:sequence>
