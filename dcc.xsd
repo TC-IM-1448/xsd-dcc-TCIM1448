@@ -85,6 +85,7 @@
             <xs:element name="description" type="dcc:textType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="measuringEquipmentListType">
@@ -110,6 +111,7 @@
             <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="coreDataType">
@@ -282,6 +284,9 @@
             <xs:element name="influenceConditions" type="dcc:influenceConditionListType" minOccurs="0"/>
             <xs:element name="results" type="dcc:resultListType"/>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <!-- We need community input about the following:
@@ -359,6 +364,7 @@
             <xs:element name="norm" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="influenceConditionListType">
@@ -465,6 +471,8 @@
             <xs:element name="list" type="dcc:listType"/>
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <!--  #####################################################################################
@@ -537,6 +545,8 @@
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="measurementMetaDataListType">
@@ -569,11 +579,12 @@
             <xs:element name="reference" type="xs:string" minOccurs="0"/>
             <xs:element name="declaration" type="dcc:textType" minOccurs="0"/>
             <xs:element name="valid" type="xs:boolean" minOccurs="0"/>
-            <xs:element name="refId" type="xs:IDREF" minOccurs="0"/>
             <xs:element name="date" type="xs:date" minOccurs="0"/>
             <xs:element name="period" type="xs:duration" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
+        <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
     <xs:simpleType name="stringISO3166Type">
@@ -713,5 +724,6 @@
         <xs:sequence>
             <xs:any namespace="##other" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 </xs:schema>

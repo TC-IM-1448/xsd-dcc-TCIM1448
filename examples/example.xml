@@ -470,9 +470,8 @@
 										</si:expandedUnc>
 									</si:real>
 									<dcc:measurementMetaData>
-										<dcc:metaData>
+										<dcc:metaData refId="MRA">
 											<dcc:valid>true</dcc:valid>
-											<dcc:refId>MRA</dcc:refId>
 										</dcc:metaData>
 										<dcc:metaData>
 											<dcc:convention>Regler 23</dcc:convention>
