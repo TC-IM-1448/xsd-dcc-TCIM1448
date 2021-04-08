@@ -231,6 +231,7 @@
         <xs:sequence>
             <xs:element name="person" type="dcc:contactNotStrictType"/>
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
+            <xs:element name="role" type="xs:string" minOccurs="0"/>
             <xs:element name="mainSigner" type="xs:boolean" minOccurs="0"/>
             <xs:element name="cryptElectronicSeal" type="xs:boolean" minOccurs="0"/>
             <xs:element name="cryptElectronicSignature" type="xs:boolean" minOccurs="0"/>
