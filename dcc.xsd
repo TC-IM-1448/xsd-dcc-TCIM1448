@@ -704,15 +704,15 @@
         <xs:annotation>
             <xs:documentation>
                 This data block is used to add formulas and equations to the measurement result section of the DCC.
-                A formula is expected to by written by means of the LaTeX ams math formalism. All units in the
+                A formula is expected to by written by means of the LaTeX ams math or MathML formalism. All units in the
                 LaTeX expression must follow the siunitx LaTeX standard.
-                The formula is written to the siunitx element.
                 The optional attribute ID is for a unique ID of this block.
             </xs:documentation>
         </xs:annotation>
-        <xs:sequence>
-            <xs:element name="siunitx" type="xs:string"/>
-        </xs:sequence>
+        <xs:choice>
+            <xs:element name="latex" type="xs:string"/>
+            <xs:element name="mathml" type="dcc:xmlType"/>
+        </xs:choice>
         <xs:attribute name="lang" type="xs:string" use="optional"/>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
