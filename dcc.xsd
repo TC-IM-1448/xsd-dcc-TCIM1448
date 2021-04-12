@@ -286,6 +286,7 @@
             <xs:element name="measuringEquipments" type="dcc:measuringEquipmentListType" minOccurs="0"/>
             <xs:element name="influenceConditions" type="dcc:influenceConditionListType" minOccurs="0"/>
             <xs:element name="results" type="dcc:resultListType"/>
+            <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
         <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
@@ -586,11 +587,25 @@
             <xs:element name="valid" type="xs:boolean" minOccurs="0"/>
             <xs:element name="date" type="xs:date" minOccurs="0"/>
             <xs:element name="period" type="xs:duration" minOccurs="0"/>
+            <xs:element name="resposibleAuthority" type="dcc:contactType" minOccurs="0"/>
+            <xs:element name="conformity" type="dcc:stringConformityStatementStatusType" minOccurs="0"/>
+            <xs:element name="data" type="dcc:dataType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
         <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
         <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
+
+    <xs:simpleType name="stringConformityStatementStatusType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="pass"/>
+            <xs:enumeration value="fail"/>
+            <xs:enumeration value="conditionalPass"/>
+            <xs:enumeration value="conditionalFail"/>
+            <xs:enumeration value="noPass"/>
+            <xs:enumeration value="noFail"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:simpleType name="stringISO3166Type">
         <xs:restriction base="xs:string">
