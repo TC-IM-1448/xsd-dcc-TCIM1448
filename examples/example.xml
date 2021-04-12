@@ -274,6 +274,10 @@
 	</dcc:administrativeData>
 	<dcc:measurementResults>
 		<dcc:measurementResult>
+			<dcc:name>
+				<dcc:content lang="de">Ergebnis der Kalibrierung</dcc:content>
+				<dcc:content lang="en">Result of the calibration</dcc:content>
+			</dcc:name>
 			<dcc:usedMethods>
 				<dcc:usedMethod>
 					<dcc:name id="Methode">
@@ -283,14 +287,10 @@
 					</dcc:name>
 					<dcc:description>
 						<dcc:content lang="de">Verfahren</dcc:content>
-						<dcc:content lang="en">Procedure</dcc:content>
-					</dcc:description>
-					<dcc:description>
 						<dcc:content lang="de">Die Volumenbestimmung für $m \ge 1 g$ erfolgte nach der hydrostatischen Wägemethode.</dcc:content>
-						<dcc:content lang="en">The volume determination for $m \ge 1 g$ was carried out with the hydrostatic weighing method.</dcc:content>
-					</dcc:description>
-					<dcc:description>
 						<dcc:content lang="de">Die Kalibrierung erfolgte durch Vergleich mit den Hauptnormalen der PTB nach der Substitutionsmethode mit Auftriebskorrektion.</dcc:content>
+						<dcc:content lang="en">Procedure</dcc:content>
+						<dcc:content lang="en">The volume determination for $m \ge 1 g$ was carried out with the hydrostatic weighing method.</dcc:content>
 						<dcc:content lang="en">The calibration was ensued through comparison with the reference standards of PTB using the substitution method with air buoyancy correction.</dcc:content>
 					</dcc:description>
 				</dcc:usedMethod>
