@@ -258,6 +258,10 @@
 
     <dcc:measurementResults>
         <dcc:measurementResult>
+            <dcc:name>
+                <dcc:content lang="de">Ergebnis der Kalibrierung</dcc:content>
+                <dcc:content lang="en">Result of the calibration</dcc:content>
+            </dcc:name>
             <dcc:usedMethods>
 
                 <dcc:usedMethod>
