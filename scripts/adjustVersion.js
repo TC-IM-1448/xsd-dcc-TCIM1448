@@ -40,6 +40,8 @@ if(process.argv.length > 2) {
         replaceInFile(schemaPath, `version="${oldVersion}"`, `version="${newVersion}"`);
         replaceInFile(schemaPath, `<xs:pattern value="${oldVersion}"/>`, `<xs:pattern value="${newVersion}"/>`);
     } else {
-        console.log("Please pass a valid version number");
+        console.log("Please pass a valid version number that complies to the semantic version specification");
     }
+} else {
+    console.log("Usage: node path/to/adjustVersion.js <newVersion>");
 }
