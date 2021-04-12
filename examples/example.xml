@@ -309,7 +309,7 @@
 						<dcc:content lang="de">Umgebungsbedingungen</dcc:content>
 						<dcc:content lang="en">Ambient conditions</dcc:content>
 					</dcc:name>
-					<dcc:state>beforeAdjustment</dcc:state>
+					<dcc:status>beforeAdjustment</dcc:status>
 					<dcc:data>
 						<dcc:list>
 							<dcc:name>
