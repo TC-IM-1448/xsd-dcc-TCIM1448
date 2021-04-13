@@ -21,16 +21,7 @@
         </xs:documentation>
     </xs:annotation>
 
-    <xs:element name="digitalCalibrationCertificate" type="dcc:digitalCalibrationCertificateType">
-        <xs:key name="usedLangCodeISO639_1_unique">
-            <xs:selector xpath=".//dcc:usedLangCodeISO639_1"/>
-            <xs:field xpath="."/>
-        </xs:key>
-        <xs:keyref name="content_lang_keyref" refer="dcc:usedLangCodeISO639_1_unique">
-            <xs:selector xpath=".//dcc:content"/>
-            <xs:field xpath="@lang"/>
-        </xs:keyref>
-    </xs:element>
+    <xs:element name="digitalCalibrationCertificate" type="dcc:digitalCalibrationCertificateType"/>
 
     <xs:complexType name="digitalCalibrationCertificateType">
         <xs:sequence>
