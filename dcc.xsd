@@ -667,8 +667,8 @@
 
     <xs:complexType name="hashType">
         <xs:sequence>
-            <xs:element name="reference" type="dcc:textType"/>
-            <xs:element name="referenceID" type="xs:string"/>
+            <xs:element name="referral" type="dcc:textType"/>
+            <xs:element name="referralID" type="xs:string"/>
             <xs:element name="procedure" type="xs:string"/>
             <xs:element name="value" type="xs:string"/>
             <xs:element name="linkedReport" type="dcc:hashType" minOccurs="0"/>
@@ -711,7 +711,7 @@
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
             <xs:element name="fileName" type="xs:string"/>
             <xs:element name="mimeType" type="xs:string"/>
-            <xs:element name="data" type="xs:base64Binary"/>
+            <xs:element name="dataBase64" type="xs:base64Binary"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/><!--92200_A_I-->
     </xs:complexType>
@@ -729,7 +729,6 @@
             <xs:element name="latex" type="xs:string"/>
             <xs:element name="mathml" type="dcc:xmlType"/>
         </xs:choice>
-        <xs:attribute name="lang" type="xs:string" use="optional"/>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
