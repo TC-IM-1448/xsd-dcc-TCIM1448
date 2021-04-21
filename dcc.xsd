@@ -24,6 +24,11 @@
     <xs:element name="digitalCalibrationCertificate" type="dcc:digitalCalibrationCertificateType"/>
 
     <xs:complexType name="digitalCalibrationCertificateType">
+        <xs:annotation>
+            <xs:documentation>
+                The root element that contains the four rings of the DCC.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="administrativeData" type="dcc:administrativeDataType"/>
 
@@ -38,7 +43,6 @@
             </xs:element>
 
             <xs:element name="document" type="dcc:byteDataType" minOccurs="0"/>
-
         </xs:sequence>
 
         <xs:attribute name="schemaVersion" use="required">
@@ -50,11 +54,13 @@
         </xs:attribute>
     </xs:complexType>
 
-    <!--   #####################################################################################
-                Elements of the administrativeData part of the DCC
-           #####################################################################################-->
-
     <xs:complexType name="administrativeDataType">
+        <xs:annotation>
+            <xs:documentation>
+                The element administrativeData contains all essential administrative information about the calibration.
+                The entries in this area are basically the same and regulated in all DCCs.
+            </xs:documentation>
+        </xs:annotation>
         <xs:all>
             <xs:element name="dccSoftware" type="dcc:softwareListType"/>
             <xs:element name="coreData" type="dcc:coreDataType"/>
@@ -69,8 +75,7 @@
     <xs:complexType name="softwareListType">
         <xs:annotation>
             <xs:documentation>
-                Clear description of the software-version and the creator of the software used to create and process the
-                DCC
+                A list of software elements.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -79,6 +84,11 @@
     </xs:complexType>
 
     <xs:complexType name="softwareType">
+        <xs:annotation>
+            <xs:documentation>
+                Information about a software including its name, version and a description.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="release" type="xs:string"/>
@@ -91,7 +101,7 @@
     <xs:complexType name="measuringEquipmentListType">
         <xs:annotation>
             <xs:documentation>
-                Information about the instruments used
+                List of measuring equipment and instruments
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -100,6 +110,11 @@
     </xs:complexType>
 
     <xs:complexType name="measuringEquipmentType">
+        <xs:annotation>
+            <xs:documentation>
+                Information about a measuring equipment or instrument used in the calibration
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
@@ -117,7 +132,7 @@
     <xs:complexType name="coreDataType">
         <xs:annotation>
             <xs:documentation>
-                Basic parameters of the Digital Calibration Certificate (DCC)
+                Important metadata for the DCC containing the global unique identifier and other identifications.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -136,7 +151,7 @@
     <xs:complexType name="equipmentClassType">
         <xs:annotation>
             <xs:documentation>
-                Clear name(s) of the item(s) and identifier(s)
+                Clear name(s) of the item(s) and identifier(s).
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -149,7 +164,8 @@
     <xs:complexType name="itemListType">
         <xs:annotation>
             <xs:documentation>
-                Clear description of the calibration items
+                This element is a set of calibrated items.
+                Contains one or more item elements.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -164,6 +180,11 @@
     </xs:complexType>
 
     <xs:complexType name="itemType">
+        <xs:annotation>
+            <xs:documentation>
+                A item that is calibrated in this DCC.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
@@ -179,12 +200,22 @@
     </xs:complexType>
 
     <xs:complexType name="identificationListType">
+        <xs:annotation>
+            <xs:documentation>
+                List of additional identifications.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="identification" type="dcc:identificationType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="identificationType">
+        <xs:annotation>
+            <xs:documentation>
+                An additional identification (eg. reference no., serial number, etc.).
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="issuer">
                 <xs:simpleType>
@@ -207,7 +238,7 @@
     <xs:complexType name="calibrationLaboratoryType">
         <xs:annotation>
             <xs:documentation>
-                Information about the calibration laboratory
+                Information about the calibration laboratory.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -219,7 +250,7 @@
     <xs:complexType name="respPersonListType">
         <xs:annotation>
             <xs:documentation>
-                List of responsible persons for the DCC
+                List of responsible persons for a DCC.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -228,6 +259,11 @@
     </xs:complexType>
 
     <xs:complexType name="respPersonType">
+        <xs:annotation>
+            <xs:documentation>
+                A person responsible for a DCC.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="person" type="dcc:contactNotStrictType"/>
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
@@ -243,7 +279,7 @@
     <xs:complexType name="statementListType">
         <xs:annotation>
             <xs:documentation>
-                Elements for the statements
+                List of statements attached to a DCC.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -251,11 +287,12 @@
         </xs:sequence>
     </xs:complexType>
 
-    <!--   #####################################################################################
-                Elements of the measurementResult part of the DCC
-           ##################################################################################### -->
-
     <xs:complexType name="measurementResultListType">
+        <xs:annotation>
+            <xs:documentation>
+                List of measurement results that are part of a DCC.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <!--
             For this elements is community input needed.
@@ -278,6 +315,12 @@
     </xs:complexType>
 
     <xs:complexType name="measurementResultType">
+        <xs:annotation>
+            <xs:documentation>
+                A measurement results with the methods, software and equipments used for the calibration.
+                Also contains influence conditions and a list of the actual results.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
@@ -299,7 +342,7 @@
         <xs:complexType name="externalType">
             <xs:annotation>
                 <xs:documentation>
-                    Information about the external partners
+                    Information about the external partners.
 
                     Community input needed! Talk to us: gemimeg@ptb.de
                 </xs:documentation>
@@ -312,7 +355,7 @@
         <xs:complexType name="sampledMaterialType">
             <xs:annotation>
                 <xs:documentation>
-                    Information about the sampled material
+                    Information about the sampled material.
 
                     Community input needed! Talk to us: gemimeg@ptb.de
                 </xs:documentation>
@@ -335,7 +378,7 @@
         <xs:complexType name="metrologicallyTraceableType">
             <xs:annotation>
                 <xs:documentation>
-                    Elements for metrologically traceable measurements
+                    Elements for metrologically traceable measurements.
 
                     Community input needed! Talk to us: gemimeg@ptb.de
 
@@ -348,12 +391,32 @@
             </xs:sequence>
         </xs:complexType>
 
+        <xs:complexType name="calibrationLocationListType">
+            <xs:annotation>
+                <xs:documentation>
+                    Locations, where the calibration was done.
+                </xs:documentation>
+            </xs:annotation>
+            <xs:sequence>
+                <xs:element name="calibrationLocation" type="dcc:calibrationLocationType" maxOccurs="unbounded"/>
+            </xs:sequence>
+    
+        </xs:complexType>
+    
+        <xs:complexType name="calibrationLocationType">
+            <xs:sequence>
+                <xs:element name="calibrationLocationSite" type="dcc:textType"/>
+                <xs:element name="beginLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
+                <xs:element name="endLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
+                <xs:element name="location" type="dcc:locationType" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID" use="optional"/>
+        </xs:complexType>
     -->
-
     <xs:complexType name="usedMethodListType">
         <xs:annotation>
             <xs:documentation>
-                Clear description of the used method
+                List of the methods used in the calibration.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -362,6 +425,11 @@
     </xs:complexType>
 
     <xs:complexType name="usedMethodType">
+        <xs:annotation>
+            <xs:documentation>
+                A method used in the calibration.
+            </xs:documentation>
+        </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="description" type="dcc:textType" minOccurs="0"/>
@@ -374,8 +442,7 @@
     <xs:complexType name="influenceConditionListType">
         <xs:annotation>
             <xs:documentation>
-                Elements for the conditions (e.g. environmental) under which the calibrations were
-                made that have an influence on the measurement results
+                List of conditions that influence the measurements.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -383,32 +450,11 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="calibrationLocationListType">
-        <xs:annotation>
-            <xs:documentation>
-                Locations, where the calibration was done
-            </xs:documentation>
-        </xs:annotation>
-        <xs:sequence>
-            <xs:element name="calibrationLocation" type="dcc:calibrationLocationType" maxOccurs="unbounded"/>
-        </xs:sequence>
-
-    </xs:complexType>
-
-    <xs:complexType name="calibrationLocationType">
-        <xs:sequence>
-            <xs:element name="calibrationLocationSite" type="dcc:textType"/>
-            <xs:element name="beginLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
-            <xs:element name="endLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
-            <xs:element name="location" type="dcc:locationType" minOccurs="0"/>
-        </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="optional"/>
-    </xs:complexType>
-
     <xs:complexType name="conditionType">
         <xs:annotation>
             <xs:documentation>
-                All necessary information for one part of a measurement
+                Condition (e.g. environmental) under which the calibrations were performed which have an influence on
+                the measurement results.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -430,10 +476,21 @@
         <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
+    <xs:complexType name="resultListType">
+        <xs:annotation>
+            <xs:documentation>
+                List of results of the calibration.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="result" type="dcc:resultType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="resultType">
         <xs:annotation>
             <xs:documentation>
-                The result itself
+                The actual result of the calibration.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -446,26 +503,7 @@
         <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="resultListType">
-        <xs:annotation>
-            <xs:documentation>
-                Elements for the measurement results
-            </xs:documentation>
-        </xs:annotation>
-        <xs:sequence>
-            <xs:element name="result" type="dcc:resultType" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-
     <xs:complexType name="dataType">
-        <xs:annotation>
-            <xs:documentation>
-                In the Element "outcome", any of the elements
-                "text", "formula", "byteData", "chart", "image", "data" and "xml"
-                can be used multiple times in an arbitrary order. The usage of each element
-                is optional. At least one of the elements must be provided.
-            </xs:documentation>
-        </xs:annotation>
         <xs:choice maxOccurs="unbounded">
             <xs:element name="text" type="dcc:textType"/>
             <xs:element name="formula" type="dcc:formulaType"/>
@@ -479,23 +517,13 @@
         <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
-    <!--  #####################################################################################
-                Elements for the specification of measurement data (quantities) in the DCC
-                (XMl Schema for the secure exchange of measurement data in ICT applications)
-          #####################################################################################-->
-
     <xs:complexType name="quantityType">
         <xs:annotation>
             <xs:documentation>
-                Basic element for the statement of measurement values in a DCC.
-                The measurement value, its unit and uncertainty are defined by type 'si:real'.
-                The 'unit' must be defined in the SI-system (siunitx format).
-                Additional information can be made according to MRA, Ilac and external
-                measurements in the 'measurementMetaData' element.
-                In addition, the 'quantity' can contain a comma separated list of independent real quantities
-                ('si:realCS').
-                The 'quantity' has an optional 'name' element and it can have a unique ID.
-                The 'name' element can be repeated with different languages.
+                A single measurement quantity that can contain a D-SI element or text.
+                Additionally used methods, used software, influence conditions that only affect this quantity can be
+                added.
+                Measurement metadata can also be added.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -529,11 +557,6 @@
                 matrix and tensor structures as well as structures of higher dimension. The 'list'
                 may also be used to give measurement results in combination with some
                 ambient conditions at the measurement.
-                In this version of the data format, the 'list' supports a global definition of uncertainties
-                that are binding for all quantities inside the 'list' element.
-                For future versions it is planned to add uncertainty elements for vector quantities
-                (e.g. covariance matrix).
-                The 'list' element can have a unique ID and several name elements.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -558,22 +581,13 @@
     <xs:complexType name="measurementMetaDataListType">
         <xs:annotation>
             <xs:documentation>
-                TODO: noch anpassen an neue Struktur
-                The measurement meta data comprises optional information that lead to a measurement result.
-                The sub-elements should reference the specific and detailed information in the administrative part.
-                Each element is optional and the user should only provide the elements that are relevant
-                for the measurement result.
+                A list of additional metadata elements.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="metaData" type="dcc:statementMetaDataType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-
-
-    <!--   #####################################################################################
-                complexTypes for DCC
-           #####################################################################################-->
 
     <xs:complexType name="statementMetaDataType">
         <xs:sequence>
@@ -608,18 +622,35 @@
     </xs:simpleType>
 
     <xs:simpleType name="stringISO3166Type">
+        <xs:annotation>
+            <xs:documentation>
+                A string that is restricted to two upper case letters that contain a country code as defined in
+                ISO 3166-1.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="[A-Z]{2}"/>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:simpleType name="stringISO639Type">
+        <xs:annotation>
+            <xs:documentation>
+                A string that is restricted to two lower case letters that contain a language code as defined in
+                ISO 639.
+            </xs:documentation>
+        </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:pattern value="[a-z]{2}"/>
         </xs:restriction>
     </xs:simpleType>
 
     <xs:complexType name="stringWithLangType">
+        <xs:annotation>
+            <xs:documentation>
+                A string element with an additional lang attribute for localization.
+            </xs:documentation>
+        </xs:annotation>
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute name="lang" type="dcc:stringISO639Type" use="optional"/>
@@ -679,10 +710,9 @@
     <xs:complexType name="textType">
         <xs:annotation>
             <xs:documentation>
-                The textType defines the type for writing text in the DCC.
+                The textType defines the type for writing localized text in the DCC.
                 In this Type, the element content can be used many times with different language definition (attribute
                 lang).
-                The optional attribute ID is for a unique ID.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -694,16 +724,8 @@
     <xs:complexType name="byteDataType">
         <xs:annotation>
             <xs:documentation>
-                The byteDataType defines a type which allows to add
-                binary encoded files to the measurement result section.
-                It is a good practise to use the Base64
-                Data Encodings standard (see RFC 4648).
-                The file must be encoded as base64Binary, see RFC 4648.
-                Examples for the content are image files or ZIP archives.
-                The element fileName gives the name of the original file.
-                Element mimeType is the underlying file type (e.g. zip, jpeg, png).
-                Element data contains the base64Binary encoded file.
-                The optional attribute ID is for a unique ID of this data block.
+                The byteDataType defines a type which allows to add binary encoded files to the measurement result
+                section.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
@@ -713,16 +735,13 @@
             <xs:element name="mimeType" type="xs:string"/>
             <xs:element name="dataBase64" type="xs:base64Binary"/>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="optional"/><!--92200_A_I-->
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="formulaType">
         <xs:annotation>
             <xs:documentation>
                 This data block is used to add formulas and equations to the measurement result section of the DCC.
-                A formula is expected to by written by means of the LaTeX ams math or MathML formalism. All units in the
-                LaTeX expression must follow the siunitx LaTeX standard.
-                The optional attribute ID is for a unique ID of this block.
             </xs:documentation>
         </xs:annotation>
         <xs:choice>
@@ -735,9 +754,7 @@
     <xs:complexType name="xmlType">
         <xs:annotation>
             <xs:documentation>
-                This data block is used to add user or application specific XML content to the
-                measurement result section of the DCC.
-                The optional attribute ID is for a unique ID of this block.
+                This data block is used to add user or application specific XML content.
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
