@@ -5,14 +5,14 @@
   <p><a href="https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/commits/master"><img alt="pipeline status" src="https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/badges/master/pipeline.svg" /></a></p>
   <p>This repository contains the XSD, a documentation and examples for the DCC (Digital Calibration Certificate).</p>
   <h3>
-    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.0.0-rc.1/) | [Examples](examples) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues)
+    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.0.0-rc.2/) | [Examples](examples) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues)
   </h3>
 </div>
 <br />
 
 ## Documentation
 
-You can find the Documentation at [https://ptb.de/dcc/v3.0.0-rc.1/](https://ptb.de/dcc/v3.0.0-rc.1/) (Best way to read the documentation).
+You can find the Documentation at [https://ptb.de/dcc/v3.0.0-rc.2/](https://ptb.de/dcc/v3.0.0-rc.2/) (Best way to read the documentation).
 
 Or here in this Repository at [docs/README.md](docs/README.md).
 
@@ -22,7 +22,7 @@ To use the Schema use the URL with a specific version below.
 This is the recommended way.
 
 ```
-https://ptb.de/dcc/v3.0.0-rc.1/dcc.xsd
+https://ptb.de/dcc/v3.0.0-rc.2/dcc.xsd
 ```
 
 ```xml
@@ -31,7 +31,7 @@ https://ptb.de/dcc/v3.0.0-rc.1/dcc.xsd
         xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0-rc.1/dcc.xsd"
         xmlns:dcc="https://ptb.de/dcc"
         xmlns:si="https://ptb.de/si"
-        schemaVersion="3.0.0-rc.1">
+        schemaVersion="3.0.0-rc.2">
         <!--
         ...
         -->
