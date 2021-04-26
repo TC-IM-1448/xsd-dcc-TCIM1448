@@ -1,8 +1,17 @@
+/*
+* This script changes the version number in various places.
+* Usage: node path/to/adjustVersion.js <newVersion>
+* */
+
 const pkg = require("../docs/package");
 const replaceInFile = require("./util/replaceInFile");
 const semverRegEx = require("./util/semverRegEx");
 const filesByExtension = require("./util/filesByExtension");
 
+// https://stackoverflow.com/a/6969486
+function escapeRegExp(string) {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
 
 if(process.argv.length > 2) {
     let newVersion = process.argv[2];
@@ -38,7 +47,7 @@ if(process.argv.length > 2) {
         let schemaPath = __dirname + "/../dcc.xsd";
         replaceInFile(schemaPath, oldUrl, newUrl);
         replaceInFile(schemaPath, `version="${oldVersion}"`, `version="${newVersion}"`);
-        replaceInFile(schemaPath, `<xs:pattern value="${oldVersion}"/>`, `<xs:pattern value="${newVersion}"/>`);
+        replaceInFile(schemaPath, `<xs:pattern value="${escapeRegExp(oldVersion)}"/>`, `<xs:pattern value="${escapeRegExp(newVersion)}"/>`);
     } else {
         console.log("Please pass a valid version number that complies to the semantic version specification");
     }

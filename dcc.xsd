@@ -48,7 +48,7 @@
         <xs:attribute name="schemaVersion" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                    <xs:pattern value="3.0.0-rc.2"/>
+                    <xs:pattern value="3\.0\.0-rc\.2"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
