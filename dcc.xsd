@@ -294,22 +294,6 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <!--
-            For this elements is community input needed.
-            Talk to us: gemimeg@ptb.de
-
-            <xs:element name="samplingDate" type="xs:date" minOccurs="0"/>
-            <xs:element name="sampledMaterials" type="dcc:sampledMaterialType" minOccurs="0"/>
-
-            <xs:element name="externals" type="dcc:externalType" minOccurs="0"/>
-
-            <xs:element name="metrologicallyTraceable" type="dcc:metrologicallyTraceableType" minOccurs="0"/>
-
-
-            <xs:element name="calibrationLocations" type="dcc:calibrationLocationType" maxOccurs="unbounded"/>
-
-            -->
-
             <xs:element name="measurementResult" type="dcc:measurementResultType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
@@ -336,83 +320,6 @@
         <xs:attribute name="refType" type="xs:string" use="optional"/>
     </xs:complexType>
 
-    <!-- We need community input about the following:
-         Talk to us: gemimeg@ptb.de
-
-        <xs:complexType name="externalType">
-            <xs:annotation>
-                <xs:documentation>
-                    Information about the external partners.
-
-                    Community input needed! Talk to us: gemimeg@ptb.de
-                </xs:documentation>
-            </xs:annotation>
-            <xs:sequence>
-                <xs:element name="external" type="dcc:contactType" maxOccurs="unbounded"/>
-            </xs:sequence>
-        </xs:complexType>
-
-        <xs:complexType name="sampledMaterialType">
-            <xs:annotation>
-                <xs:documentation>
-                    Information about the sampled material.
-
-                    Community input needed! Talk to us: gemimeg@ptb.de
-                </xs:documentation>
-            </xs:annotation>
-            <xs:sequence>
-                <xs:element name="sampledMaterial" maxOccurs="unbounded">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="plan" type="dcc:textType"/>
-                            <xs:element name="method" type="dcc:textType"/>
-                            <xs:element name="descriptionData" type="dcc:byteDataType" minOccurs="0" maxOccurs="unbounded"/>
-                            <xs:element name="externalSampler" type="dcc:contactType" minOccurs="0" maxOccurs="unbounded"/>
-                        </xs:sequence>
-                        <xs:attribute name="id" type="xs:ID" use="optional"/>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-
-        <xs:complexType name="metrologicallyTraceableType">
-            <xs:annotation>
-                <xs:documentation>
-                    Elements for metrologically traceable measurements.
-
-                    Community input needed! Talk to us: gemimeg@ptb.de
-
-                </xs:documentation>
-            </xs:annotation>
-            <xs:sequence>
-                <xs:element name="name" type="dcc:textType" />
-                <xs:element name="description" type="dcc:textType" />
-                <xs:element name="identifier" type="dcc:hashType" />
-            </xs:sequence>
-        </xs:complexType>
-
-        <xs:complexType name="calibrationLocationListType">
-            <xs:annotation>
-                <xs:documentation>
-                    Locations, where the calibration was done.
-                </xs:documentation>
-            </xs:annotation>
-            <xs:sequence>
-                <xs:element name="calibrationLocation" type="dcc:calibrationLocationType" maxOccurs="unbounded"/>
-            </xs:sequence>
-    
-        </xs:complexType>
-    
-        <xs:complexType name="calibrationLocationType">
-            <xs:sequence>
-                <xs:element name="calibrationLocationSite" type="dcc:textType"/>
-                <xs:element name="beginLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
-                <xs:element name="endLocationCalDateTime" type="xs:dateTime" minOccurs="0"/>
-                <xs:element name="location" type="dcc:locationType" minOccurs="0"/>
-            </xs:sequence>
-            <xs:attribute name="id" type="xs:ID" use="optional"/>
-        </xs:complexType>
-    -->
     <xs:complexType name="usedMethodListType">
         <xs:annotation>
             <xs:documentation>
