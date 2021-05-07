@@ -508,7 +508,7 @@
             <xs:element name="valid" type="xs:boolean" minOccurs="0"/>
             <xs:element name="date" type="xs:date" minOccurs="0"/>
             <xs:element name="period" type="xs:duration" minOccurs="0"/>
-            <xs:element name="resposibleAuthority" type="dcc:contactType" minOccurs="0"/>
+            <xs:element name="responsibleAuthority" type="dcc:contactType" minOccurs="0"/>
             <xs:element name="conformity" type="dcc:stringConformityStatementStatusType" minOccurs="0"/>
             <xs:element name="data" type="dcc:dataType" minOccurs="0"/>
         </xs:sequence>
