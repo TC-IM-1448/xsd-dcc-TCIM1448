@@ -1,4 +1,4 @@
-<dcc:digitalCalibrationCertificate xmlns:dcc="https://ptb.de/dcc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0.0-rc.3" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0-rc.3/dcc.xsd">
+<dcc:digitalCalibrationCertificate xmlns:dcc="https://ptb.de/dcc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0.0-rc.4" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0-rc.4/dcc.xsd">
   <!--
     Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte
     vorbehalten - all rights reserved
@@ -85,10 +85,10 @@
         <dcc:identification>
           <dcc:issuer>calibrationLaboratory</dcc:issuer>
           <dcc:value>7.5-9.9-99-99-98</dcc:value>
-          <dcc:description>
+          <dcc:name>
             <dcc:content lang="en">Reference No.</dcc:content>
             <dcc:content lang="de">Geschäftszeichen</dcc:content>
-          </dcc:description>
+          </dcc:name>
         </dcc:identification>
       </dcc:identifications>
       <dcc:beginPerformanceDate>2020-06-17</dcc:beginPerformanceDate>
@@ -118,10 +118,10 @@
           <dcc:identification>
             <dcc:issuer>manufacturer</dcc:issuer>
             <dcc:value>99999-998</dcc:value>
-            <dcc:description>
+            <dcc:name>
               <dcc:content lang="en">Serial No.</dcc:content>
               <dcc:content lang="de">Kennnummer</dcc:content>
-            </dcc:description>
+            </dcc:name>
           </dcc:identification>
         </dcc:identifications>
       </dcc:item>

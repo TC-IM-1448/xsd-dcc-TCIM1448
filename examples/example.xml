@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0-rc.3/dcc.xsd"
+		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0-rc.4/dcc.xsd"
 		xmlns:dcc="https://ptb.de/dcc"
 		xmlns:si="https://ptb.de/si"
-		schemaVersion="3.0.0-rc.3">
+		schemaVersion="3.0.0-rc.4">
 
     <!--
     Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
@@ -96,26 +96,26 @@
 					<dcc:identification id="dcc52">
 						<dcc:issuer>manufacturer</dcc:issuer>
 						<dcc:value>1040917</dcc:value>
-						<dcc:description id="dcc53">
+						<dcc:name id="dcc53">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc54">
 						<dcc:issuer>other</dcc:issuer>
 						<dcc:value>PTB4711</dcc:value>
-						<dcc:description id="dcc55">
+						<dcc:name id="dcc55">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc56">
 						<dcc:issuer>customer</dcc:issuer>
 						<dcc:value>0815</dcc:value>
-						<dcc:description id="dcc57">
+						<dcc:name id="dcc57">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 				</dcc:identifications>
 			</dcc:item>
@@ -142,26 +142,26 @@
 					<dcc:identification id="dcc42">
 						<dcc:issuer>manufacturer</dcc:issuer>
 						<dcc:value>1040918</dcc:value>
-						<dcc:description id="dcc43">
+						<dcc:name id="dcc43">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc44">
 						<dcc:issuer>other</dcc:issuer>
 						<dcc:value>PTB4712</dcc:value>
-						<dcc:description id="dcc45">
+						<dcc:name id="dcc45">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc46">
 						<dcc:issuer>customer</dcc:issuer>
 						<dcc:value>0816</dcc:value>
-						<dcc:description id="dcc47">
+						<dcc:name id="dcc47">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 				</dcc:identifications>
 			</dcc:item>
