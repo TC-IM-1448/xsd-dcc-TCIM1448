@@ -81,6 +81,7 @@
             </dcc:identifications>
             <dcc:beginPerformanceDate>2018-10-12</dcc:beginPerformanceDate>
             <dcc:endPerformanceDate>2018-10-12</dcc:endPerformanceDate>
+            <dcc:performanceLocation>laboratory</dcc:performanceLocation>
         </dcc:coreData>
 
         <dcc:items>
