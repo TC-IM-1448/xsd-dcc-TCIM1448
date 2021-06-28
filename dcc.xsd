@@ -143,7 +143,7 @@
             <xs:element name="receiptDate" type="xs:date" minOccurs="0"/>
             <xs:element name="beginPerformanceDate" type="xs:date"/>
             <xs:element name="endPerformanceDate" type="xs:date"/>
-            <xs:element name="performanceLocation" type="dcc:performanceLocationType" minOccurs="0"/>
+            <xs:element name="performanceLocation" type="dcc:performanceLocationType"/>
             <xs:element name="previousReport" type="dcc:hashType" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
