@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="3.0.0-rc.4" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="3.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://ptb.de/dcc"
            xmlns:si="https://ptb.de/si"
            targetNamespace="https://ptb.de/dcc"
@@ -33,7 +33,7 @@
             Vorab initiative of the Volkswagen Foundation (VolkswagenStiftung).
 
 
-            Documentation: https://ptb.de/dcc/v3.0.0-rc.4/
+            Documentation: https://ptb.de/dcc/v3.0.0/
         </xs:documentation>
     </xs:annotation>
 
@@ -64,7 +64,7 @@
         <xs:attribute name="schemaVersion" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                    <xs:pattern value="3\.0\.0-rc\.4"/>
+                    <xs:pattern value="3\.0\.0"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>

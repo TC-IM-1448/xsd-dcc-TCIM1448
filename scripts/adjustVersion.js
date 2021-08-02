@@ -1,9 +1,8 @@
 /*
 * This script changes the version number in various places.
-* Usage: node path/to/adjustVersion.js <newVersion>
+* Usage: node path/to/adjustVersion.js <oldVersion> <newVersion>
 * */
 
-const pkg = require("../docs/package");
 const replaceInFile = require("./util/replaceInFile");
 const semverRegEx = require("./util/semverRegEx");
 const filesByExtension = require("./util/filesByExtension");
@@ -13,13 +12,16 @@ function escapeRegExp(string) {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
 }
 
-if(process.argv.length > 2) {
-    let newVersion = process.argv[2];
+if(process.argv.length > 3) {
+    let oldVersion = process.argv[2];
+    let newVersion = process.argv[3];
     if(semverRegEx().test(newVersion)) {
         if(newVersion.startsWith("v")) {
             newVersion = newVersion.substring(1);
         }
-        let oldVersion = pkg.version;
+        if(oldVersion.startsWith("v")) {
+            oldVersion = oldVersion.substring(1);
+        }
 
         console.log(`Changing version from ${oldVersion} to ${newVersion}`);
 
@@ -49,5 +51,5 @@ if(process.argv.length > 2) {
         console.log("Please pass a valid version number that complies to the semantic version specification");
     }
 } else {
-    console.log("Usage: node path/to/adjustVersion.js <newVersion>");
+    console.log("Usage: node path/to/adjustVersion.js <oldVersion> <newVersion>");
 }
