@@ -1,33 +1,26 @@
-<dcc:digitalCalibrationCertificate xmlns:dcc="https://ptb.de/dcc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.4.0" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.4.0/dcc.xsd">
+<dcc:digitalCalibrationCertificate xmlns:dcc="https://ptb.de/dcc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.0.0" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0/dcc.xsd">
   <!--
-    Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte 
-    vorbehalten - all rights reserved
+    DCC - Digital Calibration Certificate
+    Copyright (C) 2021 - Physikalisch-Technische Bundesanstalt
 
-    Diese Software wurde in der Physikalisch-Technischen Bundesanstalt 
-    entwickelt. Die Software wird unentgeltlich, wie sie ist, auf eigenes 
-    Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung, 
-    egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und 
-    garantiert weder ausdrücklich noch konkludent für die Qualität, Sicherheit, 
-    Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software. Soweit 
-    gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, 
-    indirekte Schäden oder für Folgeschäden ab, die durch die Nutzung der 
-    Software entstehen.
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
 
-    This software was developed at the Physikalisch-Technische Bundesanstalt 
-    (PTB). The software is made available “as is“ free of cost at your own 
-    risk. PTB assumes no responsibility whatsoever for its use by other 
-    parties, and makes no guarantees, expressed or implied, about its quality, 
-    reliability, safety, suitability or any other characteristic. As far as 
-    legally permitted PTB refuses any liability for any direct, indirect or 
-    consequential damage arising in connection with the use of this software.
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
 
-    This project (17IND02) has received funding from the EMPIR programme 
-    co-financed by the Participating States and from the European Union's 
-    Horizon 2020 research and innovation programme.
-
-    The development of minimum requirements for a digital cal, ibration 
-    certificate (DCC) is partially funded and supported by the joint research 
-    project EMPIR 17IND02 (title: SmartCom).
+    The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
+    supported by the joint research project EMPIR 17IND02 (title: SmartCom).
+    This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
+    and from the European Union's Horizon 2020 research and innovation programme.
+    The further development of the digital calibration certificate (DCC) is partly supported by the lighthouse
+    project GEMIMEG-II (GEMIMEG 01 MT20001E) funded by the German Federal Ministry for Economic Affairs and
+    Energy (BMWi) and the project "International Standard Accident Number" (ISAN) funded by the Niedersächsiches
+    Vorab initiative of the Volkswagen Foundation (VolkswagenStiftung).
     -->
   <dcc:administrativeData>
     <dcc:calibrationLaboratory>
@@ -77,6 +70,7 @@
     </dcc:dccSoftware>
     <dcc:coreData>
       <dcc:countryCodeISO3166_1>DE</dcc:countryCodeISO3166_1>
+      <dcc:usedLangCodeISO639_1>de</dcc:usedLangCodeISO639_1>
       <dcc:usedLangCodeISO639_1>en</dcc:usedLangCodeISO639_1>
       <dcc:mandatoryLangCodeISO639_1>en</dcc:mandatoryLangCodeISO639_1>
       <dcc:uniqueIdentifier>75998PTB20</dcc:uniqueIdentifier>
@@ -84,14 +78,15 @@
         <dcc:identification>
           <dcc:issuer>calibrationLaboratory</dcc:issuer>
           <dcc:value>7.5-9.9-99-99-98</dcc:value>
-          <dcc:description>
+          <dcc:name>
             <dcc:content lang="en">Reference No.</dcc:content>
             <dcc:content lang="de">Geschäftszeichen</dcc:content>
-          </dcc:description>
+          </dcc:name>
         </dcc:identification>
       </dcc:identifications>
       <dcc:beginPerformanceDate>2020-06-17</dcc:beginPerformanceDate>
       <dcc:endPerformanceDate>2020-06-17</dcc:endPerformanceDate>
+      <dcc:performanceLocation>laboratory</dcc:performanceLocation>
     </dcc:coreData>
     <dcc:items>
       <dcc:name>
@@ -117,10 +112,10 @@
           <dcc:identification>
             <dcc:issuer>manufacturer</dcc:issuer>
             <dcc:value>99999-998</dcc:value>
-            <dcc:description>
+            <dcc:name>
               <dcc:content lang="en">Serial No.</dcc:content>
               <dcc:content lang="de">Kennnummer</dcc:content>
-            </dcc:description>
+            </dcc:name>
           </dcc:identification>
         </dcc:identifications>
       </dcc:item>
@@ -159,6 +154,10 @@
   </dcc:administrativeData>
   <dcc:measurementResults>
     <dcc:measurementResult>
+      <dcc:name>
+        <dcc:content lang="de">Ergebnis der Kalibrierung</dcc:content>
+        <dcc:content lang="en">Result of the calibration</dcc:content>
+      </dcc:name>
       <dcc:usedMethods>
         <dcc:usedMethod>
           <dcc:name id="method_1">

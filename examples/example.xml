@@ -1,32 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dcc:digitalCalibrationCertificate
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v2.4.0/dcc.xsd"
+		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0/dcc.xsd"
 		xmlns:dcc="https://ptb.de/dcc"
 		xmlns:si="https://ptb.de/si"
-		schemaVersion="2.4.0">
+		schemaVersion="3.0.0">
 
     <!--
-    Copyright (c) 2019 - Physikalisch-Technische Bundesanstalt, alle Rechte vorbehalten - all rights reserved
+	DCC - Digital Calibration Certificate
+    Copyright (C) 2021 - Physikalisch-Technische Bundesanstalt
 
-    Diese Software wurde in der Physikalisch-Technischen Bundesanstalt entwickelt. Die Software wird unentgeltlich,
-    wie sie ist, auf eigenes Risiko des Nutzers zur Verfügung gestellt. Die PTB übernimmt keine Haftung,
-    egal aus welchem Rechtsgrund, für die Nutzung der Software durch Andere und garantiert weder ausdrücklich noch
-    konkludent für die Qualität, Sicherheit, Zuverlässigkeit, Tauglichkeit, oder andere Merkmale der Software.
-    Soweit gesetzlich zulässig lehnt die PTB jede Haftung für direkte Schäden, indirekte Schäden oder für
-    Folgeschäden ab, die durch die Nutzung der Software entstehen.
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
 
-    This software was developed at the Physikalisch-Technische Bundesanstalt (PTB). The software is made available
-    “as is“ free of cost at your own risk. PTB assumes no responsibility whatsoever for its use by other parties,
-    and makes no guarantees, expressed or implied, about its quality, reliability, safety, suitability or any other
-    characteristic. As far as legally permitted PTB refuses any liability for any direct, indirect or consequential
-    damage arising in connection with the use of this software.
-
-    This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
-    and from the European Union's Horizon 2020 research and innovation programme.
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+    Lesser General Public License for more details.
 
     The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
     supported by the joint research project EMPIR 17IND02 (title: SmartCom).
+    This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
+    and from the European Union's Horizon 2020 research and innovation programme.
+    The further development of the digital calibration certificate (DCC) is partly supported by the lighthouse
+    project GEMIMEG-II (GEMIMEG 01 MT20001E) funded by the German Federal Ministry for Economic Affairs and
+    Energy (BMWi) and the project "International Standard Accident Number" (ISAN) funded by the Niedersächsiches
+    Vorab initiative of the Volkswagen Foundation (VolkswagenStiftung).
     -->
 
 	<dcc:administrativeData>
@@ -56,6 +57,7 @@
 			<dcc:uniqueIdentifier>PTB - 11044 17</dcc:uniqueIdentifier>
 			<dcc:beginPerformanceDate>2017-09-20</dcc:beginPerformanceDate>
 			<dcc:endPerformanceDate>2017-09-20</dcc:endPerformanceDate>
+			<dcc:performanceLocation>laboratory</dcc:performanceLocation>
 		</dcc:coreData>
 		<dcc:items>
 			<dcc:name>
@@ -96,26 +98,26 @@
 					<dcc:identification id="dcc52">
 						<dcc:issuer>manufacturer</dcc:issuer>
 						<dcc:value>1040917</dcc:value>
-						<dcc:description id="dcc53">
+						<dcc:name id="dcc53">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc54">
 						<dcc:issuer>other</dcc:issuer>
 						<dcc:value>PTB4711</dcc:value>
-						<dcc:description id="dcc55">
+						<dcc:name id="dcc55">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc56">
 						<dcc:issuer>customer</dcc:issuer>
 						<dcc:value>0815</dcc:value>
-						<dcc:description id="dcc57">
+						<dcc:name id="dcc57">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 				</dcc:identifications>
 			</dcc:item>
@@ -142,26 +144,26 @@
 					<dcc:identification id="dcc42">
 						<dcc:issuer>manufacturer</dcc:issuer>
 						<dcc:value>1040918</dcc:value>
-						<dcc:description id="dcc43">
+						<dcc:name id="dcc43">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc44">
 						<dcc:issuer>other</dcc:issuer>
 						<dcc:value>PTB4712</dcc:value>
-						<dcc:description id="dcc45">
+						<dcc:name id="dcc45">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 					<dcc:identification id="dcc46">
 						<dcc:issuer>customer</dcc:issuer>
 						<dcc:value>0816</dcc:value>
-						<dcc:description id="dcc47">
+						<dcc:name id="dcc47">
 							<dcc:content lang="de">Kennnummer</dcc:content>
 							<dcc:content lang="en">Serial No.</dcc:content>
-						</dcc:description>
+						</dcc:name>
 					</dcc:identification>
 				</dcc:identifications>
 			</dcc:item>
@@ -274,6 +276,10 @@
 	</dcc:administrativeData>
 	<dcc:measurementResults>
 		<dcc:measurementResult>
+			<dcc:name>
+				<dcc:content lang="de">Ergebnis der Kalibrierung</dcc:content>
+				<dcc:content lang="en">Result of the calibration</dcc:content>
+			</dcc:name>
 			<dcc:usedMethods>
 				<dcc:usedMethod>
 					<dcc:name id="Methode">
@@ -283,14 +289,10 @@
 					</dcc:name>
 					<dcc:description>
 						<dcc:content lang="de">Verfahren</dcc:content>
-						<dcc:content lang="en">Procedure</dcc:content>
-					</dcc:description>
-					<dcc:description>
 						<dcc:content lang="de">Die Volumenbestimmung für $m \ge 1 g$ erfolgte nach der hydrostatischen Wägemethode.</dcc:content>
-						<dcc:content lang="en">The volume determination for $m \ge 1 g$ was carried out with the hydrostatic weighing method.</dcc:content>
-					</dcc:description>
-					<dcc:description>
 						<dcc:content lang="de">Die Kalibrierung erfolgte durch Vergleich mit den Hauptnormalen der PTB nach der Substitutionsmethode mit Auftriebskorrektion.</dcc:content>
+						<dcc:content lang="en">Procedure</dcc:content>
+						<dcc:content lang="en">The volume determination for $m \ge 1 g$ was carried out with the hydrostatic weighing method.</dcc:content>
 						<dcc:content lang="en">The calibration was ensued through comparison with the reference standards of PTB using the substitution method with air buoyancy correction.</dcc:content>
 					</dcc:description>
 				</dcc:usedMethod>
@@ -309,7 +311,7 @@
 						<dcc:content lang="de">Umgebungsbedingungen</dcc:content>
 						<dcc:content lang="en">Ambient conditions</dcc:content>
 					</dcc:name>
-					<dcc:state>beforeAdjustment</dcc:state>
+					<dcc:status>beforeAdjustment</dcc:status>
 					<dcc:data>
 						<dcc:list>
 							<dcc:name>
@@ -470,9 +472,8 @@
 										</si:expandedUnc>
 									</si:real>
 									<dcc:measurementMetaData>
-										<dcc:metaData>
+										<dcc:metaData refId="MRA">
 											<dcc:valid>true</dcc:valid>
-											<dcc:refId>MRA</dcc:refId>
 										</dcc:metaData>
 										<dcc:metaData>
 											<dcc:convention>Regler 23</dcc:convention>
