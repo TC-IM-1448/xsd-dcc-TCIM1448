@@ -1,5 +1,5 @@
 <div align="center">
-  <a href="https://ptb.de/dcc" traget="_blank"><img src="docs/images/logo.png" alt="DCC Logo" width="400"/></a>
+  <a href="https://ptb.de/dcc" traget="_blank"><img src="assets/logo.png" alt="DCC Logo" width="400"/></a>
   <br />
   <h1>xsd-dcc</h1>
   <p><a href="https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/commits/master"><img alt="pipeline status" src="https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/badges/master/pipeline.svg" /></a></p>
