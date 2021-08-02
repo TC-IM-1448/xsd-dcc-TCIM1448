@@ -25,6 +25,12 @@
 
     The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
     supported by the joint research project EMPIR 17IND02 (title: SmartCom).
+    This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
+    and from the European Union's Horizon 2020 research and innovation programme.
+    The further development of the digital calibration certificate (DCC) is partly supported by the lighthouse
+    project GEMIMEG-II (GEMIMEG 01 MT20001E) funded by the German Federal Ministry for Economic Affairs and
+    Energy (BMWi) and the project "International Standard Accident Number" (ISAN) funded by the Niedersächsiches
+    Vorab initiative of the Volkswagen Foundation (VolkswagenStiftung).
     -->
 
 	<dcc:administrativeData>

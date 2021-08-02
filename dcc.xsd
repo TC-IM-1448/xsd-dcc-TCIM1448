@@ -15,17 +15,22 @@
             Copyright (c) 2019 - 2021 Physikalisch-Technische Bundesanstalt
 
             This XML Scheme Definition (XSD) is free software: you can redistribute it and/or modify
-   			it under the terms of the GNU Lesser General Public License as published by
-    		the Free Software Foundation, version 3 of the License.
+            it under the terms of the GNU Lesser General Public License as published by
+            the Free Software Foundation, version 3 of the License.
 
-    		This XSD is distributed in the hope that it will be useful,
-    		but WITHOUT ANY WARRANTY; without even the implied warranty of
-    		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    		GNU Lesser General Public License for more details.
+            This XSD is distributed in the hope that it will be useful,
+            but WITHOUT ANY WARRANTY; without even the implied warranty of
+            MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+            GNU Lesser General Public License for more details.
 
-            The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and supported by the joint research project EMPIR 17IND02 (title: SmartCom). 
-This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States and from the European Union's Horizon 2020 research and innovation programme.
-The further development of the digital calibration certificate (DCC) is partly supported by the lighthouse project GEMIMEG-II (GEMIMEG 01 MT20001E) funded by the German Federal Ministry for Economic Affairs and Energy (BMWi) and the project "International Standard Accident Number" (ISAN) funded by the Niedersächsiches Vorab initiative of the Volkswagen Foundation (VolkswagenStiftung).
+            The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
+            supported by the joint research project EMPIR 17IND02 (title: SmartCom).
+            This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
+            and from the European Union's Horizon 2020 research and innovation programme.
+            The further development of the digital calibration certificate (DCC) is partly supported by the lighthouse
+            project GEMIMEG-II (GEMIMEG 01 MT20001E) funded by the German Federal Ministry for Economic Affairs and
+            Energy (BMWi) and the project "International Standard Accident Number" (ISAN) funded by the Niedersächsiches
+            Vorab initiative of the Volkswagen Foundation (VolkswagenStiftung).
 
 
             Documentation: https://ptb.de/dcc/v3.0.0-rc.4/
@@ -684,11 +689,11 @@ The further development of the digital calibration certificate (DCC) is partly s
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
-            <xs:element name="name" type="dcc:textType" minOccurs="0" />
+            <xs:element name="name" type="dcc:textType" minOccurs="0"/>
             <xs:choice maxOccurs="unbounded">
-                <xs:element name="content" type="dcc:stringWithLangType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="file" type="dcc:byteDataType" minOccurs="0" maxOccurs="unbounded" />
-                <xs:element name="formula" type="dcc:formulaType" minOccurs="0" maxOccurs="unbounded" />
+                <xs:element name="content" type="dcc:stringWithLangType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="file" type="dcc:byteDataType" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="formula" type="dcc:formulaType" minOccurs="0" maxOccurs="unbounded"/>
             </xs:choice>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
