@@ -14,8 +14,6 @@
 
 You can find the Documentation at [https://ptb.de/dcc/v3.0.0-rc.4/](https://ptb.de/dcc/v3.0.0-rc.4/) (Best way to read the documentation).
 
-Or here in this Repository at [docs/README.md](docs/README.md).
-
 ## License
 
 This repository contains the XML Scheme Definition (XSD), a documentation and examples for the DCC (Digital Calibration Certificate). The XSD is licensed by Physikalisch-Technische Bundesanstalt under [GNU LGPL v3](/COPYING.LESSER).

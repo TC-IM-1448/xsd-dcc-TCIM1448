@@ -33,9 +33,6 @@ if(process.argv.length > 2) {
         replaceInFile(readMe, oldUrl, newUrl);
         replaceInFile(readMe, `schemaVersion="${oldVersion}"`, `schemaVersion="${newVersion}"`);
 
-        console.log("Adjusting package.json");
-        replaceInFile(__dirname + "/../docs/package.json", `"version": "${oldVersion}"`, `"version": "${newVersion}"`);
-
         console.log("Adjusting examples");
         let examples = filesByExtension(__dirname + "/../examples", "xml");
         for (let example of examples) {
