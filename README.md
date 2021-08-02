@@ -3,9 +3,9 @@
   <br />
   <h1>xsd-dcc</h1>
   <p><a href="https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/commits/master"><img alt="pipeline status" src="https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/badges/master/pipeline.svg" /></a></p>
-  <p>This repository contains the XSD, a documentation and examples for the DCC (Digital Calibration Certificate).</p>
+  <p>This repository contains the XML Schema Definition (XSD), a documentation and examples for the DCC (Digital Calibration Certificate). The XSD is licensed by Physikalisch-Technische Bundesanstalt under [GNU LGPL v3](/COPYING.LESSER).</p>
   <h3>
-    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.0.0-rc.4/) | [Examples](examples) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues)
+    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.0.0-rc.4/) | [Examples](examples) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues) | [License](#license) | [Liability](#liability)
   </h3>
 </div>
 <br />
@@ -15,6 +15,17 @@
 You can find the Documentation at [https://ptb.de/dcc/v3.0.0-rc.4/](https://ptb.de/dcc/v3.0.0-rc.4/) (Best way to read the documentation).
 
 Or here in this Repository at [docs/README.md](docs/README.md).
+
+## License
+
+This repository contains the XML Scheme Definition (XSD), a documentation and examples for the DCC (Digital Calibration Certificate). The XSD is licensed by Physikalisch-Technische Bundesanstalt under [GNU LGPL v3](/COPYING.LESSER).
+
+## Liability
+
+This XSD is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+[GNU Lesser General Public License](/COPYING.LESSER) for more details.
 
 ## Access to the Schema
 
