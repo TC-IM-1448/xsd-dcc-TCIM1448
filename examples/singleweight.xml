@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dcc:digitalCalibrationCertificate
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.0.0/dcc.xsd"
+		xmlns:dcc="https://ptb.de/dcc"
+		xmlns:si="https://ptb.de/si"
+		schemaVersion="3.0.0">
+
+
+	<!-- This project (17IND02) has received funding from the EMPIR programme co-financed by the Participating States
+    and from the European Union's Horizon 2020 research and innovation programme.
+
+    The development of minimum requirements for a digital calibration certificate (DCC) is partially funded and
+    supported by the joint research project EMPIR 17IND02 (title: SmartCom).-->
+	
+	<!-- This is an example for a very compact measurement result using a mass calibration for a single mass and its specific technical requirements on influence conditions, methods and results.
+		The focus is, however, the general use of the DCC structure and not the precise technical description for mass calibration. The example is provided by PTBs Department 1.1 "Mass"
+		Versionsstand der Beispiels: Version 4 vom 02.11.21-->
+	
+	<dcc:administrativeData>
+		<dcc:dccSoftware>
+			<dcc:software id="Notepad_plusplus">
+				<dcc:name>
+					<dcc:content>Notepad++ (32-bit)</dcc:content>
+				</dcc:name>
+				<dcc:release>v7.6.6</dcc:release>
+			</dcc:software>
+		</dcc:dccSoftware>
+		<dcc:coreData>
+			<dcc:countryCodeISO3166_1>DE</dcc:countryCodeISO3166_1>
+			<dcc:usedLangCodeISO639_1>de</dcc:usedLangCodeISO639_1>
+			<dcc:usedLangCodeISO639_1>en</dcc:usedLangCodeISO639_1>
+			<dcc:mandatoryLangCodeISO639_1>de</dcc:mandatoryLangCodeISO639_1>
+			<dcc:uniqueIdentifier>unique Identifier</dcc:uniqueIdentifier>
+			<dcc:identifications>
+				<dcc:identification>
+					<dcc:issuer>calibrationLaboratory</dcc:issuer>
+					<dcc:value>xx2021</dcc:value>
+					<dcc:name>
+						<dcc:content lang="de"> Geschäftszeichen</dcc:content>
+						<dcc:content lang="en">Reference No.</dcc:content>
+					</dcc:name>
+				</dcc:identification>
+			</dcc:identifications>
+			<dcc:beginPerformanceDate>2017-04-25</dcc:beginPerformanceDate>
+			<dcc:endPerformanceDate>2017-04-25</dcc:endPerformanceDate>
+			<dcc:performanceLocation>laboratory</dcc:performanceLocation>
+		</dcc:coreData>
+		<dcc:items>
+			<dcc:item id="item_x">
+				<dcc:name>
+					<dcc:content lang="de">Massestück</dcc:content>
+					<dcc:content lang="en">mass</dcc:content>
+				</dcc:name>
+				<dcc:description>
+					<dcc:content lang="de">Aufbewahrung: Das Massestück befindet sich in einem Transportbehälter; das Kalibrierzeichen ist auf dem Behälter aufgebracht.
+					</dcc:content>
+					<dcc:content lang="en">Case: The mass is accommodated in a transport container; the calibration mark is applied to the container.
+					</dcc:content>
+				</dcc:description>
+				<dcc:manufacturer>
+					<dcc:name>
+						<dcc:content>manufacturer name</dcc:content>
+					</dcc:name>
+					<dcc:eMail>info@manufacturer.de</dcc:eMail>
+					<dcc:location>
+						<dcc:street>street a</dcc:street>
+						<dcc:streetNo>100</dcc:streetNo>
+						<dcc:postCode>P1234</dcc:postCode>
+						<dcc:city>city b</dcc:city>
+						<dcc:countryCode>DE</dcc:countryCode>
+					</dcc:location>
+				</dcc:manufacturer>
+				<dcc:identifications>
+					<dcc:identification>
+						<dcc:issuer>manufacturer</dcc:issuer>
+						<dcc:value>TH477D</dcc:value>
+						<dcc:name>
+							<dcc:content lang="de">Kennnummer</dcc:content>
+							<dcc:content lang="en">Serial No.</dcc:content>
+						</dcc:name>
+					</dcc:identification>
+				</dcc:identifications>
+			</dcc:item>
+		</dcc:items>
+		<dcc:calibrationLaboratory>
+			<dcc:contact>
+				<dcc:name>
+					<dcc:content>calibration laboratory</dcc:content>
+				</dcc:name>
+				<dcc:eMail>info@laboratory.de</dcc:eMail>
+				<dcc:location>
+					<dcc:street>street c</dcc:street>
+					<dcc:streetNo>101</dcc:streetNo>
+					<dcc:postCode>P5678</dcc:postCode>
+					<dcc:city>city d</dcc:city>
+					<dcc:countryCode>DE</dcc:countryCode>
+				</dcc:location>
+			</dcc:contact>
+		</dcc:calibrationLaboratory>
+		<dcc:respPersons>
+			<dcc:respPerson id="Responsible">
+				<dcc:person>
+					<dcc:name>
+						<dcc:content>Dr. M.B.</dcc:content>
+					</dcc:name>
+					<dcc:eMail/>
+				</dcc:person>
+				<dcc:mainSigner>true</dcc:mainSigner>
+			</dcc:respPerson>
+			<dcc:respPerson id="Technician">
+				<dcc:person>
+					<dcc:name>
+						<dcc:content>M.M.</dcc:content>
+					</dcc:name>
+				</dcc:person>
+			</dcc:respPerson>
+		</dcc:respPersons>
+		<dcc:customer>
+			<dcc:name>
+				<dcc:content>customer name</dcc:content>
+			</dcc:name>
+			<dcc:eMail>info@customer.de</dcc:eMail>
+			<dcc:location>
+				<dcc:street>street e</dcc:street>
+				<dcc:streetNo>102</dcc:streetNo>
+				<dcc:postCode>P9101</dcc:postCode>
+				<dcc:city>city f</dcc:city>
+				<dcc:countryCode>DE</dcc:countryCode>
+			</dcc:location>
+		</dcc:customer>
+		<dcc:statements> <!-- not complete as it is not the focus of the example-->
+			<dcc:statement>
+				<dcc:norm>DIN EN ISO/IEC 17025</dcc:norm>
+			</dcc:statement>
+			<dcc:statement>
+				<dcc:traceable>true</dcc:traceable>
+			</dcc:statement>
+			<dcc:statement id="GUM">
+				<dcc:norm>GUM</dcc:norm>
+				<dcc:declaration>
+					<dcc:content lang="de">Angegeben ist die erweiterte Messunsicherheit, die sich aus der Standardmessunsicherheit durch Multiplikation mit dem Erweiterungsfaktor k = 2 ergibt. Sie wurde gemäß dem „Guide to the Expression of Uncertainty in Measurement (GUM)“ ermittelt. Der Wert der Messgröße liegt dann im Regelfall mit einer Wahrscheinlichkeit von annähernd 95 % im zugeordneten Überdeckungsintervall.</dcc:content>
+					<dcc:content lang="en">The uncertainty stated is the expanded measurement uncertainty obtained by multiplying the standard measurement uncertainty by the coverage factor k = 2. It has been determined in accordance with the “Guide to the Expression of Uncertainty in Measurement (GUM)”. The value of the measurand then normally lies, with a probability of approximately 95 %, within the attributed coverage interval.</dcc:content>
+				</dcc:declaration>
+			</dcc:statement>
+		</dcc:statements>
+	</dcc:administrativeData>
+	<dcc:measurementResults>
+		<dcc:measurementResult refId="item_x">
+			<dcc:name>
+				<dcc:content lang="de">Massekalibrierung</dcc:content>
+				<dcc:content lang="en">Calibration of mass</dcc:content>
+			</dcc:name>
+			<dcc:usedMethods>
+				<dcc:usedMethod>
+					<dcc:name>
+						<dcc:content lang="de">Verwendete Methode der Massekalibrierung</dcc:content>
+						<dcc:content lang="en">Used method of mass calibration</dcc:content>
+					</dcc:name>
+					<dcc:description>
+						<dcc:content lang="de">Massevergleich in Luft</dcc:content>
+						<dcc:content lang="en">Mass comparison in air</dcc:content>
+					</dcc:description>
+				</dcc:usedMethod>
+			</dcc:usedMethods>
+			<dcc:influenceConditions> <!-- list of influencing effects/values/... for the measurement, can include environmental conditions, input data from other calibrations,...-->
+				<dcc:influenceCondition refType ="temperature">
+					<dcc:name>
+						<dcc:content lang="de">Temperatur</dcc:content>
+						<dcc:content lang="en">temperature</dcc:content>
+					</dcc:name>
+					<dcc:data>
+						<dcc:quantity refType="min">
+							<dcc:name>
+								<dcc:content lang="de">von</dcc:content>
+								<dcc:content lang="en">from</dcc:content>
+							</dcc:name>
+							<si:real>
+								<si:value>20.85</si:value>
+								<si:unit>\degreeCelsius</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.02</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>
+						</dcc:quantity>
+						<dcc:quantity refType="max">
+							<dcc:name>
+								<dcc:content lang="de">bis</dcc:content>
+								<dcc:content lang="en">to</dcc:content>
+							</dcc:name>
+							<si:real>
+								<si:value>20.86</si:value>
+								<si:unit>\degreeCelsius</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.020</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>
+						</dcc:quantity>
+					</dcc:data>
+				</dcc:influenceCondition>
+				<dcc:influenceCondition refType="humidity">
+					<dcc:name>
+						<dcc:content lang="de">relative Luftfeuchte</dcc:content>
+						<dcc:content lang="en">relative humidity</dcc:content>
+					</dcc:name>
+					<dcc:data>
+						<dcc:quantity refType="min">
+							<dcc:name>
+								<dcc:content lang="de">von</dcc:content>
+								<dcc:content lang="en">from</dcc:content>
+							</dcc:name>
+							<si:real>
+								<si:value>0.435</si:value>
+								<si:unit>\one</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.01</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>
+						</dcc:quantity>
+						<dcc:quantity refType="max">
+							<dcc:name>
+								<dcc:content lang="de">bis</dcc:content>
+								<dcc:content lang="en">to</dcc:content>
+							</dcc:name>
+							<si:real>
+								<si:value>0.438</si:value>
+								<si:unit>\one</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.01</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>
+						</dcc:quantity>
+					</dcc:data>
+				</dcc:influenceCondition>
+				<dcc:influenceCondition refType="airPressure">
+					<dcc:name>
+						<dcc:content lang="de">Luftdruck</dcc:content>
+						<dcc:content lang="en">air pressure</dcc:content>
+					</dcc:name>
+					<dcc:data>
+						<dcc:quantity refType="min">
+							<dcc:name>
+								<dcc:content lang="de">von</dcc:content>
+								<dcc:content lang="en">from</dcc:content>
+							</dcc:name>
+							<si:real>
+								<si:value>1008.04</si:value>
+								<si:unit>\hecto\pascal</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.06</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>
+						</dcc:quantity>
+						<dcc:quantity refType="max">
+							<dcc:name>
+								<dcc:content lang="de">bis</dcc:content>
+								<dcc:content lang="en">to</dcc:content>
+							</dcc:name>
+							<si:real>
+								<si:value>1008.18</si:value>
+								<si:unit>\hecto\pascal</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.06</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>
+						</dcc:quantity>
+					</dcc:data>
+				</dcc:influenceCondition>
+			</dcc:influenceConditions>
+			<dcc:results>
+				<dcc:result refType="mass"> 
+					<dcc:name>
+						<dcc:content lang="de">Masse</dcc:content>
+						<dcc:content lang="en">mass</dcc:content>
+					</dcc:name>
+					<dcc:data>
+						<dcc:quantity refType="measurementValue">
+							<dcc:name>
+								<dcc:content lang="de">Masse</dcc:content>
+								<dcc:content lang="en">mass</dcc:content>
+							</dcc:name>                
+							<si:real>
+								<si:label>1 kg - 2.809 mg</si:label>
+								<si:value>0.999997191</si:value>
+								<si:unit>/kilogram</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.000000030</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>	
+						</dcc:quantity>            
+					</dcc:data>
+				</dcc:result>
+			</dcc:results>
+			<dcc:measurementMetaData>
+				<dcc:metaData refType="mass">
+					<dcc:data>
+						<dcc:quantity refType="nominalValue">
+							<dcc:name>
+								<dcc:content lang="de">Nennwert</dcc:content>
+								<dcc:content lang="en">nominal value</dcc:content>
+							</dcc:name>
+							<si:real> <!-- nominal values can also be described as si:constant-->
+								<si:label>1 kg</si:label>
+								<si:value>1</si:value>
+								<si:unit>/kilogram</si:unit>
+							</si:real>	
+						</dcc:quantity>
+					</dcc:data>
+				</dcc:metaData>
+				<dcc:metaData refType="volume"> <!-- example for an input value from a referenced calibration certificate-->
+					<dcc:declaration>
+						<dcc:content lang="de">Volumen (siehe Kalibrierschein xxa3 vom 2017-04-11)</dcc:content>
+						<dcc:content lang="en">Volume (cf. calibration certificate xxa3 dated 2017-04-11)</dcc:content>
+					</dcc:declaration>
+					<dcc:data>                          
+						<dcc:quantity refType="referencedValue">
+							<dcc:name>
+								<dcc:content lang="de">Volumen bei t = 20 °C</dcc:content>
+								<dcc:content lang="en">volume at t = 20 °C</dcc:content>
+							</dcc:name>
+							<si:real>
+								<si:value>429.35318</si:value>
+								<si:unit>\centi\metre\tothe{3}</si:unit>
+								<si:expandedUnc>
+									<si:uncertainty>0.00020</si:uncertainty>
+									<si:coverageFactor>2</si:coverageFactor>
+									<si:coverageProbability>0.95</si:coverageProbability>
+								</si:expandedUnc>
+							</si:real>
+							<dcc:measurementMetaData>
+								<dcc:metaData refType="source">
+									<dcc:reference>certificate xxa3</dcc:reference>
+									<dcc:date>2017-04-11</dcc:date>
+									<dcc:respAuthority>
+										<dcc:name>
+											<dcc:content>Calibration lab xy</dcc:content>
+										</dcc:name>
+										<dcc:eMail>info@xy.de</dcc:eMail>
+										<dcc:location>
+											<dcc:city>city abc</dcc:city>
+										</dcc:location>
+									</dcc:respAuthority>
+								</dcc:metaData>
+							</dcc:measurementMetaData>
+						</dcc:quantity>
+					</dcc:data>
+				</dcc:metaData>
+			</dcc:measurementMetaData>
+		</dcc:measurementResult>
+	</dcc:measurementResults>
+</dcc:digitalCalibrationCertificate>
