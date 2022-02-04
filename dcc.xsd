@@ -693,7 +693,7 @@
             <xs:element name="street" type="xs:string"/>
             <xs:element name="streetNo" type="xs:string"/>
             <xs:element name="further" type="dcc:richContentType"/>
-            <xs:element name="positionCoordinates" type="dcc:positionCoordinatesType" minOccurs="0"/>
+            <xs:element name="positionCoordinates" type="dcc:positionCoordinatesType"/>
         </xs:choice>
     </xs:complexType>
 
