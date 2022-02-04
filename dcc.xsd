@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema version="3.0.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+<xs:schema version="3.1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:dcc="https://ptb.de/dcc"
            xmlns:si="https://ptb.de/si"
            targetNamespace="https://ptb.de/dcc"
@@ -7,7 +7,7 @@
 
     <xs:import
             namespace="https://ptb.de/si"
-            schemaLocation="https://ptb.de/si/v2.0.0/SI_Format.xsd"/>
+            schemaLocation="https://ptb.de/si/v2.1.0/SI_Format.xsd"/>
 
     <xs:annotation>
         <xs:documentation>
@@ -33,7 +33,7 @@
             Vorab initiative of the Volkswagen Foundation (VolkswagenStiftung).
 
 
-            Documentation: https://ptb.de/dcc/v3.0.0/
+            Documentation: https://ptb.de/dcc/v3.1.0/
         </xs:documentation>
     </xs:annotation>
 
@@ -64,7 +64,7 @@
         <xs:attribute name="schemaVersion" use="required">
             <xs:simpleType>
                 <xs:restriction base="xs:string">
-                    <xs:pattern value="3\.0\.0"/>
+                    <xs:pattern value="3\.1\.0"/>
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
@@ -108,10 +108,24 @@
         <xs:sequence>
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="release" type="xs:string"/>
+            <xs:element name="type" minOccurs="0">
+               <xs:simpleType>
+                   <xs:restriction base="xs:string">
+                       <xs:enumeration value="application" />
+                       <xs:enumeration value="bios" />
+                       <xs:enumeration value="driver" />
+                       <xs:enumeration value="editor" />
+                       <xs:enumeration value="firmware" />
+                       <xs:enumeration value="library" />
+                       <xs:enumeration value="os" />
+                       <xs:enumeration value="other" />
+                   </xs:restriction>
+               </xs:simpleType>
+           </xs:element>
             <xs:element name="description" type="dcc:richContentType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="measuringEquipmentListType">
@@ -121,6 +135,11 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
+            <xs:element name="name" type="dcc:textType" minOccurs="0"/>
+                <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
+                <xs:element name="description" type="dcc:richContentType" minOccurs="0"/>
+                <xs:element name="owner" type="dcc:contactType" minOccurs="0"/>
+                <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
             <xs:element name="measuringEquipment" type="dcc:measuringEquipmentType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
@@ -139,9 +158,44 @@
             <xs:element name="manufacturer" type="dcc:contactNotStrictType" minOccurs="0"/>
             <xs:element name="model" type="xs:string" minOccurs="0"/>
             <xs:element name="identifications" type="dcc:identificationListType" minOccurs="0"/>
+            <xs:element name="measuringEquipmentQuantities" type="dcc:measuringEquipmentQuantityListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="measuringEquipmentQuantityListType">
+        <xs:annotation>
+            <xs:documentation>
+                List of values which describes the measurement equipment.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="measuringEquipmentQuantity" type="dcc:measuringEquipmentQuantityType" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="measuringEquipmentQuantityType">
+        <xs:annotation>
+            <xs:documentation>
+                Value which describes the measuringEquipment
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="dcc:textType" minOccurs="0"/>
+            <xs:element name="description" type="dcc:richContentType" minOccurs="0"/>
+            <xs:choice>
+                <xs:element name="noQuantity" type="dcc:richContentType"/>
+                <xs:element ref="si:real"/>
+                <xs:element ref="si:hybrid"/>
+                <xs:element ref="si:complex"/>
+                <xs:element ref="si:constant"/>
+                <xs:element ref="si:realListXMLList"/>
+            </xs:choice>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="coreDataType">
@@ -205,10 +259,9 @@
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="equipmentClass" type="dcc:equipmentClassType" minOccurs="0"/>
             <xs:element name="description" type="dcc:richContentType" minOccurs="0"/>
-
+            <xs:element name="installedSoftwares" type="dcc:softwareListType" minOccurs="0" />
             <xs:element name="manufacturer" type="dcc:contactNotStrictType"/>
             <xs:element name="model" type="xs:string" minOccurs="0"/>
-
             <xs:element name="identifications" type="dcc:identificationListType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
@@ -247,15 +300,15 @@
             <xs:element name="name" type="dcc:textType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="performanceLocationType">
         <xs:simpleContent>
             <xs:extension base="dcc:stringPerformanceLocationType">
                 <xs:attribute name="id" type="xs:ID" use="optional"/>
-                <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-                <xs:attribute name="refType" type="xs:string" use="optional"/>
+                <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+                <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -351,8 +404,8 @@
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="usedMethodListType">
@@ -376,9 +429,10 @@
             <xs:element name="name" type="dcc:textType"/>
             <xs:element name="description" type="dcc:richContentType" minOccurs="0"/>
             <xs:element name="norm" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="reference" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="influenceConditionListType">
@@ -412,10 +466,11 @@
                     </xs:restriction>
                 </xs:simpleType>
             </xs:element>
+            <xs:element name="certificate" type="dcc:hashType" minOccurs="0"/>
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="resultListType">
@@ -441,8 +496,8 @@
             <xs:element name="data" type="dcc:dataType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="dataType">
@@ -455,8 +510,8 @@
             <xs:element name="list" type="dcc:listType"/>
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="quantityType">
@@ -478,7 +533,9 @@
                 <xs:element ref="si:hybrid"/>
                 <xs:element ref="si:complex"/>
                 <xs:element ref="si:constant"/>
+                <xs:element ref="si:realListXMLList"/>
             </xs:choice>
+            <xs:element name="relativeUncertainty" type="dcc:relativeUncertaintyType" minOccurs="0" />
             <xs:element name="usedMethods" type="dcc:usedMethodListType" minOccurs="0"/>
             <xs:element name="usedSoftware" type="dcc:softwareListType" minOccurs="0"/>
             <xs:element name="measuringEquipments" type="dcc:measuringEquipmentListType" minOccurs="0"/>
@@ -486,8 +543,15 @@
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
+    </xs:complexType>
+
+    <xs:complexType name="relativeUncertaintyType">
+        <xs:choice>
+            <xs:element name="relativeUncertaintyXmlList" type="si:realListXMLListType" />
+            <xs:element name="relativeUncertainty" type="si:realQuantityType" />
+        </xs:choice>
     </xs:complexType>
 
     <xs:complexType name="listType">
@@ -504,7 +568,10 @@
         <xs:sequence>
             <xs:element name="name" type="dcc:textType" minOccurs="0"/>
             <xs:element name="description" type="dcc:richContentType" minOccurs="0"/>
-            <xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/>
+            <xs:choice>
+                <xs:element name="dateTime" type="xs:dateTime" minOccurs="0"/>
+                <xs:element name="dateTimeXMLList" type="dcc:dateTimeXMLListType" minOccurs="0"/>
+            </xs:choice>
             <xs:choice>
                 <xs:element name="list" type="dcc:listType" maxOccurs="unbounded"/>
                 <xs:element name="quantity" type="dcc:quantityType" maxOccurs="unbounded"/>
@@ -516,9 +583,13 @@
             <xs:element name="measurementMetaData" type="dcc:measurementMetaDataListType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
+    
+    <xs:simpleType name="dateTimeXMLListType">
+        <xs:list itemType="xs:dateTime"  />
+    </xs:simpleType>
 
     <xs:complexType name="measurementMetaDataListType">
         <xs:annotation>
@@ -537,19 +608,24 @@
                         maxOccurs="unbounded"/>
             <xs:element name="convention" type="xs:string" minOccurs="0"/>
             <xs:element name="traceable" type="xs:boolean" minOccurs="0"/>
-            <xs:element name="norm" type="xs:string" minOccurs="0"/>
-            <xs:element name="reference" type="xs:string" minOccurs="0"/>
+            <xs:element name="norm" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="reference" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="declaration" type="dcc:richContentType" minOccurs="0"/>
             <xs:element name="valid" type="xs:boolean" minOccurs="0"/>
             <xs:element name="date" type="xs:date" minOccurs="0"/>
             <xs:element name="period" type="xs:duration" minOccurs="0"/>
             <xs:element name="respAuthority" type="dcc:contactType" minOccurs="0"/>
-            <xs:element name="conformity" type="dcc:stringConformityStatementStatusType" minOccurs="0"/>
+            <xs:choice minOccurs="0">
+                <xs:element name="conformity" type="dcc:stringConformityStatementStatusType"/>
+                <xs:element name="conformityXMLList" type="dcc:stringConformityStatementStatusXMLListType"/>
+            </xs:choice>
             <xs:element name="data" type="dcc:dataType" minOccurs="0"/>
+            <xs:element name="nonSIDefinition" type="xs:string" minOccurs="0"/>
+            <xs:element name="nonSIUnit" type="xs:string" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:simpleType name="stringConformityStatementStatusType">
@@ -561,6 +637,10 @@
             <xs:enumeration value="noPass"/>
             <xs:enumeration value="noFail"/>
         </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="stringConformityStatementStatusXMLListType">
+        <xs:list itemType="dcc:stringConformityStatementStatusType"/>
     </xs:simpleType>
 
     <xs:simpleType name="stringISO3166Type">
@@ -597,8 +677,8 @@
             <xs:extension base="xs:string">
                 <xs:attribute name="lang" type="dcc:stringISO639Type" use="optional"/>
                 <xs:attribute name="id" type="xs:ID" use="optional"/>
-                <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-                <xs:attribute name="refType" type="xs:string" use="optional"/>
+                <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+                <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -627,8 +707,8 @@
             <xs:element name="positionCoordinate3" type="si:realQuantityType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="contactType">
@@ -653,8 +733,8 @@
             <xs:element name="descriptionData" type="dcc:byteDataType" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="hashType">
@@ -690,15 +770,15 @@
         </xs:annotation>
         <xs:sequence>
             <xs:element name="name" type="dcc:textType" minOccurs="0"/>
-            <xs:choice maxOccurs="unbounded">
+            <xs:sequence maxOccurs="unbounded">
                 <xs:element name="content" type="dcc:stringWithLangType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="file" type="dcc:byteDataType" minOccurs="0" maxOccurs="unbounded"/>
                 <xs:element name="formula" type="dcc:formulaType" minOccurs="0" maxOccurs="unbounded"/>
-            </xs:choice>
+            </xs:sequence>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="byteDataType">
@@ -729,8 +809,8 @@
             <xs:element name="mathml" type="dcc:xmlType"/>
         </xs:choice>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
 
     <xs:complexType name="xmlType">
@@ -743,7 +823,21 @@
             <xs:any namespace="##other" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
-        <xs:attribute name="refId" type="xs:IDREF" use="optional"/>
-        <xs:attribute name="refType" type="xs:string" use="optional"/>
+        <xs:attribute name="refId" type="xs:IDREFS" use="optional"/>
+        <xs:attribute name="refType" type="dcc:refTypesType" use="optional"/>
     </xs:complexType>
+
+    <xs:simpleType name="refTypesType">
+        <xs:annotation>
+            <xs:documentation>
+                Allow multiple refTypes for one element as attribute.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction>
+            <xs:simpleType>
+                <xs:list itemType="xs:string"/>
+            </xs:simpleType>
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
