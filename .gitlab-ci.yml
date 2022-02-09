@@ -30,4 +30,4 @@ test-examples:
   script:
     - apk add xerces-c-samples
     - cd examples
-    - for f in *.xml; do StdInParse -v=always -n -s -f < $f; done
+    - for f in *.xml; do SAX2Count -v=always -f -p $f; done
