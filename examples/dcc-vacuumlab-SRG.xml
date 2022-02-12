@@ -1,4 +1,4 @@
-<dcc:digitalCalibrationCertificate xmlns:dcc="https://ptb.de/dcc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.1.0" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.1.0/dcc.xsd">
+<dcc:digitalCalibrationCertificate xmlns:dcc="https://ptb.de/dcc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="3.1.1" xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.1.1/dcc.xsd">
   <!--
     DCC - Digital Calibration Certificate
     Copyright (C) 2021 - Physikalisch-Technische Bundesanstalt
