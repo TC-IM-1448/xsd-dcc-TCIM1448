@@ -550,7 +550,7 @@
     <xs:complexType name="relativeUncertaintyType">
         <xs:choice>
             <xs:element name="relativeUncertaintyXmlList" type="si:realListXMLListType" />
-            <xs:element name="relativeUncertainty" type="si:realQuantityType" />
+            <xs:element name="relativeUncertaintySingle" type="si:realQuantityType" />
         </xs:choice>
     </xs:complexType>
 
