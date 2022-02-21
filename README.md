@@ -4,7 +4,7 @@
   <h1>xsd-dcc</h1>
   <p>This repository contains the XML Schema Definition (XSD), a documentation and examples for the DCC (Digital Calibration Certificate). The XSD is licensed by Physikalisch-Technische Bundesanstalt under [GNU LGPL v3](/COPYING.LESSER).</p>
   <h3>
-    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.1.2/) | [Examples](examples) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues) | [License](#license) | [Liability](#liability)
+    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.1.2/) | [Good Practice](https://dccwiki.ptb.de/en/gp_home) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues) | [License](#license) | [Liability](#liability)
   </h3>
 </div>
 <br />
