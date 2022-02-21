@@ -25,9 +25,9 @@ test-xsd:
 
 # === Job: test-examples ===
 # Description: this job checks the examples using xerces-c.
-test-examples:
-  stage: test
-  script:
-    - apk add xerces-c-samples
-    - cd examples
-    - for f in *.xml; do SAX2Count -v=always -f -p $f; done
+# test-examples:
+#   stage: test
+#   script:
+#     - apk add xerces-c-samples
+#     - cd examples
+#     - for f in *.xml; do SAX2Count -v=always -f -p $f; done
