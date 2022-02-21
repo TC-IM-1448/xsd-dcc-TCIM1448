@@ -4,14 +4,14 @@
   <h1>xsd-dcc</h1>
   <p>This repository contains the XML Schema Definition (XSD), a documentation and examples for the DCC (Digital Calibration Certificate). The XSD is licensed by Physikalisch-Technische Bundesanstalt under [GNU LGPL v3](/COPYING.LESSER).</p>
   <h3>
-    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.1.1/) | [Examples](examples) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues) | [License](#license) | [Liability](#liability)
+    [Releases](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/releases) | [Documentation](https://ptb.de/dcc/v3.1.2/) | [Examples](examples) | [Development Branch](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/tree/develop) | [Issues](https://gitlab1.ptb.de/d-ptb/dcc/xsd-dcc/-/issues) | [License](#license) | [Liability](#liability)
   </h3>
 </div>
 <br />
 
 ## Documentation
 
-You can find the Documentation at [https://ptb.de/dcc/v3.1.1/](https://ptb.de/dcc/v3.1.1/) (Best way to read the documentation).
+You can find the Documentation at [https://ptb.de/dcc/v3.1.2/](https://ptb.de/dcc/v3.1.2/) (Best way to read the documentation).
 
 ## License
 
@@ -30,16 +30,16 @@ To use the Schema use the URL with a specific version below.
 This is the recommended way.
 
 ```
-https://ptb.de/dcc/v3.1.1/dcc.xsd
+https://ptb.de/dcc/v3.1.2/dcc.xsd
 ```
 
 ```xml
 <dcc:digitalCalibrationCertificate
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.1.1/dcc.xsd"
+        xsi:schemaLocation="https://ptb.de/dcc https://ptb.de/dcc/v3.1.2/dcc.xsd"
         xmlns:dcc="https://ptb.de/dcc"
         xmlns:si="https://ptb.de/si"
-        schemaVersion="3.1.1">
+        schemaVersion="3.1.2">
         <!--
         ...
         -->
