@@ -11,7 +11,7 @@
 
 ## Documentation
 
-You can find the Documentation at [https://ptb.de/dcc/v3.1.2/](https://ptb.de/dcc/v3.1.2/) (Best way to read the documentation).
+You can find the Documentation at [https://ptb.de/dcc/](https://ptb.de/dcc/) (Best way to read the documentation).
 
 ## License
 
